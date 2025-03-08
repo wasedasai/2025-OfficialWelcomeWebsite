@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+html{
+    overflow: hidden;
+}
 body {
     width: 100vw;
     height: 100vh;
@@ -12,9 +15,13 @@ body {
     font-family: 'Yugothic', sans-serif;
     font-weight: 510;
 }
-.marquee-wrapper {
-    width: 100%;
+.all-container{
+    width: 100vw;
+    height: 100vh;
+    display: fixed;
     overflow: hidden;
+}
+.marquee-wrapper {
     white-space: nowrap;
     position: relative;
     display: flex;
