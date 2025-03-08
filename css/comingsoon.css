@@ -8,6 +8,8 @@ body {
     height: 100vh;
     background-color: #fffcfc;
     overflow: hidden;
+    font-family: 'Yugothic', sans-serif;
+    font-weight: 510;
 }
 .marquee-wrapper {
     width: 100%;
@@ -39,6 +41,20 @@ body {
 }
 .loading-img img{
     width: 375px;
+}
+@media (max-width: 500px) {
+    .marquee{
+        font-size: 65px;
+    }
+    .marquee-wrapper{
+        margin-top: 150px;
+    }
+    .loading-img{
+        margin-top: 100px;
+    }
+    .loading-img img{
+        width: 330px;
+    }
 }
 
 
