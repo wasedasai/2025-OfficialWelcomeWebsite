@@ -7,6 +7,7 @@ body {
     width: 100vw;
     height: 100vh;
     background-color: #fffcfc;
+    color: #1c1b1b;
     overflow: hidden;
     font-family: 'Yugothic', sans-serif;
     font-weight: 510;
@@ -47,7 +48,7 @@ body {
         font-size: 65px;
     }
     .marquee-wrapper{
-        margin-top: 150px;
+        margin-top: 40%;
     }
     .loading-img{
         margin-top: 100px;
