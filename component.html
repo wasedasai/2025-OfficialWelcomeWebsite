@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+     <meta charset="utf-8">
+     <title>早稲田祭2025運営スタッフ 新歓公式サイト</title>
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/sanitize.css" rel="stylesheet"/>
+    <link rel="stylesheet" media="(min-width: 1024px)" href="css/component-pc.css">
+    <link rel="stylesheet" media="(max-width: 1023px)" href="css/component-mobile.css">
+    <link rel="canocical" href="https://wasedasai.github.io/2025-OfficialWelcomeWebsite/">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+     <meta name="description" content="早稲田祭運営スタッフ2025年度新歓用公式サイトです。運スタの新歓イベントや、運スタに関する情報を掲載しています。"> 
+     <meta name="keywords" content="早稲田祭,早稲田祭運営スタッフ,運スタ,早稲田,運スタ新歓,運スタ2025,早稲田祭2025運営スタッフ,運スタ2025新歓">
+     <meta property="og:url" content="https://wasedasai.github.io/2025-OfficialWelcomeWebsite/" />
+     <meta property="og:type" content="website" />
+     <meta property="og:title" content="2025早稲田祭運営スタッフ新歓サイト" />
+     <meta property="og:description" content="早稲田祭運営スタッフ(運スタ)2025年度新歓用公式サイトです。運スタの新歓イベントや、運スタに関する情報を掲載しています。" />
+     <meta property="og:site_name" content="2025早稲田祭運営スタッフ新歓サイト" />
+     <meta property="og;image" content="images/faviconlogo.png" />
+     <!-- あとで画像変えて下さい上とした二つ。 -->
+     <link rel="icon" href="images/faviconlogo.png" type="image/png">
+     <link rel="apple-touch-icon" href="images/faviconlogo.png">
+     <meta name="google-site-verification" content="PREUoAvDPGm4IBv_BUsNCwKUSFRjLSaLSSNL8bfFCAE" />
+</head>
+<body>
+    <header>
+        <div class="header">
+            <div class="header-logo">
+                <img src="images/headerlogo.png" alt="">
+            </div>
+            <div class="saikun-menu">
+                <img src="images/header-saikun.png" alt="" class="menu-img">
+                <div class="menu-text">menu</div>
+            </div>
+        </div>
+        <div class="fullscreen-menu">
+            <div class="menu-open-container">
+                <div class="menu-open-logo"><img src="images/headerlogo.png" alt=""></div>
+                <div class="menu-open-texts">
+                    <a href=""><p>TOP</p></a>
+                    <a href=""><p>早稲田祭・運営スタッフとは</p></a>
+                    <a href=""><p>新歓イベント</p></a>
+                    <a href=""><p>入会方法</p></a>
+                    <a href=""><p>運スタの1年</p></a>
+                    <a href=""><p>運スタのリアル</p></a>
+                    <a href=""><p>局紹介</p></a>
+                    <a href=""><p>わせだサイくん</p></a>
+                    <a href=""><p>よくある質問・お問い合わせ</p></a>
+                </div>
+                <a href="#" class="button">入会方法はこちら</a>
+                <div class="menu-sns-icon">
+                    <div class="menu-Instagram">
+                        <img src="images/menu-Instagram.png" alt="">
+                    </div>
+                    <div class="menu-x">
+                        <img src="images/menu-X.png" alt="">
+                    </div>
+                    <div class="menu-YouTube">
+                        <img src="images/menu-YouTube.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+    const menu = document.querySelector(".saikun-menu");
+    const menuImg = document.querySelector(".menu-img");
+    const menuText = document.querySelector(".menu-text");
+    const fullscreenMenu = document.querySelector(".fullscreen-menu");
+    const menuItems = document.querySelectorAll(".menu-open-texts p");
+
+    let isOpen = false;
+
+    menu.addEventListener("click", function () {
+        isOpen = !isOpen;
+
+        if (isOpen) {
+            menuImg.src = "images/close.png";
+            menuText.textContent = "close";
+            fullscreenMenu.classList.add("active");
+
+            
+            menuItems.forEach(item => {
+                item.style.opacity = "0";
+                item.style.transform = "translateY(30px)";
+            });
+
+            menuItems.forEach((item, index) => {
+                setTimeout(() => {
+                    item.style.opacity = "1";
+                    item.style.transform = "translateY(0)";
+                    item.style.transition = "opacity 0.6s ease-in-out, transform 0.6s ease-in-out";
+                }, index * 100); 
+            });
+
+        } else {
+            menuImg.src = "images/header-saikun.png"; 
+            menuText.textContent = "menu";
+            fullscreenMenu.classList.remove("active"); 
+            menuItems.forEach(item => {
+                item.style.opacity = "0";
+                item.style.transform = "translateY(30px)";
+            });
+        }
+    });
+});
+        </script>
+    </header>
+</body>
+</html>
