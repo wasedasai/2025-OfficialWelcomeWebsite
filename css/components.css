@@ -10,13 +10,13 @@ body{
 /* ここからheader */
 .header{
     width: 100vw;
-    height: 75px;
+    height: 100px;
     background-color: #fffcfc;
     color: #1c1b1b;
     font-family: 'Notosans JP', sans-serif;
 }
 .header-logo img{
-    width: 170px;
+    width: 220px;
     margin: 15px 2% 0 2%;
 }
 .saikun-menu{
@@ -27,14 +27,12 @@ body{
     z-index: 200;
 }
 .menu-img{
-    width: 65px;
+    width: 75px;
 }
 .menu-text{
-    margin-top: -14px;
-    font-size: 14px;
+    margin-top: -17px;
 }
 .fullscreen-menu {
-    position: relative;
     position: fixed;
     top: 0;
     left: 0;
@@ -54,7 +52,7 @@ body{
 }
 .menu-open-container{
     position: absolute;
-    top: 51%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 80vw;
@@ -66,20 +64,14 @@ body{
 .menu-open-logo img{
     width: 200px;
     margin: 40px 2% 0 2%;
-    position: absolute;
-    top: -20px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 100;
 }
 .menu-open-texts{
     text-align: center;
     position: absolute;
-    top: 42%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 16px;
-    width: 100%;
+    font-size: 20px;
 }
 .menu-open-container a{
     text-decoration: none;
@@ -90,7 +82,7 @@ body{
     transition: 0.7s;
 }
 .menu-open-container p{
-    margin: 15px 0;
+    margin: 36px 0;
     font-family: "Noto Sans JP", sans-serif;
 }
 .menu-open-texts p{
@@ -99,9 +91,8 @@ body{
 }
 .menu-sns-icon{
     position: absolute;
-    bottom: 30px;
-    left: 50%;
-    transform: translateX(-50%);
+    bottom: 35px;
+    margin-left: 2%;
     display: flex;
 }
 .menu-sns-icon img{
@@ -110,9 +101,8 @@ body{
 }
 .button {
     position: absolute;
-    bottom: 105px;
-    left: 50%;
-    transform: translateX(-50%);
+    bottom: 40px;
+    right: 2%;
     display: flex;
     align-items: center;
     justify-content:space-between;
@@ -130,6 +120,7 @@ body{
     white-space: nowrap;
     width:262px;/*長さを変えてね*/
     gap:10px;
+    margin-left: 20px;
     padding-left: 50px;/*文字をずらせる */
     }
           
@@ -161,7 +152,73 @@ body{
   color: #1c1b1b;
   transform: scale(1); 
   }
+
+  @media (max-width: 1023px) {
+    /* ここからheader */
+.header{
+    height: 75px;
+}
+.header-logo img{
+    width: 170px;
+}
+.saikun-menu{
+    right: 5px;
+    top: 5px;
+}
+.menu-img{
+    width: 65px;
+}
+.menu-text{
+    margin-top: -16px;
+    font-size: 14px;
+}
+.menu-open-container{
+    top: 51%;
+    width: 90vw;
+}
+.menu-open-logo img{
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+}
+.menu-open-texts{
+    top: 44%;
+    width: 100%;
+    font-size: 16px;
+}
+.menu-open-container p{
+    margin: 15px 0;
+}
+.menu-sns-icon{
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.button {
+    bottom: 95px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: 0;
+}
+.menu-sns-icon{
+    bottom: 25px;
+}
 /* ここまでheader */
+  }
+/* ここまでheader */
+
+/* ここからhero */
+.hero{
+    width: 100%;
+    height: 180px;
+    background-color: #e72241;
+}
+
+
+
+
 
 /* ここまで、square-link */
 .square-button {
@@ -184,8 +241,6 @@ body{
     width: 200px; /* 文字の長さに応じて可変 */
     min-width: 150px; /* 最小幅を設定して極端に小さくならないように */
     padding-right: 50px;
-
-    margin-top: 10%;
 }
 
 .square-button .spacer {
@@ -224,4 +279,3 @@ body{
     color: #2c6dbc;
     transform: scale(1);
 }
-/* ここまで、square-link */
