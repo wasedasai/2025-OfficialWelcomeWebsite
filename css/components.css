@@ -279,3 +279,48 @@ body{
     color: #2c6dbc;
     transform: scale(1);
 }
+
+/* ここからベイマックス */
+.square-bar {
+    position: relative;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    color: #1c1b1b; /* 文字色 */
+    text-decoration: none;
+    font-size: 16px;
+    font-family: "Noto Sans JP", sans-serif;
+    padding-bottom: 6px; /* 文字と線の間隔 */
+}
+
+.square-bar::after {
+    content: '';
+    position: absolute;
+    left: 50%; /* 線を中央配置 */
+    width: 210px;
+    height: 2px;
+    background: #1c1b1b;
+    bottom: -3px;
+    transform: translateX(-50%) scale(1, 1); 
+    transform-origin: right top;
+    transition: transform 0.3s ease-out;
+}
+
+.square-bar::before {
+    content: '';
+    position: absolute;
+    left: calc(50% + 105px); 
+    bottom: -6px;
+    width: 10px;
+    height: 10px;
+    background: #1c1b1b;
+    border-radius: 50%;
+}
+
+
+.square-bar:hover::after {
+    transform: translateX(-50%) scale(0, 1);
+    transform-origin: right top;
+    transition: transform 0.5s ease-out;
+}
+/* ここまでベイマックス */
