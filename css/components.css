@@ -99,7 +99,7 @@ body{
     width: 50px;
     margin: 0 10px;
 }
-.button {
+.menu-open-button {
     position: absolute;
     bottom: 40px;
     right: 2%;
@@ -125,7 +125,7 @@ body{
     }
           
   
-  .button::after {
+  .menu-open-button::after {
   content: "→";
   font-size: 20px;/*矢印の大きさを変えてね*/
   display: flex;
@@ -142,12 +142,12 @@ body{
   margin-left: 10px; 
   flex-shrink: 0;
   }
-  .button:hover {
+  .menu-open-button:hover {
   background-color: #1c1b1b;/*色を変えてね*/
   color: #fffcfc;
   }
   
-  .button:hover::after {
+  .menu-open-button:hover::after {
   background-color: #fffcfc;
   color: #1c1b1b;
   transform: scale(1); 
@@ -196,7 +196,7 @@ body{
     left: 50%;
     transform: translateX(-50%);
 }
-.button {
+.menu-open-button {
     bottom: 95px;
     left: 50%;
     transform: translateX(-50%);

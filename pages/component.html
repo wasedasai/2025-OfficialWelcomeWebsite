@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/sanitize.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="../css/components.css">
     <link rel="canocical" href="https://wasedasai.github.io/2025-OfficialWelcomeWebsite/">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
      <meta name="description" content="早稲田祭運営スタッフ2025年度新歓用公式サイトです。運スタの新歓イベントや、運スタに関する情報を掲載しています。"> 
@@ -17,9 +17,9 @@
      <meta property="og:title" content="2025早稲田祭運営スタッフ新歓サイト" />
      <meta property="og:description" content="早稲田祭運営スタッフ(運スタ)2025年度新歓用公式サイトです。運スタの新歓イベントや、運スタに関する情報を掲載しています。" />
      <meta property="og:site_name" content="2025早稲田祭運営スタッフ新歓サイト" />
-     <meta property="og;image" content="images/faviconlogo.png" />
-     <link rel="icon" href="images/faviconlogo.png" type="image/png">
-     <link rel="apple-touch-icon" href="images/faviconlogo.png">
+     <meta property="og;image" content="../images/faviconlogo.png" />
+     <link rel="icon" href="../images/faviconlogo.png" type="image/png">
+     <link rel="apple-touch-icon" href="../images/faviconlogo.png">
      <meta name="google-site-verification" content="PREUoAvDPGm4IBv_BUsNCwKUSFRjLSaLSSNL8bfFCAE" />
 </head>
 <body>
@@ -27,16 +27,16 @@
     <header>
         <div class="header">
             <div class="header-logo">
-                <img src="images/headerlogo.png" alt="">
+                <img src="../images/headerlogo.png" alt="">
             </div>
             <div class="saikun-menu">
-                <img src="images/header-saikun.png" alt="" class="menu-img">
+                <img src="../images/header-saikun.png" alt="" class="menu-img">
                 <div class="menu-text">menu</div>
             </div>
         </div>
         <div class="fullscreen-menu">
             <div class="menu-open-container">
-                <div class="menu-open-logo"><img src="images/headerlogo.png" alt=""></div>
+                <div class="menu-open-logo"><img src="../images/headerlogo.png" alt=""></div>
                 <div class="menu-open-texts">
                     <a href=""><p>TOP</p></a>
                     <a href=""><p>早稲田祭・運営スタッフとは</p></a>
@@ -48,16 +48,16 @@
                     <a href=""><p>わせだサイくん</p></a>
                     <a href=""><p>よくある質問・お問い合わせ</p></a>
                 </div>
-                <a href="#" class="button">入会方法はこちら</a>
+                <a href="#" class="menu-open-button">入会方法はこちら</a>
                 <div class="menu-sns-icon">
                     <div class="menu-Instagram">
-                        <img src="images/menu-Instagram.png" alt="">
+                        <img src="../images/menu-Instagram.png" alt="">
                     </div>
                     <div class="menu-x">
-                        <img src="images/menu-X.png" alt="">
+                        <img src="../images/menu-X.png" alt="">
                     </div>
                     <div class="menu-YouTube">
-                        <img src="images/menu-YouTube.png" alt="">
+                        <img src="../images/menu-YouTube.png" alt="">
                     </div>
                 </div>
             </div>
@@ -76,7 +76,7 @@
         isOpen = !isOpen;
 
         if (isOpen) {
-            menuImg.src = "images/close.png";
+            menuImg.src = "../images/close.png";
             menuText.textContent = "close";
             fullscreenMenu.classList.add("active");
 
@@ -95,7 +95,7 @@
             });
 
         } else {
-            menuImg.src = "images/header-saikun.png"; 
+            menuImg.src = "../images/header-saikun.png"; 
             menuText.textContent = "menu";
             fullscreenMenu.classList.remove("active"); 
             menuItems.forEach(item => {
