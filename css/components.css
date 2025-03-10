@@ -436,6 +436,7 @@ footer {
     height: 644px;
     position: relative;
     font-family: 'Noto Sans JP', sans-serif;
+    z-index: 0;
 }
 .shinkan_elements {
     position: absolute;
@@ -513,19 +514,19 @@ footer {
     text-align: center;
 }
 .footer_hover {
-    display: inline-block; /* 幅を持たせる */
-    position: relative; /* `::after` の基準を設定 */
+    display: inline-block; 
+    position: relative; 
     cursor: pointer;
 }
 
 .footer_hover::after {
     content: '';
     position: absolute;
-    bottom: -2px;
+    bottom: 1px;
     left: 0;
     width: 0%;
     height: 1px;
-    background: #ffffff; /* 白色の下線 */
+    background: #fffcfc; /* 白色の下線 */
     transition: width 0.3s ease-in-out;
     z-index: 100;
 }
@@ -664,7 +665,7 @@ footer {
 }
 
 .footer_square-button:hover::after {
-    円の色
+
     background-color: #e72241;
     color: #fffcfc;
     transform: scale(1);
