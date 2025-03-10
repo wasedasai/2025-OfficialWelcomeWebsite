@@ -527,6 +527,7 @@ footer {
     height: 1px;
     background: #ffffff; /* 白色の下線 */
     transition: width 0.3s ease-in-out;
+    z-index: 100;
 }
 
 .footer_hover:hover::after {
@@ -537,6 +538,7 @@ footer {
     footer {
         height: 100vh;
         width: 100vw;
+        z-index: 1;
     }
     .yajirushi_photo {
         width: 66px;
@@ -575,15 +577,15 @@ footer {
         left: 0;
         width: 100%;
         text-align: center;
-        line-height: 4.5vh;
+        line-height: 4vh;
         top: 270px;
     }
     .footer_contents_line2 {
-        top: 490px;
+        top: 450px;
         left: 0;
         width: 100%;
         text-align: center;
-        line-height: 4.5vh;
+        line-height: 4vh;
     }
     .shinkan_elements {
     }
@@ -662,11 +664,11 @@ footer {
 }
 
 .footer_square-button:hover::after {
-    /* 円の色 */
+    円の色
     background-color: #e72241;
     color: #fffcfc;
     transform: scale(1);
-}
+} 
 .footer_logo {
     height: 133px;
     width: auto;
