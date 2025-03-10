@@ -157,5 +157,56 @@
     </div>
     <!-- ここまでブロックタイトル -->
 
+
+    <!-- ここからフッター -->
+     <footer>
+        <div class="yajirushi_footer">
+            <img class="yajirushi_photo" src="../images/footer_yajirushi.png">
+        </div>
+        <div class="shinkan_elements"></div>
+        <div class="shinkan_wasedasai">
+            <img class="footer_logo" src="../images/logo_footer.png">
+        </div>
+        <div class="footer_icons">
+            <img src="../images/footer_x.png" alt="" class="footer_icons_photo">
+            <img src="../images/footer_instagram.png" alt="" class="footer_icons_photo">
+            <img src="../images/footer_youtube.png" alt="" class="footer_icons_photo">
+        </div>
+        <div class="footer_contents">
+            <div class="footer_contents_line1">
+                <span class="footer_hover">早稲田祭・運営スタッフとは</span><br>
+                <span class="footer_hover">新歓イベント</span><br>
+                <span class="footer_hover">入会方法</span><br>
+                <span class="footer_hover">よくある質問・お問い合わせ</span>
+            </div>
+            <div class="footer_contents_line2">
+                <span class="footer_hover">運スタの一年</span><br>
+                <span class="footer_hover">運スタのリアル</span><br>
+                <span class="footer_hover">局紹介</span><br>
+                <span class="footer_hover">わせだサイくん</span>
+            </div>
+            <div  class="footer_square-button" href="">
+                <span class="spacer"></span>
+                <span class="footer_text">入会フォームはこちら</span>
+                <span class="spacer"></span>
+            </div>
+        </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    const backToTopBtn = document.querySelector(".yajirushi_photo");
+
+    if (backToTopBtn) {
+        backToTopBtn.addEventListener("click", function () {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+    } else {
+        console.error("トップへ戻るボタン (#yajirushi_footer) が見つかりません。");
+    }
+});
+
+    </script>
+     </footer>
+    <!-- ここまでフッター -->
 </body>
 </html>
