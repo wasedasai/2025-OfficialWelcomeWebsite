@@ -225,12 +225,10 @@ body{
     align-items: center;
     justify-content: center;
     padding: 10px 20px;
-    border: 1.5px solid #2c6dbc;
+    border: 1.5px solid #2660ad;
     border-radius: 30px;
     font-size: 15px;
-    font-family: 'Notosans JP', sans-serif;
-    /* font-weight: bold; */
-    color: #2c6dbc;
+    color: #2660ad;
     text-decoration: none;
     transition: all 0.3s ease;
     position: relative;
@@ -259,7 +257,7 @@ body{
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    background-color: #2c6dbc;
+    background-color: #2660ad;
     color: #fffcfc;
     transition: all 0.3s ease;
     position: absolute;
@@ -269,14 +267,95 @@ body{
 
 /* ホバー時の変更 */
 .square-button:hover {
-    background-color: #2c6dbc;
+    background-color: #2660ad;
     color: #fffcfc;
 }
 
 .square-button:hover::after {
     background-color: #fffcfc;
-    color: #2c6dbc;
+    color: #2660ad;
     transform: scale(1);
+}
+
+.square-button-red {
+    border: 1.5px solid #e72241;
+    color: #e72241;
+}
+.square-button-red::after {
+    background-color: #e72241;
+    color: #fffcfc;
+}
+.square-button-red:hover {
+    background-color: #e72241;
+    color: #fffcfc;
+}
+.square-button-red:hover::after {
+    background-color: #fffcfc;
+    color: #e72241;
+}
+.square-button-blue {
+    border: 1.5px solid #2660ad;
+    color: #2660ad;
+}
+.square-button-blue::after {
+    background-color: #2660ad;
+    color: #fffcfc;
+}
+.square-button-blue:hover {
+    background-color: #2660ad;
+    color: #fffcfc;
+}
+.square-button-blue:hover::after {
+    background-color: #fffcfc;
+    color: #2660ad;
+}
+.square-button-yellow {
+    border: 1.5px solid #f8b945;
+    color: #f8b945;
+}
+.square-button-yellow::after {
+    background-color: #f8b945;
+    color: #fffcfc;
+}
+.square-button-yellow:hover {
+    background-color: #f8b945;
+    color: #fffcfc;
+}
+.square-button-yellow:hover::after {
+    background-color: #fffcfc;
+    color: #f8b945;
+}
+.square-button-black {
+    border: 1.5px solid #1c1b1b;
+    color: #1c1b1b;
+}
+.square-button-black::after {
+    background-color: #1c1b1b;
+    color: #fffcfc;
+}
+.square-button-black:hover {
+    background-color: #1c1b1b;
+    color: #fffcfc;
+}
+.square-button-black:hover::after {
+    background-color: #fffcfc;
+    color: #1c1b1b;
+}
+.square-button-white {
+    border: 1.5px solid #fffcfc;
+    color: #fffcfc;
+}
+.square-button-white::after {
+    background-color: #fffcfc;
+    color: #1c1b1b;
+}
+.square-button-white:hover {
+    background-color: #fffcfc;
+    color: #1c1b1b;
+}
+.square-button-white:hover::after {
+    background-color: #1c1b1b;
+    color: #fffcfc;
 }
 
 /* ここからベイマックス */
