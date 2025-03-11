@@ -3,12 +3,9 @@
     padding: 0;
     overflow-x: hidden;
 }
-body{
-    height: auto;
-}
 /* ここからコンテンツ */
 .section-title {
-    margin: 75px 75px 20px 100px;
+    margin: 75px 75px 15px 100px;
   }
 .section-title h1 {
     font-size: 30px;
@@ -18,12 +15,12 @@ body{
     font-size: 20px;
     margin: 0 100px;
 }
-.all-contents a{
+.recruit{
     text-decoration: none;
     color: #e72241;
     font-weight: bold;
 }
-.all-contents span{
+.link{
     color: #e72241;
     font-weight: bold;
 }
@@ -36,19 +33,8 @@ body{
     position: absolute;
     bottom: 0;
     right: 5%;
-    color: #e72241;
-    border: 1.5px solid #e72241;
     width: 240px;
     height: 60px;
-}
-.square-button::after{
-    background-color: #e72241;
-}
-.square-button:hover{
-    background-color: #e72241;
-}
-.square-button:hover::after{
-    color: #e72241;
 }
 /* ここまでコンテンツ */
 footer {
