@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+body{
+    height: auto;
+}
+/* ここからコンテンツ */
+.section-title {
+    margin: 75px 75px 30px 100px;
+  }
+.section-title h1 {
+    font-size: 30px;
+    font-weight: bold;
+}
+@media (max-width:500px){
+    .section-title h1{
+        font-size: 18px;
+    }
+}
+.all-contents p{
+    font-size: 20px;
+    margin: 0 100px;
+}
+.square-flex{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+.square-button{
+    position: absolute;
+    bottom: 0;
+    right: 5%;
+    color: #e72241;
+    border: 1.5px solid #e72241;
+    width: 240px;
+    height: 60px;
+}
+.square-button::after{
+    background-color: #e72241;
+}
+.square-button:hover{
+    background-color: #e72241;
+}
+.square-button:hover::after{
+    color: #e72241;
+}
+/* ここまでコンテンツ */
+footer {
+    margin-top: 75px;
+}
