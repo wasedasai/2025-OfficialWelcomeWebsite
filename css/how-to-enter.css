@@ -14,14 +14,18 @@ body{
     font-size: 30px;
     font-weight: bold;
 }
-@media (max-width:500px){
-    .section-title h1{
-        font-size: 18px;
-    }
-}
 .all-contents p{
     font-size: 20px;
     margin: 0 100px;
+}
+.all-contents a{
+    text-decoration: none;
+    color: #e72241;
+    font-weight: bold;
+}
+span{
+    color: #e72241;
+    font-weight: bold;
 }
 .square-flex{
     position: relative;
@@ -49,4 +53,32 @@ body{
 /* ここまでコンテンツ */
 footer {
     margin-top: 75px;
+}
+@media (max-width:820px){
+    .section-title{
+        margin: 50px 30px 15px 30px;
+    }
+    .section-title h1{
+        font-size: 18px;
+    }
+    .all-contents p{
+        font-size: 14px;
+        margin: 0 30px;
+    }
+    .square-flex{
+        display: flex;
+        flex-direction: column;
+    }
+    .square-button{
+        position: relative;
+        margin: 20px 0 0 0;
+        width: 200px;
+        height: 55px;
+        font-size: 13px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    footer{
+        margin-top: 50px;
+    }
 }
