@@ -238,6 +238,7 @@ body{
     width: 200px; /* 文字の長さに応じて可変 */
     min-width: 150px; /* 最小幅を設定して極端に小さくならないように */
     padding-right: 50px;
+    font-family: "Noto Sans JP", sans-serif;
 }
 
 .square-button .spacer {
