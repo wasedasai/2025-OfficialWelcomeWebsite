@@ -478,8 +478,8 @@ footer {
     left: 12%;
 }
 .footer_icons_photo {
-    width: 6vh;
-    height: 6vh;
+    width: 48px;
+    height: 48px;
     margin-right: 3vh;
 }
 .footer_icons {
@@ -487,9 +487,11 @@ footer {
     height: 7vh;
     left: 12%;
     top: 425px;
-    z-index: 1111;
+    z-index: 1;
     position: absolute;
     line-height: 3;
+    display: flex;
+    flex-wrap: nowrap;
 }
 .footer_contents_line1 {
     position: absolute;
@@ -536,7 +538,81 @@ footer {
     width: 100%;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (min-width: 800px) and (max-width: 1023px) {
+    footer {
+        height: 100vh;
+        width: 100vw;
+        z-index: 1;
+    }
+    .yajirushi_photo {
+        width: 66px;
+        height: 66px;
+        left: calc(50% - 33px);
+    }
+    .shinkan_elements {
+        height: 82vh;
+        top: 130px;
+    }
+    .shinkan_wasedasai,
+    .shinkan_wasedasai_staff {
+        width: 100%;
+        text-align: center;
+        left: 0;
+    }
+    .shinkan_wasedasai {
+        top: 140px;
+    }
+    .shinkan_wasedasai_staff {
+        top: 240px;
+    }
+    .footer_icons {
+        width:300px;
+        top: 70%;
+        left: calc(50% - 125px + 3vw);
+    }
+    .footer_icons_photo {
+    }
+    .footer_contents {
+        display: flex;
+        flex-direction: column;
+        line-height: 0.5vh;
+    }
+    .footer_contents_line1 {
+        left: 0;
+        width: 100%;
+        text-align: center;
+        line-height: 4vh;
+        top: 270px;
+    }
+    .footer_contents_line2 {
+        top: 450px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        line-height: 4vh;
+    }
+    .shinkan_elements {
+    }
+    .footer_hover {
+        font-weight: normal;
+    }
+    .footer_square-button {
+        margin-top: 200px;
+        left: calc(50% - 125px ) !important;
+        font-size: 13px !important;
+    }
+    .footer_square-button::after {
+        font-size: 10px;
+    }
+    .footer_text {
+        font-size: 13px;
+        height: 5px;
+        padding: 10px;
+        overflow: hidden;
+    }
+  }
+
+@media screen and (max-width: 799px) {
     footer {
         height: 100vh;
         width: 100vw;
