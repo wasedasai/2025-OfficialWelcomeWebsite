@@ -36,6 +36,14 @@
     width: 240px;
     height: 60px;
 }
+.br-sp {
+    display: none;
+}
+@media (max-width: 450px) {
+    .br-sp {
+        display: block;
+    }
+}
 /* ここまでコンテンツ */
 footer {
     margin-top: 75px;
