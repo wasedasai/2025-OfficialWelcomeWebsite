@@ -8,7 +8,7 @@
        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
        <link href="https://unpkg.com/sanitize.css" rel="stylesheet"/>
        <link rel="stylesheet" href="../css/components.css">
-       <!-- <link rel="stylesheet" href="../css/comingsoon.css"> 変えてね-->
+       <link rel="stylesheet" href="../css/faq-contact.css">
        <link rel="canocical" href="https://wasedasai.github.io/2025-OfficialWelcomeWebsite/">
        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
         <meta name="description" content="早稲田祭運営スタッフ2025年度新歓用公式サイトです。運スタの新歓イベントや、運スタに関する情報を掲載しています。"> <!---変えてね--->
@@ -24,6 +24,299 @@
         <meta name="google-site-verification" content="PREUoAvDPGm4IBv_BUsNCwKUSFRjLSaLSSNL8bfFCAE" />
    </head>
    <body>
-    
+        <!-- ここからヘッダー -->
+    <header>
+        <div class="header">
+            <div class="header-logo">
+                <a href="../index.html"><img src="../images/headerlogo.png" alt=""></a>
+            </div>
+            <div class="saikun-menu">
+                <img src="../images/header-saikun.png" alt="" class="menu-img">
+                <div class="menu-text">menu</div>
+            </div>
+        </div>
+        <div class="fullscreen-menu">
+            <div class="menu-open-container">
+                <div class="menu-open-logo"><img src="../images/menu-open-logo.png" alt=""></div>
+                <div class="menu-open-texts">
+                    <a href="../index.html"><p>TOP</p></a>
+                    <a href=""><p>早稲田祭・運営スタッフとは</p></a>
+                    <a href="../pages/shinkan-event.html"><p>新歓イベント</p></a>
+                    <a href="../pages/how-to-enter.html"><p>入会方法</p></a>
+                    <a href="../pages/unsuta-one-yaer.html"><p>運スタの1年</p></a>
+                    <a href="../pages/unusta-real.html"><p>運スタのリアル</p></a>
+                    <a href="../pages/kyoku-introduce.html"><p>局紹介</p></a>
+                    <a href="../pages/wasedasaikun.html"><p>わせだサイくん</p></a>
+                    <a href="../pages/faq-contact.html"><p>よくある質問・お問い合わせ</p></a>
+                </div>
+                <a href="../pages/how-to-enter.html" class="menu-open-button">入会方法はこちら</a>
+                <div class="menu-sns-icon">
+                    <div class="menu-Instagram">
+                        <a href=""><img src="../images/menu-Instagram.png" alt=""></a>
+                    </div>
+                    <div class="menu-x">
+                        <a href=""><img src="../images/menu-X.png" alt=""></a>
+                    </div>
+                    <div class="menu-YouTube">
+                        <a href=""><img src="../images/menu-YouTube.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+    const menu = document.querySelector(".saikun-menu");
+    const menuImg = document.querySelector(".menu-img");
+    const menuText = document.querySelector(".menu-text");
+    const fullscreenMenu = document.querySelector(".fullscreen-menu");
+    const menuItems = document.querySelectorAll(".menu-open-texts p");
+
+    let isOpen = false;
+
+    menu.addEventListener("click", function () {
+        isOpen = !isOpen;
+
+        if (isOpen) {
+            menuImg.src = "../images/close.png";
+            menuText.textContent = "close";
+            fullscreenMenu.classList.add("active");
+
+            
+            menuItems.forEach(item => {
+                item.style.opacity = "0";
+                item.style.transform = "translateY(30px)";
+            });
+
+            menuItems.forEach((item, index) => {
+                setTimeout(() => {
+                    item.style.opacity = "1";
+                    item.style.transform = "translateY(0)";
+                    item.style.transition = "opacity 0.6s ease-in-out, transform 0.6s ease-in-out";
+                }, index * 100); 
+            });
+
+        } else {
+            menuImg.src = "../images/header-saikun.png"; 
+            menuText.textContent = "menu";
+            fullscreenMenu.classList.remove("active"); 
+            menuItems.forEach(item => {
+                item.style.opacity = "0";
+                item.style.transform = "translateY(30px)";
+            });
+            }
+         });
+        });
+        </script>
+    </header>
+    <!-- ここまでヘッダー -->
+    <!-- ここからヒーロー -->
+    <div class="hero"></div>
+    <!-- ここまでヒーロー -->
+    <!-- ここからコンテンツ -->
+    <div class="QandA">
+        <div class="section-title">
+            <h1>&emsp;よくある質問&emsp;</h1>
+            <div class="section-underline"></div>
+        </div>
+        <div class="faq">
+            <!-- １項目分ここから -->
+            <div class="faq-item">
+                <a class="faq-question">
+                    <div class="question-items">
+                        <div class="q-text">Q.</div><p class="q-sentence">どうすれば入会できますか？</p>
+                    </div>
+                  <span class="faq-toggle">+</span>
+                </a>
+                <div class="faq-answer">
+                    <div class="answer-items">
+                        <div class="a-text">A.</div><p class="a-sentence">募集期間内に、入会申し込みフォームに必要事項を記入しご応募ください！
+                            詳細はコチラをご覧ください。
+                            </p>
+                    </div>
+                 </div>
+            </div>
+            <!-- １項目分ここまで -->
+            <!-- １項目分ここから -->
+            <div class="faq-item">
+                <a class="faq-question">
+                    <div class="question-items">
+                        <div class="q-text">Q.</div><p class="q-sentence">活動日はいつですか？</p>
+                    </div>
+                  <span class="faq-toggle">+</span>
+                </a>
+                <div class="faq-answer">
+                    <div class="answer-items">
+                        <div class="a-text">A.</div><p class="a-sentence">原則、毎週月曜日と木曜日の6限から活動しています！ （一部、水曜日や金曜日に活動する局もあります。）</p>
+                    </div>
+                 </div>
+            </div>
+            <!-- １項目分ここまで -->
+            <!-- １項目分ここから -->
+            <div class="faq-item">
+                <a class="faq-question">
+                    <div class="question-items">
+                        <div class="q-text">Q.</div><p class="q-sentence">例年、入会者数はどのくらいですか？</p>
+                    </div>
+                  <span class="faq-toggle">+</span>
+                </a>
+                <div class="faq-answer">
+                    <div class="answer-items">
+                        <div class="a-text">A.</div><p class="a-sentence">例年、新たに約300人が入会しています！ なお、入会に際しては「Q. どうすれば入会できますか？」をご参照ください。</p>
+                    </div>
+                 </div>
+            </div>
+            <!-- １項目分ここまで -->
+            <!-- １項目分ここから -->
+            <div class="faq-item">
+                <a class="faq-question">
+                    <div class="question-items">
+                        <div class="q-text">Q.</div><p class="q-sentence">入会費などはありますか？</p>
+                    </div>
+                  <span class="faq-toggle">+</span>
+                </a>
+                <div class="faq-answer">
+                    <div class="answer-items">
+                        <div class="a-text">A.</div><p class="a-sentence">運営スタッフへの入会に際しての費用は発生しませんが別途、運営費というものがあります。例年10,000円前後で、昨年度は10,000円でした。また、はっぴの購入やレクへの参加などにも費用が発生します。</p>
+                    </div>
+                 </div>
+            </div>
+            <!-- １項目分ここまで -->
+            <!-- １項目分ここから -->
+            <div class="faq-item">
+                <a class="faq-question">
+                    <div class="question-items">
+                        <div class="q-text">Q.</div><p class="q-sentence">どのくらい大変ですか？</p>
+                    </div>
+                  <span class="faq-toggle">+</span>
+                </a>
+                <div class="faq-answer">
+                    <div class="answer-items">
+                        <div class="a-text">A.</div><p class="a-sentence">所属する局やチームによって時期やその程度は異なりますが、自分のペースに合わせながら活動することができます！ 大変なときに支え合えることも運スタの魅力の一つ！ 現役の運営スタッフのリアルな声はコチラをご覧ください。。</p>
+                    </div>
+                 </div>
+            </div>
+            <!-- １項目分ここまで -->
+            <!-- １項目分ここから -->
+            <div class="faq-item">
+                <a class="faq-question">
+                    <div class="question-items">
+                        <div class="q-text">Q.</div><p class="q-sentence">早稲田祭の当日はどんな仕事をしますか？</p>
+                    </div>
+                  <span class="faq-toggle">+</span>
+                </a>
+                <div class="faq-answer">
+                    <div class="answer-items">
+                        <div class="a-text">A.</div><p class="a-sentence">当日は会場の警備や来場者のご案内、企画の運営、備品の貸し出しなど、さまざまなお仕事をします！ 当日は忙しく大変ですが、運営スタッフの目線から早稲田祭を直に感じることができます！</p>
+                    </div>
+                 </div>
+            </div>
+            <!-- １項目分ここまで -->
+            <!-- １項目分ここから -->
+            <div class="faq-item">
+                <a class="faq-question">
+                    <div class="question-items">
+                        <div class="q-text">Q.</div><p class="q-sentence">早稲田祭に行ったことがなくても、入会できますか？</p>
+                    </div>
+                  <span class="faq-toggle">+</span>
+                </a>
+                <div class="faq-answer">
+                    <div class="answer-items">
+                        <div class="a-text">A.</div><p class="a-sentence">もちろん可能です！ 早稲田祭への来場経験がないことによって選考で不利になることはございません。きちんと先輩が一から教えてくれるので、心配無用です！</p>
+                    </div>
+                 </div>
+            </div>
+            <!-- １項目分ここまで -->
+            <!-- １項目分ここから -->
+            <div class="faq-item">
+                <a class="faq-question">
+                    <div class="question-items">
+                        <div class="q-text">Q.</div><p class="q-sentence">西早稲田キャンパスや所沢キャンパスに通っていても入会できますか？</p>
+                    </div>
+                  <span class="faq-toggle">+</span>
+                </a>
+                <div class="faq-answer">
+                    <div class="answer-items">
+                        <div class="a-text">A.</div><p class="a-sentence">もちろん可能です！ 運営スタッフには、理工学部や人間科学部に所属する学生もいます。運営スタッフが所属する学部の割合はコチラをご覧ください。</p>
+                    </div>
+                 </div>
+            </div>
+            <!-- １項目分ここまで -->
+            <!-- １項目分ここから -->
+            <div class="faq-item">
+                <a class="faq-question">
+                    <div class="question-items">
+                        <div class="q-text">Q.</div><p class="q-sentence">留学希望があっても入会できますか？</p>
+                    </div>
+                  <span class="faq-toggle">+</span>
+                </a>
+                <div class="faq-answer">
+                    <div class="answer-items">
+                        <div class="a-text">A.</div><p class="a-sentence">もちろん可能です！ 国際教養学部に所属する学生も、長期休暇期間に短期留学に行く学生もいます！</p>
+                    </div>
+                 </div>
+            </div>
+            <!-- １項目分ここまで -->
+            <!-- １項目分ここから -->
+            <div class="faq-item">
+                <a class="faq-question">
+                    <div class="question-items">
+                        <div class="q-text">Q.</div><p class="q-sentence">兼サーを考えているのですが、運営スタッフの活動と両立できますか？</p>
+                    </div>
+                  <span class="faq-toggle">+</span>
+                </a>
+                <div class="faq-answer">
+                    <div class="answer-items">
+                        <div class="a-text">A.</div><p class="a-sentence">兼サー先にもよりますが、両立している運営スタッフはいます！ 兼サーの割合はコチラをご覧ください。</p>
+                    </div>
+                 </div>
+            </div>
+            <!-- １項目分ここまで -->
+            <!-- １項目分ここから -->
+            <div class="faq-item">
+                <a class="faq-question">
+                    <div class="question-items">
+                        <div class="q-text">Q.</div><p class="q-sentence">2年生や浪人経験者でも入会できますか？</p>
+                    </div>
+                  <span class="faq-toggle">+</span>
+                </a>
+                <div class="faq-answer">
+                    <div class="answer-items">
+                        <div class="a-text">A.</div><p class="a-sentence">できます！ 運営スタッフは、早稲田大学所属の1年生と2年生のみが入会できます。</p>
+                    </div>
+                 </div>
+            </div>
+            <!-- １項目分ここまで -->
+            <!-- １項目分ここから -->
+            <div class="faq-item">
+                <a class="faq-question">
+                    <div class="question-items">
+                        <div class="q-text">Q.</div><p class="q-sentence">インカレですか？</p>
+                    </div>
+                  <span class="faq-toggle">+</span>
+                </a>
+                <div class="faq-answer">
+                    <div class="answer-items">
+                        <div class="a-text">A.</div><p class="a-sentence">いいえ、違います。運営スタッフに入会できるのは早大生のみです。</p>
+                    </div>
+                 </div>
+            </div>
+            <!-- １項目分ここまで -->
+        </div>
+        <script>
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+              const answer = question.nextElementSibling;
+              const toggle = question.querySelector('.faq-toggle');
+              if (answer.style.display === 'block') {
+                answer.style.display = 'none';
+                toggle.textContent = '+';
+              } else {
+                answer.style.display = 'block';
+                toggle.textContent = '−';
+              }
+            });
+          });
+        </script>
+    </div>
    </body>
 </html>
