@@ -493,6 +493,20 @@ body{
 }
 /* ここまでブロックタイトル */
 
+/* ここからコンテイナー */
+.container{
+    width: 30vw;
+    height: 30vw;
+    border: 3px solid #E72241;
+    border-radius: 40px;
+}
+.container p{
+    font-size: 20px;
+    text-align: center;
+    margin: 20px;
+    color: #E72241;
+}
+/* ここまでコンテイナー */
 
 /* ここからフッター */
 * {
