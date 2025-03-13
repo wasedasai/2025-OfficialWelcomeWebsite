@@ -39,9 +39,10 @@
     color: #58b1e4;
     font-weight: bold;
     margin-right: 1vw;
+    padding-right: 0.1vw;
 }
 .q-sentence{
-    margin-top: 0.5vw;
+    margin-top: 0.6vw;
     width: 60vw;
 }
 .faq-toggle {
@@ -54,6 +55,7 @@
     color: #e72241;
     font-weight: bold;
     margin-right: 1vw;
+    padding-right: 0.1vw;
 }
 .a-sentence{
     margin-top: 0.5vw;
