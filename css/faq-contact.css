@@ -7,6 +7,12 @@
     transform: translateX(-50%);
     margin: 5% 0;
 }
+.section-title h1{
+    font-size: 2.5vw;
+}
+.section-underline {
+    height: 8px;
+}
 .faq {
     margin: 0 auto;
     width: 60vw;
@@ -19,7 +25,6 @@
 .faq-question {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     font-size: 1.2vw;
     color: #1c1b1b;
     font-weight: bold;
@@ -27,7 +32,7 @@
 }
 .question-items{
     display: flex;
-    align-items: center;
+    align-items: start;
 }
 .q-text{
     font-size: 1.8vw;
@@ -37,6 +42,7 @@
 }
 .q-sentence{
     margin-top: 0.5vw;
+    width: 60vw;
 }
 .faq-toggle {
     color: #e72241;
@@ -72,4 +78,62 @@
 
 .faq-text{
     font-size: 1rem;
+}
+.contact-text{
+    font-size: 1.2vw;
+    text-align: center;
+}
+.contact-text span{
+    color: #e72241;
+    font-weight: bold;
+}
+footer{
+    margin-top: 5vw;
+}
+
+@media (max-width: 767px){
+.section-title{
+    margin: 10% 0;
+}
+.faq{
+    width: 80vw;
+}
+
+.faq-question{
+    font-size: 14px;
+}
+
+.faq-toggle{
+    font-size: 18px;
+}
+
+.faq-answer{
+    font-size: 14px;
+}
+
+.a-text{
+    font-size: 1rem;
+}
+.q-sentence{
+    width: 70vw;
+}
+.q-text{
+    font-size: 1rem;
+}
+.section-title h1{
+    font-size: 1.5rem !important;
+}
+.section-underline {
+    height: 5px;
+  }
+.contact-text{
+    position: relative;
+    width: 80vw;
+    font-size: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+footer{
+    margin-top: 10vw;
+}
 }
