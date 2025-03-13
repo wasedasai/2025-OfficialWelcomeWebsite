@@ -6,13 +6,15 @@
     left: 50%;
     transform: translateX(-50%);
     margin: 5% 0;
+
 }
 .section-title h1{
     font-size: 2.5vw;
+    margin-bottom: 0.3vw;
 }
-.section-underline {
+/* .section-underline {
     height: 8px;
-}
+} */
 .faq {
     margin: 0 auto;
     width: 60vw;
@@ -89,6 +91,9 @@
     color: #e72241;
     font-weight: bold;
 }
+.br-sp{
+    display: none;
+}
 footer{
     margin-top: 5vw;
 }
@@ -138,4 +143,10 @@ footer{
 footer{
     margin-top: 10vw;
 }
+}
+
+@media (max-width: 500px){
+    .br-sp{
+        display: block;
+    }
 }
