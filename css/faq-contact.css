@@ -6,13 +6,15 @@
     left: 50%;
     transform: translateX(-50%);
     margin: 5% 0;
+
 }
 .section-title h1{
     font-size: 2.5vw;
+    margin-bottom: 0.3vw;
 }
-.section-underline {
+/* .section-underline {
     height: 8px;
-}
+} */
 .faq {
     margin: 0 auto;
     width: 60vw;
