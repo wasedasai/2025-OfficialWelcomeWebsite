@@ -279,3 +279,81 @@ body{
     color: #2c6dbc;
     transform: scale(1);
 }
+
+/* ここからセクションタイトル */
+.section-title {
+    display: inline-block; 
+  }
+  
+  .section-title h1 {
+    font-size: 48px;
+    font-weight: bold;
+    color: #1c1b1b;
+  }
+  
+  .section-underline {
+    width: 100%;
+    height: 10px;
+    background-color: #E72241;
+    border-radius: 5px;
+  }
+
+@media (max-width:400px){
+    .section-title h1{
+        font-size: 18px;
+    }
+    .section-underline{
+        height: 3.5px;
+        border-radius: 1.5px;
+    }
+}
+
+/* ここまでセクションタイトル */
+
+/* ここからブロックタイトル */
+.blockTitleContainer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.blockTitleBar {
+    width: 9px; 
+    height: 30px; 
+    border-radius: 5px; 
+}
+
+.blockRed {
+    background-color: #e72241;
+}
+
+.blockBlue {
+    background-color: #58b1e4;
+}
+
+.blockYellow {
+    background-color: #f8b945;
+}
+
+.blockTitle {
+    font-size: 30px;
+}
+
+@media (max-width:400px){
+    .blockTitleContainer{
+        gap: 5px;
+    }
+
+    .blockTitleBar{
+        width: 6px;
+        height: 20px;
+        border-radius: 3px;
+    }
+
+    .blockTitle{
+        font-size: 18px;
+    }
+}
+/* ここまでブロックタイトル */
+
+
