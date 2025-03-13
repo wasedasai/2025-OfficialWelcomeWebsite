@@ -91,6 +91,9 @@
     color: #e72241;
     font-weight: bold;
 }
+.br-sp{
+    display: none;
+}
 footer{
     margin-top: 5vw;
 }
@@ -140,4 +143,10 @@ footer{
 footer{
     margin-top: 10vw;
 }
+}
+
+@media (max-width: 500px){
+    .br-sp{
+        display: block;
+    }
 }
