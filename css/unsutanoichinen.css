@@ -1,0 +1,168 @@
+/* タイトル系コンポーネント */
+.unsuta1-title {
+  display: flex;
+  justify-content: center; /* 水平方向の中央揃え */
+  align-items: center;
+  margin-top: 5vh;
+}
+.event-title {
+  justify-content: center; /* 水平方向の中央揃え */
+  align-items: center;
+  margin-top: 3vh;
+}
+/* heroコンポーネント */
+.hero {
+  position: relative;
+}
+/* boxコンポーネント */
+.blue-box-event {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 500px;
+  height: 840px;
+  border: 3px solid #58b1e4;
+  border-radius: 40px;
+}
+.red-box-event {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 500px;
+  height: 840px;
+  border: 3px solid #e72241;
+  border-radius: 40px;
+}
+.box-pj {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 500px;
+  height: 840px;
+  border: 3px dashed #e72241;
+  border-radius: 40px;
+}
+.wasesai-box {
+  position: relative;
+  width: 1035px;
+  height: 640px;
+  border: 3px solid #e72241;
+  border-radius: 40px;
+}
+/* boxをまとめてるdiv */
+.unsuta1-boxes {
+  display: flex;
+  flex-direction: column;
+  padding: 0 4.16vw; /* 画面端にも60pxの余白 */
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.box-line {
+  margin-top: 90px;
+  display: grid;
+  grid-auto-flow: column; /* 横並び */
+  gap: 4.16vw; /* ボックスの間隔を60px */
+}
+
+.oneday-boxline {
+  margin: 3% 8%;
+  display: flex;
+  gap: 5vw;
+}
+.oneday-box {
+  display: flex;
+  flex-direction: column; /* 子要素を縦に並べる */
+  align-items: center; /* 子要素を中央揃え */
+  width: 630px;
+  height: 1035px;
+  border: 3px solid #e72241;
+  border-radius: 40px;
+}
+/* 矢印コンポーネント*/
+.month-img {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.month-sentence {
+  color: #fffcfc;
+  font-size: 2vw;
+  position: absolute;
+  margin-top: 60%;
+}
+/* 写真サイズ指定 */
+.img-inbox {
+  width: 70%;
+  margin-top: 8%;
+}
+.wasesai-img {
+  display: flex;
+  gap: 2vw;
+  margin-left: 2vw;
+  margin-right: 2vw;
+  margin-top: 1.7vw;
+}
+/* テキストボックス指定 */
+.event-discription {
+  margin: 10% 8%; /* 上下に余白を追加 */
+  text-align: center; /* テキストを中央揃え */
+  width: 80%;
+  font-size: 1.4vw;
+  line-height: 2.9vw;
+}
+.event-discription-wasesai {
+  margin: 5% 8%; /* 上下に余白を追加 */
+  text-align: center; /* テキストを中央揃え */
+  width: 80%;
+  font-size: 1.4vw;
+  line-height: 2.9vw;
+}
+.period-of-event {
+  color: #fffcfc;
+  font-size: 1.2vw;
+}
+.day-discription {
+  margin-top: 4vh;
+  font-size: 1.4vw;
+  text-align: center;
+}
+/* boxの中の小さい四角枠 */
+.smlal-box-blue {
+  display: flex;
+  justify-content: center; /* 水平方向の中央揃え */
+  align-items: center;
+  width: 60%;
+  height: 7%;
+  background-color: #58b1e4;
+  border-radius: 20px;
+  position: absolute; /* 絶対位置に設定 */
+  bottom: 10%;
+}
+.smlal-box-red {
+  display: flex;
+  justify-content: center; /* 水平方向の中央揃え */
+  align-items: center;
+  width: 60%;
+  height: 7%;
+  background-color: #e72241;
+  border-radius: 20px;
+  position: absolute; /* 絶対位置に設定 */
+  bottom: 10%;
+  left: 20%;
+}
+.smlal-box-red-wasesai {
+  display: flex;
+  justify-content: center; /* 水平方向の中央揃え */
+  align-items: center;
+  width: 60%;
+  height: 7%;
+  background-color: #e72241;
+  border-radius: 20px;
+  position: absolute; /* 絶対位置に設定 */
+  bottom: 7%;
+  left: 20%;
+}
