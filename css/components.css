@@ -278,13 +278,6 @@ body{
     transform: scale(1);
 }
 
-<<<<<<< HEAD
-/* ここからセクションタイトル */
-.section-title {
-    display: inline-block; 
-  }
-  
-=======
 .square-button-red {
     border: 1.5px solid #e72241;
     color: #e72241;
@@ -418,19 +411,13 @@ body{
     display: inline-block;
   }
  
->>>>>>> 55af066c947a7040d71de86eb0d2da7e1f1f46dd
   .section-title h1 {
     font-size: 48px;
     font-weight: bold;
     color: #1c1b1b;
-<<<<<<< HEAD
-  }
-  
-=======
-    margin-bottom: -10px;
+    margin-bottom: -6px;
   }
  
->>>>>>> 55af066c947a7040d71de86eb0d2da7e1f1f46dd
   .section-underline {
     width: 100%;
     height: 10px;
@@ -438,17 +425,11 @@ body{
     border-radius: 5px;
   }
 
-<<<<<<< HEAD
-@media (max-width:400px){
-    .section-title h1{
-        font-size: 18px;
-=======
 
 @media (max-width:500px){
     .section-title h1{
         font-size: 18px;
         margin-bottom: -3px;
->>>>>>> 55af066c947a7040d71de86eb0d2da7e1f1f46dd
     }
     .section-underline{
         height: 3.5px;
@@ -456,15 +437,10 @@ body{
     }
 }
 
-<<<<<<< HEAD
-/* ここまでセクションタイトル */
-
-=======
 
 /* ここまでセクションタイトル */
 
 
->>>>>>> 55af066c947a7040d71de86eb0d2da7e1f1f46dd
 /* ここからブロックタイトル */
 .blockTitleContainer {
     display: flex;
@@ -472,14 +448,6 @@ body{
     gap: 10px;
 }
 
-<<<<<<< HEAD
-.blockTitleBar {
-    width: 9px; 
-    height: 30px; 
-    border-radius: 5px; 
-}
-
-=======
 
 .blockTitleBar {
     width: 9px;
@@ -492,68 +460,40 @@ body{
 }
 
 
->>>>>>> 55af066c947a7040d71de86eb0d2da7e1f1f46dd
 .blockRed {
     background-color: #e72241;
 }
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 55af066c947a7040d71de86eb0d2da7e1f1f46dd
 .blockBlue {
     background-color: #58b1e4;
 }
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 55af066c947a7040d71de86eb0d2da7e1f1f46dd
 .blockYellow {
     background-color: #f8b945;
 }
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 55af066c947a7040d71de86eb0d2da7e1f1f46dd
 .blockTitle {
     font-size: 30px;
 }
 
-<<<<<<< HEAD
-@media (max-width:400px){
-=======
 
 @media (max-width:500px){
->>>>>>> 55af066c947a7040d71de86eb0d2da7e1f1f46dd
     .blockTitleContainer{
         gap: 5px;
     }
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 55af066c947a7040d71de86eb0d2da7e1f1f46dd
     .blockTitleBar{
         width: 6px;
         height: 20px;
         border-radius: 3px;
     }
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 55af066c947a7040d71de86eb0d2da7e1f1f46dd
     .blockTitle{
         font-size: 18px;
     }
 }
 /* ここまでブロックタイトル */
 
-<<<<<<< HEAD
-
-=======
 /* ここからコンテイナー */
 .container{
     width: 300px;
@@ -896,4 +836,3 @@ footer {
     width: 289px;
 }
 /* ここまでフッター */
->>>>>>> 55af066c947a7040d71de86eb0d2da7e1f1f46dd
