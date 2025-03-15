@@ -205,11 +205,87 @@
     background-color: #e72241;
 }
 
+
 .kyokuButton{
     background-color: #e72241;
-    font-size: 30px;
-    border-radius: 60px;    
-    width: 210px;
-    height: 60px;
+    font-size: 2vw;
+    font-weight: bold;
+    border-radius: 500px;
+    padding: 0.85vw 1.73vw;
     color: #fffcfc;
+    text-align: center;
+    width: 14.5vw;
+    opacity: 0.5;
+    cursor: pointer;
 }
+
+.kyokuButtonContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+}
+
+.kyokuButtonUpper{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1.4vw;
+    gap: 25px;
+}
+
+.kyokuButtonLower{
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+}
+
+
+.kyokuUnderBoxContainer{
+    border-radius: 100px;
+    border: 3px solid #e72241;
+    width: 90%;
+    margin-top: 5%;
+    margin: 5% auto;
+    padding: 3%;
+}
+
+.kyokuBoxLeft{
+    width: 45%;
+}
+
+.kyokuBoxRight{
+    width: 45%;
+}
+
+.kyokuBoxLine{
+    content: "";
+    color: #1b1c1b;
+}
+
+.kyokuBoxUnder{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.kyokuBoxLeft img{
+    width: 325px;
+    height: auto;
+}
+
+.organizationChart{
+    text-align: center;
+}
+
+/* .section-title-kyoku{
+    text-align: center;
+    display: block;
+    width: 30%;
+    margin: auto;
+    white-space: nowrap;
+    font-size: 3.33vw;
+} */
+
+
+
