@@ -4,7 +4,6 @@
     overflow-x: hidden;
 }
 body{
-    height: 300vh;
     background-color: #fffcfc;
 }
 /* ここからheader */
@@ -62,8 +61,8 @@ body{
     overflow: hidden;
 }
 .menu-open-logo img{
-    width: 200px;
-    margin: 40px 2% 0 2%;
+    width: 230px;
+    margin: 26px 2% 0 2%;
 }
 .menu-open-texts{
     text-align: center;
@@ -226,12 +225,10 @@ body{
     align-items: center;
     justify-content: center;
     padding: 10px 20px;
-    border: 1.5px solid #2c6dbc;
+    border: 1.5px solid #2660ad;
     border-radius: 30px;
     font-size: 15px;
-    font-family: 'Notosans JP', sans-serif;
-    /* font-weight: bold; */
-    color: #2c6dbc;
+    color: #2660ad;
     text-decoration: none;
     transition: all 0.3s ease;
     position: relative;
@@ -241,6 +238,7 @@ body{
     width: 200px; /* 文字の長さに応じて可変 */
     min-width: 150px; /* 最小幅を設定して極端に小さくならないように */
     padding-right: 50px;
+    font-family: "Noto Sans JP", sans-serif;
 }
 
 .square-button .spacer {
@@ -260,7 +258,7 @@ body{
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    background-color: #2c6dbc;
+    background-color: #2660ad;
     color: #fffcfc;
     transition: all 0.3s ease;
     position: absolute;
@@ -270,27 +268,169 @@ body{
 
 /* ホバー時の変更 */
 .square-button:hover {
-    background-color: #2c6dbc;
+    background-color: #2660ad;
     color: #fffcfc;
 }
 
 .square-button:hover::after {
     background-color: #fffcfc;
-    color: #2c6dbc;
+    color: #2660ad;
     transform: scale(1);
 }
 
+<<<<<<< HEAD
 /* ここからセクションタイトル */
 .section-title {
     display: inline-block; 
   }
   
+=======
+.square-button-red {
+    border: 1.5px solid #e72241;
+    color: #e72241;
+}
+.square-button-red::after {
+    background-color: #e72241;
+    color: #fffcfc;
+}
+.square-button-red:hover {
+    background-color: #e72241;
+    color: #fffcfc;
+}
+.square-button-red:hover::after {
+    background-color: #fffcfc;
+    color: #e72241;
+}
+.square-button-blue {
+    border: 1.5px solid #2660ad;
+    color: #2660ad;
+}
+.square-button-blue::after {
+    background-color: #2660ad;
+    color: #fffcfc;
+}
+.square-button-blue:hover {
+    background-color: #2660ad;
+    color: #fffcfc;
+}
+.square-button-blue:hover::after {
+    background-color: #fffcfc;
+    color: #2660ad;
+}
+.square-button-yellow {
+    border: 1.5px solid #f8b945;
+    color: #f8b945;
+}
+.square-button-yellow::after {
+    background-color: #f8b945;
+    color: #fffcfc;
+}
+.square-button-yellow:hover {
+    background-color: #f8b945;
+    color: #fffcfc;
+}
+.square-button-yellow:hover::after {
+    background-color: #fffcfc;
+    color: #f8b945;
+}
+.square-button-black {
+    border: 1.5px solid #1c1b1b;
+    color: #1c1b1b;
+}
+.square-button-black::after {
+    background-color: #1c1b1b;
+    color: #fffcfc;
+}
+.square-button-black:hover {
+    background-color: #1c1b1b;
+    color: #fffcfc;
+}
+.square-button-black:hover::after {
+    background-color: #fffcfc;
+    color: #1c1b1b;
+}
+.square-button-white {
+    border: 1.5px solid #fffcfc;
+    color: #fffcfc;
+}
+.square-button-white::after {
+    background-color: #fffcfc;
+    color: #1c1b1b;
+}
+.square-button-white:hover {
+    background-color: #fffcfc;
+    color: #1c1b1b;
+}
+.square-button-white:hover::after {
+    background-color: #1c1b1b;
+    color: #fffcfc;
+}
+
+/* ここからベイマックス */
+.square-bar {
+    position: relative;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    color: #1c1b1b; /* 文字色 */
+    text-decoration: none;
+    font-size: 16px;
+    font-family: "Noto Sans JP", sans-serif;
+    padding-bottom: 5px; /* 文字と線の間隔 */
+    overflow: visible;
+
+}
+
+.square-bar::after {
+    content: '';
+    position: absolute;
+    left: 50%; /* 線を中央配置 */
+    width: 210px;
+    height: 2px;
+    background: #1c1b1b;
+    bottom: -3px;
+    transform: translateX(-50%) scale(1, 1); 
+    transform-origin: right top;
+    transition: transform 0.3s ease-out;
+}
+
+.square-bar::before {
+    content: '';
+    position: absolute;
+    left: calc(50% + 105px); 
+    bottom: -6px;
+    width: 10px;
+    height: 10px;
+    background: #1c1b1b;
+    border-radius: 50%;
+}
+
+
+.square-bar:hover::after {
+    transform: translateX(-50%) scale(0, 1);
+    transform-origin: right top;
+    transition: transform 0.5s ease-out;
+}
+/* ここまでベイマックス */
+
+/* ここからセクションタイトル */
+.section-title {
+    display: inline-block;
+  }
+ 
+>>>>>>> 55af066c947a7040d71de86eb0d2da7e1f1f46dd
   .section-title h1 {
     font-size: 48px;
     font-weight: bold;
     color: #1c1b1b;
+<<<<<<< HEAD
   }
   
+=======
+    margin-bottom: -10px;
+  }
+ 
+>>>>>>> 55af066c947a7040d71de86eb0d2da7e1f1f46dd
   .section-underline {
     width: 100%;
     height: 10px;
@@ -298,9 +438,17 @@ body{
     border-radius: 5px;
   }
 
+<<<<<<< HEAD
 @media (max-width:400px){
     .section-title h1{
         font-size: 18px;
+=======
+
+@media (max-width:500px){
+    .section-title h1{
+        font-size: 18px;
+        margin-bottom: -3px;
+>>>>>>> 55af066c947a7040d71de86eb0d2da7e1f1f46dd
     }
     .section-underline{
         height: 3.5px;
@@ -308,8 +456,15 @@ body{
     }
 }
 
+<<<<<<< HEAD
 /* ここまでセクションタイトル */
 
+=======
+
+/* ここまでセクションタイトル */
+
+
+>>>>>>> 55af066c947a7040d71de86eb0d2da7e1f1f46dd
 /* ここからブロックタイトル */
 .blockTitleContainer {
     display: flex;
@@ -317,43 +472,428 @@ body{
     gap: 10px;
 }
 
+<<<<<<< HEAD
 .blockTitleBar {
     width: 9px; 
     height: 30px; 
     border-radius: 5px; 
 }
 
+=======
+
+.blockTitleBar {
+    width: 9px;
+    height: 30px;
+    border-radius: 5px;
+}
+
+.blockTitleContainer h1{
+    margin-top: 4px;
+}
+
+
+>>>>>>> 55af066c947a7040d71de86eb0d2da7e1f1f46dd
 .blockRed {
     background-color: #e72241;
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 55af066c947a7040d71de86eb0d2da7e1f1f46dd
 .blockBlue {
     background-color: #58b1e4;
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 55af066c947a7040d71de86eb0d2da7e1f1f46dd
 .blockYellow {
     background-color: #f8b945;
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 55af066c947a7040d71de86eb0d2da7e1f1f46dd
 .blockTitle {
     font-size: 30px;
 }
 
+<<<<<<< HEAD
 @media (max-width:400px){
+=======
+
+@media (max-width:500px){
+>>>>>>> 55af066c947a7040d71de86eb0d2da7e1f1f46dd
     .blockTitleContainer{
         gap: 5px;
     }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 55af066c947a7040d71de86eb0d2da7e1f1f46dd
     .blockTitleBar{
         width: 6px;
         height: 20px;
         border-radius: 3px;
     }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 55af066c947a7040d71de86eb0d2da7e1f1f46dd
     .blockTitle{
         font-size: 18px;
     }
 }
 /* ここまでブロックタイトル */
 
+<<<<<<< HEAD
 
+=======
+/* ここからコンテイナー */
+.container{
+    width: 300px;
+    height: 300px;
+    border: 3px solid #E72241;
+    border-radius: 40px;
+}
+.container p{
+    font-size: 15px;
+    text-align: center;
+    margin: 20px;
+    color: #E72241;
+}
+/* ここまでコンテイナー */
+
+/* ここからフッター */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{ 
+    /* これいるかも */
+    scroll-behavior: smooth;
+  }
+  
+.test-box {
+    width: 100vw;
+    height: 150vh;
+    background-color: #fffcfc;
+}
+
+footer {
+    background-color: #e72241;
+    width: 100%;
+    height: 644px;
+    position: relative;
+    font-family: 'Noto Sans JP', sans-serif;
+    z-index: 0;
+    overflow: hidden;
+}
+.footer_grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2列 */
+    grid-template-rows: repeat(4, auto); /* 4行 */
+    justify-content: center; /* 水平方向の中央揃え */
+    align-items: center; /* 垂直方向の中央揃え */
+    text-align: center;
+    width: 440px;
+    margin: 0 auto; /* 中央揃え */
+    line-height: 5;
+    top: 30px;
+    left: 350px;
+    position: absolute;
+}
+
+.shinkan_elements {
+    position: absolute;
+    width: 80%;
+    height: 394px;
+    top: 146px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #e72241;
+    border-top: 2px solid white;
+  border-bottom: 2px solid white;
+  overflow: hidden;
+}
+.yajirushi_photo {
+    width: 4vw;
+    height: 4vw;
+    position: absolute;
+    top: 35px;
+    left: 48vw;
+    z-index: 100;
+    cursor: pointer;
+}
+.shinkan_wasedasai {
+    font-size: 40px;
+    top: 140px;
+    z-index: 100;
+    font-weight: bold;
+    color: #fffcfc;
+    left: 10%;
+    width: 280px;
+}
+.shinkan_wasedasai_staff {
+    position: absolute;
+    font-size: 18px;
+    font-weight: bold;
+    top: 270px;
+    z-index: 100;
+    color: #fffcfc;
+    left: 12%;
+}
+.footer_icons_photo {
+    width: 48px;
+    height: 48px;
+    margin-right: 3vh;
+}
+.footer_icons {
+    position: relative;
+    width: 270px;
+    height: 56px;
+    left: 50px;
+    top: 150px;
+    z-index: 1;
+    line-height: 3;
+    display: flex;
+    flex-wrap: nowrap;
+}
+/* .footer_contents_line1 {
+    position: absolute;
+    font-size: 16px;
+    font-weight: bold;
+    top: 170px;
+    z-index: 100;
+    color: #fffcfc;
+    left: 40%;
+    line-height: 4;
+    text-align: center;
+    
+} */
+.footer_grid a {
+    color: #fffcfc;
+    font-size: 16px;
+    text-decoration:none;
+}
+/* .footer_contents_line2 {
+    position: absolute;
+    font-size: 16px;
+    font-weight: bold;
+    top: 170px;
+    z-index: 100;
+    color: #fffcfc;
+    left: 60%;
+    line-height: 4;
+    text-align: center;
+} */
+.footer_hover {
+    display: inline-block; 
+    position: relative; 
+    cursor: pointer;
+    width: 220px;
+
+}
+
+.footer_hover::after {
+    content: '';
+    position: absolute;
+    bottom: 1px;
+    left: 0;
+    width: 0%;
+    height: 1px;
+    background: #fffcfc; /* 白色の下線 */
+    transition: width 0.3s ease-in-out;
+    z-index: 100;
+}
+
+.footer_hover:hover::after {
+    width: 100%;
+}
+
+
+@media screen and (max-width: 1400px) {
+    footer {
+        height: 100vh;
+        width: 100vw;
+        z-index: 1;
+    }
+    .yajirushi_photo {
+        width: 66px;
+        height: 66px;
+        left: calc(50% - 33px);
+    }
+    .shinkan_elements {
+        height: 82vh;
+        top: 130px;
+        align-items: center;
+    }
+    .shinkan_wasedasai,
+    .shinkan_wasedasai_staff {
+        width: 100%;
+        text-align: center;
+        left: 0;
+    }
+    .shinkan_wasedasai {
+        top: 140px;
+    }
+    .shinkan_wasedasai_staff {
+        top: 240px;
+    }
+    .footer_icons {
+        margin-top: 550px;
+        height: 48px;
+        width: 264px;
+        left: 50%;
+        transform: translateX(-50%);
+  
+    }
+    .footer_icon1 {
+     margin-left: 30px;
+    }
+    .footer_icons_photo {
+    margin-right: 30px;
+    }
+    .footer_contents {
+        display: flex;
+        flex-direction: column;
+        line-height: 0.5vh;
+    }
+
+    .footer_hover {
+        font-weight: normal;
+    }
+
+    .footer_square-button {
+        margin-top: 100px;
+        left: calc(50% - 125px ) !important;
+        font-size: 13px !important;
+        position: relative;
+    }
+    .footer_square-button::after {
+        font-size: 10px;
+    }
+    .footer_text {
+        font-size: 13px;
+        padding: 10px;
+        overflow: hidden;
+    }
+    .footer_grid {
+        grid-template-columns: 1fr; /* 1列 */
+        grid-template-rows: auto;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+    .footer_grid a {
+        line-height: 4;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+@media screen and (max-width: 768px) {
+    .footer {
+        height: 150vh !important;
+    }
+    .shinkan_elements {
+        top: 75px;
+    }
+    .yajirushi_photo {
+        top: 10px;
+        width: 60px;
+        height: 60px;
+    }
+    .shinkan_wasedasai {
+        top: 70px;
+    }
+    .footer_logo {
+        width: 500px;
+    }
+.footer_grid a {
+    padding-top: 15px;
+    line-height:  1.5;
+    
+}
+.footer_square-button {
+    margin-top: 15px;
+}
+.footer_icons {
+    margin-top: 270px;
+}
+
+}
+.footer_square-button {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* 文字を中央に配置 */
+    padding: 10px 20px;
+    border: 1.5px solid #fffcfc;
+    border-radius: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fffcfc;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: absolute;
+    overflow: hidden;
+    height: 50px;
+    white-space: nowrap;
+    width: 270px; /* 文字の長さに応じて可変 */
+    min-width: 150px; /* 最小幅を設定して極端に小さくならないように */
+    padding-right: 50px; /* 矢印のスペースを確保 */
+    top: 73%;
+    left: 75%;
+    cursor: pointer;
+}
+
+.footer_square-button .spacer {
+    flex-grow: 1; /* 文字の左右の余白を均等に */
+}
+
+.footer_square-button .text {
+    flex-shrink: 0; /* 文字の長さに影響されないように固定 */
+    padding-left: 10px;
+}
+
+.footer_square-button::after {
+    content: "→";
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 27px;
+    height: 27px;
+    border-radius: 50%;
+    background-color: #fffcfc;
+    color: #e72241;
+    transition: all 0.3s ease;
+    position: absolute;
+    right: 10px; /* 矢印は固定 */
+    flex-shrink: 0;
+}
+
+/* ホバー時の変更 */
+.footer_square-button:hover {
+    background-color: #fffcfc;
+    color: #e72241;
+}
+
+.footer_square-button:hover::after {
+
+    background-color: #e72241;
+    color: #fffcfc;
+    transform: scale(1);
+} 
+.footer_logo {
+    height: auto;
+    width: 289px;
+}
+/* ここまでフッター */
+>>>>>>> 55af066c947a7040d71de86eb0d2da7e1f1f46dd
