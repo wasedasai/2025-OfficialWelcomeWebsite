@@ -210,14 +210,26 @@ body{
 
 /* ここからhero */
 .hero{
+    position: relative;
     width: 100%;
     height: 180px;
-    background-color: #e72241;
+    overflow: hidden;
 }
-
-
-
-
+.hero img{
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+.hero h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    color: #1c1b1b;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+/* ここまでhero */
 
 /* ここまで、square-link */
 .square-button {
