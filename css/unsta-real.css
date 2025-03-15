@@ -1,0 +1,104 @@
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.chart-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 800px;
+    width: 100%;
+}
+.chart-item {
+    text-align:left;
+    flex-direction: column;
+    align-items: center;
+}
+.chart-item img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    max-width: 600px;
+    margin: auto;
+    position: relative;
+    z-index: 10;
+}
+.container {
+    text-align: center;
+}
+
+.description-overlay {
+    display: none;
+            position: relative;
+            margin: 50px auto 0 auto;
+            width: 80%; 
+    max-width: 800px; 
+    margin: 50px auto 0 auto; 
+    padding: 40px; 
+            min-height: 200px;
+            background-color: #fffcfc;
+            outline: 3px solid #e72241;
+            border-radius: 20px;
+            color: black;
+            font-size: 1.5em;
+            text-align: center;
+            padding: 40px;
+            box-sizing: border-box;
+            z-index: 5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+}
+
+    
+
+.description-overlay::before {
+    content: "Q";
+            position: absolute;
+            top: -30px;
+            left: 10px;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 60px;
+            background: white;
+            border: 3px solid red;
+            border-radius: 50%;
+            font-size: 24px;
+            font-weight: bold;
+            color: red;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+.midashi{
+    font-weight: bold;
+    text-align: center;
+    color: #e72241;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #e72241;
+    padding-bottom: 5px;
+}
+.showButton {
+    background-color: #fffcfc;
+    color: #e72241;
+    border: 1px solid #e72241;
+    border-radius: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    width:100%;
+}
+.showButton:hover {
+    background-color: #e72241;
+    color: #fffcfc;
+}

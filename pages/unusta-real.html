@@ -8,7 +8,7 @@
        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
        <link href="https://unpkg.com/sanitize.css" rel="stylesheet"/>
        <link rel="stylesheet" href="../css/components.css">
-       <!-- <link rel="stylesheet" href="../css/comingsoon.css"> 変えてね-->
+       <link rel="stylesheet" href="../css/unsta-real.css"> 
        <link rel="canocical" href="https://wasedasai.github.io/2025-OfficialWelcomeWebsite/">
        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
         <meta name="description" content="早稲田祭運営スタッフ2025年度新歓用公式サイトです。運スタの新歓イベントや、運スタに関する情報を掲載しています。"> <!---変えてね--->
@@ -24,6 +24,106 @@
         <meta name="google-site-verification" content="PREUoAvDPGm4IBv_BUsNCwKUSFRjLSaLSSNL8bfFCAE" />
    </head>
    <body>
+    <div class="section-title">
+        <h1>&emsp;アンケート&emsp;</h1>
+    <div class="section-underline"></div>
     
+    <div class="wrapper">
+      <div class="chart-container">
+          <div class="chart-item">
+            <div class="blockTitleContainer">
+                <div class="blockTitleBar blockRed"></div>
+                <h1 class="blockTitle">学部</h1>
+            </div>
+              <img src="../images/faculty.png" alt="円グラフ 1">
+              <p>西早稲田キャンパスや所沢キャンパスに通っている人もいます！</p>
+          </div>
+          <div class="chart-item">
+            <div class="blockTitleContainer">
+                <div class="blockTitleBar blockRed"></div>
+                <h1 class="blockTitle">性別</h1>
+            </div>
+              <img src="../images/gender.png" alt="円グラフ 2">
+              <p>男女関係なくみんなで仲良く活動しています！
+            </p>
+          </div>
+          <div class="chart-item">
+            <div class="blockTitleContainer">
+                <div class="blockTitleBar blockRed"></div>
+                <h1 class="blockTitle">通学時間</h1>
+            </div>
+              <img src="../images/commute.png" alt="円グラフ 3">
+              <p>遠方から通っている人も多いです！</p>
+          </div>
+          <div class="chart-item">
+            <div class="blockTitleContainer">
+                <div class="blockTitleBar blockRed"></div>
+                <h1 class="blockTitle">兼サー</h1>
+            </div>
+              <img src="../images/double.png" alt="円グラフ 4">
+              <p>兼サーしていない人も多いですが、スポーツ系や文化・芸術系も多いです！</p>
+          </div>
+          <div class="chart-item">
+            <div class="blockTitleContainer">
+                <div class="blockTitleBar blockRed"></div>
+                <h1 class="blockTitle">バイトの職種</h1>
+            </div>
+              <img src="../images/albeite.png" alt="円グラフ 5">
+              <p>飲食系や教育系のアルバイトをしている人が多いです！</p>
+          </div>
+          <div class="chart-item">
+            <div class="blockTitleContainer">
+                <div class="blockTitleBar blockRed"></div>
+                <h1 class="blockTitle">バイトの頻度</h1>
+            </div>
+              <img src="../images/frequency-albeite.png" alt="円グラフ 6">
+              <p>アルバイトとの両立もできます！</p>
+          </div>
+      </div>
+  </div>
+    <div class="grid-container">
+      <div class="container">
+          <button class="showButton" data-target="desc1">説明 1 を表示</button>
+      </div>
+      <div class="container">
+          <button class="showButton" data-target="desc2">説明 2 を表示</button>
+      </div>
+      <div class="container">
+          <button class="showButton" data-target="desc3">説明 3 を表示</button>
+      </div>
+      <div class="container">
+          <button class="showButton" data-target="desc4">説明 4 を表示</button>
+      </div>
+      <div class="container">
+          <button class="showButton" data-target="desc5">説明 5 を表示</button>
+      </div>
+      <div class="container">
+          <button class="showButton" data-target="desc6">説明 6 を表示</button>
+      </div>
+  </div>
+  
+  <div id="desc1" class="description-overlay"><h class="midashi">これは説明テキスト 1 です</h></div>
+  <div id="desc2" class="description-overlay"><h class="midashi">これは説明テキスト 2 です。</h></div>
+  <div id="desc3" class="description-overlay"><h class="midashi">これは説明テキスト 3 です。</h></div>
+  <div id="desc4" class="description-overlay"><h class="midashi">これは説明テキスト 4 です。</h></div>
+  <div id="desc5" class="description-overlay"><h class="midashi">これは説明テキスト 5 です。</h></div>
+  <div id="desc6" class="description-overlay"><h class="midashi">これは説明テキスト 6 です。</h></div>
+<script>
+    document.querySelectorAll(".showButton").forEach(function(button) {
+  button.addEventListener("click", function() {
+      let targetId = this.getAttribute("data-target");
+      let targetDesc = document.getElementById(targetId);
+      
+      if (targetDesc.style.display === "block") {
+          targetDesc.style.display = "none";
+      } else {
+          document.querySelectorAll(".description-overlay").forEach(function(desc) {
+              desc.style.display = "none";
+          });
+          targetDesc.style.display = "block";
+      }
+  });
+});
+</script>
    </body>
 </html>
