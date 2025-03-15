@@ -115,10 +115,11 @@
         </div>
         <p class="text-wasedasai">早稲田祭は、例年約20万人の来場者を誇り、早大生が主体となって行われる日本最大級の学園祭です！<br>昨年は2日間で<span class="text-wasedasai-event">約450企画</span>が実施され、大盛況で幕を閉じました。</p>
         <div class="container-img-waseda-gaiyou">
-            <img src="..\images\waseda_1.jpg" class="img-waseda-1 img-container" alt="概要1">
-            <img src="..\images\waseda_2.jpg" class="img-waseda-2" alt="概要2">
-            <img src="..\images\waseda_3.jpg" class="img-waseda-3" alt="概要3">
+            <img src="../images/waseda_1.jpg" class="img-waseda" alt="概要1">
+            <img src="../images/waseda_2.jpg" class="img-waseda" alt="概要2">
+            <img src="../images/waseda_3.jpg" class="img-waseda" alt="概要3">
         </div>
+        
     </section>
     
     <section>
@@ -139,8 +140,8 @@
             <div class="section-underline"></div>
         </div>
         <div class="container-img-waseda-gaiyou">
-            <img src="..\images\waseda_gaiyou_1.jpg" class="img-waseda-gaiyou-1" alt="概要1">
-            <img src="..\images\waseda_gaiyou_2.jpg" class="img-waseda-gaiyou-2" alt="概要2">
+            <img src="..\images\waseda_gaiyou_1.jpg" class="img-waseda-gaiyou" alt="概要1">
+            <img src="..\images\waseda_gaiyou_2.jpg" class="img-waseda-gaiyou" alt="概要2">
         </div>
         <p class="text-wasedasai">局ごとの活動内容は参加団体・参加者との調整や企画の運営、事前の広報活動から、早稲田祭のさらなる発展に向けた活動や資金の調達など多岐にわたります。各局の詳しい活動内容は<a class="text-link" href="https://wasedasai.github.io/2024-Shinkan/pages/introduce.html">コチラ</a>をご覧ください！</p>
     </section>
@@ -191,25 +192,57 @@
         <img src="..\images\waseda_reku.jpg" class="img-waseda-lecreation" alt="レク集合写真">
     </section>
 
+    <footer>
+        <div class="yajirushi_footer">
+            <img class="yajirushi_photo" src="../images/footer_yajirushi.png">
+        </div>
+        <div class="shinkan_elements">
+            <div class="shinkan_wasedasai">
+                <img class="footer_logo" src="../images/logo_footer.png">
+            </div>
+            <div class="footer_grid">
+                <a href="wasedasai.html" class="footer_hover">早稲田祭・運営スタッフとは</a>
+                <a href="event.html" class="footer_hover">新歓イベント</a>
+                <a href="join.html" class="footer_hover">入会方法</a>
+                <a href="faq.html" class="footer_hover">よくある質問・お問い合わせ</a>
+                <a href="year.html" class="footer_hover">運スタの一年</a>
+                <a href="real.html" class="footer_hover">運スタのリアル</a>
+                <a href="bureau.html" class="footer_hover">局紹介</a>
+                <a href="saikun.html" class="footer_hover">わせだサイくん</a>
+            </div>
+            <div class="footer_icons">
+                <img src="../images/footer_x.png" alt="" class="footer_icons_photo footer_icon1">
+                <img src="../images/footer_instagram.png" alt="" class="footer_icons_photo">
+                <img src="../images/footer_youtube.png" alt="" class="footer_icons_photo">
+            </div>
+            <div  class="footer_square-button" href="">
+                <span class="spacer"></span>
+                <span class="footer_text">入会フォームはこちら</span>
+                <span class="spacer"></span>
+            </div>
+        </div>
+        
+
+        <div class="footer_contents">
+            
+            
+
+        </div>
+
     <script>
-        // 画像を取得
-        const images = document.querySelectorAll('.image');
+        document.addEventListener("DOMContentLoaded", function () {
+    const backToTopBtn = document.querySelector(".yajirushi_photo");
 
-        // Intersection Observer を設定
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('active');
-                }
-            });
-        }, {
-            threshold: 0.2 // 画像の20%が見えたら発火
+    if (backToTopBtn) {
+        backToTopBtn.addEventListener("click", function () {
+            window.scrollTo({ top: 0, behavior: "smooth" });
         });
+    } else {
+        console.error("トップへ戻るボタン (#yajirushi_footer) が見つかりません。");
+    }
+});
 
-        // 画像それぞれにObserverを適用
-        images.forEach(image => {
-            observer.observe(image);
-        });
     </script>
+     </footer>
    </body>
 </html>
