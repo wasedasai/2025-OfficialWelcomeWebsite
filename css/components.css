@@ -427,7 +427,7 @@ body{
     font-size: 48px;
     font-weight: bold;
     color: #1c1b1b;
-    margin-bottom: -10px;
+    margin-bottom: -6px;
   }
  
   .section-underline {
@@ -476,16 +476,13 @@ body{
     background-color: #e72241;
 }
 
-
 .blockBlue {
     background-color: #58b1e4;
 }
 
-
 .blockYellow {
     background-color: #f8b945;
 }
-
 
 .blockTitle {
     font-size: 30px;
@@ -497,13 +494,11 @@ body{
         gap: 5px;
     }
 
-
     .blockTitleBar{
         width: 6px;
         height: 20px;
         border-radius: 3px;
     }
-
 
     .blockTitle{
         font-size: 18px;
