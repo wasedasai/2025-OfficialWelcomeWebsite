@@ -210,26 +210,14 @@ body{
 
 /* ここからhero */
 .hero{
-    position: relative;
     width: 100%;
     height: 180px;
-    overflow: hidden;
+    background-color: #e72241;
 }
-.hero img{
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-}
-.hero h1{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 30px;
-    color: #1c1b1b;
-    font-family: 'Noto Sans JP', sans-serif;
-}
-/* ここまでhero */
+
+
+
+
 
 /* ここまで、square-link */
 .square-button {
@@ -427,7 +415,6 @@ body{
     font-size: 48px;
     font-weight: bold;
     color: #1c1b1b;
-    margin-bottom: -6px;
   }
  
   .section-underline {
@@ -441,7 +428,6 @@ body{
 @media (max-width:500px){
     .section-title h1{
         font-size: 18px;
-        margin-bottom: -3px;
     }
     .section-underline{
         height: 3.5px;
@@ -467,22 +453,21 @@ body{
     border-radius: 5px;
 }
 
-.blockTitleContainer h1{
-    margin-top: 4px;
-}
-
 
 .blockRed {
     background-color: #e72241;
 }
 
+
 .blockBlue {
     background-color: #58b1e4;
 }
 
+
 .blockYellow {
     background-color: #f8b945;
 }
+
 
 .blockTitle {
     font-size: 30px;
@@ -494,11 +479,13 @@ body{
         gap: 5px;
     }
 
+
     .blockTitleBar{
         width: 6px;
         height: 20px;
         border-radius: 3px;
     }
+
 
     .blockTitle{
         font-size: 18px;
@@ -506,20 +493,6 @@ body{
 }
 /* ここまでブロックタイトル */
 
-/* ここからコンテイナー */
-.container{
-    width: 300px;
-    height: 300px;
-    border: 3px solid #E72241;
-    border-radius: 40px;
-}
-.container p{
-    font-size: 15px;
-    text-align: center;
-    margin: 20px;
-    color: #E72241;
-}
-/* ここまでコンテイナー */
 
 /* ここからフッター */
 * {
