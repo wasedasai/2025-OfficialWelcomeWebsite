@@ -1,151 +1,217 @@
-/* ここからheader */
-.header{
-    width: 100vw;
-    height: 100px;
-    background-color: #fffcfc;
-    color: #1c1b1b;
-    font-family: 'Notosans JP', sans-serif;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-.header-logo img{
-    width: 220px;
-    margin: 15px 2% 0 2%;
+.section-title {
+   position: relative;
+   left: 50%;
+    transform: translateX(-50%);
+    margin: 1vw;
 }
-.saikun-menu{
-    position: fixed;
-    right: 13px;
-    top: 8px;
+/* ここまでブロックタイトル */
+.text-wasedasai{
+    font-size: 24px;
     text-align: center;
-    z-index: 200;
+    margin: 2vw;
+    color: #1C1B1B;
 }
-.menu-img{
-    width: 75px;
+.text-wasedasai-event{
+    font-size: 30px;
+    font-weight: bold;
+    color: #1C1B1B;
 }
-.menu-text{
-    margin-top: -17px;
+.container-img-waseda-gaiyou{
+    display: flex;
+    justify-content: center;
 }
-.fullscreen-menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: #fffcfc;
-    color: #1c1b1b;
-    opacity: 0;
-    visibility: hidden;
-    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
-    z-index: 100;
-    overflow: hidden;
+.img-waseda{
+    width: 25vw;
+    margin: 2vw;
 }
-.fullscreen-menu.active {
-    opacity: 1;
-    visibility: visible;
-}
-.menu-open-container{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 80vw;
-    height: 80vh;
-    border-top: 1.5px solid #1c1b1b;
-    border-bottom: 1.5px solid #1c1b1b;
-    overflow: hidden;
-}
-.menu-open-logo img{
-    width: 200px;
-    margin: 40px 2% 0 2%;
-}
-.menu-open-texts{
+.ccontainer-img-waseda-gaiyou{
+    display: flex;
     text-align: center;
-    position: absolute;
-    top: 50%;
+    width: 60vw;
+}
+.img-waseda-gaiyou{
+    width: 35vw;
+    margin: 2vw;
+}
+.img-waseda-zennmi{
+    width: 50vw;
+    margin: 1vw;
     left: 50%;
-    transform: translate(-50%, -50%);
+}
+.container-text-wasedasai{
+    display: flex;
+    justify-content: center;
+    margin: 2vw;
+    position: relative;
+}
+.blockTitleContainer{
+    justify-content: center;
+}
+.text-wasedasai-number{
+    font-size: 24px;
+    text-align: center;
+    margin: 2vw;
+    padding: 0.3vw;
+    color: #1C1B1B;
+}
+.text-wasedasai-action{
+    font-size: 24px;
+    text-align: center;
+    margin: 2vw;
+    padding: 0.3rem;
+    color: #1C1B1B;
+}
+.text-wasedasai-attention{
     font-size: 20px;
+    text-align: center;
+    margin: 2vw;
+    color: #1C1B1B;
 }
-.menu-open-container a{
-    text-decoration: none;
-    color: #1c1b1b;
+.text-wasedasai-about-number{
+    font-size: 25px;
+    font-weight: bold;
+    color: #1C1B1B;
 }
-.menu-open-texts a:hover{
-    color: #e72241;
-    transition: 0.7s;
-}
-.menu-open-container p{
-    margin: 36px 0;
-    font-family: "Noto Sans JP", sans-serif;
-}
-.menu-open-texts p{
-    opacity: 0;
-    transform: translateY(30px);
-}
-.menu-sns-icon{
-    position: absolute;
-    bottom: 35px;
-    margin-left: 2%;
+.container-img-waseda-happi{
     display: flex;
-}
-.menu-sns-icon img{
-    width: 50px;
-    margin: 0 10px;
-}
-.button {
-    position: absolute;
-    bottom: 40px;
-    right: 2%;
-    display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content:space-between;
-    padding: 10px 20px;
-    border: 1.5px solid #1c1b1b;
-    border-radius: 3s0px;
-    font-size: 15px;
-    /* font-weight: bold; なくそう*/
-    color: #1c1b1b;
-    font-family: "Noto Sans JP", sans-serif;
-    /* text-decoration: none; なくそう*/
-    transition: all 0.3s ease;
-    overflow: hidden;
-    height:60px;
-    white-space: nowrap;
-    width:262px;
-    gap:10px;
-    margin-left: 20px;
-    padding-left: 50px;/*文字をずらせる */
+}
+.img-waseda-happi{
+    width: 90vw;
+    margin-left: 7vw;
+}
+.text-wasedasai-happpi{
+    font-size: 24px;
+    text-align: center;
+    margin: 2vw;
+    color: #1C1B1B;
+}
+.text-wasedasai-lecureation{
+    font-size: 24px;
+    text-align: center;
+    margin: 2vw;
+    color: #1C1B1B;
+}
+.img-waseda-lecreation{
+    width: 50vw;
+    margin: 1vw;
+    position: relative;
+    left: 25%;
+    text-align: center;
+}
+.text-color-enji{
+    color: #B3424A;
+    font-size: 28px;
+    font-weight: bold;
+}
+.text-link{
+    color: #E72241;
+    font-size: 24px;
+}
+@media (max-width: 500px) {
+    .section-title {
+        position: relative;
+        left: 50%;
+         transform: translateX(-50%);
+         margin: 1vw;
+     }
+    .text-wasedasai{
+        font-size: 18px;
+        color: #1C1B1B;
+        width: 90%;
+        position: relative;
+        left: 50%;
+         transform: translateX(-50%);
     }
-          
-  
-  .button::after {
-  content: "→";
-  font-size: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-  background-color: #1c1b1b;
-  color: #fffcfc;
-  transition: all 0.3s ease;
-  position: absolute;
-  right: 10px; 
-  margin-left: 10px; 
-  flex-shrink: 0;
-  }
-  .button:hover {
-  background-color: #1c1b1b;
-  color: #fffcfc;
-  }
-  
-  .button:hover::after {
-  background-color: #fffcfc;
-  color: #1c1b1b;
-  transform: scale(1); 
-  }
-/* ここまでheader */
-.hero{
-    width: 100%;
-    height: 180px;
-    background-color: #e72241;
+    .text-wasedasai-event{
+        font-size: 24px;
+        color: #1C1B1B;
+    }
+    .img-waseda:not(:first-child) {
+        display: none; /* 1枚目以外を非表示 */
+    }
+    .img-waseda {
+        width: 80%; /* スマホでは1枚の写真を画面いっぱいに */
+    }
+    .img-waseda-gaiyou{
+        width: 40vw;
+    }
+    .img-waseda-zennmi{
+        width: 80vw;
+    }
+    .text-wasedasai-number{
+        font-size: 18px;
+        color: #1C1B1B;
+        width: 90%;
+        position: relative;
+        left: 50%;
+         transform: translateX(-50%);
+    }
+    .text-wasedasai-action{
+        font-size: 18px;
+        color: #1C1B1B;
+        width: 90%;
+        position: relative;
+        left: 50%;
+         transform: translateX(-50%);
+    }
+    .text-wasedasai-attention{
+        font-size: 16px;
+        color: #1C1B1B;width: 80%;
+    }
+    .text-wasedasai-about-number{
+        font-size: 20px;
+        color: #1C1B1B;
+    }
+    .img-waseda-happi{
+        width: 70vw;
+        position: relative;
+        left: 51%;
+         transform: translateX(-50%);
+         margin: 0;
+    }
+    .container-img-waseda-happi{
+        display: block;
+    }
+    .text-wasedasai-happpi{
+        font-size: 18px;
+        color: #1C1B1B;
+        width: 90%;
+        position: relative;
+        left: 50%;
+         transform: translateX(-50%);
+    }
+    .text-wasedasai-lecureation{
+        font-size: 18px;
+        color: #1C1B1B;
+        width: 90%;
+        position: relative;
+        left: 50%;
+         transform: translateX(-50%);
+    }
+    .img-waseda-lecreation{
+        width: 80vw;
+        margin: 2vw;
+        position: relative;
+        left: 8%;
+    }
+    .text-color-enji{
+        font-size: 24px;
+        color: #B3424A;
+    }
+    .text-link{
+        font-size: 18px;
+        color: #B3424A;
+    }
+    .container-text-wasedasai{
+        display: inline;
+        justify-content: center;
+        margin: 2vw;
+    }
 }
