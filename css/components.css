@@ -228,6 +228,15 @@ body{
     color: #1c1b1b;
     font-family: 'Noto Sans JP', sans-serif;
 }
+@media (max-width: 500px) {
+    .hero{
+        height: 100px;
+        background-image: url(../images/hero-sp.png);
+    }
+    .hero h1{
+        font-size: 15px;
+    }
+}
 /* ここまでhero */
 
 /* ここまで、square-link */
