@@ -435,7 +435,6 @@ body{
     font-size: 48px;
     font-weight: bold;
     color: #1c1b1b;
-    margin-bottom: -6px;
   }
  
   .section-underline {
@@ -449,7 +448,6 @@ body{
 @media (max-width:500px){
     .section-title h1{
         font-size: 18px;
-        margin-bottom: -3px;
     }
     .section-underline{
         height: 3.5px;
@@ -475,22 +473,21 @@ body{
     border-radius: 5px;
 }
 
-.blockTitleContainer h1{
-    margin-top: 4px;
-}
-
 
 .blockRed {
     background-color: #e72241;
 }
 
+
 .blockBlue {
     background-color: #58b1e4;
 }
 
+
 .blockYellow {
     background-color: #f8b945;
 }
+
 
 .blockTitle {
     font-size: 30px;
@@ -502,11 +499,13 @@ body{
         gap: 5px;
     }
 
+
     .blockTitleBar{
         width: 6px;
         height: 20px;
         border-radius: 3px;
     }
+
 
     .blockTitle{
         font-size: 18px;
@@ -514,20 +513,6 @@ body{
 }
 /* ここまでブロックタイトル */
 
-/* ここからコンテイナー */
-.container{
-    width: 300px;
-    height: 300px;
-    border: 3px solid #E72241;
-    border-radius: 40px;
-}
-.container p{
-    font-size: 15px;
-    text-align: center;
-    margin: 20px;
-    color: #E72241;
-}
-/* ここまでコンテイナー */
 
 /* ここからフッター */
 * {

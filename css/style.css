@@ -95,9 +95,6 @@ body {
 
 
 @media screen and (max-width: 1025px) {
-    .top_first {
-    }
-    
     .mojimoji h1 {
         transition: font-size 0.5s ease-out ;
     }
@@ -142,10 +139,9 @@ body {
         position: relative;
         top: 15%;
         left: -39%;
+        z-index: 5;
     }
-    html, body {
 
-    }
     .top_first h1 {
         font-size: 200px;
     }
@@ -155,15 +151,13 @@ body {
         display: flex;
         justify-content: center;
     }
-    p {
+    .sentence > p {
         font-size: 16px !important;
         line-height: 10vh !important;
         padding-left: 3% !important;
         padding-right: 3% !important;
     }
-    .sentence {
-        height: ;
-    }
+
     .sentence_sp {
         display: block !important;
     }
@@ -274,7 +268,6 @@ body {
     .mottokuwasiku h1 {
         margin-top: -30px !important;
     }
-    .detail {}
     /* .detail {
         width: 150px !important;
         height: 300px;
@@ -290,6 +283,16 @@ body {
     } */
     .news_sentences {
         height: 200px;
+        overflow-y: auto;
+    }
+    .top-days {
+        font-size: 16px;
+        padding-right: 10vw !important;
+    }
+    .top-topics {
+        line-height: 30px;
+        font-size: 16px;
+        text-align: left !important;
     }
     .additional-content2 h1 {
         margin-bottom: 0;
@@ -381,7 +384,8 @@ html, body {
     color: rgba(0,0,0,0);
     -webkit-background-clip: text;
     background-clip: text;  
-    background-image: url("../images/samata.png");
+    background-image: url("../images/utasan.jpg");
+    backdrop-filter: bl;
     background-size: cover;
     background-position: center center;
     position: relative;
@@ -391,7 +395,7 @@ html, body {
     transition: background-image 4s ease-in-out, color 4s ease-in-out;
     left: 0;
     right: 0;
-    
+    object-fit: cover;
 }
 
 .top_first h1 {
@@ -407,7 +411,7 @@ html, body {
     width: 130%;
     white-space: nowrap;
     transform: rotate(45deg);
-    margin-top: -70vh;
+    margin-top: -72vh;
     margin-left: -40vw;
     z-index: -1;
 }
@@ -486,9 +490,8 @@ html, body {
     font-weight: bold;
     color: #fffcfc;
     text-align: center;
-    line-height: 200px;
     font-size: 24px;
-    z-index: 1001;
+    z-index: 6;
     margin-left: 5vw;
     margin-right: 5vw;
 }
@@ -623,7 +626,7 @@ html, body {
 .sentence_sp {
     display: none;
 }
-.sentence p {
+.sentence > p {
     text-align: center;
     width: 100%;
     font-size: 20px;
@@ -632,6 +635,7 @@ html, body {
     color: #fffcfc; 
     font-weight: bold;
 }
+
 .sentence {
     width: 100vw;
     height: 100vh;
@@ -665,6 +669,207 @@ html, body {
     text-shadow: 4px 4px 10px red;
   }
 /* 次のページのスタイル */
+/* ここからheader */
+.header{
+    width: 100vw;
+    height: 100px;
+    background-color: #fffcfc;
+    color: #1c1b1b;
+    font-family: 'Notosans JP', sans-serif;
+}
+.header-logo img{
+    width: 220px;
+    margin: 15px 2% 0 2%;
+}
+.saikun-menu{
+    position: fixed;
+    right: 13px;
+    top: 8px;
+    text-align: center;
+    z-index: 200;
+}
+.menu-img{
+    width: 75px;
+}
+.menu-text{
+    margin-top: -17px;
+}
+.fullscreen-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #fffcfc;
+    color: #1c1b1b;
+    opacity: 0;
+    visibility: hidden;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+    z-index: 100;
+    overflow: hidden;
+}
+.fullscreen-menu.active {
+    opacity: 1;
+    visibility: visible;
+}
+.menu-open-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80vw;
+    height: 80vh;
+    border-top: 1.5px solid #1c1b1b;
+    border-bottom: 1.5px solid #1c1b1b;
+    overflow: hidden;
+}
+.menu-open-logo img{
+    width: 230px;
+    margin: 26px 2% 0 2%;
+}
+.menu-open-texts{
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+}
+.menu-open-container a{
+    text-decoration: none;
+    color: #1c1b1b;
+}
+.menu-open-texts a:hover{
+    color: #e72241;
+    transition: 0.7s;
+}
+.menu-open-container p{
+    margin: 36px 0;
+    font-family: "Noto Sans JP", sans-serif;
+}
+.menu-open-texts p{
+    opacity: 0;
+    transform: translateY(30px);
+}
+.menu-sns-icon{
+    position: absolute;
+    bottom: 35px;
+    margin-left: 2%;
+    display: flex;
+}
+.menu-sns-icon img{
+    width: 50px;
+    margin: 0 10px;
+}
+.menu-open-button {
+    position: absolute;
+    bottom: 40px;
+    right: 2%;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    padding: 10px 20px;
+    border: 1.5px solid #1c1b1b;/*色を変えてね*/
+    border-radius: 30px;
+    font-size: 15px;
+    /* font-weight: bold; なくそう*/
+    color: #1c1b1b;
+    font-family: "Noto Sans JP", sans-serif;/*加えた*/
+    /* text-decoration: none; なくそう*/
+    transition: all 0.3s ease;
+    overflow: hidden;
+    height:60px;/*高さを変えてね*/
+    white-space: nowrap;
+    width:262px;/*長さを変えてね*/
+    gap:10px;
+    margin-left: 20px;
+    padding-left: 50px;/*文字をずらせる */
+    }
+          
+  
+  .menu-open-button::after {
+  content: "→";
+  font-size: 20px;/*矢印の大きさを変えてね*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;/*まるの大きさを変えてね*/
+  height: 45px;/*まるの大きさを変えてね*/
+  border-radius: 50%;
+  background-color: #1c1b1b;/*色を変えてね*/
+  color: #fffcfc;
+  transition: all 0.3s ease;
+  position: absolute;
+  right: 10px; 
+  margin-left: 10px; 
+  flex-shrink: 0;
+  }
+  .menu-open-button:hover {
+  background-color: #1c1b1b;/*色を変えてね*/
+  color: #fffcfc;
+  }
+  
+  .menu-open-button:hover::after {
+  background-color: #fffcfc;
+  color: #1c1b1b;
+  transform: scale(1); 
+  }
+
+  @media (max-width: 1023px) {
+    /* ここからheader */
+.header{
+    height: 75px;
+}
+.header-logo img{
+    width: 170px;
+}
+.saikun-menu{
+    right: 5px;
+    top: 5px;
+}
+.menu-img{
+    width: 65px;
+}
+.menu-text{
+    margin-top: -16px;
+    font-size: 14px;
+}
+.menu-open-container{
+    top: 51%;
+    width: 90vw;
+}
+.menu-open-logo img{
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+}
+.menu-open-texts{
+    top: 44%;
+    width: 100%;
+    font-size: 16px;
+}
+.menu-open-container p{
+    margin: 15px 0;
+}
+.menu-sns-icon{
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.menu-open-button {
+    bottom: 95px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: 0;
+}
+.menu-sns-icon{
+    bottom: 25px;
+}
+/* ここまでheader */
+  }
+/* ここまでheader */
 /* 次のセクションのデザイン */
 .next-section {
     width: 100vw;
@@ -680,6 +885,7 @@ html, body {
     cursor: auto;
     position: relative;
     overflow: hidden;
+
 }
 .next-section h1 {
     position: absolute;
@@ -738,9 +944,7 @@ html, body {
     transform: translateX(-50%) ;
     position: relative;
 }
-.swiper-wrapper {
-    
-}
+
 .swiper-slide {
     display: flex;
     align-items: center;
@@ -961,6 +1165,61 @@ html, body {
     border-radius: 10px;
     margin-bottom: 1.5vh;
 }
+/* ここからブロックタイトル */
+.blockTitleContainer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.blockTitleBar {
+    width: 9px;
+    height: 30px;
+    border-radius: 5px;
+}
+
+.blockTitle{
+    margin-top: 4px;
+    color: #fffcfc;
+}
+
+.blockwhite {
+    background-color: #fffcfc;
+}
+.blockRed {
+    background-color: #e72241;
+}
+
+.blockBlue {
+    background-color: #58b1e4;
+}
+
+.blockYellow {
+    background-color: #f8b945;
+}
+
+.blockTitle {
+    font-size: 30px;
+}
+
+
+@media (max-width:500px){
+    .blockTitleContainer{
+        gap: 5px;
+    }
+
+    .blockTitleBar{
+        width: 6px;
+        height: 20px;
+        border-radius: 3px;
+    }
+
+    .blockTitle{
+        font-size: 18px;
+    }
+}
+/* ここまでブロックタイトル */
 .minititle {
     text-align: left;
     font-size: 24px;
@@ -982,6 +1241,51 @@ html, body {
     font-family: Noto;  
     text-align: right;
 }
+/* ここからベイマックス */
+.square-bar {
+    position: relative;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    color: #fffcfc; /* 文字色 */
+    text-decoration: none;
+    font-size: 16px;
+    font-family: "Noto Sans JP", sans-serif;
+    padding-bottom: 5px; /* 文字と線の間隔 */
+    overflow: visible;
+}
+
+.square-bar::after {
+    content: '';
+    position: absolute;
+    left: 80%; /* 線を中央配置 */
+    width: 150px;
+    height: 2px;
+    background: #fffcfc;
+    bottom: -3px;
+    transform: translateX(-50%) scale(1, 1); 
+    transform-origin: right top;
+    transition: transform 0.3s ease-out;
+}
+
+.square-bar::before {
+    content: '';
+    position: absolute;
+    left: calc(80% + 75px); 
+    bottom: -6px;
+    width: 10px;
+    height: 10px;
+    background: #fffcfc;
+    border-radius: 50%;
+}
+
+
+.square-bar:hover::after {
+    transform: translateX(-50%) scale(0, 1);
+    transform-origin: right top;
+    transition: transform 0.5s ease-out;
+}
+/* ここまでベイマックス */
 .detail {
 width: 290px;
 height: 480px;
@@ -1070,13 +1374,27 @@ background-color: #fffcfc;
     padding-top: 100px;
     border-top: #1c1b1b 2px solid;
     border-bottom: #1c1b1b 2px solid;
+    display: flex;
+    align-items: center;
+    line-height: 100px;
 }
-.news_sentences p {
+.top-days{
     margin-top: -115px;
     color: #1c1b1b;
     font-weight: normal;
     font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+    text-align: left; 
+    padding-right: 20vw;
+    padding-left: 5vw;
 }
+.top-topics{
+    margin-top: -115px;
+    color: #1c1b1b;
+    font-weight: normal;
+    font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+    text-align: center; 
+}
+
 .additional-content3{
     width: 100vw;
     background-color: #fffcfc; /* さらに暗めの背景色 */
@@ -1283,7 +1601,7 @@ background-color: #fffcfc;
         width: 300% !important;
     }
     .scroll-container2 {
-        top: 67vh !important;
+        top: 69vh !important;
     }
     .scroll-container3 {
       /* 上の幅調整 */
@@ -1295,8 +1613,9 @@ background-color: #fffcfc;
     .scroll-content3 {
         width: 200% !important;
     }
-        .saisyomoji1 {
+     .saisyomoji1 {
         font-size: 88px !important;
+        height: 100px;
     }
     .saisyomoji2 {
         font-size: 48px !important;
@@ -1322,16 +1641,7 @@ background-color: #fffcfc;
     }
 }/* フッターを画面の最下部に固定 */
 footer {
-    height: 60vh; /* フッターの高さを調整 */
-    width: 100vw;
-    background-color: #e72241;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 24px;
-    text-align: center;
-   position: absolute;
+
    cursor: auto;
 }
 
@@ -1342,10 +1652,10 @@ footer {
 }
 .footer_container {
     width: 100vw;
-    height: 40vh;
+    height: 644px;
     position: relative; 
     cursor: auto;
-    
+    margin-bottom: -10%;
 }
 .next_sp {
     display: none;
@@ -1371,4 +1681,300 @@ footer {
     .restore-screen-btn:hover {
         background-color: #c91636;
     }
-   
+/* ここからフッター */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{ 
+    /* これいるかも */
+    scroll-behavior: smooth;
+  }
+  
+.test-box {
+    width: 100vw;
+    height: 150vh;
+    background-color: #fffcfc;
+}
+
+footer {
+    background-color: #e72241;
+    width: 100%;
+    height: 644px;
+    position: relative;
+    font-family: 'Noto Sans JP', sans-serif;
+    z-index: 0;
+    overflow: hidden;
+}
+.footer_grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2列 */
+    grid-template-rows: repeat(4, auto); /* 4行 */
+    justify-content: center; /* 水平方向の中央揃え */
+    align-items: center; /* 垂直方向の中央揃え */
+    text-align: center;
+    width: 440px;
+    margin: 0 auto; /* 中央揃え */
+    line-height: 5;
+    top: 30px;
+    left: 350px;
+    position: absolute;
+}
+
+.shinkan_elements {
+    position: absolute;
+    width: 80%;
+    height: 394px;
+    top: 146px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #e72241;
+    border-top: 2px solid white;
+  border-bottom: 2px solid white;
+  overflow: hidden;
+}
+.yajirushi_photo {
+    width: 4vw;
+    height: 4vw;
+    position: absolute;
+    top: 35px;
+    left: 48vw;
+    z-index: 100;
+    cursor: pointer;
+}
+.shinkan_wasedasai {
+    font-size: 40px;
+    top: 140px;
+    z-index: 100;
+    font-weight: bold;
+    color: #fffcfc;
+    left: 10%;
+    width: 280px;
+}
+.shinkan_wasedasai_staff {
+    position: absolute;
+    font-size: 18px;
+    font-weight: bold;
+    top: 270px;
+    z-index: 100;
+    color: #fffcfc;
+    left: 12%;
+}
+.footer_icons_photo {
+    width: 48px;
+    height: 48px;
+    margin-right: 3vh;
+}
+.footer_icons {
+    position: relative;
+    width: 270px;
+    height: 56px;
+    left: 50px;
+    top: 150px;
+    z-index: 1;
+    line-height: 3;
+    display: flex;
+    flex-wrap: nowrap;
+}
+/* .footer_contents_line1 {
+    position: absolute;
+    font-size: 16px;
+    font-weight: bold;
+    top: 170px;
+    z-index: 100;
+    color: #fffcfc;
+    left: 40%;
+    line-height: 4;
+    text-align: center;
+    
+} */
+.footer_grid a {
+    color: #fffcfc;
+    font-size: 16px;
+    text-decoration:none;
+}
+/* .footer_contents_line2 {
+    position: absolute;
+    font-size: 16px;
+    font-weight: bold;
+    top: 170px;
+    z-index: 100;
+    color: #fffcfc;
+    left: 60%;
+    line-height: 4;
+    text-align: center;
+} */
+.footer_hover {
+    display: inline-block; 
+    position: relative; 
+    cursor: pointer;
+    width: 220px;
+
+}
+
+.footer_hover::after {
+    content: '';
+    position: absolute;
+    bottom: 1px;
+    left: 0;
+    width: 0%;
+    height: 1px;
+    background: #fffcfc; /* 白色の下線 */
+    transition: width 0.3s ease-in-out;
+    z-index: 100;
+}
+
+.footer_hover:hover::after {
+    width: 100%;
+}
+
+
+@media screen and (max-width: 1400px) {
+    footer {
+        height: 100vh;
+        width: 100vw;
+        z-index: 1;
+    }
+    .yajirushi_photo {
+        width: 66px;
+        height: 66px;
+        left: calc(50% - 33px);
+    }
+    .shinkan_elements {
+        height: 82vh;
+        top: 130px;
+        align-items: center;
+    }
+    .shinkan_wasedasai,
+    .shinkan_wasedasai_staff {
+        width: 100%;
+        text-align: center;
+        left: 0;
+    }
+    .shinkan_wasedasai {
+        top: 140px;
+    }
+    .shinkan_wasedasai_staff {
+        top: 240px;
+    }
+    .footer_icons {
+        margin-top: 550px;
+        height: 48px;
+        width: 264px;
+        left: 50%;
+        transform: translateX(-50%);
+  
+    }
+    .footer_icon1 {
+     margin-left: 30px;
+    }
+    .footer_icons_photo {
+    margin-right: 30px;
+    }
+    .footer_contents {
+        display: flex;
+        flex-direction: column;
+        line-height: 0.5vh;
+    }
+
+    .footer_hover {
+        font-weight: normal;
+    }
+
+    .footer_square-button {
+        margin-top: 100px;
+        left: calc(50% - 125px ) !important;
+        font-size: 13px !important;
+        position: relative;
+    }
+    .footer_square-button::after {
+        font-size: 10px;
+    }
+    .footer_text {
+        font-size: 13px;
+        padding: 10px;
+        overflow: hidden;
+    }
+    .footer_grid {
+        grid-template-columns: 1fr; /* 1列 */
+        grid-template-rows: auto;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+    .footer_grid a {
+        line-height: 4;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+@media screen and (max-width: 768px) {
+    .footer {
+        height: 150vh !important;
+    }
+    .shinkan_elements {
+        top: 75px;
+    }
+    .yajirushi_photo {
+        top: 10px;
+        width: 60px;
+        height: 60px;
+    }
+    .shinkan_wasedasai {
+        top: 70px;
+    }
+    .footer_logo {
+        width: 500px;
+    }
+.footer_grid a {
+    padding-top: 15px;
+    line-height:  1.5;
+    
+}
+.footer_square-button {
+    margin-top: 15px;
+}
+.footer_icons {
+    margin-top: 270px;
+}
+
+}
+.footer_square-button {
+    border: 1.5px solid #fffcfc;
+    border-radius: 30px;
+    color: #fffcfc;
+    
+    position: absolute;
+    height: 60px;
+    white-space: nowrap;
+    width: 260px; /* 文字の長さに応じて可変 */
+    top: 73%;
+    left: 75%;
+}
+
+.footer_square-button::after {
+    background-color: #fffcfc;
+    color: #e72241;
+
+}
+
+/* ホバー時の変更 */
+.footer_square-button:hover {
+    background-color: #fffcfc;
+    color: #e72241;
+}
+
+.footer_square-button:hover::after {
+
+    background-color: #e72241;
+    color: #fffcfc;
+    transform: scale(1);
+} 
+.footer_logo {
+    height: auto;
+    width: 289px;
+}
+/* ここまでフッター */
+ 
