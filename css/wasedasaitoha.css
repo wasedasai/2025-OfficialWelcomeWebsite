@@ -14,24 +14,18 @@
     font-size: 24px;
     text-align: center;
     margin: 2vw;
+    color: #1C1B1B;
 }
 .text-wasedasai-event{
     font-size: 30px;
     font-weight: bold;
+    color: #1C1B1B;
 }
 .container-img-waseda-gaiyou{
     display: flex;
     justify-content: center;
 }
-.img-waseda-1{
-    width: 25vw;
-    margin: 2vw;
-}
-.img-waseda-2{
-    width: 25vw;
-    margin: 2vw;
-}
-.img-waseda-3{
+.img-waseda{
     width: 25vw;
     margin: 2vw;
 }
@@ -40,15 +34,10 @@
     text-align: center;
     width: 60vw;
 }
-.img-waseda-gaiyou-1{
+.img-waseda-gaiyou{
     width: 35vw;
     margin: 2vw;
 }
-.img-waseda-gaiyou-2{
-    width: 35vw;
-    margin: 2vw;
-}
-
 .img-waseda-zennmi{
     width: 50vw;
     margin: 1vw;
@@ -68,21 +57,25 @@
     text-align: center;
     margin: 2vw;
     padding: 0.3vw;
+    color: #1C1B1B;
 }
 .text-wasedasai-action{
     font-size: 24px;
     text-align: center;
     margin: 2vw;
     padding: 0.3rem;
+    color: #1C1B1B;
 }
 .text-wasedasai-attention{
     font-size: 20px;
     text-align: center;
     margin: 2vw;
+    color: #1C1B1B;
 }
 .text-wasedasai-about-number{
     font-size: 25px;
     font-weight: bold;
+    color: #1C1B1B;
 }
 .container-img-waseda-happi{
     display: flex;
@@ -97,11 +90,13 @@
     font-size: 24px;
     text-align: center;
     margin: 2vw;
+    color: #1C1B1B;
 }
 .text-wasedasai-lecureation{
     font-size: 24px;
     text-align: center;
     margin: 2vw;
+    color: #1C1B1B;
 }
 .img-waseda-lecreation{
     width: 50vw;
@@ -119,36 +114,32 @@
     color: #E72241;
     font-size: 24px;
 }
-.img-container { /* スクロール用の余白 */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-.image.active {
-    opacity: 1;
-    transform: translateY(0);
-}
 @media (max-width: 500px) {
+    .section-title {
+        position: relative;
+        left: 50%;
+         transform: translateX(-50%);
+         margin: 1vw;
+     }
     .text-wasedasai{
         font-size: 18px;
+        color: #1C1B1B;
+        width: 90%;
+        position: relative;
+        left: 50%;
+         transform: translateX(-50%);
     }
     .text-wasedasai-event{
         font-size: 24px;
+        color: #1C1B1B;
     }
-    .img-waseda-1{
-        width: 40vw;
+    .img-waseda:not(:first-child) {
+        display: none; /* 1枚目以外を非表示 */
     }
-    .img-waseda-2{
-        width: 40vw;
+    .img-waseda {
+        width: 80%; /* スマホでは1枚の写真を画面いっぱいに */
     }
-    .img-waseda-3{
-        width: 40vw;
-    }
-    .img-waseda-gaiyou-1{
-        width: 40vw;
-    }
-    .img-waseda-gaiyou-2{
+    .img-waseda-gaiyou{
         width: 40vw;
     }
     .img-waseda-zennmi{
@@ -156,45 +147,71 @@
     }
     .text-wasedasai-number{
         font-size: 18px;
+        color: #1C1B1B;
+        width: 90%;
+        position: relative;
+        left: 50%;
+         transform: translateX(-50%);
     }
     .text-wasedasai-action{
         font-size: 18px;
+        color: #1C1B1B;
+        width: 90%;
+        position: relative;
+        left: 50%;
+         transform: translateX(-50%);
     }
     .text-wasedasai-attention{
         font-size: 16px;
+        color: #1C1B1B;width: 80%;
     }
     .text-wasedasai-about-number{
         font-size: 20px;
+        color: #1C1B1B;
     }
     .img-waseda-happi{
-        width: 90vw;
-        margin-left: 7vw;
+        width: 70vw;
+        position: relative;
+        left: 51%;
+         transform: translateX(-50%);
+         margin: 0;
+    }
+    .container-img-waseda-happi{
+        display: block;
     }
     .text-wasedasai-happpi{
         font-size: 18px;
+        color: #1C1B1B;
+        width: 90%;
+        position: relative;
+        left: 50%;
+         transform: translateX(-50%);
     }
     .text-wasedasai-lecureation{
         font-size: 18px;
+        color: #1C1B1B;
+        width: 90%;
+        position: relative;
+        left: 50%;
+         transform: translateX(-50%);
     }
     .img-waseda-lecreation{
         width: 80vw;
-        margin: 1vw;
+        margin: 2vw;
         position: relative;
-        left: 10%;
+        left: 8%;
     }
     .text-color-enji{
         font-size: 24px;
+        color: #B3424A;
     }
     .text-link{
         font-size: 18px;
+        color: #B3424A;
     }
-    .img-container {
+    .container-text-wasedasai{
+        display: inline;
         justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
-    .image.active {
-        opacity: 1;
-        transform: translateY(0);
+        margin: 2vw;
     }
 }
