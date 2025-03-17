@@ -12,7 +12,7 @@ body{
     height: 100px;
     background-color: #fffcfc;
     color: #1c1b1b;
-    font-family: 'Notosans JP', sans-serif;
+    font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
 }
 .header-logo img{
     width: 220px;
@@ -82,7 +82,8 @@ body{
 }
 .menu-open-container p{
     margin: 36px 0;
-    font-family: "Noto Sans JP", sans-serif;
+    font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+
 }
 .menu-open-texts p{
     opacity: 0;
@@ -111,7 +112,7 @@ body{
     font-size: 15px;
     /* font-weight: bold; なくそう*/
     color: #1c1b1b;
-    font-family: "Noto Sans JP", sans-serif;/*加えた*/
+    font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
     /* text-decoration: none; なくそう*/
     transition: all 0.3s ease;
     overflow: hidden;
@@ -260,7 +261,7 @@ body{
     width: 200px; /* 文字の長さに応じて可変 */
     min-width: 150px; /* 最小幅を設定して極端に小さくならないように */
     padding-right: 50px;
-    font-family: "Noto Sans JP", sans-serif;
+    font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
 }
 
 .square-button .spacer {
@@ -390,7 +391,7 @@ body{
     color: #1c1b1b; /* 文字色 */
     text-decoration: none;
     font-size: 16px;
-    font-family: "Noto Sans JP", sans-serif;
+    font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
     padding-bottom: 5px; /* 文字と線の間隔 */
     overflow: visible;
 }
@@ -526,7 +527,7 @@ footer{
     height: 600px;
     background-color: #e72241;
     color: #fffcfc;
-    font-family: 'Notosans JP', sans-serif;
+    font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
     margin-top: 75px;
 }
 .arrow-img{
@@ -565,7 +566,7 @@ footer{
     color: #fffcfc;
 }
 .footer-pages p{
-    font-family: "Noto Sans JP", sans-serif;
+    font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
     width: 250px;
 }
 .footer-pages p:hover{
@@ -613,7 +614,7 @@ footer{
     width: 17vw; /* 文字の長さに応じて可変 */
     min-width: 150px; /* 最小幅を設定して極端に小さくならないように */
     padding-right: 4vw;
-    font-family: "Noto Sans JP", sans-serif;
+    font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
 }
 .foooter-square-button .spacer {
     flex-grow: 1; 
