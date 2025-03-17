@@ -258,10 +258,34 @@ body {
         height: 130px !important;
     } */
     .detail_examples {
-        width: 100% !important;
-        flex-flow: column;
-        padding-top: 0 !important;
-        margin:  0 auto;
+        display: flex !important;
+        flex-direction: column !important; /* 🎯 スマホでは縦並び */
+        justify-content: center !important; /* 🎯 中央揃え */
+        align-items: center !important; /* 🎯 縦方向も中央揃え */
+        text-align: center !important; /* 🎯 テキストも中央揃え */
+        width: 100%;
+        padding-top: 30px;
+        gap: 20px; /* アイテム間の余白 */
+        top: 260px;
+    }
+
+    .detail {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* 🎯 各要素も中央揃え */
+        text-align: center;
+        width: 80%; /* 🎯 スマホ版では幅を調整 */
+        max-width: 350px;
+    }
+
+    .detail_image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        max-width: 290px;
+        height: auto;
+        margin-bottom: 1.5vh;
     }
     .mottokuwasiku {
         height: 200vh !important;
@@ -1166,7 +1190,7 @@ html, body {
     height: 720px;
     position: relative;
     justify-content: space-around;
-    padding-top: 264px;
+    padding-top: 200px;
     display: flex;
     left: 50%;
     transform: translateX(-50%)
@@ -1742,7 +1766,6 @@ background-color: #fffcfc;
     .top_matsuri_btn {
         top: 80% !important; /* 祭の文字の下に配置 */
     }
-    
 }/* フッターを画面の最下部に固定 */
 
 
@@ -1761,8 +1784,7 @@ footer {
     height: 600px;
     position: relative; 
     cursor: auto;
-    margin-bottom: -30% !important;
-    margin-top: -6% !important;
+    margin-bottom: -300px !important;
 }
 .next_sp {
     display: none;
@@ -1788,15 +1810,16 @@ footer {
     .restore-screen-btn:hover {
         background-color: #c91636;
     }
-    /* ここからfooter */
+/* ここからfooter */
 footer{
     position: relative;
     width: 100vw;
-    height: 600px;
+    height: 630px;
     background-color: #e72241;
     color: #fffcfc;
     font-family: 'Notosans JP', sans-serif;
-    margin-top: 75px;
+    margin-bottom: -10%;
+    padding-bottom: -30%;
 }
 .arrow-img{
     text-align: center;
@@ -1815,6 +1838,9 @@ footer{
     left: 50%;
     transform: translate(-50%, -50%);
     margin-top: 3vw;
+}
+.footer-logo {
+    text-align: left !important;
 }
 .footer-logo img{
     width: 18vw;
