@@ -788,6 +788,7 @@ footer {
 }
 
 .footer_square-button::after {
+    
     background-color: #fffcfc;
     color: #e72241;
 
