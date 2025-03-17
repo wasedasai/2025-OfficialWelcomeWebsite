@@ -195,7 +195,87 @@ function preventClick(event) {
             <a href="saikun.html" class="top-menu-link">サイくんかわいい</a><br>
             <a href="faq.html" class="top-menu-link">よくある質問</a>
         </div>
-        
+        <header>
+            <div class="header">
+
+                <div class="saikun-menu">
+                    <img src="../images/header-saikun.png" alt="" class="menu-img">
+                    <div class="menu-text">menu</div>
+                </div>
+            </div>
+            <div class="fullscreen-menu">
+                <div class="menu-open-container">
+                    <div class="menu-open-logo"><img src="../images/menu-open-logo.png" alt=""></div>
+                    <div class="menu-open-texts">
+                        <a href="../index.html"><p>TOP</p></a>
+                        <a href="../pages/wasedasaitoha.html"><p>早稲田祭・運営スタッフとは</p></a>
+                        <a href="../pages/shinkan-event.html"><p>新歓イベント</p></a>
+                        <a href="../pages/how-to-enter.html"><p>入会方法</p></a>
+                        <a href="../pages/unsuta-one-yaer.html"><p>運スタの1年</p></a>
+                        <a href="../pages/unusta-real.html"><p>運スタのリアル</p></a>
+                        <a href="../pages/kyoku-introduce.html"><p>局紹介</p></a>
+                        <a href="../pages/comingsoon.html"><p>わせだサイくん</p></a>
+                        <a href="../pages/faq-contact.html"><p>よくある質問・お問い合わせ</p></a>
+                    </div>
+                    <a href="../pages/how-to-enter.html" class="menu-open-button">入会方法はこちら</a>
+                    <div class="menu-sns-icon">
+                        <div class="menu-Instagram">
+                            <a href="https://www.instagram.com/wasedasai_new?igsh=MXZhZzJvOW50Y2preQ%3D%3D&utm_source=qr"><img src="../images/menu-Instagram.png" alt=""></a>
+                        </div>
+                        <div class="menu-x">
+                            <a href="https://x.com/wasedasai_new?s=21"><img src="../images/menu-X.png" alt=""></a>
+                        </div>
+                        <div class="menu-YouTube">
+                            <a href=""><img src="../images/menu-YouTube.png" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+        const menu = document.querySelector(".saikun-menu");
+        const menuImg = document.querySelector(".menu-img");
+        const menuText = document.querySelector(".menu-text");
+        const fullscreenMenu = document.querySelector(".fullscreen-menu");
+        const menuItems = document.querySelectorAll(".menu-open-texts p");
+    
+        let isOpen = false;
+    
+        menu.addEventListener("click", function () {
+            isOpen = !isOpen;
+    
+            if (isOpen) {
+                menuImg.src = "../images/close.png";
+                menuText.textContent = "close";
+                fullscreenMenu.classList.add("active");
+    
+                
+                menuItems.forEach(item => {
+                    item.style.opacity = "0";
+                    item.style.transform = "translateY(30px)";
+                });
+    
+                menuItems.forEach((item, index) => {
+                    setTimeout(() => {
+                        item.style.opacity = "1";
+                        item.style.transform = "translateY(0)";
+                        item.style.transition = "opacity 0.6s ease-in-out, transform 0.6s ease-in-out";
+                    }, index * 100); 
+                });
+    
+            } else {
+                menuImg.src = "../images/header-saikun.png"; 
+                menuText.textContent = "menu";
+                fullscreenMenu.classList.remove("active"); 
+                menuItems.forEach(item => {
+                    item.style.opacity = "0";
+                    item.style.transform = "translateY(30px)";
+                });
+            }
+        });
+    });
+            </script>
+        </header>
         
         <div class="top-icons">
             <img class="top-icon" src="images/snsicon_I.png" alt="line">
@@ -210,6 +290,7 @@ function preventClick(event) {
 
     </div>
     <div class="sentence">
+
        <span class="white_red"></span> <h1>君に誇り</span>を、<br class="sentence_sp">祭に熱</span>を。</h1>
         <p>「早稲田祭2025」</p>
         <p>365日あるうちのたったの2日間。</p>
@@ -250,6 +331,7 @@ function preventClick(event) {
 
 <!-- 追加: 画面を元に戻すボタン -->
 <!-- <button id="restore-screen-button" class="restore-screen-btn">画面を元に戻す</button> -->
+    <!-- ここからヘッダー -->
 
         <div class="next-section">
     
@@ -379,9 +461,12 @@ function preventClick(event) {
 
 <div class="faq_examples">
     <div class="faq-top">
-        <div class="faq_q">Q 活動日はいつですか</div>
-        <div class="faq_a">A 基本的には月曜日と木曜日の6限以降に活動しています。
-            局によっては、水曜日や金曜日に活動があります。</div>
+        <div class="faq_q">Q どうすれば入会できますか？</div>
+        <div class="faq_a">
+            A 募集期間内に、入会申し込みフォームに必要事項を記入しご応募ください！
+            詳細は <a href="https://example.com" target="_blank" class="faq-link">こちら</a> をご覧ください。
+        </div>
+        
     </div>
     <div class="faq-top">
         <div class="faq_q">Q 活動日はいつですか</div>
@@ -389,14 +474,16 @@ function preventClick(event) {
             局によっては、水曜日や金曜日に活動があります。</div>
     </div>
     <div class="faq-top">
-        <div class="faq_q">Q 活動日はいつですか</div>
-        <div class="faq_a">A 基本的には月曜日と木曜日の6限以降に活動しています。
-            局によっては、水曜日や金曜日に活動があります。</div>
+        <div class="faq_q">Q 2年生や浪人経験者でも入会できますか？</div>
+        <div class="faq_a">A できます！運営スタッフは、早稲田大学所属の１年生と２年生のみが
+            入会できます。
+        </div>
     </div>
     <div class="faq-top">
-        <div class="faq_q">Q 活動日はいつですか</div>
-        <div class="faq_a">A 基本的には月曜日と木曜日の6限以降に活動しています。
-            局によっては、水曜日や金曜日に活動があります。</div>
+        <div class="faq_q">Q どのくらい大変ですか？</div>
+        <div class="faq_a">A 所属する局やチームによって時期やその程度は異なりますが、自分のペースに
+            合わせながら活動することができます！
+        </div>
         <a href="" class="top-square-button square-button-black">
             <span class="spacer"></span>
             <span class="text">詳しく見る</span>
