@@ -559,8 +559,23 @@ footer{
     color: #fffcfc;
 }
 .footer-pages p{
-    margin: 4vw 0;
     font-family: "Noto Sans JP", sans-serif;
+    width: 300px;
+}
+.footer-pages p:hover{
+    animation: zoom .3s;
+    
+}
+@keyframes zoom {
+	50% {
+		transform: scale(1.05);
+	}
+}
+.mergin-exist{
+    margin: 4vw 0;
+}
+.mergin-none{
+    margin: 4vw 0;
 }
 .footer-sns-icon{
     position: absolute;
@@ -594,15 +609,12 @@ footer{
     padding-right: 4vw;
     font-family: "Noto Sans JP", sans-serif;
 }
-
 .foooter-square-button .spacer {
     flex-grow: 1; 
 }
-
 .footer-square-button .text {
     flex-shrink: 0; /* 文字の長さに影響されないように固定 */
 }
-
 .footer-square-button::after {
     content: "→";
     font-size: 1.3vw;
@@ -619,16 +631,81 @@ footer{
     right: 0.7vw; /* 矢印は固定 */
     flex-shrink: 0;
 }
-
 /* ホバー時の変更 */
 .footer-square-button:hover {
     background-color: #fffcfc;
     color: #e72241;
 }
-
 .footer-square-button:hover::after {
     background-color: #e72241;
     color: #fffcfc;
     transform: scale(1);
+}
+@media (max-width: 500px) {
+    footer{
+        height: 100vh;
+    }
+    .footer-contaier{
+        height: 77vh;
+        margin-top: 30px;
+    }
+    .footer-logo img{
+        width: 220px;
+        margin: 10px 0;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .footer-pages{
+        flex-direction: column;
+        font-size: 14px;
+    }
+    .footer-pages p{
+        width: 250px;
+    }
+    .mergin-exist{
+        margin: 25px 0;
+    }
+    .mergin-none{
+        margin-top: 25px;
+    }
+    .footer-sns-icon{
+        bottom: 90px;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-left: 0;
+    }
+    .footer-sns-icon img{
+        width: 40px;
+        margin: 0 10px;
+    }
+    .footer-square-button {
+        padding: 2vw 4vw;
+        border-radius: 6vw;
+        font-size: 2.7vw;
+        height: 10vw;
+        width: 32vw;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        padding-right: 8vw;
+    }
+    .footer-square-button .spacer {
+        flex-grow: 1; 
+    }
+    .footer-square-button .text {
+        flex-shrink: 0; 
+    }
+    .footer-square-button::after {
+        font-size: 2.5vw;
+        width: 6vw;
+        height: 6vw;
+        right: 1.3vw;
+    }
+}
+@media (max-width: 376px) {
+    .footer-sns-icon{
+        display: none;
+    }
 }
 /* ここまでfooter */
