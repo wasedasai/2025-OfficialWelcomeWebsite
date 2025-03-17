@@ -3,6 +3,10 @@
     padding: 0;
     box-sizing: border-box;
 }
+p{
+    font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+
+}
 .section-title {
    position: relative;
    left: 50%;
@@ -86,7 +90,7 @@
 }
 .img-waseda-happi{
     width: 30vw;
-    margin-left: 7vw;
+    margin: 3vw;
 }
 .text-wasedasai-happpi{
     font-size: 24px;
@@ -112,7 +116,7 @@
     text-align: center;
 }
 .text-color-enji{
-    color: #B3424A;
+    color: #E72241;
     font-size: 28px;
     font-weight: bold;
 }
@@ -211,11 +215,11 @@
     }
     .text-color-enji{
         font-size: 24px;
-        color: #B3424A;
+        color: #E72241;
     }
     .text-link{
         font-size: 18px;
-        color: #B3424A;
+        color: #E72241;
     }
     .container-text-wasedasai{
         display: inline;
