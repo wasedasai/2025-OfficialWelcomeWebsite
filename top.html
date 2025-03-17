@@ -40,35 +40,42 @@
         });
     </script> -->
     <script>
-        window.addEventListener("load", function() {
-            const loadingScreen = document.getElementById("loading");
-            const loadingImage = document.getElementById("loading-image");
-    
-            // 初期状態を表示
-            loadingScreen.classList.remove("hidden");
-    
+window.addEventListener("load", function() {
+    const loadingScreen = document.getElementById("loading");
+
+    // クリックイベントを一時的に無効化
+    document.addEventListener("click", preventClick, true);
+
+    setTimeout(function() {
+        document.getElementById("loading-image").classList.add("slide-out-image");
+
+        setTimeout(function() {
+            loadingScreen.classList.add("slide-out-background");
+
             setTimeout(function() {
-                // 1. 画像をスライドアウト
-                loadingImage.classList.add("slide-out-image");
-    
-                setTimeout(function() {
-                    // 2. 画像のスライドが終わったら、背景をスライドアウト
-                    loadingScreen.classList.add("slide-out-background");
-    
-                    setTimeout(function() {
-                        // 3. 背景のスライドが終わったら非表示にする
-                        loadingScreen.style.display = "none";
-                    }, 5000); // 背景のアニメーションが終わるのを待つ
-                }, 2000); // 画像のアニメーションが終わるのを待つ
-            }, 3000); // 2秒間表示後にスライド開始
-        });
-    </script>
-    <style>
-        .loading-back{
-    color: red;
+                loadingScreen.style.display = "none";
+
+                // クリックイベントを再び有効化
+                document.removeEventListener("click", preventClick, true);
+            }, 3000);
+        }, 2000);
+    }, 3000);
+});
+
+// クリックを防ぐ関数
+function preventClick(event) {
+    event.stopPropagation();
+    event.preventDefault();
 }
 
-#loading {
+    </script>
+    <style>
+.loading-back{
+    color: red;
+    pointer-events: none;
+}
+
+#loading { 
     position: fixed;
     top: 0%;
     left: 0%;
@@ -80,6 +87,7 @@
     align-items: center;
     z-index: 9999; /* 他の要素の前面に表示 */
     overflow: hidden;
+    pointer-events: none;
 }
 
 /* 画像の縦横比を維持しながら中央配置 */
@@ -178,16 +186,17 @@
             </div>
         </div>
         <div class="top-menu">
-            <span class="top-menu-chousei">早稲田祭・<br>
-            運営スタッフとは<br></span>
-            新歓イベント<br>
-            局紹介<br>
-            運スタの1年<br>
-            運スタのリアル<br>
-            入会方法<br>
-            サイくんかわいい<br>
-            よくある質問<br>
+            <a href="wasedasai.html" class="top-menu-link"><span class="top-menu-chousei">早稲田祭・<br>運営スタッフとは</span></a><br>
+            <a href="event.html" class="top-menu-link">新歓イベント</a><br>
+            <a href="bureau.html" class="top-menu-link">局紹介</a><br>
+            <a href="year.html" class="top-menu-link">運スタの1年</a><br>
+            <a href="real.html" class="top-menu-link">運スタのリアル</a><br>
+            <a href="join.html" class="top-menu-link">入会方法</a><br>
+            <a href="saikun.html" class="top-menu-link">サイくんかわいい</a><br>
+            <a href="faq.html" class="top-menu-link">よくある質問</a>
         </div>
+        
+        
         <div class="top-icons">
             <img class="top-icon" src="images/snsicon_I.png" alt="line">
             <img class="top-icon" src="images/snsicon_X.png" alt="twitter">
@@ -366,11 +375,7 @@
             
         <div class="additional-content">
         <h2>FAQ</h2>
-        <a href="" class="square-button square-button-black">
-        <span class="spacer"></span>
-        <span class="text">詳しく見る</span>
-        <span class="spacer"></span>
-    </a>
+        
 
 <div class="faq_examples">
     <div class="faq-top">
@@ -392,10 +397,15 @@
         <div class="faq_q">Q 活動日はいつですか</div>
         <div class="faq_a">A 基本的には月曜日と木曜日の6限以降に活動しています。
             局によっては、水曜日や金曜日に活動があります。</div>
+        <a href="" class="top-square-button square-button-black">
+            <span class="spacer"></span>
+            <span class="text">詳しく見る</span>
+            <span class="spacer"></span>
+        </a>   
     </div>
 
 </div>
-
+    
         </div>
         <div class="additional-content2">
             <h1>News</h1>   
@@ -429,58 +439,42 @@
             </a>
         </div>
         <div class="footer_container">
-    <!-- ここからフッター -->
-    <footer>
-        <div class="yajirushi_footer">
-            <img class="yajirushi_photo" src="../images/footer_yajirushi.png">
+                <!-- ここからフッター -->
+     <footer>
+        <div class="arrow-img">
+            <a href="#"><img src="../images/footer_yajirushi.png" alt=""></a>
         </div>
-        <div class="shinkan_elements">
-            <div class="shinkan_wasedasai">
-                <img class="footer_logo" src="../images/logo_footer.png">
+        <div class="footer-contaier">
+            <div class="footer-logo">
+                <a href="../index.html"><img src="../images/logo_footer.png" alt=""></a>
             </div>
-            <div class="footer_grid">
-                <a href="wasedasai.html" class="footer_hover">早稲田祭・運営スタッフとは</a>
-                <a href="event.html" class="footer_hover">新歓イベント</a>
-                <a href="join.html" class="footer_hover">入会方法</a>
-                <a href="faq.html" class="footer_hover">よくある質問・お問い合わせ</a>
-                <a href="year.html" class="footer_hover">運スタの一年</a>
-                <a href="real.html" class="footer_hover">運スタのリアル</a>
-                <a href="bureau.html" class="footer_hover">局紹介</a>
-                <a href="saikun.html" class="footer_hover">わせだサイくん</a>
+            <div class="footer-pages">
+                <div class="footer-pages-left">
+                    <a href="../pages/wasedasaitoha.html"><p class="mergin-exist">早稲田祭・運営スタッフとは</p></a>
+                    <a href="../pages/shinkan-event.html"><p class="mergin-exist">新歓イベント</p></a>
+                    <a href="../pages/how-to-enter.html"><p class="mergin-exist">入会方法</p></a>
+                    <a href="../pages/unsuta-one-yaer.html"><p class="margin-exist">運スタの1年</p></a>
+                </div>
+                <div class="footer-pages-right">
+                    <a href="../pages/unusta-real.html"><p class="mergin-none">運スタのリアル</p></a>
+                    <a href="../pages/kyoku-introduce.html"><p class="mergin-exist">局紹介</p></a>
+                    <a href="../pages/comingsoon.html"><p class="mergin-exist">わせだサイくん</p></a>
+                    <a href="../pages/faq-contact.html"><p class="mergin-exist">よくある質問・お問い合わせ</p></a>
+                </div>
             </div>
-            <div class="footer_icons">
-                <img src="../images/footer_x.png" alt="" class="footer_icons_photo footer_icon1">
-                <img src="../images/footer_instagram.png" alt="" class="footer_icons_photo">
-                <img src="../images/footer_youtube.png" alt="" class="footer_icons_photo">
+            <div class="footer-sns-icon">
+                <a href="https://www.instagram.com/wasedasai_new?igsh=MXZhZzJvOW50Y2preQ%3D%3D&utm_source=qr"><img src="../images/snsicon_I.png" alt=""></a>
+                <a href="https://x.com/wasedasai_new?s=21"><img src="../images/snsicon_X.png" alt=""></a>
+                <a href=""><img src="../images/snsicon_Y.png" alt=""></a>
             </div>
-            <div  class="footer_square-button square-button" href="">
-                <span class="spacer"></span>
-                <span class="footer_text">入会フォームはこちら</span>
-                <span class="spacer"></span>
+            <div class="footer-button">
+                <a href="" class="footer-square-button footer-square-button-white">
+                    <span class="foooter-spacer"></span>
+                    <span class="footer-text">入会方法はこちら</span>
+                    <span class="foooter-spacer"></span>
+                </a>
             </div>
         </div>
-        
-
-        <div class="footer_contents">
-            
-            
-
-        </div>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-    const backToTopBtn = document.querySelector(".yajirushi_photo");
-
-    if (backToTopBtn) {
-        backToTopBtn.addEventListener("click", function () {
-            window.scrollTo({ top: 0, behavior: "smooth" });
-        });
-    } else {
-        console.error("トップへ戻るボタン (#yajirushi_footer) が見つかりません。");
-    }
-});
-
-    </script>
      </footer>
     <!-- ここまでフッター -->
         </div>

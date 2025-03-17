@@ -1,3 +1,8 @@
+$(document).ready(function () {
+    $(".top-menu a").on("click", function (event) {
+        event.stopPropagation(); // 他のイベントをブロック
+    });
+});
 
 $(document).ready(function () {
     // 初回ロード時に `html, body` に width: 100%; height: 100%; を適用
@@ -23,6 +28,7 @@ $(document).ready(function () {
         });
         
     }
+
     // カスタムカーソルをスマホ版では非表示
     if (window.innerWidth > 1000) {
         $('body').append('<div class="custom-cursor">Tap</div>');
@@ -38,7 +44,7 @@ $(document).ready(function () {
         });
 
         // メニューやアイコン上でカスタムカーソルを非表示
-        $('.top-menu, .top-icons, .next-section, .next-section, .additional-content2, .additionalcontent3, footer, .additional-content').on('mouseenter', function () {
+        $('#loading, .top-menu, .top-icons, .next-section, .next-section, .additional-content2, .additionalcontent3, footer, .additional-content').on('mouseenter', function () {
             $cursor.css('display', 'none');
             $('body').css('cursor', 'auto');
         }).on('mouseleave', function () {
