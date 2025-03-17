@@ -136,10 +136,10 @@ p{
     .text-wasedasai{
         font-size: 14px;
         color: #1C1B1B;
-        width: 93%;
+        width: 94%;
         position: relative;
-        left: 50%;
-         transform: translateX(-50%);
+        left: 48%;
+        transform: translateX(-50%);
     }
     .text-wasedasai-event{
         font-size: 14px;
@@ -156,6 +156,7 @@ p{
     }
     .img-waseda-zennmi{
         width: 80vw;
+        margin-top: 2vw;
     }
     .text-wasedasai-number{
         font-size: 14px;
@@ -190,6 +191,7 @@ p{
         left: 51%;
          transform: translateX(-50%);
          margin: 0;
+        margin-top: 2vw;
     }
     .container-img-waseda-happi{
         display: block;
@@ -198,6 +200,7 @@ p{
         font-size: 14px;
         color: #1C1B1B;
         width: 90%;
+        margin-top: 5vw;
         text-align: center;
         position: relative;
         left: 50%;

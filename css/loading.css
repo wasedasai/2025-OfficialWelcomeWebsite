@@ -1,0 +1,73 @@
+.loading-back{
+    color: #e72241;
+}
+
+#loading {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100vw;
+    height: 100vh;
+    background-color: #e72241; /* 背景を赤に */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* 他の要素の前面に表示 */
+    overflow: hidden;
+}
+
+/* 画像の縦横比を維持しながら中央配置 */
+#loading-image {
+    width: auto;  
+    height: 25vh; /* 高さ基準で調整 */
+    max-width: 100%; 
+    max-height: 100%;
+}
+
+/* 初期位置のズレを防ぐため、アニメーション前に固定 */
+.hidden {
+    display: none !important;
+}
+
+
+
+@keyframes slideRight {
+    0% {
+        transform: translate(0, 0); /* 初期位置 */
+    }
+    100% {
+        transform: translate(100vw, 0); /* 右へスライド */
+    }
+}
+
+.slide-out {
+    animation: slideRight 5s ease-in-out forwards;
+}
+@keyframes slideRightImage {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(100vw);
+    }
+}
+
+@keyframes slideRightBackground {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(100vw);
+    }
+}
+
+.slide-out-image {
+    animation: slideRightImage 5s ease-in-out forwards;
+}
+
+.slide-out-background {
+    animation: slideRightBackground 2s ease-in-out forwards;
+}
+
+
+

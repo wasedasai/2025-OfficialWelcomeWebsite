@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+     <meta charset="utf-8">
+     <title>早稲田祭2025運営スタッフ 新歓公式サイト</title>
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Zen+Kaku+Gothic+New:wght@700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/sanitize.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/loading.css">
+    <link rel="canocical" href="https://wasedasai.github.io/2025-OfficialWelcomeWebsite/">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+     <meta name="description" content="早稲田祭運営スタッフ2025年度新歓用公式サイトです。運スタの新歓イベントや、運スタに関する情報を掲載しています。"> 
+     <meta name="keywords" content="早稲田祭,早稲田祭運営スタッフ,運スタ,早稲田,運スタ新歓,運スタ2025,早稲田祭2025運営スタッフ,運スタ2025新歓">
+     <meta property="og:url" content="https://wasedasai.github.io/2025-OfficialWelcomeWebsite/" />
+     <meta property="og:type" content="website" />
+     <meta property="og:title" content="2025早稲田祭運営スタッフ新歓サイト" />
+     <meta property="og:description" content="早稲田祭運営スタッフ(運スタ)2025年度新歓用公式サイトです。運スタの新歓イベントや、運スタに関する情報を掲載しています。" />
+     <meta property="og:site_name" content="2025早稲田祭運営スタッフ新歓サイト" />
+     <meta property="og;image" content="../images/faviconlogo.png" />
+     <link rel="icon" href="../images/faviconlogo.png" type="image/png">
+     <link rel="apple-touch-icon" href="../images/faviconlogo.png">
+     <meta name="google-site-verification" content="PREUoAvDPGm4IBv_BUsNCwKUSFRjLSaLSSNL8bfFCAE" />
+</head>
+    <body>
+        <header>
+            <div class="header">
+                <div class="header-logo">
+                    <a href="../index.html"><img src="../images/headerlogo.png" alt=""></a>
+                </div>
+                <div class="saikun-menu">
+                    <img src="../images/header-saikun.png" alt="" class="menu-img">
+                    <div class="menu-text">menu</div>
+                </div>
+            </div>
+            <div class="fullscreen-menu">
+                <div class="menu-open-container">
+                    <div class="menu-open-logo"><img src="../images/menu-open-logo.png" alt=""></div>
+                    <div class="menu-open-texts">
+                        <a href="../index.html"><p>TOP</p></a>
+                        <a href="../pages/wasedasaitoha.html"><p>早稲田祭・運営スタッフとは</p></a>
+                        <a href="../pages/shinkan-event.html"><p>新歓イベント</p></a>
+                        <a href="../pages/how-to-enter.html"><p>入会方法</p></a>
+                        <a href="../pages/unsuta-one-yaer.html"><p>運スタの1年</p></a>
+                        <a href="../pages/unusta-real.html"><p>運スタのリアル</p></a>
+                        <a href="../pages/kyoku-introduce.html"><p>局紹介</p></a>
+                        <a href="../pages/comingsoon.html"><p>わせだサイくん</p></a>
+                        <a href="../pages/faq-contact.html"><p>よくある質問・お問い合わせ</p></a>
+                    </div>
+                    <a href="../pages/how-to-enter.html" class="menu-open-button">入会方法はこちら</a>
+                    <div class="menu-sns-icon">
+                        <div class="menu-Instagram">
+                            <a href="https://www.instagram.com/wasedasai_new?igsh=MXZhZzJvOW50Y2preQ%3D%3D&utm_source=qr"><img src="../images/menu-Instagram.png" alt=""></a>
+                        </div>
+                        <div class="menu-x">
+                            <a href="https://x.com/wasedasai_new?s=21"><img src="../images/menu-X.png" alt=""></a>
+                        </div>
+                        <div class="menu-YouTube">
+                            <a href=""><img src="../images/menu-YouTube.png" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+        const menu = document.querySelector(".saikun-menu");
+        const menuImg = document.querySelector(".menu-img");
+        const menuText = document.querySelector(".menu-text");
+        const fullscreenMenu = document.querySelector(".fullscreen-menu");
+        const menuItems = document.querySelectorAll(".menu-open-texts p");
+    
+        let isOpen = false;
+    
+        menu.addEventListener("click", function () {
+            isOpen = !isOpen;
+    
+            if (isOpen) {
+                menuImg.src = "../images/close.png";
+                menuText.textContent = "close";
+                fullscreenMenu.classList.add("active");
+    
+                
+                menuItems.forEach(item => {
+                    item.style.opacity = "0";
+                    item.style.transform = "translateY(30px)";
+                });
+    
+                menuItems.forEach((item, index) => {
+                    setTimeout(() => {
+                        item.style.opacity = "1";
+                        item.style.transform = "translateY(0)";
+                        item.style.transition = "opacity 0.6s ease-in-out, transform 0.6s ease-in-out";
+                    }, index * 100); 
+                });
+    
+            } else {
+                menuImg.src = "../images/header-saikun.png"; 
+                menuText.textContent = "menu";
+                fullscreenMenu.classList.remove("active"); 
+                menuItems.forEach(item => {
+                    item.style.opacity = "0";
+                    item.style.transform = "translateY(30px)";
+                });
+            }
+        });
+    });
+            </script>
+        </header>
+
+        <div class="loading-back">
+            <div id="loading">
+                <img id="loading-image" src="../images/saiwalk.webp" alt="Loading Animation">
+            </div>
+        </div>
+        <!-- <script>
+            window.addEventListener("load", function() {
+                const loadingScreen = document.getElementById("loading");
+        
+                // 初期状態を表示
+                loadingScreen.classList.remove("hidden");
+        
+                setTimeout(function() {
+                    // スライドアウトアニメーションを適用
+                    loadingScreen.classList.add("slide-out");
+        
+                    // アニメーション終了後に削除
+                    setTimeout(function() {
+                        loadingScreen.style.display = "none";
+                    }, 7000); // 3秒後に削除
+                }, 2000); // 2秒間表示後にスライド開始
+            });
+        </script> -->
+        <script>
+            window.addEventListener("load", function() {
+                const loadingScreen = document.getElementById("loading");
+                const loadingImage = document.getElementById("loading-image");
+        
+                // 初期状態を表示
+                loadingScreen.classList.remove("hidden");
+        
+                setTimeout(function() {
+                    // 1. 画像をスライドアウト
+                    loadingImage.classList.add("slide-out-image");
+        
+                    setTimeout(function() {
+                        // 2. 画像のスライドが終わったら、背景をスライドアウト
+                        loadingScreen.classList.add("slide-out-background");
+        
+                        setTimeout(function() {
+                            // 3. 背景のスライドが終わったら非表示にする
+                            loadingScreen.style.display = "none";
+                        }, 5000); // 背景のアニメーションが終わるのを待つ
+                    }, 2000); // 画像のアニメーションが終わるのを待つ
+                }, 3000); // 2秒間表示後にスライド開始
+            });
+        </script> 
+                 
+    </body>
+</html>
