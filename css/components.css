@@ -226,7 +226,9 @@ body{
     transform: translate(-50%, -50%);
     font-size: 30px;
     color: #1c1b1b;
-    font-family: 'Noto Sans JP', sans-serif;
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 700;
+    font-style: normal;
 }
 @media (max-width: 500px) {
     .hero{
@@ -391,7 +393,6 @@ body{
     font-family: "Noto Sans JP", sans-serif;
     padding-bottom: 5px; /* 文字と線の間隔 */
     overflow: visible;
-
 }
 
 .square-bar::after {
@@ -433,7 +434,9 @@ body{
  
   .section-title h1 {
     font-size: 48px;
-    font-weight: bold;
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 700;
+    font-style: normal;
     color: #1c1b1b;
   }
  
@@ -491,6 +494,9 @@ body{
 
 .blockTitle {
     font-size: 30px;
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 700;
+    font-style: normal;
 }
 
 
