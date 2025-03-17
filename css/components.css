@@ -547,7 +547,6 @@ footer {
     justify-content: center; /* 水平方向の中央揃え */
     align-items: center; /* 垂直方向の中央揃え */
     text-align: center;
-    width: 440px;
     margin: 0 auto; /* 中央揃え */
     line-height: 5;
     top: 30px;
@@ -642,7 +641,6 @@ footer {
     display: inline-block; 
     position: relative; 
     cursor: pointer;
-    width: 220px;
 
 }
 
@@ -650,16 +648,17 @@ footer {
     content: '';
     position: absolute;
     bottom: 1px;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
     width: 0%;
     height: 1px;
     background: #fffcfc; /* 白色の下線 */
     transition: width 0.3s ease-in-out;
-    z-index: 100;
+    z-index: 2;
 }
 
 .footer_hover:hover::after {
-    width: 100%;
+    width: 70%;
 }
 
 
@@ -788,6 +787,7 @@ footer {
 }
 
 .footer_square-button::after {
+    
     background-color: #fffcfc;
     color: #e72241;
 
