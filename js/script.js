@@ -130,6 +130,13 @@ $(document).ready(function () {
                             $("top_first").css({"overflow-x": "hidden"});
 
                         }
+                        setTimeout(() => {
+                            $(".header").css({
+                                "display": "block",  // `display: none;` を解除
+                                "opacity": "1",
+                                "transition": `opacity ${fadeDuration}ms ease-in-out`
+                            });
+                        }, fadeDuration);
                     }, 200);
 
                     setTimeout(() => {
@@ -275,8 +282,10 @@ $(document).ready(function () {
                         "transition": `opacity 2s ease-in-out`,
                         "overflow": "auto"
                     });
+                
 
                 }, fadeDuration + 500);
+                
 
             }, 500);
 
