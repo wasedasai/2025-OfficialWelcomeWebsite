@@ -7,7 +7,7 @@
    position: relative;
    left: 50%;
     transform: translateX(-50%);
-    margin: 1vw;
+    margin-top: 8vw;
 }
 /* ここまでブロックタイトル */
 .text-wasedasai{
@@ -53,20 +53,18 @@
     position: relative;
 }
 .blockTitleContainer{
-    justify-content: start;
-    position: relative;
-    left: 0%;
+    justify-content: center;
     width: 30vw;
 }
 .text-wasedasai-number{
     font-size: 24px;
-    text-align: start;
+    text-align: center;
     padding: 0.3vw;
     color: #1C1B1B;
 }
 .text-wasedasai-action{
     font-size: 24px;
-    text-align: start;
+    text-align: center;
     color: #1C1B1B;
     width: 30vw;
 }
@@ -92,7 +90,7 @@
 }
 .text-wasedasai-happpi{
     font-size: 24px;
-    text-align: center;
+    text-align: start;
     margin: 2vw;
     color: #1C1B1B;
     width: 40vw;
@@ -110,7 +108,7 @@
     width: 50vw;
     margin: 2vw;
     position: relative;
-    left: 25%;
+    left: 23%;
     text-align: center;
 }
 .text-color-enji{
@@ -129,7 +127,7 @@
         position: relative;
         left: 50%;
          transform: translateX(-50%);
-         margin: 1vw;
+         margin-top: 10vw;
      }
     .text-wasedasai{
         font-size: 18px;
@@ -225,11 +223,19 @@
         margin: 2vw;
     }
     .blockTitleContainer{
-        width: 80%;
-        position: relative;
-        left: 5%;
+        width: 30%;
+        text-align: left;
     }
     .text-wasedasai-lecureation{
         margin-bottom: 8vw;
+    }
+    .text-wasedasai-number{
+        text-align: left;
+    }
+    .text-wasedasai-action{
+        text-align: left;
+    }
+    .text-wasedasai-number br {
+        display: none;
     }
 }
