@@ -15,6 +15,9 @@
     text-align: center;
     margin: 2vw;
     color: #1C1B1B;
+    width: 75vw;
+    position: relative;
+    left: 10%;
 }
 .text-wasedasai-event{
     font-size: 30px;
@@ -50,27 +53,28 @@
     position: relative;
 }
 .blockTitleContainer{
-    justify-content: center;
+    justify-content: start;
+    position: relative;
+    left: 0%;
+    width: 30vw;
 }
 .text-wasedasai-number{
     font-size: 24px;
-    text-align: center;
-    margin: 2vw;
+    text-align: start;
     padding: 0.3vw;
     color: #1C1B1B;
 }
 .text-wasedasai-action{
     font-size: 24px;
-    text-align: center;
-    margin: 2vw;
-    padding: 0.3rem;
+    text-align: start;
     color: #1C1B1B;
+    width: 30vw;
 }
 .text-wasedasai-attention{
     font-size: 20px;
-    text-align: center;
-    margin: 2vw;
+    text-align: start;
     color: #1C1B1B;
+    width: 30vw;
 }
 .text-wasedasai-about-number{
     font-size: 25px;
@@ -83,7 +87,7 @@
     align-items: center;
 }
 .img-waseda-happi{
-    width: 90vw;
+    width: 30vw;
     margin-left: 7vw;
 }
 .text-wasedasai-happpi{
@@ -91,16 +95,20 @@
     text-align: center;
     margin: 2vw;
     color: #1C1B1B;
+    width: 40vw;
 }
 .text-wasedasai-lecureation{
     font-size: 24px;
     text-align: center;
     margin: 2vw;
     color: #1C1B1B;
+    width: 50vw;
+    position: relative;
+    left: 23.5%;
 }
 .img-waseda-lecreation{
     width: 50vw;
-    margin: 1vw;
+    margin: 2vw;
     position: relative;
     left: 25%;
     text-align: center;
@@ -113,6 +121,8 @@
 .text-link{
     color: #E72241;
     font-size: 24px;
+    text-decoration: none;
+    font-weight: bold;
 }
 @media (max-width: 500px) {
     .section-title {
@@ -213,5 +223,13 @@
         display: inline;
         justify-content: center;
         margin: 2vw;
+    }
+    .blockTitleContainer{
+        width: 80%;
+        position: relative;
+        left: 5%;
+    }
+    .text-wasedasai-lecureation{
+        margin-bottom: 8vw;
     }
 }
