@@ -16,6 +16,126 @@
 
 </head>
 <body>
+    <div class="loading-back">
+        <div id="loading">
+            <img id="loading-image" src="images/saiwalk.webp" alt="Loading Animation">
+        </div>
+    </div>
+    <!-- <script>
+        window.addEventListener("load", function() {
+            const loadingScreen = document.getElementById("loading");
+    
+            // 初期状態を表示
+            loadingScreen.classList.remove("hidden");
+    
+            setTimeout(function() {
+                // スライドアウトアニメーションを適用
+                loadingScreen.classList.add("slide-out");
+    
+                // アニメーション終了後に削除
+                setTimeout(function() {
+                    loadingScreen.style.display = "none";
+                }, 7000); // 3秒後に削除
+            }, 2000); // 2秒間表示後にスライド開始
+        });
+    </script> -->
+    <script>
+        window.addEventListener("load", function() {
+            const loadingScreen = document.getElementById("loading");
+            const loadingImage = document.getElementById("loading-image");
+    
+            // 初期状態を表示
+            loadingScreen.classList.remove("hidden");
+    
+            setTimeout(function() {
+                // 1. 画像をスライドアウト
+                loadingImage.classList.add("slide-out-image");
+    
+                setTimeout(function() {
+                    // 2. 画像のスライドが終わったら、背景をスライドアウト
+                    loadingScreen.classList.add("slide-out-background");
+    
+                    setTimeout(function() {
+                        // 3. 背景のスライドが終わったら非表示にする
+                        loadingScreen.style.display = "none";
+                    }, 5000); // 背景のアニメーションが終わるのを待つ
+                }, 2000); // 画像のアニメーションが終わるのを待つ
+            }, 3000); // 2秒間表示後にスライド開始
+        });
+    </script>
+    <style>
+        .loading-back{
+    color: red;
+}
+
+#loading {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100vw;
+    height: 100vh;
+    background-color: red; /* 背景を赤に */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* 他の要素の前面に表示 */
+    overflow: hidden;
+}
+
+/* 画像の縦横比を維持しながら中央配置 */
+#loading-image {
+    width: auto;  
+    height: 25vh; /* 高さ基準で調整 */
+    max-width: 100%; 
+    max-height: 100%;
+}
+
+/* 初期位置のズレを防ぐため、アニメーション前に固定 */
+.hidden {
+    display: none !important;
+}
+
+
+
+@keyframes slideRight {
+    0% {
+        transform: translate(0, 0); /* 初期位置 */
+    }
+    100% {
+        transform: translate(100vw, 0); /* 右へスライド */
+    }
+}
+
+.slide-out {
+    animation: slideRight 5s ease-in-out forwards;
+}
+@keyframes slideRightImage {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(100vw);
+    }
+}
+
+@keyframes slideRightBackground {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(100vw);
+    }
+}
+
+.slide-out-image {
+    animation: slideRightImage 5s ease-in-out forwards;
+}
+
+.slide-out-background {
+    animation: slideRightBackground 2s ease-in-out forwards;
+}
+    </style>
+    
     <!-- 背景専用の要素 -->
     <div class="background">
         <div class="scroll-container1">
@@ -150,8 +270,8 @@
                         <div class="swiper-slide shinkan-event-2">
                             今際の国の<br>
                             運営スタッフ
-                            <img src="images/swan.png" alt="" class="white_picture">
-                            <img src="images/swan_red.png" alt="" class="red_picture">
+                            <img src="images/tranp.png" alt="" class="white_picture">
+                            <img src="images/tranp_red.png" alt="" class="red_picture">
                         </div>
                         <div class="swiper-slide shinkan-event-3">
                             ～診断×人生ゲーム～
@@ -177,8 +297,8 @@
                         </div>
                         <div class="swiper-slide shinkan-event-7">
                             対面説明会
-                            <img src="images/toudaiji.png" alt="" class="white_picture">
-                            <img src="images/toudaiji_red.png" alt="" class="red_picture">
+                            <img src="images/seminar.png" alt="" class="white_picture">
+                            <img src="images/seminar_red.png" alt="" class="red_picture">
                         </div>
 
                     </div>
@@ -246,6 +366,11 @@
             
         <div class="additional-content">
         <h2>FAQ</h2>
+        <a href="" class="square-button square-button-black">
+        <span class="spacer"></span>
+        <span class="text">詳しく見る</span>
+        <span class="spacer"></span>
+    </a>
 
 <div class="faq_examples">
     <div class="faq-top">
@@ -268,7 +393,9 @@
         <div class="faq_a">A 基本的には月曜日と木曜日の6限以降に活動しています。
             局によっては、水曜日や金曜日に活動があります。</div>
     </div>
+
 </div>
+
         </div>
         <div class="additional-content2">
             <h1>News</h1>   

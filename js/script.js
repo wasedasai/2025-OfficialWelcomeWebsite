@@ -91,7 +91,7 @@ $(document).ready(function () {
                     setTimeout(() => {
                         $(".top_first h1, .scroll-container2, .scroll-container3, .top-menu, .top_matsuri_btn, .top_btn, .top-icons").css({
                             "opacity": "0",
-                            "transition": `opacity ${fadeDuration}ms ease-in-out`
+                            "transition": `opacity ${fadeDuration}ms ease-in-out`,
                         });
                         if (window.innerWidth <= 1000) {$(".scroll-container2, .scroll-container3").css({
                             "display": "none" // 完全に削除
