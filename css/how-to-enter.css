@@ -9,11 +9,12 @@
   }
 .section-title h1 {
     font-size: 30px;
-    font-weight: bold;
 }
 .all-contents p{
     font-size: 20px;
     margin: 0 100px;
+    font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+    color: #1c1b1b;
 }
 .recruit{
     text-decoration: none;
