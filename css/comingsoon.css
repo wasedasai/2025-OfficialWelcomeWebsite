@@ -12,8 +12,9 @@ body {
     background-color: #fffcfc;
     color: #1c1b1b;
     overflow: hidden;
-    font-family: 'Yugothic', sans-serif;
-    font-weight: 510;
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 700;
+    font-style: normal;
 }
 .marquee-wrapper {
     white-space: nowrap;
