@@ -9,10 +9,10 @@ html{
 body {
     width: 100%;
     height: 100%;
-    background-color: #fffcfc;
+    background-color: #e72241;
     color: #1c1b1b;
     overflow: hidden;
-    font-family: 'Yugothic', sans-serif;
+    font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
     font-weight: 510;
 }
 .marquee-wrapper {
@@ -54,4 +54,2219 @@ body {
         width: 330px;
     }
 }
+/* ここから移植 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* すべての要素を選択不可にする */
+* {
+    user-select: none;
+    -webkit-user-select: none; /* Safari用 */
+    -moz-user-select: none; /* Firefox用 */
+    -ms-user-select: none; /* Internet Explorer用 */
+}
+/* Chrome, Safari, Edge 用 */
+::-webkit-scrollbar {
+    display: none;
+}
 
+/* Firefox 用 */
+html, body {
+    scrollbar-width: none;
+    
+}
+html {
+    overscroll-behavior: none;
+  }
+
+/* Internet Explorer & Edge 用 */
+html, body {
+    -ms-overflow-style: none;
+}
+body{
+    -webkit-overflow-scrolling: touch;
+    }
+body {
+    cursor: none;
+}
+.top_matsuri_btn {
+    display: none;
+}
+/* ここからセクションタイトル */
+.section-title {
+    display: inline-block;
+  }
+ 
+  .section-title h1 {
+    font-size: 48px;
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #1c1b1b;
+  }
+ 
+  .section-underline {
+    width: 100%;
+    height: 10px;
+    background-color: #E72241;
+    border-radius: 5px;
+  }
+
+
+@media (max-width:500px){
+    .section-title h1{
+        font-size: 18px;
+    }
+    .section-underline{
+        height: 3.5px;
+        border-radius: 1.5px;
+    }
+}
+
+
+/* ここまでセクションタイトル */
+@media screen and (max-width: 1025px) {
+    .mojimoji h1 {
+        transition: font-size 0.5s ease-out ;
+    }
+
+    /* .top_first h1 {
+        margin-top: 50vh !important;
+    } */
+    .custom-cursor {
+        display: none;
+    }
+    
+
+
+    .top-icon {
+        width: 38px !important;
+        height: 38px !important;
+    }
+
+    .top_matsuri_btn {
+        display: block !important;
+        position: absolute;
+        z-index: 5;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 120px; /* 楕円形の幅 */
+        height: 60px; /* 楕円形の高さ */
+        line-height: 60px;
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+        background-color: #fffcfc;
+        color: #E72241;
+        border-radius: 50%  !important;
+        border: 2px solid #fffcfc;
+        cursor: pointer;
+        text-transform: uppercase;
+            top: 70% !important; /* 祭の文字の下に配置 */
+    }
+    /* .top_btn {
+
+        position: absolute;
+        top: 65%;
+        z-index: 5;
+        left: 50%;
+        transform: translateX(-50%);
+    } */
+
+    .top_first h1 {
+        font-size: 200px;
+    }
+    .sentence h1 {
+        font-size: 44px !important;
+        text-align: start !important;
+        display: flex;
+        justify-content: center;
+        width: 250px;
+    }
+    .sentence > p {
+        font-size: 16px !important;
+        line-height: 10vh !important;
+        padding-left: 3% !important;
+        padding-right: 3% !important;
+        
+    }
+    .sentence_sp {
+        display: block !important;
+    }
+
+    .next_sp {
+        display: block !important;
+    }
+    
+    /* PCではボタンを非表示 */
+
+    .top-menu {
+        font-size: 13px !important;
+    }
+    .item1, .item2, .item3 {
+        width: 2000px !important;
+        height: 3000px !important;
+    }
+    .next_pc {
+        display: none !important;
+    }
+    .next-section {
+        height: 2560px !important;
+        align-items: unset !important;
+    }
+    .daen1
+    .daen2 {
+        z-index: -1;
+    }
+    .next-section h1 {
+        margin-top: 300px !important;
+        width: 220px !important;
+        position: absolute !important;
+        z-index: 0;
+        font-size: 36px !important;
+            font-family: "Zen Kaku Gothic New", sans-serif;
+            font-weight: 700;
+            font-style: normal;
+    }
+    /* .swiper {
+        z-index: 10 !important;
+    } */
+    /* .swiper {
+        width: 330px !important;
+    }
+    .swiper-wrapper {
+        display: block !important;
+        left: 0 !important;
+        transform: translateX(0) !important;
+        width: 330px !important;
+    }
+    .scroll_introduction {
+        width: auto !important;  
+        max-width: 330px;  
+        margin: 0 auto; 
+        text-align: center; 
+    }
+    .swiper-slide {
+        background-color: #ffffff !important;
+        color: #e72241 !important; 
+        border: none !important;  
+    }
+    .swiper-slide::before {
+        content: "";
+        position: absolute;
+        top: 5px; 
+        left: 5px;
+        right: 5px; 
+        bottom: 5px; 
+        border: 5px solid #e72241; 
+        border-radius: 50%; 
+        z-index: -1; 
+    }
+    .swiper-btns {
+        margin-top: 300px !important;
+    } 
+    .mottokuwasiku {
+        padding-top: 70px !important;
+        top: 600px !important;
+        height: 210vh !important;
+    }
+
+    .mottokuwasiku h1 {
+        top: 900px !important;
+    }
+    .faq_q {
+        font-size: 15px !important;
+    }
+    .faq_a {
+        font-size: 12px !important;
+    }
+    .faq-top {
+        width: 180px !important;
+        height: 160px !important;  
+    }
+    /* .detail_image {
+        width: 150px !important;
+        height: 150px !important;
+    }
+    .detail_photo {
+        width: 130px !important;
+        height: 130px !important;
+    } */
+    .detail_examples {
+        display: flex !important;
+        flex-direction: column !important; /* 🎯 スマホでは縦並び */
+        justify-content: center !important; /* 🎯 中央揃え */
+        align-items: center !important; /* 🎯 縦方向も中央揃え */
+        text-align: center !important; /* 🎯 テキストも中央揃え */
+        width: 100%;
+        padding-top: 30px;
+        gap: 20px; /* アイテム間の余白 */
+        top: 260px;
+    }
+
+    .detail {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        width: 80%; /* 🎯 スマホ版では幅を調整 */
+        max-width: 350px;
+    }
+
+    .detail_image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        max-width: 290px;
+        height: auto;
+        margin-bottom: 1.5vh;
+    }
+    .mottokuwasiku {
+        height: 200vh !important;
+    }
+    .mottokuwasiku h1 {
+        margin-top: -30px !important;
+        width: 250px;
+        /* margin-left: -50px;
+        margin-right: -50px; */
+    }
+    /* .detail {
+        width: 150px !important;
+        height: 300px;
+    } */
+    /* .minititle {
+        font-size: 13px !important
+    }
+    .minidetail {
+        font-size: 12px !important;
+    }
+    .detail_tail {
+        text-align: left !important;
+    } */
+    .news_sentences {
+        height: 200px;
+        overflow-y: auto;
+
+    }
+    .top-days {
+        font-size: 16px;
+        padding-right: 10vw !important;
+    }
+    .top-topics {
+        line-height: 30px;
+        font-size: 16px;
+        text-align: left !important;
+    }
+    .additional-content2 h1 {
+        margin-bottom: 0;
+        font-size: 64px !important;
+    }
+    .swiper-btns {
+        margin-top: 810px !important;
+    }
+    .border:before {
+        content: "";
+            display: inline-block;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -10px !important;
+            width: 120%;
+            height: 5px;
+            border-radius: 5px;
+          background: #fffcfc;
+        }
+        .top-days{
+        }
+        .top-topics {
+        }
+        .news_sentences {
+           margin-bottom: 0 !important;
+        }
+}
+
+
+.custom-cursor {
+    width: 100px;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.9); /* 透明度を減らして白を濃く */
+    border-radius: 50%;
+    position: absolute;
+    pointer-events: none;
+    z-index: 10000;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+    opacity: 0.9; /* 全体的な透明度も調整 */
+    backdrop-filter: blur(12px); /* ぼかし効果を少し強く */
+    -webkit-backdrop-filter: blur(12px); /* Safari対応 */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.9); /* 光の影を強く */
+    transition: transform 0.1s ease-out; /* なめらかな動き */
+    cursor: none;
+}
+
+
+/* 通常のカーソルを隠す */
+
+/* top-menu の上では通常のカーソルを表示 */
+.top-menu {
+    cursor: auto;
+}
+
+
+/* `top-menu` と `top-icons` は選択可能 */
+.top-menu, .top-icons {
+    user-select: auto;
+    -webkit-user-select: auto;
+    -moz-user-select: auto;
+    -ms-user-select: auto;
+}
+.top-menu {
+    cursor: auto; /* 通常のカーソルを表示 */
+}
+.top-icon {
+    cursor: pointer; /* ポインターを表示 */
+}
+
+
+html, body {
+    /* width: 100%;
+    height: 100%; */
+    margin: 0;
+    padding: 0;
+    overflow-y: auto;
+}
+
+/* 背景全体を覆うコンテナ */
+.background {   
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 150vw;
+    height: 100vh;
+    /* overflow: hidden; */
+    z-index: -1;
+    opacity: 1; /* 初期状態で表示 */
+    transition: opacity 4s ease-in-out; /* フェードイン・フェードアウトを統一 */
+    background-color: rgba(0,0,0,0);
+}
+
+/* 三色を持つ大きな長方形 */
+
+/* メインコンテンツ */
+.top_first {
+    width: 100vw;
+    height: 100vh; 
+    font-weight: bold;
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    overflow: visible;
+    color: rgba(0,0,0,0);
+    -webkit-background-clip: text;
+    background-clip: text;  
+    background-image: url("../images/utasan.jpg");
+    backdrop-filter: bl;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-image 4s ease-in-out, color 4s ease-in-out;
+    left: 0;
+    right: 0;
+    object-fit: cover;
+    cursor: none;
+}
+
+.top_first h1 {
+    margin-top: -4.5%;
+    text-align: center;
+    font-size: 550px;
+    transition: font-size 0.5s ease-out;
+
+}
+.scroll-container1 {
+    display: flex;
+    overflow: hidden;
+    width: 130%;
+    white-space: nowrap;
+    transform: rotate(45deg);
+    margin-top: -72vh;
+    margin-left: -40vw;
+    z-index: -1;
+}
+
+.scroll-content1 {
+    display: flex;
+    animation: scroll 10s linear infinite;
+}
+.scroll-container2 {
+    display: flex;
+    overflow: hidden;
+    width: 200vw;
+    white-space: nowrap;
+    z-index: 1000;
+    position: absolute;
+    top: 77vh;
+    padding-right: 10vw;
+}
+
+.scroll-content2 {
+    display: flex;
+    animation: scroll 10s linear infinite;
+    z-index: 1000;
+}
+
+.scroll-container3 {
+    display: flex;
+    overflow: hidden;
+    width: 200vw;
+    white-space: nowrap;
+    z-index: 1000;
+    position: absolute;
+    transform: rotate(90deg);
+    top: 75vh;
+    left: -10vw;
+    padding-left: 30vh;
+}
+
+.scroll-content3 {
+    display: flex;
+    animation: scroll 10s linear infinite;
+    z-index: 1000;
+}
+
+.item1 {
+    flex: 0 0 auto;
+    width: 20000px;/*お好みの幅に調整*/
+    height: 3000px;/*お好みの高さに調整*/
+    background-color: #e72241;
+    text-align: center;
+    line-height: 200px;
+    font-size: 24px;
+}
+.item2 {
+    flex: 0 0 auto;
+    width: 20000px;/*お好みの幅に調整*/
+    height: 3000px;/*お好みの高さに調整*/
+    background-color: #57b1e5;
+    text-align: center;
+    line-height: 200px;
+    font-size: 24px;
+}
+.item3 {
+    flex: 0 0 auto;
+    width: 20000px;/*お好みの幅に調整*/
+    height: 3000px;/*お好みの高さに調整*/
+    background-color: #f8b845;
+    text-align: center;
+    line-height: 200px;
+    font-size: 24px;
+}
+.item4 {
+    flex: 0 0 auto;
+    width: auto;
+    font-size: 128px;
+    font-weight: bold;
+    color: #fffcfc;
+    text-align: center;
+    font-size: 24px;
+    z-index: 6;
+    margin-left: 5vw;
+    margin-right: 5vw;
+}
+.item5 {
+    flex: 0 0 auto;
+    width: auto;
+    font-size: 128px;
+    font-weight: bold;
+    color: #fffcfc;
+    text-align: center;
+    line-height: 200px;
+    font-size: 24px;
+    z-index: 1000;
+    margin-left: 5vw;
+    margin-right: 5vw;
+}
+.saisyomoji1 {
+    font-size: 128px;
+    color: #fffcfc;
+    text-align: center;
+        font-family: "Zen Kaku Gothic New", sans-serif;
+        font-weight: 700;
+        font-style: normal;    
+}
+.saisyomoji2 {
+    font-size: 128px;
+    font-weight: bold;
+    color: #fffcfc;
+    text-align: center;
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 700;
+    font-style: normal; 
+}
+.top-menu {
+    position: absolute;
+        top: 5vh;
+        left: 5vw;
+        border-radius: 1px;
+        font-size: 18px;
+        color: #fffcfc;
+        z-index: 1001;
+        border-left: 3px solid #fffcfc;
+        padding-left: 1.5vw;
+        line-height: 2.5;
+        cursor: pointer;
+        text-decoration: none;
+        pointer-events: auto !important;
+}
+.top-menu a {
+    text-decoration: none; /* 下線を消す */
+    color: #fffcfc; /* テキストカラー */
+    display: inline-block; /* ブロック化せず、改行をそのまま活かす */
+    transition: color 0.3s ease-in-out;
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 700;
+    font-style: normal; 
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+.top_secound {
+    width: 100vw;
+    height: 100vh;
+    background-color: purple;
+}
+.top-icon {
+    width: 45px;
+    height: 45px;
+}
+.top-icons {
+    width: 0vw;
+    height: 20vh;
+    left: 5vw;
+    top: 53vh;
+    z-index: 1111;
+    position: absolute;
+    line-height: 3;
+    pointer-events: auto !important;
+}
+.top-menu-chousei {
+    display: block;
+    line-height: 25px !important;
+}
+.mojimoji h1 {
+    transform: scale();
+    transition: font-size 0.5s ease-in-out; /* 0.5秒でサイズ変更 */
+        font-family: "Zen Kaku Gothic New", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        
+}
+.mojimoji {
+    cursor: pointer;
+}
+.header {
+    display: none; /* 初期状態で非表示 */
+}
+.show-header {
+    display: block !important; /* JavaScript で適用するクラス */
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+header {
+    cursor: auto;
+}
+.new-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    opacity: 0;
+    transition: opacity 4s ease-in-out;
+}
+
+.sentence {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80vw;
+    min-height: 90vh;
+    height: auto;
+    padding: 5vh 0;
+    overflow: hidden;
+    /* 背景の影響を受けないようにz-indexを設定 */
+    position: relative;
+    z-index: 1;
+    font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+}
+
+.sentence h1 {
+    width: 100%;
+    font-size: 6rem;
+    margin-bottom: 3rem;
+    margin-top: 40vh;
+    font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+    text-align: center;
+    color: #fffcfc;
+}
+.sentence_sp {
+    display: none;
+}
+.sentence > p {
+    text-align: center;
+    width: 100%;
+    font-size: 20px;
+    line-height: 15vh;
+    font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+    color: #fffcfc; 
+    font-weight: bold;
+}
+
+.sentence {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    
+    text-align: center;
+
+    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
+    /* overflow-y: auto; スクロール可能にする */
+    opacity: 0; /* 最初は非表示 */
+    transition: opacity 2s ease-in-out;
+    font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+    bottom: 50vh;
+}
+.sentence::-webkit-scrollbar {
+    display: none; /* Chrome, Safari用 */
+}
+
+.sentence {
+    scrollbar-width: none; /* Firefox用 */
+    -ms-overflow-style: none; /* IE, Edge用 */
+    cursor: auto;
+}
+.top-square-button2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    border: 1.5px solid #2660ad;
+    border-radius: 30px;
+    font-size: 15px;
+    color: #2660ad;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    height: 53px;
+    white-space: nowrap;
+    width: 15%; /* 文字の長さに応じて可変 */
+    min-width: 150px; /* 最小幅を設定して極端に小さくならないように */
+    padding-right: 50px;
+    font-family: "Noto Sans JP", sans-serif;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 50px;
+}
+.top-square-button2 .spacer {
+    flex-grow: 1; 
+}
+
+.top-square-button2  .text {
+    flex-shrink: 0; /* 文字の長さに影響されないように固定 */
+}
+
+.top-square-button2::after {
+    content: "→";
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #2660ad;
+    color: #fffcfc;
+    transition: all 0.3s ease;
+    position: absolute;
+    right: 10px; /* 矢印は固定 */
+    flex-shrink: 0;
+    
+}
+
+/* ホバー時の変更 */
+.top-square-button2:hover {
+    background-color: #2660ad;
+    color: #fffcfc;
+}
+
+.top-square-button2:hover::after {
+    background-color: #fffcfc;
+    color: #2660ad;
+    transform: scale(1);
+}
+
+.square-button-white {
+    border: 1.5px solid #fffcfc;
+    color: #fffcfc;
+}
+.square-button-white::after {
+    background-color: #fffcfc;
+    color: #1c1b1b;
+}
+.square-button-white:hover {
+    background-color: #fffcfc;
+    color: #1c1b1b;
+}
+.square-button-white:hover::after {
+    background-color: #1c1b1b;
+    color: #fffcfc;
+}
+/* ここからセクションタイトル */
+.section-title {
+    display: inline-block;
+  }
+ 
+  .section-title h1 {
+    font-size: 48px;
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #1c1b1b;
+    z-index: 9999;
+    position: absolute;
+  }
+ 
+  .section-underline {
+    width: 100%;
+    height: 10px;
+    background-color: #E72241;
+    border-radius: 5px;
+  }
+
+
+@media (max-width:500px){
+    .section-title h1{
+        font-size: 18px;
+    }
+    .section-underline{
+        height: 3.5px;
+        border-radius: 1.5px;
+    }
+}
+
+
+/* ここまでセクションタイトル */
+/* .sentence.scrollable {
+    overflow-y: auto;
+} */
+
+.white_red {
+    color: white;
+    text-shadow: 4px 4px 10px red;
+  }
+/* 次のページのスタイル */
+/* ここからheader */
+.header{
+    width: 100vw;
+    height: 100px;
+    color: #1c1b1b;
+    font-family: 'Notosans JP', sans-serif;
+}
+.header-logo img{
+    width: 220px;
+    margin: 15px 2% 0 2%;
+}
+.saikun-menu{
+    position: absolute;
+    right: 13px;
+    top: 8px;
+    text-align: center;
+    z-index: 200;
+}
+.menu-img{
+    width: 75px;
+}
+.menu-text{
+    margin-top: -17px;
+}
+.fullscreen-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #fffcfc;
+    color: #1c1b1b;
+    opacity: 0;
+    visibility: hidden;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+    z-index: 100;
+    overflow: hidden;
+}
+.fullscreen-menu.active {
+    opacity: 1;
+    visibility: visible;
+}
+.menu-open-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80vw;
+    height: 80vh;
+    border-top: 1.5px solid #1c1b1b;
+    border-bottom: 1.5px solid #1c1b1b;
+    overflow: hidden;
+}
+.menu-open-logo img{
+    width: 230px;
+    margin: 26px 2% 0 2%;
+}
+.menu-open-texts{
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+}
+.menu-open-container a{
+    text-decoration: none;
+    color: #1c1b1b;
+}
+.menu-open-texts a:hover{
+    color: #e72241;
+    transition: 0.7s;
+}
+.menu-open-container p{
+    margin: 36px 0;
+    font-family: "Noto Sans JP", sans-serif;
+}
+.menu-open-texts p{
+    opacity: 0;
+    transform: translateY(30px);
+}
+.menu-sns-icon{
+    position: absolute;
+    bottom: 35px;
+    margin-left: 2%;
+    display: flex;
+}
+.menu-sns-icon img{
+    width: 50px;
+    margin: 0 10px;
+}
+.menu-open-button {
+    position: absolute;
+    bottom: 40px;
+    right: 2%;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    padding: 10px 20px;
+    border: 1.5px solid #1c1b1b;/*色を変えてね*/
+    border-radius: 30px;
+    font-size: 15px;
+    /* font-weight: bold; なくそう*/
+    color: #1c1b1b;
+    font-family: "Noto Sans JP", sans-serif;/*加えた*/
+    /* text-decoration: none; なくそう*/
+    transition: all 0.3s ease;
+    overflow: hidden;
+    height:60px;/*高さを変えてね*/
+    white-space: nowrap;
+    width:262px;/*長さを変えてね*/
+    gap:10px;
+    margin-left: 20px;
+    padding-left: 50px;/*文字をずらせる */
+    }
+          
+  
+  .menu-open-button::after {
+  content: "→";
+  font-size: 20px;/*矢印の大きさを変えてね*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;/*まるの大きさを変えてね*/
+  height: 45px;/*まるの大きさを変えてね*/
+  border-radius: 50%;
+  background-color: #1c1b1b;/*色を変えてね*/
+  color: #fffcfc;
+  transition: all 0.3s ease;
+  position: absolute;
+  right: 10px; 
+  margin-left: 10px; 
+  flex-shrink: 0;
+  }
+  .menu-open-button:hover {
+  background-color: #1c1b1b;/*色を変えてね*/
+  color: #fffcfc;
+  }
+  
+  .menu-open-button:hover::after {
+  background-color: #fffcfc;
+  color: #1c1b1b;
+  transform: scale(1); 
+  }
+
+  @media (max-width: 1023px) {
+    /* ここからheader */
+.header{
+    height: 75px;
+}
+.header-logo img{
+    width: 170px;
+}
+.saikun-menu{
+    right: 5px;
+    top: 5px;
+}
+.menu-img{
+    width: 65px;
+}
+.menu-text{
+    margin-top: -16px;
+    font-size: 14px;
+}
+.menu-open-container{
+    top: 51%;
+    width: 90vw;
+}
+.menu-open-logo img{
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+}
+.menu-open-texts{
+    top: 44%;
+    width: 100%;
+    font-size: 16px;
+}
+.menu-open-container p{
+    margin: 15px 0;
+}
+.menu-sns-icon{
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.menu-open-button {
+    bottom: 95px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: 0;
+}
+.menu-sns-icon{
+    bottom: 25px;
+}
+.square-bar {
+    margin-right: 30px;
+}
+/* ここまでheader */
+  }
+/* ここまでheader */
+/* 次のセクションのデザイン */
+.next-section {
+    width: 100vw;
+    height: 1800px;
+    background-color: #fffcfc; /* 背景色を設定 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #444;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    cursor: auto;
+    position: relative;
+    overflow: hidden;
+
+}
+.next-section h1 {
+    position: absolute;
+    font-size: 64px;
+    margin-bottom: 3rem;
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    text-align: center;
+    color: #fffcfc;
+    margin-top: -1240px;
+    z-index: 10;
+    border-bottom: 4px #fffcfc ;
+    width: 500px;
+}
+.border {
+    position: relative;
+  }
+  
+  .border:before {
+  content: "";
+      display: inline-block;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -30px;
+      width: 120%;
+      height: 5px;
+      border-radius: 5px;
+    background: #fffcfc;
+  }
+.daen1 {
+    position: absolute;
+    background-color:#e72241;
+    /*要素を高さ200px、幅300pxの長方形*/
+    width: 2400px;
+    height: 1600px;
+    border-radius: 50%;
+    top: 15vh;
+}
+.daen2 {
+    position: absolute;
+    background-color: rgba(0,0,0,0);
+    width: 2400px;
+    height: 1600px;
+    border-radius: 50%;
+    top: 7vh;
+    border: dashed #e72241; /* 点線の太さ */
+    border-spacing: 40px; /* 通常は適用されない */
+    border-image: none;
+}
+
+/* 点線の間隔を強制的に変更 */
+.daen2 {
+    border-style: dashed;
+    border-width: 2px;
+    border-color: #e72241;
+    stroke-dasharray: 20 80; /* 破線の長さと間隔を調整 */
+}
+.scroll_introduction {
+    position: absolute;
+    top: 424px;
+}
+
+.scroll_introduction {
+    max-width: 800px; /* カルーセルの最大幅 */
+    text-align: center !important;
+}
+
+.swiper {
+    width: 221.5%;
+    height: 330px;
+    left: 50%;
+    transform: translateX(-50%) ;
+    position: relative;
+}
+.swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #e72241;
+    width: 330px !important;  /* 正円の幅 */
+    height: 330px !important; /* 正円の高さ */
+    border: #fffcfc 2px solid;
+    color: #fffcfc;
+    font-size: 30px;
+    line-height: 30px;
+        font-family: "Zen Kaku Gothic New", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+}
+
+.swiper-slide-active {
+    background-color: #ffffff !important;
+    color: #e72241 !important; /* 文字の色を赤に変更 */
+    border: none !important; /* 枠線を直接適用しない */
+}
+
+/* 白いスライドの外側に枠線を作る */
+.swiper-slide-active::before {
+    content: "";
+    position: absolute;
+    top: 5px; /* 上の隙間 */
+    left: 5px; /* 左の隙間 */
+    right: 5px; /* 右の隙間 */
+    bottom: 5px; /* 下の隙間 */
+    border: 5px solid #e72241; /* 赤い枠線 */
+    border-radius: 50%; /* 丸型 */
+    z-index: -1; /* 背景に配置 */
+}
+
+.shinkan-event-1 {
+    padding-top: 150px;
+    position: relative;
+}
+.white_picture {
+    position: absolute;
+    right: 50px;
+    bottom: 46px;
+    width: 80px;
+}
+.red_picture {
+    position: absolute;
+    left: 70px;
+    bottom: 46px;
+    width: 80px;
+}
+.shinkan-event-2 {
+    padding-top: 135px;
+    position: relative;
+}
+.shinkan-event-3 {
+    padding-top: 150px;
+    position: relative;
+}
+.shinkan-event-4 {
+    padding-top: 135px;
+    position: relative;
+}
+.shinkan-event-5 {
+    padding-top: 135px;
+    position: relative;
+}
+.shinkan-event-6 {
+    padding-top: 150px;
+    position: relative;
+}
+.shinkan-event-7 {
+    padding-top: 150px;
+    position: relative;
+}
+.shinkan-event-8 {
+    padding-top: 135px;
+}
+/* Swiper標準の矢印を非表示 */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    display: none;
+}
+.swiper-button-next,.swiper-button-prev {
+    position: absolute;
+    top: var(--swiper-navigation-top-offset,50%);
+    /* width:calc(var(--swiper-navigation-size)/ 44 * 27); */
+    /* height:var(--swiper-navigation-size); */
+    margin-top: calc(0px - (var(--swiper-navigation-size)/ 2));
+    z-index: 10;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--swiper-navigation-color,var(--swiper-theme-color))
+}
+/* カスタムナビゲーションボタン */
+.custom-swiper-button {
+    width: 70px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.8); /* 半透明の白 */
+    border-radius: 50%; /* 丸形 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 10;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* 影を追加 */
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+/* ホバー時のエフェクト */
+.custom-swiper-button:hover {
+    background-color: rgba(255, 255, 255, 1); /* 明るく */
+    transform: translateY(-50%) scale(1.1); /* 拡大 */
+}
+
+/* ボタン内の矢印 */
+.custom-swiper-button span {
+    font-size: 24px;
+    color: #e72241; /* 矢印の色 */
+    font-weight: bold;
+}
+
+/* 位置調整 */
+
+.swiper-pagination {
+    top: -20px !important;
+}
+/* ページネーションのデザイン */
+/* ページネーションのデザイン */
+.swiper-pagination-bullet {
+    width: 15px !important; /* 丸の大きさ */
+    height: 15px !important;
+    background-color: #fffcfc !important; /* デフォルト（押していない時の色） */
+    border-radius: 50%;
+    opacity: 1 !important;
+    
+    transition: background-color 0.3s ease-in-out;
+}
+/* .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+    bottom: var(--swiper-pagination-bottom,8px);
+    top: var(--swiper-pagination-top,25px) !important;
+    left: 0px;
+    width: 100%;
+} */
+/* アクティブな（押している）ページネーション */
+.swiper-pagination-bullet-active {
+    background-color: #e72241 !important; /* 押している時の色を赤にする */
+    border: 2px solid #fffcfc; 
+}
+
+.swiper-btns {
+    position: absolute;
+    width: 370px;
+    height: auto;
+    gap: 30px;
+    margin-top: -100px;
+    z-index: 1;
+}
+.footer-left-btn {
+    width: 60px !important;
+    height: 60px !important;
+    background-color: #fffcfc;
+    border-radius: 50%;
+    color: #e72241 !important;
+}
+.footer-right-btn {
+    width: 60px !important;
+    height: 60px !important;
+    background-color: #fffcfc;
+    color: #e72241 !important;
+    border-radius: 50%;
+}
+.mottokuwasiku {
+    position: absolute;
+    width: 100vw;
+    height: 160vh;
+    background-color: #e72241;
+    z-index: 0;
+    top: 750px;
+    padding-top: 170px;
+}
+.mottokuwasiku h1 {
+    position: absolute;
+    font-size: 64px;
+    margin-bottom: 3rem;
+    color: #fffcfc;
+    z-index: 10;
+    width: 384px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 100px;
+        font-family: "Zen Kaku Gothic New", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+
+}
+.detail_examples {
+    width: 80%;
+    height: 720px;
+    position: relative;
+    justify-content: space-around;
+    padding-top: 200px;
+    display: flex;
+    left: 50%;
+    transform: translateX(-50%)
+}
+
+.detail_photo {
+    width: 270px ;
+    height: 270px ;
+    border-radius: 10px;
+    margin: 5px;
+}
+.detail_image {
+    width:290px ;
+    height: 290px ;
+    border: 5px #fffcfc solid;
+    border-radius: 10px;
+    margin-bottom: 1.5vh;
+}
+/* ここからブロックタイトル */
+.blockTitleContainer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.blockTitleBar {
+    width: 9px;
+    height: 30px;
+    border-radius: 5px;
+}
+
+.blockTitle{
+    color: #fffcfc;
+        font-family: "Zen Kaku Gothic New", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+}
+
+.blockwhite {
+    background-color: #fffcfc;
+}
+.blockRed {
+    background-color: #e72241;
+}
+
+.blockBlue {
+    background-color: #58b1e4;
+}
+
+.blockYellow {
+    background-color: #f8b945;
+}
+
+.blockTitle {
+    font-size: 30px;
+}
+
+
+@media (max-width:500px){
+    .blockTitleContainer{
+        gap: 5px;
+    }
+
+    .blockTitleBar{
+        width: 6px;
+        height: 20px;
+        border-radius: 3px;
+    }
+
+    .blockTitle{
+        font-size: 18px;
+    }
+}
+/* ここまでブロックタイトル */
+.minititle {
+    text-align: left;
+    font-size: 24px;
+    color: #fffcfc;
+    margin-bottom: 1vh;
+}
+.minidetail {
+    text-align: left;
+    font-size: 20px;
+    color: #fffcfc;
+    font-weight: normal;
+    margin-bottom: 13px;
+    width: 290px;
+    margin-top: 9px;
+
+}
+.detail_tail {
+    font-size: 20px;
+    color: #fffcfc;
+    font-weight: normal;
+    font-family: Noto;  
+    text-align: right;
+}
+/* ここからベイマックス */
+.square-bar {
+    position: relative;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    color: #fffcfc; /* 文字色 */
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: normal;
+    padding-bottom: 5px; /* 文字と線の間隔 */
+    overflow: visible;
+    margin-top: 3px;
+}
+
+.square-bar::after {
+    content: '';
+    position: absolute;
+    left: 80%; /* 線を中央配置 */
+    width: 150px;
+    height: 2px;
+    background: #fffcfc;
+    bottom: -3px;
+    transform: translateX(-50%) scale(1, 1); 
+    transform-origin: right top;
+    transition: transform 0.3s ease-out;
+}
+
+.square-bar::before {
+    content: '';
+    position: absolute;
+    left: calc(80% + 75px); 
+    bottom: -6px;
+    width: 10px;
+    height: 10px;
+    background: #fffcfc;
+    border-radius: 50%;
+}
+
+
+.square-bar:hover::after {
+    transform: translateX(-50%) scale(0, 1);
+    transform-origin: right top;
+    transition: transform 0.5s ease-out;
+}
+/* ここまでベイマックス */
+.detail {
+width: 290px;
+height: 480px;
+padding-top: 12.5vh;
+padding-left: 1vw;
+padding-right: 1vw;
+}
+
+
+/* さらに続くコンテンツ */
+.additional-content {
+    width: 100vw;
+    height: 650px;
+background-color: #fffcfc;
+    display: flex;
+    color: white;
+    font-size: 24px;
+    padding: 20px;
+    cursor: auto;
+    z-index: 10;
+}
+
+.additional-content h2 {
+    color: #1c1b1b;
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    left: 50%;
+    transform: translateX(-50%);
+    position: relative;
+    font-size: 64px;
+    padding-top: 50px;
+}
+.top-square-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    border: 1.5px solid #2660ad;
+    border-radius: 30px;
+    font-size: 16px;
+    color: #2660ad;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    height: 60px;
+    white-space: nowrap;
+    width: 100%; /* 文字の長さに応じて可変 */
+    min-width: 150px; /* 最小幅を設定して極端に小さくならないように */
+    padding-right: 50px;
+    font-family: "Noto Sans JP", sans-serif;
+    top: 47px;
+}
+.top-square-button .spacer {
+    flex-grow: 1; 
+}
+
+.top-square-button .text {
+    flex-shrink: 0; /* 文字の長さに影響されないように固定 */
+}
+
+.top-square-button::after {
+    content: "→";
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 37px;
+    height: 37px;
+    border-radius: 50%;
+    background-color: #2660ad;
+    color: #fffcfc;
+    transition: all 0.3s ease;
+    position: absolute;
+    right: 10px; /* 矢印は固定 */
+    flex-shrink: 0;
+    
+}
+
+/* ホバー時の変更 */
+.top-square-button:hover {
+    background-color: #2660ad;
+    color: #fffcfc;
+}
+
+.top-square-button:hover::after {
+    background-color: #fffcfc;
+    color: #2660ad;
+    transform: scale(1);
+}
+
+.square-button-black {
+    border: 1.5px solid #1c1b1b;
+    color: #1c1b1b;
+}
+.square-button-black::after {
+    background-color: #1c1b1b;
+    color: #fffcfc;
+}
+.square-button-black:hover {
+    background-color: #1c1b1b;
+    color: #fffcfc;
+}
+.square-button-black:hover::after {
+    background-color: #fffcfc;
+    color: #1c1b1b;
+}
+.faq_examples {
+    position: absolute;
+    width: 90%;
+    height: 250px;
+
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 170px;
+    display: flex;
+    padding-top: 30px;
+    justify-content: space-around;
+}
+.faq-top {
+    width: 272px;
+    height: 220px;  
+    border-top: 2.5px #1c1b1b solid;
+    color: #1c1b1b;
+    padding-top: 20px;
+    text-align: left;
+}
+.faq_q {
+    font-size: 20px;
+    padding-bottom: 10px;
+        font-family: "Zen Kaku Gothic New", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+}
+.faq_a {
+    font-size: 18px;
+}
+.faq-link {
+    color: #e72241; /* リンクの色（赤） */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+.additional-content2{
+    width: 100vw;
+    height: 40%;
+    background-color: #fffcfc; /* さらに暗めの背景色 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fffcfc;
+    font-size: 24px;
+    padding: 20px;
+    cursor: auto;
+    z-index: 10;
+    padding: 50 px;
+    position: relative;
+
+}
+.additional-content2 h1 {
+    color: #1c1b1b;
+    font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+    margin: 0; /* 余計なマージンを削除 */
+    position: relative; /* `absolute` を削除 */
+    font-size: 64px;
+    margin-bottom: 40px;
+}
+.news_sentences {
+    width: 90%;
+    border-top: #1c1b1b 2px solid;
+    border-bottom: #1c1b1b 2px solid;
+    display: flex;
+    align-items: center;
+    line-height: 100px;
+    margin-bottom: 100px;
+}
+.top-days{
+    /* margin-top: -115px; */
+    color: #1c1b1b;
+    font-weight: normal;
+    font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+    text-align: left; 
+    padding-right: 10vw;
+    padding-left: 5vw;
+}
+.top-topics{
+    /* margin-top: -115px; */
+    color: #1c1b1b;
+    font-weight: normal;
+    font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+    text-align: center; 
+}
+
+.additional-content3{
+    width: 100vw;
+    background-color: #fffcfc; /* さらに暗めの背景色 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fffcfc;
+    font-size: 24px;
+    padding: 20px;
+    cursor: auto;
+    z-index: 10;
+    padding: 50 px;
+    position: relative;
+}
+.kyousan_photo {
+    width: 40vw;
+    height: auto;
+    margin-bottom: 30px;
+}
+.fukidashi-container{
+    position: relative;
+    width: 100vw;
+    height: 38vw;
+    background-color: #fffcfc;
+    font-family: "Noto Sans JP", sans-serif;
+    cursor: auto;
+}
+.fukidashi-container img{
+    position: absolute;
+    width: 20vw;
+    height: 20vw;
+    bottom: 0;
+    left: 3vw;
+}
+.fukidashi-circle{
+    position: absolute;
+    background-color: #e72241;
+}
+.small{
+    width: 2vw;
+    height: 2vw;
+    border-radius: 50%;
+    bottom: 15vw;
+    left: 25vw;
+}
+.medium{
+    width: 3.5vw;
+    height: 2.5vw;
+    border-radius: 50%;
+    bottom: 17vw;
+    left: 27vw;
+    transform: rotate(25deg);
+}
+.large{
+    width: 60vw;
+    height: 22vw;
+    border-radius: 52% 48% 48% 52% / 49% 56% 44% 51%;
+    bottom: 13vw;
+    left: 30vw;
+    transform: rotate(3deg);
+}
+.large-small{
+    position: absolute;
+    width: 55vw;
+    height: 19vw;
+    border-radius: 53% 47% 50% 50% / 52% 57% 43% 48% ;
+    bottom: 1.5vw;
+    left: 2.2vw;
+    background-color: transparent;
+    border: 4px solid #fffcfc;
+}
+.fukidashi-container h2{
+    position: absolute;
+    bottom: 25vw;
+    left: 47vw;
+    font-size: 2.5vw;
+    color: #fffcfc; 
+        font-family: "Zen Kaku Gothic New", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+}
+.square-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.9vw 1.8vw;
+    border: 2px solid #fffcfc;
+    border-radius: 2.7vw;
+    font-size: 1,7vw;
+    color: #fffcfc;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    height: 4vw;
+    white-space: nowrap;
+    width: 15vw; /* 文字の長さに応じて可変 */
+    min-width: 150px; /* 最小幅を設定して極端に小さくならないように */
+    padding-right: 4vw;
+    font-family: "Noto Sans JP", sans-serif;
+    position: absolute;
+    bottom: 19vw;
+    left: 51vw;
+}
+
+.square-button .spacer {
+    flex-grow: 1; 
+}
+
+.square-button .text {
+    flex-shrink: 0; /* 文字の長さに影響されないように固定 */
+}
+
+.square-button::after {
+    content: "→";
+    font-size: 1.3vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.8vw;
+    height: 2.8vw;
+    border-radius: 50%;
+    background-color: #fffcfc;
+    color: #e72241;
+    transition: all 0.3s ease;
+    position: absolute;
+    right: 0.7vw; /* 矢印は固定 */
+    flex-shrink: 0;
+}
+/* ホバー時の変更 */
+.square-button:hover {
+    background-color: #fffcfc;
+    color: #e72241;
+}
+.square-button:hover::after {
+    background-color: #e72241;
+    color: #fffcfc;
+    transform: scale(1);
+}
+@media (max-width: 767px) {
+    .top-menu-chousei {
+        display: block;
+        line-height: 15px !important;
+    }
+    .fukidashi-container{
+        height: 110vw;
+    }
+    .fukidashi-container img{
+        width: 50vw;
+        height: 50vw;
+        left: -4vw;
+    }
+    .small{
+        width: 3vw;
+        height: 3vw;
+        bottom: 40vw;
+        left: 35vw;
+    }
+    .medium{
+        width: 5vw;
+        height: 4vw;
+        bottom: 45vw;
+        left: 36.5vw;
+    }
+    .large{
+        width: 63vw;
+        height: 50vw;
+        bottom: 45vw;
+        left: 35vw;
+        border-radius: 57% 43% 38% 57% / 43% 52% 48% 57% ;
+    }
+    .large-small{
+        width: 60vw;
+        height: 45vw;
+        bottom: 2vw;
+        left: 2vw;
+        border-radius: 57% 43% 38% 57% / 43% 52% 48% 57% ;
+    }
+    .fukidashi-container h2{
+        bottom: 75vw;
+        left: 47vw;
+        font-size: 4vw;
+    }
+    .square-button {
+        padding: 2vw 4vw;
+        border-radius: 6vw;
+        font-size: 2.7vw;
+        height: 10vw;
+        width: 32vw;
+        bottom: 57vw;
+        left: 51vw;
+        padding-right: 8vw;
+    }
+    .square-button .spacer {
+        flex-grow: 1; 
+    }
+    .square-button .text {
+        flex-shrink: 0; 
+    }
+    .square-button::after {
+        font-size: 2.5vw;
+        width: 6vw;
+        height: 6vw;
+        right: 1.3vw;
+    }
+    .item5 {
+        font-size: 60px !important;
+    }
+    .scroll-container1 {
+        margin-top: -300% !important;
+        width: 300% !important;
+    }
+    .scroll-container2 {
+        top: 78vh !important;
+    }
+    .scroll-container3 {
+      /* 上の幅調整 */
+      top: 0 !important;
+      /* 横の幅調整 */
+      width: 200% !important;
+      overflow: visible !important;
+
+    }
+    .scroll-content3 {
+        width: 200% !important;
+    }
+     .saisyomoji1 {
+        font-size: 88px !important;
+        height: 100px;
+    }
+    .saisyomoji2 {
+        font-size: 48px !important;
+    }
+    .additional-content {
+        width: 100vw;
+        height: 1100px;
+        padding: 0 !important;
+    }
+    .faq_examples {
+        flex-flow: column !important;
+        padding-top: 0;
+        width: auto !important;
+    }
+    .faq-top {
+        margin-top: 20px;
+    }
+    .kyousan_photo {
+        width: 80vw;
+        height: auto;
+    }
+    .mottokuwasiku {
+        height: 280vh !important;
+    }
+    .top_matsuri_btn {
+        top: 70% !important; /* 祭の文字の下に配置 */
+    }
+    .top-square-button2 {
+        width: 50%;
+    }
+}/* フッターを画面の最下部に固定 */
+
+
+footer {
+
+   cursor: auto;
+}
+
+/* フッター到達時にスクロールを無効化するクラス */
+.no-scroll {
+    overflow: hidden;
+    height: 100vh;
+}
+.footer_container {
+    width: 100vw;
+    height: 700px;
+    position: relative; 
+    cursor: auto;
+    margin-bottom: -300px !important;
+    background-color: #e72241;
+}
+.next_sp {
+    display: none;
+}
+.no-scroll {
+    overflow: hidden !important;
+}
+
+    .restore-screen-btn {
+        display: block;
+        margin: 20px auto;
+        padding: 10px 20px;
+        font-size: 18px;
+        font-weight: bold;
+        color: white;
+        background-color: #e72241;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background 0.3s ease-in-out;
+    }
+    
+    .restore-screen-btn:hover {
+        background-color: #c91636;
+    }
+/* ここからfooter */
+footer{
+    position: relative;
+    width: 100vw;
+    height: 630px;
+    background-color: #e72241;
+    color: #fffcfc;
+    font-family: 'Notosans JP', sans-serif;
+    margin-bottom: -10%;
+    padding-bottom: -30%;
+}
+.arrow-img{
+    text-align: center;
+}
+.arrow-img img{
+    width: 50px;
+    margin-top: 30px;
+}
+.footer-contaier{
+    position: absolute;
+    width: 80vw;
+    height: 420px;
+    border-top: 1.5px solid #fffcfc;
+    border-bottom: 1.5px solid #fffcfc;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 3vw;
+}
+.footer-logo {
+    text-align: left !important;
+}
+.footer-logo img{
+    width: 18vw;
+    margin: 26px 2% 0 2%;
+}
+.footer-pages{
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.3vw;
+    display: flex;
+}
+.footer-pages a{
+    text-decoration: none;
+    color: #fffcfc;
+}
+.footer-pages p{
+    font-family: "Noto Sans JP", sans-serif;
+    width: 250px;
+}
+.footer-pages p:hover{
+    animation: zoom .3s;
+    
+}
+@keyframes zoom {
+	50% {
+		transform: scale(1.05);
+	}
+}
+.mergin-exist{
+    margin: 4vw 0;
+}
+.mergin-none{
+    margin: 4vw 0;
+}
+.footer-sns-icon{
+    position: absolute;
+    bottom: 35px;
+    margin-left: 4%;
+    display: flex;
+}
+.footer-sns-icon img{
+    width: 3vw;
+    margin: 0 10px;
+}
+.footer-square-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.9vw 1.8vw;
+    border: 1.5px solid #fffcfc;
+    border-radius: 2.7vw;
+    font-size: 1.2vw;
+    color: #fffcfc;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: absolute;
+    bottom: 35px;
+    right: 2%;
+    overflow: hidden;
+    height: 4vw;
+    white-space: nowrap;
+    width: 17vw; /* 文字の長さに応じて可変 */
+    min-width: 150px; /* 最小幅を設定して極端に小さくならないように */
+    padding-right: 4vw;
+    font-family: "Noto Sans JP", sans-serif;
+}
+.foooter-square-button .spacer {
+    flex-grow: 1; 
+}
+.footer-square-button .text {
+    flex-shrink: 0; /* 文字の長さに影響されないように固定 */
+}
+.footer-square-button::after {
+    content: "→";
+    font-size: 1.3vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.8vw;
+    height: 2.8vw;
+    border-radius: 50%;
+    background-color: #fffcfc;
+    color: #e72241;
+    transition: all 0.3s ease;
+    position: absolute;
+    right: 0.7vw; /* 矢印は固定 */
+    flex-shrink: 0;
+}
+/* ホバー時の変更 */
+.footer-square-button:hover {
+    background-color: #fffcfc;
+    color: #e72241;
+}
+.footer-square-button:hover::after {
+    background-color: #e72241;
+    color: #fffcfc;
+    transform: scale(1);
+}
+@media (max-width: 500px) {
+    footer{
+        height: 100vh;
+    }
+    .footer-contaier{
+        height: 77vh;
+        margin-top: 30px;
+    }
+    .footer-logo img{
+        width: 220px;
+        margin: 10px 0;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .footer-pages{
+        flex-direction: column;
+        font-size: 14px;
+    }
+    .footer-pages p{
+        width: 250px;
+    }
+    .mergin-exist{
+        margin: 25px 0;
+    }
+    .mergin-none{
+        margin-top: 25px;
+    }
+    .footer-sns-icon{
+        bottom: 90px;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-left: 0;
+    }
+    .footer-sns-icon img{
+        width: 40px;
+        margin: 0 10px;
+    }
+    .footer-square-button {
+        padding: 2vw 4vw;
+        border-radius: 6vw;
+        font-size: 2.7vw;
+        height: 10vw;
+        width: 32vw;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        padding-right: 8vw;
+    }
+    .footer-square-button .spacer {
+        flex-grow: 1; 
+    }
+    .footer-square-button .text {
+        flex-shrink: 0; 
+    }
+    .footer-square-button::after {
+        font-size: 2.5vw;
+        width: 6vw;
+        height: 6vw;
+        right: 1.3vw;
+    }
+}
+@media (max-width: 376px) {
+    .footer-sns-icon{
+        display: none;
+    }
+}
+/* ここまでfooter */
+ /* ここからセクションタイトル */
+.section-title {
+    display: inline-block;
+  }
+ 
+  .section-title h1 {
+    font-size: 48px;
+    font-weight: bold;
+    color: #1c1b1b;
+  }
+ 
+  .section-underline {
+    width: 100%;
+    height: 10px;
+    background-color: #E72241;
+    border-radius: 5px;
+  }
+
+
+@media (max-width:500px){
+    .section-title h1{
+        font-size: 18px;
+    }
+    .section-underline{
+        height: 3.5px;
+        border-radius: 1.5px;
+    }
+}
+
+
+/* ここまでセクションタイトル */

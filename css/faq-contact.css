@@ -1,5 +1,5 @@
 .QandA{
-    font-family: "Noto Sans JP", sans-serif;
+    font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
 }
 .section-title{
     position: relative;
@@ -62,6 +62,11 @@
 .a-sentence{
     margin-top: 0.5vw;
     width: 90%;
+}
+.a-sentence a{
+    color: #e72241;
+    font-weight: bold;
+    text-decoration: none;
 }
 .faq-answer {
     display: none; /* 初期状態で非表示 */

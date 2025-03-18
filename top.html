@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">    
+    <title>Topテスト</title>
+     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/script.js"></script>
+   <!-- SwiperのCSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+<!-- SwiperのJS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+</head>
+<body>
+    <div class="loading-back">
+        <div id="loading">
+            <img id="loading-image" src="images/saiwalk.webp" alt="Loading Animation">
+        </div>
+    </div>
+    <!-- <script>
+        window.addEventListener("load", function() {
+            const loadingScreen = document.getElementById("loading");
+    
+            // 初期状態を表示
+            loadingScreen.classList.remove("hidden");
+    
+            setTimeout(function() {
+                // スライドアウトアニメーションを適用
+                loadingScreen.classList.add("slide-out");
+    
+                // アニメーション終了後に削除
+                setTimeout(function() {
+                    loadingScreen.style.display = "none";
+                }, 7000); // 3秒後に削除
+            }, 2000); // 2秒間表示後にスライド開始
+        });
+    </script> -->
+    <script>
+window.addEventListener("load", function() {
+    const loadingScreen = document.getElementById("loading");
+
+    // クリックイベントを一時的に無効化
+    document.addEventListener("click", preventClick, true);
+
+    setTimeout(function() {
+        document.getElementById("loading-image").classList.add("slide-out-image");
+
+        setTimeout(function() {
+            loadingScreen.classList.add("slide-out-background");
+
+            setTimeout(function() {
+                loadingScreen.style.display = "none";
+
+                // クリックイベントを再び有効化
+                document.removeEventListener("click", preventClick, true);
+            }, 3000);
+        }, 2000);
+    }, 3000);
+});
+
+// クリックを防ぐ関数
+function preventClick(event) {
+    event.stopPropagation();
+    event.preventDefault();
+}
+
+    </script>
+    <style>
+.loading-back{
+    color: #e72241;
+    pointer-events: none;
+}
+
+#loading { 
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100vw;
+    height: 100vh;
+    background-color: #e72241; /* 背景を赤に */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* 他の要素の前面に表示 */
+    overflow: hidden;
+    pointer-events: none;
+}
+
+/* 画像の縦横比を維持しながら中央配置 */
+#loading-image {
+    width: auto;  
+    height: 25vh; /* 高さ基準で調整 */
+    max-width: 100%; 
+    max-height: 100%;
+}
+
+/* 初期位置のズレを防ぐため、アニメーション前に固定 */
+.hidden {
+    display: none !important;
+}
+
+
+
+@keyframes slideRight {
+    0% {
+        transform: translate(0, 0); /* 初期位置 */
+    }
+    100% {
+        transform: translate(100vw, 0); /* 右へスライド */
+    }
+}
+
+.slide-out {
+    animation: slideRight 5s ease-in-out forwards;
+}
+@keyframes slideRightImage {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(100vw);
+    }
+}
+
+@keyframes slideRightBackground {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(100vw);
+    }
+}
+
+.slide-out-image {
+    animation: slideRightImage 5s ease-in-out forwards;
+}
+
+.slide-out-background {
+    animation: slideRightBackground 2s ease-in-out forwards;
+}
+    </style>
+    
+    <!-- 背景専用の要素 -->
+    <div class="background">
+        <div class="scroll-container1">
+            <div class="scroll-content1">
+                <div class="item1">1</div>
+                <div class="item2">2</div>
+                <div class="item3">3</div>
+            </div>
+            <div class="scroll-content1">
+                <div class="item1">1</div>
+                <div class="item2">2</div>
+                <div class="item3">3</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- メインコンテンツ -->
+    <div class="top_first">
+        <div class="mojimoji"><h1>祭</h1></div>
+        <div class="scroll-container2">
+            <div class="scroll-content2">
+                <div class="item4"><span class="saisyomoji1">早稲田祭2025運営スタッフ新歓</span> </div>
+            </div>
+            <div class="scroll-content2">
+                <div class="item4"><span class="saisyomoji1">早稲田祭2025運営スタッフ新歓</span> </div>
+            </div>
+        </div>
+        <div class="scroll-container3">
+            <div class="scroll-content3">
+                <div class="item5"><span class="saisyomoji2">君に誇りを、祭に熱を。</span> </div>
+            </div>
+            <div class="scroll-content3">
+                <div class="item5"><span class="saisyomoji2">君に誇りを、祭に熱を。</span> </div>
+            </div>
+            <div class="scroll-content3">
+                <div class="item5"><span class="saisyomoji2">君に誇りを、祭に熱を。</span> </div>
+            </div>
+            <div class="scroll-content3">
+                <div class="item5"><span class="saisyomoji2">君に誇りを、祭に熱を。</span> </div>
+            </div>
+        </div>
+        <div class="top-menu">
+            <a href="pages/wasedasaitoha.html" class="top-menu-link"><span class="top-menu-chousei">早稲田祭・<br>運営スタッフとは</span></a><br>
+            <a href="pages/shinkan-event.html" class="top-menu-link">新歓イベント</a><br>
+            <a href="pages/kyoku-introduce.html" class="top-menu-link">局紹介</a><br>
+            <a href="pages/unsuta-one-yaer.html" class="top-menu-link">運スタの1年</a><br>
+            <a href="pages/unusta-real.html" class="top-menu-link">運スタのリアル</a><br>
+            <a href="pages/how-to-enter.html" class="top-menu-link">入会方法</a><br>
+            <a href="pages/comingsoon.html" class="top-menu-link">わせだサイくん</a><br>
+            <a href="pages/faq-contact.html" class="top-menu-link">よくある質問</a>
+        </div>
+        <header>
+            <div class="header">
+
+                <div class="saikun-menu">
+                    <img src="../images/header-saikun.png" alt="" class="menu-img">
+                    <div class="menu-text">menu</div>
+                </div>
+            </div>
+            <div class="fullscreen-menu">
+                <div class="menu-open-container">
+                    <div class="menu-open-logo"><img src="../images/menu-open-logo.png" alt=""></div>
+                    <div class="menu-open-texts">
+                        <a href="../index.html"><p>TOP</p></a>
+                        <a href="../pages/wasedasaitoha.html"><p>早稲田祭・運営スタッフとは</p></a>
+                        <a href="../pages/shinkan-event.html"><p>新歓イベント</p></a>
+                        <a href="../pages/how-to-enter.html"><p>入会方法</p></a>
+                        <a href="../pages/unsuta-one-yaer.html"><p>運スタの1年</p></a>
+                        <a href="../pages/unusta-real.html"><p>運スタのリアル</p></a>
+                        <a href="../pages/kyoku-introduce.html"><p>局紹介</p></a>
+                        <a href="../pages/comingsoon.html"><p>わせだサイくん</p></a>
+                        <a href="../pages/faq-contact.html"><p>よくある質問・お問い合わせ</p></a>
+                    </div>
+                    <a href="../pages/how-to-enter.html" class="menu-open-button">入会方法はこちら</a>
+                    <div class="menu-sns-icon">
+                        <div class="menu-Instagram">
+                            <a href="https://www.instagram.com/wasedasai_new?igsh=MXZhZzJvOW50Y2preQ%3D%3D&utm_source=qr"><img src="../images/menu-Instagram.png" alt=""></a>
+                        </div>
+                        <div class="menu-x">
+                            <a href="https://x.com/wasedasai_new?s=21"><img src="../images/menu-X.png" alt=""></a>
+                        </div>
+                        <div class="menu-YouTube">
+                            <a href=""><img src="../images/menu-YouTube.png" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+        const menu = document.querySelector(".saikun-menu");
+        const menuImg = document.querySelector(".menu-img");
+        const menuText = document.querySelector(".menu-text");
+        const fullscreenMenu = document.querySelector(".fullscreen-menu");
+        const menuItems = document.querySelectorAll(".menu-open-texts p");
+    
+        let isOpen = false;
+    
+        menu.addEventListener("click", function () {
+            isOpen = !isOpen;
+    
+            if (isOpen) {
+                menuImg.src = "../images/close.png";
+                menuText.textContent = "close";
+                fullscreenMenu.classList.add("active");
+    
+                
+                menuItems.forEach(item => {
+                    item.style.opacity = "0";
+                    item.style.transform = "translateY(30px)";
+                });
+    
+                menuItems.forEach((item, index) => {
+                    setTimeout(() => {
+                        item.style.opacity = "1";
+                        item.style.transform = "translateY(0)";
+                        item.style.transition = "opacity 0.6s ease-in-out, transform 0.6s ease-in-out";
+                    }, index * 100); 
+                });
+    
+            } else {
+                menuImg.src = "../images/header-saikun.png"; 
+                menuText.textContent = "menu";
+                fullscreenMenu.classList.remove("active"); 
+                menuItems.forEach(item => {
+                    item.style.opacity = "0";
+                    item.style.transform = "translateY(30px)";
+                });
+            }
+        });
+    });
+            </script>
+        </header>
+        
+        <div class="top-icons">
+            <a href="https://www.instagram.com/wasedasai_new?igsh=MXZhZzJvOW50Y2preQ%3D%3D&utm_source=qr"><img class="top-icon" src="images/snsicon_I.png" alt="line"></a>
+            <a href="https://x.com/wasedasai_new?s=21"><img class="top-icon" src="images/snsicon_X.png" alt="twitter"></a>
+            <img class="top-icon" src="images/snsicon_Y.png" alt="instagram">
+        </div>
+        <div class="top_btn">
+            <button id="change-text-button" class="top_matsuri_btn">
+    Tap </button>
+        </div>
+
+
+    </div>
+    <div class="sentence">
+
+       <span class="white_red"></span> <h1>君に誇り</span>を、<br class="sentence_sp">祭に熱</span>を。</h1>
+        <p>「早稲田祭2025」</p>
+        <p>365日あるうちのたったの2日間。</p>
+        <p>だがこの2日間は、<br class="sentence_sp">
+            1年の中で最も熱く、<br class="sentence_sp">
+            多くの人の心を動かす2日間だ。</p>
+        <p>2日間の祭を創りあげるのはどんな存在だろうか。</p>
+        <p>たった2日間のために、1年間努力を続ける存在。</p>
+        <p>自分たちの大学生活を祭で彩り、<br class="sentence_sp">
+            誰かの生活も祭を介して彩ることができる存在。</p>
+        <p>そして、日本最大級の学園祭を、日本一愛する存在。</p>
+        <p>それが、我々早稲田祭2025運営スタッフだ。</p>
+        <p>1度しかない早稲田での大学生活、<br class="sentence_sp">
+            私たちと共に祭に捧げてみないか。</p>
+        <p>「君に誇りを、祭に熱を。」</p>
+        <p>早稲田祭2025は君に、<br class="sentence_sp">
+            経験や仲間、自信といった<br class="sentence_sp">
+            「誇り」を与えてくれる。</p>
+        <p>この「誇り」は、<br class="sentence_sp">
+            君の大学生活を彩り、<br class="sentence_sp">
+            鮮やかなものにする。</p>
+        <p>早稲田祭2025運営スタッフに入ったことを後悔させない。</p>
+        <p>そして、<br class="sentence_sp">
+            君の想いが、<br class="sentence_sp">
+            早稲田祭2025を情熱溢れる祭にする。</p>
+        <p>どんな形の想いでも構わない。<br class="sentence_sp">
+            君の存在が、<br class="sentence_sp">
+            君の想いが、<br class="sentence_sp">
+            早稲田祭2025には必要だ。</p>
+        <p>さあ、運営スタッフとしての一歩を踏み出そう。<br class="sentence_sp">
+            共に早稲田祭2025を創りあげよう。</p>
+        <p>代表 吉田詩</p>
+        <a href="pages/wasedasaitoha.html" class="top-square-button2 square-button-white">
+            <span class="spacer"></span>
+            <span class="text">早稲田祭を知る</span>
+            <span class="spacer"></span>
+        </a>    
+<!-- 追加: 画面を元に戻すボタン -->
+<!-- <button id="restore-screen-button" class="restore-screen-btn">画面を元に戻す</button> -->
+    <!-- ここからヘッダー -->
+
+        <div class="next-section">
+    
+            <h1><span class="border">新歓イベント</span></h1>
+            <!-- ナビゲーションボタン -->
+
+            <p></p>
+            <div class="daen1"></div>
+            <div class="daen2"></div>
+            <div class="swiper-btns">
+                            <div class="footer-right-btn swiper-button-next" >
+                                <span>&rarr;</span>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                            <div class="footer-left-btn swiper-button-prev">
+                            &larr;
+                            </div>
+                        </div>
+            <div class="scroll_introduction">
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide shinkan-event-1">
+                            ぶらり早稲田の旅
+                            <img src="images/walker.png" alt="" class="white_picture">
+                            <img src="images/walker_red.png" alt="" class="red_picture">
+                        </div>
+                        <div class="swiper-slide shinkan-event-2">
+                            今際の国の<br>
+                            運営スタッフ
+                            <img src="images/tranp.png" alt="" class="white_picture">
+                            <img src="images/tranp_red.png" alt="" class="red_picture">
+                        </div>
+                        <div class="swiper-slide shinkan-event-3">
+                            ～診断×人生ゲーム～
+                            <img src="images/doctor.png" alt="" class="white_picture">
+                            <img src="images/doctor_red.png" alt="" class="red_picture">
+                        </div>
+                        <div class="swiper-slide shinkan-event-4">
+                            行列のできる<br>
+                            運スタ相談所
+                            <img src="images/team.png" alt="" class="white_picture">
+                            <img src="images/team_red.png" alt="" class="red_picture">
+                        </div>
+                        <div class="swiper-slide shinkan-event-5">
+                            突然ですが、<br>
+                            相談してもいいですか
+                            <img src="images/callsenter.png" alt="" class="white_picture">
+                            <img src="images/callsenter_red.png" alt="" class="red_picture">
+                        </div>
+                        <div class="swiper-slide shinkan-event-6">
+                            新歓てらこや<br>
+                            <img src="images/toudaiji.png" alt="" class="white_picture">
+                            <img src="images/toudaiji_red.png" alt="" class="red_picture">
+                        </div>
+                        <div class="swiper-slide shinkan-event-7">
+                            対面説明会
+                            <img src="images/seminar.png" alt="" class="white_picture">
+                            <img src="images/seminar_red.png" alt="" class="red_picture">
+                        </div>
+
+                    </div>
+                    
+                    <!-- ナビゲーションボタン -->
+            
+
+
+                    <!-- ページネーション -->
+                </div>
+            </div>
+            
+            
+            <div class="mottokuwasiku">
+                <h1>
+                    <span class="border">もっと詳しく</span>
+                </h1>
+                <div class="detail_examples">
+                    <div class="detail">
+                        <div class="blockTitleContainer">
+                            <div class="blockTitleBar blockwhite"></div>
+                            <div class="blockTitle">局紹介</div>
+                        </div>
+                        <div class="minidetail">
+                            運スタの8つの局って何？<br>
+                            見てみよう！
+                        </div>
+                        <div class="detail_image">
+                            <img src="images/object.png" alt="sample" class="detail_photo">
+                        </div>
+                        <a href="pages/kyoku-introduce.html" class="square-bar">詳しく見る</a>
+                    </div>
+                    <div class="detail">
+                        <div class="blockTitleContainer">
+                            <div class="blockTitleBar blockwhite"></div>
+                            <div class="blockTitle">運スタのリアル</div>
+                        </div>
+                        <div class="minidetail">
+                            運スタってどんな人がいるの？<br>
+                            見てみよう！
+                        </div>
+                        <div class="detail_image">
+                            <img src="images/image 75.png" alt="samople" class="detail_photo">
+                        </div>
+                        <a href="pages/unusta-real.html" class="square-bar">詳しく見る</a>
+                    </div>
+                    <div class="detail">
+                        <div class="blockTitleContainer">
+                            <div class="blockTitleBar blockwhite"></div>
+                            <div class="blockTitle">運スタの一年</div>
+                        </div>
+                        <div class="minidetail">
+                            運スタに入るとなにがあるの？<br>
+                            見てみよう！
+                        </div>
+                        <div class="detail_image">
+                            <img src="images/image 76.png" alt="sample" class="detail_photo">
+                        </div>
+                        <a href="pages/unsuta-one-yaer.html" class="square-bar">詳しく見る</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+            
+            
+        <div class="additional-content">
+        <h2>FAQ</h2>
+        
+
+<div class="faq_examples">
+    <div class="faq-top">
+        <div class="faq_q">Q 入会方法について
+        </div>
+        <div class="faq_a">
+            A 募集期間内に、入会申し込みフォームに必要事項を記入しご応募ください！
+            詳細は <a href="https://example.com" target="_blank" class="faq-link">こちら</a> をご覧ください。
+        </div>
+        
+    </div>
+    <div class="faq-top">
+        <div class="faq_q">Q 活動日はいつですか？</div>
+        <div class="faq_a">A 基本的には月曜日と木曜日の6限以降に活動しています。局によっては、水曜日や金曜日に活動があります。</div>
+    </div>
+    <div class="faq-top">
+        <div class="faq_q">Q 2年生は入会できますか？</div>
+        <div class="faq_a">A できます！運営スタッフは、早稲田大学所属の１年生と２年生のみが入会できます。
+        </div>
+    </div>
+    <div class="faq-top">
+        <div class="faq_q">Q どのくらい大変ですか？</div>
+        <div class="faq_a">A 所属する局やチームによって時期やその程度は異なりますが、自分のペースに合わせながら活動することができます！
+        </div>
+        <a href="pages/faq-contact.html" class="top-square-button square-button-black">
+            <span class="spacer"></span>
+            <span class="text">詳しく見る</span>
+            <span class="spacer"></span>
+        </a>   
+    </div>
+
+</div>
+    
+        </div>
+        <div class="additional-content2">
+            <h1>News</h1>   
+            <div class="news_sentences">
+             <p class="top-days">
+                2025.3.24 
+             </p>
+             <p class="top-topics">
+                早稲田祭運営スタッフ2025新歓公式サイト公開！
+             </p>
+
+            </div>
+            </div>
+        <div class="additional-content3">
+            <div class="kyousan_image">
+                <a href="https://www.shikaku.co.jp/"><img src="images/kyousan.png" alt="" class="kyousan_photo"></a>
+            </div>
+        </div>
+        <div class="fukidashi-container">
+            <img src="images/saiwalk.webp" alt="">
+            <div class="fukidashi-circle small"></div>
+            <div class="fukidashi-circle medium"></div>
+            <div class="fukidashi-circle large">
+                <div class="large-small"></div>
+            </div>
+            <h2>入会情報はこちらから</h2>
+            <a href="pages/how-to-enter.html" class="square-button square-button-red">
+                <span class="spacer"></span>
+                <span class="text">詳しく見る</span>
+                <span class="spacer"></span>
+            </a>
+        </div>
+        <div class="footer_container">
+                <!-- ここからフッター -->
+     <footer>
+        <div class="arrow-img">
+            <a href="pages/comingsoon.html"><img src="images/footer_yajirushi.png" alt=""></a>
+        </div>
+        <div class="footer-contaier">
+            <div class="footer-logo">
+                <a href="../index.html"><img src="../images/logo_footer.png" alt=""></a>
+            </div>
+            <div class="footer-pages">
+                <div class="footer-pages-left">
+                    <a href="../pages/wasedasaitoha.html"><p class="mergin-exist">早稲田祭・運営スタッフとは</p></a>
+                    <a href="../pages/shinkan-event.html"><p class="mergin-exist">新歓イベント</p></a>
+                    <a href="../pages/how-to-enter.html"><p class="mergin-exist">入会方法</p></a>
+                    <a href="../pages/unsuta-one-yaer.html"><p class="margin-exist">運スタの1年</p></a>
+                </div>
+                <div class="footer-pages-right">
+                    <a href="../pages/unusta-real.html"><p class="mergin-none">運スタのリアル</p></a>
+                    <a href="../pages/kyoku-introduce.html"><p class="mergin-exist">局紹介</p></a>
+                    <a href="../pages/comingsoon.html"><p class="mergin-exist">わせだサイくん</p></a>
+                    <a href="../pages/faq-contact.html"><p class="mergin-exist">よくある質問・お問い合わせ</p></a>
+                </div>
+            </div>
+            <div class="footer-sns-icon">
+                <a href="https://www.instagram.com/wasedasai_new?igsh=MXZhZzJvOW50Y2preQ%3D%3D&utm_source=qr"><img src="../images/snsicon_I.png" alt=""></a>
+                <a href="https://x.com/wasedasai_new?s=21"><img src="../images/snsicon_X.png" alt=""></a>
+                <a href=""><img src="../images/snsicon_Y.png" alt=""></a>
+            </div>
+            <div class="footer-button">
+                <a href="" class="footer-square-button footer-square-button-white">
+                    <span class="foooter-spacer"></span>
+                    <span class="footer-text">入会方法はこちら</span>
+                    <span class="foooter-spacer"></span>
+                </a>
+            </div>
+        </div>
+     </footer>
+    <!-- ここまでフッター -->
+
+    </div>
+       
+        
+    <!-- <div class="top_secound"></div> -->
+
+</body>
+</html>
