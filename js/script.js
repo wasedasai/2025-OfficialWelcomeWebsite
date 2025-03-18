@@ -3,7 +3,21 @@ $(document).ready(function () {
         event.stopPropagation(); // 他のイベントをブロック
     });
 });
-
+$(document).ready(function () {
+    $(".top-icons").on("click", function (event) {
+        event.stopPropagation(); // 他のイベントをブロック
+    });
+});
+$(document).ready(function () {
+    $(".footer_container").on("click", function (event) {
+        event.stopPropagation(); // 他のイベントをブロック
+    });
+});
+$(document).ready(function () {
+    $(".top-square-button2, .detail, .faq_examples, .kyousan_image, .fukidashi-container").on("click", function (event) {
+        event.stopPropagation(); // 他のイベントをブロック
+    });
+});
 $(document).ready(function () {
     // 初回ロード時に `html, body` に width: 100%; height: 100%; を適用
     $("html, body").css({"width": "100%", "height": "100%"});
