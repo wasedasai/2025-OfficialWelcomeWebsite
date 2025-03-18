@@ -233,6 +233,8 @@ p{
     .blockTitleContainer{
         width: 30%;
         text-align: left;
+        margin-top: 3vw;
+        margin-bottom: 3vw;
     }
     .text-wasedasai-lecureation{
         font-size: 14px;
