@@ -200,16 +200,213 @@
   }
 
   .hero{
+    position: relative;
     width: 100%;
     height: 180px;
-    background-color: #e72241;
+    overflow: hidden;
+    background-image: url(../images/hero.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.hero h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    color: #1c1b1b;
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+@media (max-width: 500px) {
+    .hero{
+        height: 100px;
+        background-image: url(../images/hero-sp.png);
+    }
+    .hero h1{
+        font-size: 15px;
+    }
+}
+.kyokuButtonContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+    gap: 1.73vw;
 }
 
 .kyokuButton{
     background-color: #e72241;
-    font-size: 30px;
-    border-radius: 60px;    
-    width: 210px;
-    height: 60px;
+    font-size: 2vw;
+    font-weight: bold;
+    border-radius: 500px;
+    padding: 0.85vw 1.73vw;
     color: #fffcfc;
+    text-align: center;
+    width: 14.5vw;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.kaijyo{
+    opacity: 1;
+}
+
+.kyokuButton4{
+    display: flex;
+    flex-direction: row;
+    gap: 1.38vw;
+}
+
+
+.kyokuUnderBoxContainer{
+    border-radius: 50px;
+    border: 3px solid #e72241;
+    width: 90%;
+    margin: 2% auto;
+    padding: 3%;
+    text-align: center;
+}
+
+.section-title-kyoku h1 {
+    font-size: 3.35vw;
+    font-weight: bold;
+}
+
+.kyokuBoxLeft{
+    width: 45%;
+}
+
+.kyokuBoxRight{
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.kyokuBoxLine{
+    content: "";
+    color: #1b1c1b;
+    border: #1b1c1b 1px solid;
+    margin: 0 auto;
+}
+
+.kyokuBoxUnder{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 1.73vw 10px 0 10px;
+}
+
+.kyokuBoxLeft img{
+    width: 100%;
+    height: auto;
+    border: #e72241 3px solid;
+    border-radius: 6.94vw;
+    margin-bottom: 10px;
+}
+
+.kyokuBoxLeftUnder .blockTitle{
+    font-size: 2.08vw;
+}
+
+.LeftUnderText p{
+    text-align: left;
+    font-size: 1.38vw;
+}
+
+.kyokuText{
+    font-size: 1.38vw;
+    text-align: left;
+}
+
+.kyokuchoName{
+    text-align: end;
+    font-size: 1.38vw;
+}
+
+.organizationChart{
+    text-align: center;
+    margin: 5% 0 5% 0;
+}
+
+.organizationChart img{
+    width: 90%;
+    height: auto;
+}
+
+@media (max-width:500px) {
+    .kyokuButton4{
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .kyokuButtonContainer{
+        flex-direction: row;
+        gap: 45px;
+    }
+
+    .kyokuButton{
+        font-size: 16px;
+        padding: 5px 15px;
+        white-space: nowrap;
+        width: 120px;
+    }
+
+    .section-title-kyoku h1 {
+        font-size: 18px;
+    }
+
+    .kyokuBoxUnder{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 1.73vw 10px 0 10px;
+    }
+
+    .kyokuBoxLeft{
+        width: 100%;
+    }
+
+    .kyokuBoxLeftUnder{
+        margin-top: 30px;
+    }
+
+    .kyokuBoxLeftUnder .blockTitle{
+        font-size: 16px;
+    }
+
+    .LeftUnderText p{
+        font-size: 16px;
+    }
+
+    .kyokuBoxRight{
+        width: 100%;
+        display: block;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .kyokuBoxLine{
+        content: "";
+        border: none;
+        margin: 0;
+    }
+
+    .kyokuText{
+        font-size: 16px;
+    }
+
+    .kyokuchoName{
+        text-align: end;
+        font-size: 16px;
+    }
+
+    .organizationChart{
+        margin: 5% 0 10% 0;
+    }
+    
 }
