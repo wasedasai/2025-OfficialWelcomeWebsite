@@ -234,7 +234,7 @@ body{
 @media (max-width: 500px) {
     .hero{
         height: 100px;
-        background-image: url(../images/hero-sp.png);
+        background-image: url(../images/hero-wide.png);
     }
     .hero h1{
         font-size: 15px;
