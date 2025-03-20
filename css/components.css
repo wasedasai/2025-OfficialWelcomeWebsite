@@ -207,6 +207,15 @@ body{
 }
 /* ここまでheader */
   }
+@media (max-height: 700px) {
+    .menu-open-button{
+        display: none;
+    }
+    .menu-open-texts{
+        top: 50%;
+    }
+}
+    /* ここからheader */
 /* ここまでheader */
 
 /* ここからhero */
@@ -234,7 +243,7 @@ body{
 @media (max-width: 500px) {
     .hero{
         height: 100px;
-        background-image: url(../images/hero-sp.png);
+        background-image: url(../images/hero-wide.png);
     }
     .hero h1{
         font-size: 15px;
@@ -531,13 +540,14 @@ footer{
     color: #fffcfc;
     font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
     margin-top: 75px;
+    overflow: hidden;
 }
 .arrow-img{
     text-align: center;
 }
 .arrow-img img{
     width: 50px;
-    margin-top: 30px;
+    margin-top: 40px;
 }
 .footer-contaier{
     position: absolute;
@@ -668,15 +678,16 @@ footer{
     .footer-pages{
         flex-direction: column;
         font-size: 14px;
+        top: 46%;
     }
     .footer-pages p{
         width: 250px;
     }
     .mergin-exist{
-        margin: 25px 0;
+        margin: 20px 0;
     }
     .mergin-none{
-        margin-top: 25px;
+        margin-top: 20px;
     }
     .footer-sns-icon{
         bottom: 90px;
@@ -691,9 +702,9 @@ footer{
     .footer-square-button {
         padding: 2vw 4vw;
         border-radius: 6vw;
-        font-size: 2.7vw;
-        height: 10vw;
-        width: 32vw;
+        font-size: 13px;
+        height: 50px;
+        width: 200px;
         bottom: 20px;
         left: 50%;
         transform: translateX(-50%);
@@ -706,15 +717,23 @@ footer{
         flex-shrink: 0; 
     }
     .footer-square-button::after {
-        font-size: 2.5vw;
-        width: 6vw;
-        height: 6vw;
+        font-size: 14px;
+        width: 34px;
+        height: 34px;
         right: 1.3vw;
     }
 }
 @media (max-width: 376px) {
     .footer-sns-icon{
         display: none;
+    }
+}
+@media (max-height: 700px) {
+    .footer-sns-icon{
+        display: none;
+    }
+    .footer-pages{
+        top: 53%;
     }
 }
 /* ここまでfooter */
