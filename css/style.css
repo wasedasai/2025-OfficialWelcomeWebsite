@@ -94,6 +94,9 @@ body {
 .top_matsuri_btn {
     display: none;
 }
+.taptop {
+    display: none;
+}
 /* ここからセクションタイトル */
 .section-title {
     display: inline-block;
@@ -113,8 +116,13 @@ body {
     background-color: #E72241;
     border-radius: 5px;
   }
-
-
+  .swiper-tap {
+    text-decoration: none !important;
+    color: #fffcfc;
+  }
+  .swiper-wrapper {
+    text-decoration: none !important;
+  }
 @media (max-width:500px){
     .section-title h1{
         font-size: 18px;
@@ -165,6 +173,25 @@ body {
         cursor: pointer;
         text-transform: uppercase;
             top: 70% !important; /* 祭の文字の下に配置 */
+    }
+    .taptop {
+        width: 100px !important;
+        height: 100px !important;
+        display: block !important;
+        position: absolute;
+        z-index: 5;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 120px; /* 楕円形の幅 */
+        height: 60px; /* 楕円形の高さ */
+        line-height: 60px;
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+
+        cursor: pointer;
+        text-transform: uppercase;
+            top: 65% !important; /* 祭の文字の下に配置 */
     }
     /* .top_btn {
 
@@ -397,7 +424,7 @@ body {
     border-radius: 50%;
     position: absolute;
     pointer-events: none;
-    z-index: 10000;
+    z-index: 100;
     transform: translate(-50%, -50%);
     display: flex;
     align-items: center;
@@ -972,7 +999,7 @@ header {
 }
 .menu-open-container p{
     margin: 36px 0;
-    font-family: "Noto Sans JP", sans-serif;
+    font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
 }
 .menu-open-texts p{
     opacity: 0;
@@ -1001,7 +1028,7 @@ header {
     font-size: 15px;
     /* font-weight: bold; なくそう*/
     color: #1c1b1b;
-    font-family: "Noto Sans JP", sans-serif;/*加えた*/
+    font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
     /* text-decoration: none; なくそう*/
     transition: all 0.3s ease;
     overflow: hidden;
@@ -1100,6 +1127,14 @@ header {
 /* ここまでheader */
   }
 /* ここまでheader */
+@media (max-height: 700px) {
+    .menu-open-button{
+        display: none;
+    }
+    .menu-open-texts{
+        top: 50%;
+    }
+}
 /* 次のセクションのデザイン */
 .next-section {
     width: 100vw;
@@ -1211,10 +1246,12 @@ header {
 
 .swiper-slide-active {
     background-color: #ffffff !important;
-    color: #e72241 !important; /* 文字の色を赤に変更 */
+    color: #e72241 !important ; /* 文字の色を赤に変更 */
     border: none !important; /* 枠線を直接適用しない */
 }
-
+.swiper-slide-active a {
+    color: #E72241;
+}
 /* 白いスライドの外側に枠線を作る */
 .swiper-slide-active::before {
     content: "";
@@ -1226,6 +1263,7 @@ header {
     border: 5px solid #e72241; /* 赤い枠線 */
     border-radius: 50%; /* 丸型 */
     z-index: -1; /* 背景に配置 */
+    color: #e72241 !important;
 }
 
 .shinkan-event-1 {
@@ -1458,7 +1496,9 @@ header {
     font-size: 30px;
 }
 
-
+.top-loading {
+    cursor: pointer !important;
+}
 @media (max-width:500px){
     .blockTitleContainer{
         gap: 5px;
@@ -1884,7 +1924,7 @@ background-color: #fffcfc;
 @media (max-width: 767px) {
     .top-menu-chousei {
         display: block;
-        line-height: 15px !important;
+        line-height: 13px !important;
     }
     .fukidashi-container{
         height: 110vw;
@@ -1955,7 +1995,7 @@ background-color: #fffcfc;
         width: 300% !important;
     }
     .scroll-container2 {
-        top: 78vh !important;
+        top: 77vh !important;
     }
     .scroll-container3 {
       /* 上の幅調整 */
@@ -1969,7 +2009,7 @@ background-color: #fffcfc;
         width: 200% !important;
     }
      .saisyomoji1 {
-        font-size: 88px !important;
+        font-size: 64px !important;
         height: 100px;
     }
     .saisyomoji2 {
@@ -2005,7 +2045,7 @@ background-color: #fffcfc;
         padding-left: 3vw;
     }
     .top-icons {
-        top: 60vh;
+        top: 55vh;
     }
     .blockTitle {
         font-size: 24px;
@@ -2013,6 +2053,7 @@ background-color: #fffcfc;
     .minidetail {
         font-size: 16px;
     }
+    
 }/* フッターを画面の最下部に固定 */
 
 
@@ -2068,13 +2109,14 @@ footer{
     font-family: 'Notosans JP', sans-serif;
     margin-bottom: -10%;
     padding-bottom: -30%;
+    overflow: hidden;
 }
 .arrow-img{
     text-align: center;
 }
 .arrow-img img{
     width: 50px;
-    margin-top: 30px;
+    margin-top: 40px;
 }
 .footer-contaier{
     position: absolute;
@@ -2156,7 +2198,7 @@ footer{
     width: 17vw; /* 文字の長さに応じて可変 */
     min-width: 150px; /* 最小幅を設定して極端に小さくならないように */
     padding-right: 4vw;
-    font-family: "Noto Sans JP", sans-serif;
+    font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
 }
 .foooter-square-button .spacer {
     flex-grow: 1; 
@@ -2208,15 +2250,16 @@ footer{
     .footer-pages{
         flex-direction: column;
         font-size: 14px;
+        top: 46%;
     }
     .footer-pages p{
         width: 250px;
     }
     .mergin-exist{
-        margin: 25px 0;
+        margin: 20px 0;
     }
     .mergin-none{
-        margin-top: 25px;
+        margin-top: 20px;
     }
     .footer-sns-icon{
         bottom: 90px;
@@ -2231,9 +2274,9 @@ footer{
     .footer-square-button {
         padding: 2vw 4vw;
         border-radius: 6vw;
-        font-size: 2.7vw;
-        height: 10vw;
-        width: 32vw;
+        font-size: 13px;
+        height: 50px;
+        width: 200px;
         bottom: 20px;
         left: 50%;
         transform: translateX(-50%);
@@ -2246,9 +2289,9 @@ footer{
         flex-shrink: 0; 
     }
     .footer-square-button::after {
-        font-size: 2.5vw;
-        width: 6vw;
-        height: 6vw;
+        font-size: 14px;
+        width: 34px;
+        height: 34px;
         right: 1.3vw;
     }
 }
@@ -2287,5 +2330,19 @@ footer{
     }
 }
 
-
+@media (max-height: 700px) {
+    .top_first {
+        margin-top: -75px;
+    }
+    .top-menu {
+    line-height: 27px;
+    margin-top: 60px;
+    }
+    .scroll-container2 {
+        top: 81vh !important;
+    }
+    .top-icons {
+        margin-top: 50px;
+    }
+}
 /* ここまでセクションタイトル */
