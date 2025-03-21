@@ -2355,16 +2355,3 @@ footer{
     }
 }
 /* ここまでセクションタイトル */
-@media (max-width: 400px) {
-    .top_first{
-        margin-top: 0px;
-    }
-    .top-menu {
-        line-height: 27px;
-        margin-top: 0px;
-    }
-    .scroll-container2{
-        top: 85vh !important;
-        overflow: visible !important;
-    }
-}
