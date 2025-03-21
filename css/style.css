@@ -2303,6 +2303,9 @@ footer{
     }
 }
   @media (max-height: 700px) {
+      footer{
+        height: 100vh;
+      }
       .footer-sns-icon{
           display: none;
       }
@@ -2342,6 +2345,7 @@ footer{
 @media (max-height: 700px) {
     .top_first {
         margin-top: -75px;
+        height: 100svh !important;
     }
     .top-menu {
     line-height: 27px;
@@ -2355,3 +2359,16 @@ footer{
     }
 }
 /* ここまでセクションタイトル */
+@media (max-width: 400px) {
+    .top_first{
+        margin-top: 0px;
+    }
+    .top-menu {
+        line-height: 27px;
+        margin-top: 0px;
+    }
+    .scroll-container2{
+        top: 85vh !important;
+        overflow: visible !important;
+    }
+}
