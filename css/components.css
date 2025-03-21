@@ -200,38 +200,14 @@ body {
     left: 50%;
     transform: translateX(-50%);
     margin-left: 0;
-  }
-<<<<<<< HEAD
-=======
-  .menu-sns-icon {
-    bottom: 25px;
-  }
-<<<<<<< HEAD
-<<<<<<< HEAD
-  /* ここまでheader */
-}
-=======
-=======
-
->>>>>>> 3b51e9d47aa32a58963bb7494e5d3bc328bdae99
->>>>>>> d853774a94a98d0cbf1603932e90b2f1112b238b
+  }}
 @media (max-height: 700px) {
     .menu-open-button{
         display: none;
     }
     .menu-open-texts{
         top: 50%;
-    }
-}
-<<<<<<< HEAD
-    /* ここからheader */
-<<<<<<< HEAD
-=======
->>>>>>> 62b0c03865b574bbb47bf41d523621a190c43fda
-=======
->>>>>>> 3b51e9d47aa32a58963bb7494e5d3bc328bdae99
->>>>>>> d853774a94a98d0cbf1603932e90b2f1112b238b
-/* ここまでheader */
+    }}
 
 /* ここからhero */
 .hero {
@@ -255,37 +231,15 @@ body {
   font-weight: 700;
   font-style: normal;
 }
-@media (max-width: 500px) {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-  .hero {
-    height: 100px;
-    background-image: url(../images/hero-sp.png);
-  }
-  .hero h1 {
-    font-size: 15px;
-  }
-=======
-=======
->>>>>>> 3b51e9d47aa32a58963bb7494e5d3bc328bdae99
->>>>>>> d853774a94a98d0cbf1603932e90b2f1112b238b
+@media (max-width: 500px){
     .hero{
-        height: 100px;
-        background-image: url(../images/hero-wide.png);
-    }
-    .hero h1{
-        font-size: 15px;
-    }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 62b0c03865b574bbb47bf41d523621a190c43fda
-=======
->>>>>>> 3b51e9d47aa32a58963bb7494e5d3bc328bdae99
->>>>>>> d853774a94a98d0cbf1603932e90b2f1112b238b
-}
+      height: 100px;
+      background-image: url(../images/hero-wide.png);
+  }
+  .hero h1{
+      font-size: 15px;
+  }}
+
 /* ここまでhero */
 
 /* ここまで、square-link */
@@ -556,23 +510,7 @@ body {
 }
 /* ここまでブロックタイトル */
 
-/* ここからfooter */
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-footer {
-  position: relative;
-  width: 100vw;
-  height: 600px;
-  background-color: #e72241;
-  color: #fffcfc;
-  font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
-  margin-top: 75px;
-=======
-=======
->>>>>>> 3b51e9d47aa32a58963bb7494e5d3bc328bdae99
->>>>>>> d853774a94a98d0cbf1603932e90b2f1112b238b
+
 footer{
     position: relative;
     width: 100vw;
@@ -581,35 +519,20 @@ footer{
     color: #fffcfc;
     font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
     margin-top: 75px;
-    overflow: hidden;
-<<<<<<< HEAD
-=======
-}
+   overflow: hidden;}
 .arrow-img{
     text-align: center;
 }
 .arrow-img img{
     width: 50px;
-    margin-top: 40px;
-<<<<<<< HEAD
->>>>>>> 62b0c03865b574bbb47bf41d523621a190c43fda
-=======
->>>>>>> 3b51e9d47aa32a58963bb7494e5d3bc328bdae99
->>>>>>> d853774a94a98d0cbf1603932e90b2f1112b238b
-}
+    margin-top: 40px;}
 .arrow-img {
   text-align: center;
 }
-<<<<<<< HEAD
+
 .arrow-img img{
     width: 50px;
-    margin-top: 40px;
-=======
-.arrow-img img {
-  width: 50px;
-  margin-top: 30px;
->>>>>>> d853774a94a98d0cbf1603932e90b2f1112b238b
-}
+    margin-top: 40px;}
 .footer-contaier {
   position: absolute;
   width: 80vw;
@@ -720,75 +643,7 @@ footer{
   color: #fffcfc;
   transform: scale(1);
 }
-@media (max-width: 500px) {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-  footer {
-    height: 100vh;
-  }
-  .footer-contaier {
-    height: 77vh;
-    margin-top: 30px;
-  }
-  .footer-logo img {
-    width: 220px;
-    margin: 10px 0;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  .footer-pages {
-    flex-direction: column;
-    font-size: 14px;
-  }
-  .footer-pages p {
-    width: 250px;
-  }
-  .mergin-exist {
-    margin: 25px 0;
-  }
-  .mergin-none {
-    margin-top: 25px;
-  }
-  .footer-sns-icon {
-    bottom: 90px;
-    left: 50%;
-    transform: translateX(-50%);
-    margin-left: 0;
-  }
-  .footer-sns-icon img {
-    width: 40px;
-    margin: 0 10px;
-  }
-  .footer-square-button {
-    padding: 2vw 4vw;
-    border-radius: 6vw;
-    font-size: 2.7vw;
-    height: 10vw;
-    width: 32vw;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    padding-right: 8vw;
-  }
-  .footer-square-button .spacer {
-    flex-grow: 1;
-  }
-  .footer-square-button .text {
-    flex-shrink: 0;
-  }
-  .footer-square-button::after {
-    font-size: 2.5vw;
-    width: 6vw;
-    height: 6vw;
-    right: 1.3vw;
-  }
-=======
-=======
->>>>>>> 3b51e9d47aa32a58963bb7494e5d3bc328bdae99
->>>>>>> d853774a94a98d0cbf1603932e90b2f1112b238b
+@media (max-width: 500px){
     footer{
         height: 100vh;
     }
@@ -849,43 +704,15 @@ footer{
         width: 34px;
         height: 34px;
         right: 1.3vw;
-    }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 62b0c03865b574bbb47bf41d523621a190c43fda
-=======
->>>>>>> 3b51e9d47aa32a58963bb7494e5d3bc328bdae99
->>>>>>> d853774a94a98d0cbf1603932e90b2f1112b238b
-}
+   }}
 @media (max-width: 376px) {
   .footer-sns-icon {
     display: none;
-  }
-}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-/* ここまでfooter */
-=======
-=======
->>>>>>> 3b51e9d47aa32a58963bb7494e5d3bc328bdae99
->>>>>>> d853774a94a98d0cbf1603932e90b2f1112b238b
+  }}
 @media (max-height: 700px) {
     .footer-sns-icon{
         display: none;
     }
     .footer-pages{
         top: 53%;
-    }
-}
-/* ここまでfooter */
-<<<<<<< HEAD
-}
-=======
-<<<<<<< HEAD
->>>>>>> 62b0c03865b574bbb47bf41d523621a190c43fda
-=======
->>>>>>> 3b51e9d47aa32a58963bb7494e5d3bc328bdae99
->>>>>>> d853774a94a98d0cbf1603932e90b2f1112b238b
+    }}
