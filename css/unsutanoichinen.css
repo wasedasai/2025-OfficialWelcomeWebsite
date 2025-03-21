@@ -420,6 +420,7 @@ details[open] .event-title-accordion-blue::after {
   }
   .blockTitle {
     font-size: 2.5vw;
+    margin: 0;
   }
   .oneday-box {
     height: 550px;
@@ -496,6 +497,9 @@ details[open] .event-title-accordion-blue::after {
   .period-of-event-red {
     font-size: 2vw;
   }
+  .blockTitle {
+    font-size: 18px;
+  }
 }
 /*レスポンシブ -iphone*/
 @media (max-width: 430px) {
@@ -525,7 +529,7 @@ details[open] .event-title-accordion-blue::after {
     margin: 11% 0;
     text-align: center; /* テキストを中央揃え */
     width: 80%;
-    font-size: 2.5vw;
+    font-size: 3vw;
     line-height: 5vw;
   }
   .event-discription-wasesai {
@@ -596,7 +600,7 @@ details[open] .event-title-accordion-blue::after {
   .period-of-event,
   .period-of-event-red,
   .day-discription {
-    font-size: 12px;
+    font-size: 14px;
   }
   .day-discription {
     padding-left: 3%;
@@ -604,9 +608,6 @@ details[open] .event-title-accordion-blue::after {
   }
   .event-discription .event-discription-wasesai {
     font-size: 13px;
-  }
-  .blockTitle {
-    font-size: 18px;
   }
   .day-caution {
     font-size: 11px;
