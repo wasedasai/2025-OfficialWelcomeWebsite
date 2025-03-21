@@ -2303,9 +2303,6 @@ footer{
     }
 }
   @media (max-height: 700px) {
-      footer{
-        height: 100vh;
-      }
       .footer-sns-icon{
           display: none;
       }
