@@ -515,11 +515,10 @@ html, body {
 }
 
 .top_first h1 {
-    margin-top: 0;
+    margin-top: -150px;
     text-align: center;
     font-size: 550px;
     transition: font-size 0.5s ease-out;
-
 }
 .scroll-container1 {
     display: flex;
@@ -682,6 +681,7 @@ html, body {
 .top-icon {
     width: 45px;
     height: 45px;
+    margin-bottom: 15px;
 }
 .top-icons {
     width: 0vw;
@@ -2343,6 +2343,7 @@ footer{
     .top_first {
         margin-top: -75px;
         height: 100svh !important;
+            -webkit-overflow-scrolling: touch !important;
     }
     .top-menu {
     line-height: 27px;
