@@ -1,7 +1,4 @@
 /* タイトル系コンポーネント */
-* {
-  overflow-x: visible;
-}
 .unsuta1-title {
   display: flex;
   justify-content: center; /* 水平方向の中央揃え */
@@ -19,6 +16,9 @@
 }
 .wasesai-title {
   padding-left: 40%;
+}
+.blockTitle {
+  margin-bottom: 0px;
 }
 /* boxコンポーネント */
 .blue-box-event {
@@ -128,6 +128,7 @@
 /* 写真サイズ指定 */
 .img-inbox {
   width: 25vw;
+  height: 30vh;
   margin-top: 5vh;
 }
 .wasesai-img1,
@@ -429,10 +430,15 @@ details[open] .event-title-accordion-blue::after {
   .time-schedule-2 {
     padding-top: 2vh;
   }
-  .oneday-title{
-    margin-top:0;
-    padding-left:4vw;
+  .oneday-title {
+    margin-top: 0;
+    padding-left: 4vw;
   }
+  .img-inbox {
+    width: 25vw;
+    height: 12vh;
+    margin-top: 5vh;
+    object-fit: cover;
   }
 }
 /*レスポンシブ -ipad*/
@@ -502,7 +508,7 @@ details[open] .event-title-accordion-blue::after {
   .box-pj,
   .wasesai-box {
     width: 250px;
-    height: 425px;
+    height: 470px;
   }
   .box-line {
     gap: 6vw;
@@ -553,7 +559,9 @@ details[open] .event-title-accordion-blue::after {
   }
   .oneday-box {
     width: 280px;
-    height: 430px;
+    height: 510px;
+    margin-left: 3%;
+    margin-right: 3%;
   }
   .day-caution {
     font-size: 1.9vw;
@@ -580,6 +588,36 @@ details[open] .event-title-accordion-blue::after {
   .event-title-accordion {
     margin-left: 5vw;
     margin-top: 2.8vh;
+  }
+  .month-sentence,
+  .month-sentence-wasesai {
+    font-size: 16px;
+  }
+  .period-of-event,
+  .period-of-event-red,
+  .day-discription {
+    font-size: 12px;
+  }
+  .day-discription {
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+  .event-discription .event-discription-wasesai {
+    font-size: 13px;
+  }
+  .blockTitle {
+    font-size: 18px;
+  }
+  .day-caution {
+    font-size: 11px;
+    text-align: center;
+    line-height: 5vw;
+  }
+  .day-caution-2 {
+    font-size: 11px;
+    text-align: center;
+    line-height: 5vw;
+    margin-top: 10vh;
   }
 }
 /*レスポンシブ -iphoneSE*/
