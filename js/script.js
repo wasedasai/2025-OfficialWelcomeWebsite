@@ -24,7 +24,7 @@ $(document).ready(function () {
 
     // スマホ版では最初に `mojimoji h1` の `font-size` を 200px に設定
     if (window.innerWidth <= 1000) {
-        $("html, body").css({"width": "100%", "height": "105%"});
+        $("html, body").css({"width": "100%", "height": "100%"});
         $(".mojimoji h1").css("font-size", "200px");
         $("html, body").css({"overflow": "hidden"});
         $("#change-text-button").on("click", function () {
