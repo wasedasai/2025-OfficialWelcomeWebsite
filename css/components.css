@@ -514,299 +514,208 @@ body{
 /* ここまでブロックタイトル */
 
 
-/* ここからフッター */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-html{ 
-    /* これいるかも */
-    scroll-behavior: smooth;
-  }
-  
-.test-box {
+footer{
+    position: relative;
     width: 100vw;
-    height: 150vh;
-    background-color: #fffcfc;
-}
-
-footer {
+    height: 600px;
     background-color: #e72241;
-    width: 100%;
-    height: 644px;
-    position: relative;
-    font-family: 'Noto Sans JP', sans-serif;
-    z-index: 0;
-    overflow: hidden;
-}
-.footer_grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2列 */
-    grid-template-rows: repeat(4, auto); /* 4行 */
-    justify-content: center; /* 水平方向の中央揃え */
-    align-items: center; /* 垂直方向の中央揃え */
+    color: #fffcfc;
+    font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+    margin-top: 75px;
+   overflow: hidden;}
+.arrow-img{
     text-align: center;
-    margin: 0 auto; /* 中央揃え */
-    line-height: 5;
-    top: 30px;
-    left: 350px;
-    position: absolute;
+}
+.arrow-img img{
+    width: 50px;
+    margin-top: 40px;}
+.arrow-img {
+  text-align: center;
 }
 
-.shinkan_elements {
-    position: absolute;
-    width: 80%;
-    height: 394px;
-    top: 146px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #e72241;
-    border-top: 2px solid white;
-  border-bottom: 2px solid white;
+.arrow-img img{
+    width: 50px;
+    margin-top: 40px;}
+.footer-contaier {
+  position: absolute;
+  width: 80vw;
+  height: 420px;
+  border-top: 1.5px solid #fffcfc;
+  border-bottom: 1.5px solid #fffcfc;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 3vw;
+}
+.footer-logo img {
+  width: 18vw;
+  margin: 26px 2% 0 2%;
+}
+.footer-pages {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.3vw;
+  display: flex;
+}
+.footer-pages a {
+  text-decoration: none;
+  color: #fffcfc;
+}
+.footer-pages p {
+  font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  width: 250px;
+}
+.footer-pages p:hover {
+  animation: zoom 0.3s;
+}
+@keyframes zoom {
+  50% {
+    transform: scale(1.05);
+  }
+}
+.mergin-exist {
+  margin: 4vw 0;
+}
+.mergin-none {
+  margin: 4vw 0;
+}
+.footer-sns-icon {
+  position: absolute;
+  bottom: 35px;
+  margin-left: 4%;
+  display: flex;
+}
+.footer-sns-icon img {
+  width: 3vw;
+  margin: 0 10px;
+}
+.footer-square-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.9vw 1.8vw;
+  border: 1.5px solid #fffcfc;
+  border-radius: 2.7vw;
+  font-size: 1.2vw;
+  color: #fffcfc;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: absolute;
+  bottom: 35px;
+  right: 2%;
   overflow: hidden;
+  height: 4vw;
+  white-space: nowrap;
+  width: 17vw; /* 文字の長さに応じて可変 */
+  min-width: 150px; /* 最小幅を設定して極端に小さくならないように */
+  padding-right: 4vw;
+  font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
 }
-.yajirushi_photo {
-    width: 4vw;
-    height: 4vw;
-    position: absolute;
-    top: 35px;
-    left: 48vw;
-    z-index: 100;
-    cursor: pointer;
+.foooter-square-button .spacer {
+  flex-grow: 1;
 }
-.shinkan_wasedasai {
-    font-size: 40px;
-    top: 140px;
-    z-index: 100;
-    font-weight: bold;
-    color: #fffcfc;
-    left: 10%;
-    width: 280px;
+.footer-square-button .text {
+  flex-shrink: 0; /* 文字の長さに影響されないように固定 */
 }
-.shinkan_wasedasai_staff {
-    position: absolute;
-    font-size: 18px;
-    font-weight: bold;
-    top: 270px;
-    z-index: 100;
-    color: #fffcfc;
-    left: 12%;
+.footer-square-button::after {
+  content: "→";
+  font-size: 1.3vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.8vw;
+  height: 2.8vw;
+  border-radius: 50%;
+  background-color: #fffcfc;
+  color: #e72241;
+  transition: all 0.3s ease;
+  position: absolute;
+  right: 0.7vw; /* 矢印は固定 */
+  flex-shrink: 0;
 }
-.footer_icons_photo {
-    width: 48px;
-    height: 48px;
-    margin-right: 3vh;
-}
-.footer_icons {
-    position: relative;
-    width: 270px;
-    height: 56px;
-    left: 50px;
-    top: 150px;
-    z-index: 1;
-    line-height: 3;
-    display: flex;
-    flex-wrap: nowrap;
-}
-/* .footer_contents_line1 {
-    position: absolute;
-    font-size: 16px;
-    font-weight: bold;
-    top: 170px;
-    z-index: 100;
-    color: #fffcfc;
-    left: 40%;
-    line-height: 4;
-    text-align: center;
-    
-} */
-.footer_grid a {
-    color: #fffcfc;
-    font-size: 16px;
-    text-decoration:none;
-}
-/* .footer_contents_line2 {
-    position: absolute;
-    font-size: 16px;
-    font-weight: bold;
-    top: 170px;
-    z-index: 100;
-    color: #fffcfc;
-    left: 60%;
-    line-height: 4;
-    text-align: center;
-} */
-.footer_hover {
-    display: inline-block; 
-    position: relative; 
-    cursor: pointer;
-
-}
-
-.footer_hover::after {
-    content: '';
-    position: absolute;
-    bottom: 1px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 0%;
-    height: 1px;
-    background: #fffcfc; /* 白色の下線 */
-    transition: width 0.3s ease-in-out;
-    z-index: 2;
-}
-
-.footer_hover:hover::after {
-    width: 70%;
-}
-
-
-@media screen and (max-width: 1400px) {
-    footer {
-        height: 100vh;
-        width: 100vw;
-        z-index: 1;
-    }
-    .yajirushi_photo {
-        width: 66px;
-        height: 66px;
-        left: calc(50% - 33px);
-    }
-    .shinkan_elements {
-        height: 82vh;
-        top: 130px;
-        align-items: center;
-    }
-    .shinkan_wasedasai,
-    .shinkan_wasedasai_staff {
-        width: 100%;
-        text-align: center;
-        left: 0;
-    }
-    .shinkan_wasedasai {
-        top: 140px;
-    }
-    .shinkan_wasedasai_staff {
-        top: 240px;
-    }
-    .footer_icons {
-        margin-top: 550px;
-        height: 48px;
-        width: 264px;
-        left: 50%;
-        transform: translateX(-50%);
-  
-    }
-    .footer_icon1 {
-     margin-left: 30px;
-    }
-    .footer_icons_photo {
-    margin-right: 30px;
-    }
-    .footer_contents {
-        display: flex;
-        flex-direction: column;
-        line-height: 0.5vh;
-    }
-
-    .footer_hover {
-        font-weight: normal;
-    }
-
-    .footer_square-button {
-        margin-top: 100px;
-        left: calc(50% - 125px ) !important;
-        font-size: 13px !important;
-        position: relative;
-    }
-    .footer_square-button::after {
-        font-size: 10px;
-    }
-    .footer_text {
-        font-size: 13px;
-        padding: 10px;
-        overflow: hidden;
-    }
-    .footer_grid {
-        grid-template-columns: 1fr; /* 1列 */
-        grid-template-rows: auto;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-    }
-    .footer_grid a {
-        line-height: 4;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-}
-@media screen and (max-width: 768px) {
-    .footer {
-        height: 150vh !important;
-    }
-    .shinkan_elements {
-        top: 75px;
-    }
-    .yajirushi_photo {
-        top: 10px;
-        width: 60px;
-        height: 60px;
-    }
-    .shinkan_wasedasai {
-        top: 70px;
-    }
-    .footer_logo {
-        width: 500px;
-    }
-.footer_grid a {
-    padding-top: 15px;
-    line-height:  1.5;
-    
-}
-.footer_square-button {
-    margin-top: 15px;
-}
-.footer_icons {
-    margin-top: 270px;
-}
-
-}
-.footer_square-button {
-    border: 1.5px solid #fffcfc;
-    border-radius: 30px;
-    color: #fffcfc;
-    
-    position: absolute;
-    height: 60px;
-    white-space: nowrap;
-    width: 260px; /* 文字の長さに応じて可変 */
-    top: 73%;
-    left: 75%;
-}
-
-.footer_square-button::after {
-    
-    background-color: #fffcfc;
-    color: #e72241;
-
-}
-
 /* ホバー時の変更 */
-.footer_square-button:hover {
-    background-color: #fffcfc;
-    color: #e72241;
+.footer-square-button:hover {
+  background-color: #fffcfc;
+  color: #e72241;
 }
-
-.footer_square-button:hover::after {
-
-    background-color: #e72241;
-    color: #fffcfc;
-    transform: scale(1);
-} 
-.footer_logo {
-    height: auto;
-    width: 289px;
+.footer-square-button:hover::after {
+  background-color: #e72241;
+  color: #fffcfc;
+  transform: scale(1);
 }
-/* ここまでフッター */
+@media (max-width: 500px){
+    footer{
+        height: 100vh;
+    }
+    .footer-contaier{
+        height: 77vh;
+        margin-top: 30px;
+    }
+    .footer-logo img{
+        width: 220px;
+        margin: 10px 0;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .footer-pages{
+        flex-direction: column;
+        font-size: 14px;
+        top: 46%;
+    }
+    .footer-pages p{
+        width: 250px;
+    }
+    .mergin-exist{
+        margin: 20px 0;
+    }
+    .mergin-none{
+        margin-top: 20px;
+    }
+    .footer-sns-icon{
+        bottom: 90px;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-left: 0;
+    }
+    .footer-sns-icon img{
+        width: 40px;
+        margin: 0 10px;
+    }
+    .footer-square-button {
+        padding: 2vw 4vw;
+        border-radius: 6vw;
+        font-size: 13px;
+        height: 50px;
+        width: 200px;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        padding-right: 8vw;
+    }
+    .footer-square-button .spacer {
+        flex-grow: 1; 
+    }
+    .footer-square-button .text {
+        flex-shrink: 0; 
+    }
+    .footer-square-button::after {
+        font-size: 14px;
+        width: 34px;
+        height: 34px;
+        right: 1.3vw;
+   }}
+@media (max-width: 376px) {
+  .footer-sns-icon {
+    display: none;
+  }}
+@media (max-height: 700px) {
+    .footer-sns-icon{
+        display: none;
+    }
+    .footer-pages{
+        top: 53%;
+    }}
