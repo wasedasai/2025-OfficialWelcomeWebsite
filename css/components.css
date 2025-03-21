@@ -205,9 +205,13 @@ body {
     bottom: 25px;
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
   /* ここまでheader */
 }
 =======
+=======
+
+>>>>>>> 3b51e9d47aa32a58963bb7494e5d3bc328bdae99
 @media (max-height: 700px) {
     .menu-open-button{
         display: none;
@@ -216,8 +220,11 @@ body {
         top: 50%;
     }
 }
+<<<<<<< HEAD
     /* ここからheader */
 >>>>>>> 62b0c03865b574bbb47bf41d523621a190c43fda
+=======
+>>>>>>> 3b51e9d47aa32a58963bb7494e5d3bc328bdae99
 /* ここまでheader */
 
 /* ここからhero */
@@ -244,6 +251,7 @@ body {
 }
 @media (max-width: 500px) {
 <<<<<<< HEAD
+<<<<<<< HEAD
   .hero {
     height: 100px;
     background-image: url(../images/hero-sp.png);
@@ -252,6 +260,8 @@ body {
     font-size: 15px;
   }
 =======
+=======
+>>>>>>> 3b51e9d47aa32a58963bb7494e5d3bc328bdae99
     .hero{
         height: 100px;
         background-image: url(../images/hero-wide.png);
@@ -259,7 +269,10 @@ body {
     .hero h1{
         font-size: 15px;
     }
+<<<<<<< HEAD
 >>>>>>> 62b0c03865b574bbb47bf41d523621a190c43fda
+=======
+>>>>>>> 3b51e9d47aa32a58963bb7494e5d3bc328bdae99
 }
 /* ここまでhero */
 
@@ -533,6 +546,7 @@ body {
 
 /* ここからfooter */
 <<<<<<< HEAD
+<<<<<<< HEAD
 footer {
   position: relative;
   width: 100vw;
@@ -542,6 +556,8 @@ footer {
   font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
   margin-top: 75px;
 =======
+=======
+>>>>>>> 3b51e9d47aa32a58963bb7494e5d3bc328bdae99
 footer{
     position: relative;
     width: 100vw;
@@ -558,7 +574,10 @@ footer{
 .arrow-img img{
     width: 50px;
     margin-top: 40px;
+<<<<<<< HEAD
 >>>>>>> 62b0c03865b574bbb47bf41d523621a190c43fda
+=======
+>>>>>>> 3b51e9d47aa32a58963bb7494e5d3bc328bdae99
 }
 .arrow-img {
   text-align: center;
@@ -679,6 +698,7 @@ footer{
 }
 @media (max-width: 500px) {
 <<<<<<< HEAD
+<<<<<<< HEAD
   footer {
     height: 100vh;
   }
@@ -740,6 +760,8 @@ footer{
     right: 1.3vw;
   }
 =======
+=======
+>>>>>>> 3b51e9d47aa32a58963bb7494e5d3bc328bdae99
     footer{
         height: 100vh;
     }
@@ -801,7 +823,10 @@ footer{
         height: 34px;
         right: 1.3vw;
     }
+<<<<<<< HEAD
 >>>>>>> 62b0c03865b574bbb47bf41d523621a190c43fda
+=======
+>>>>>>> 3b51e9d47aa32a58963bb7494e5d3bc328bdae99
 }
 @media (max-width: 376px) {
   .footer-sns-icon {
@@ -809,8 +834,11 @@ footer{
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* ここまでfooter */
 =======
+=======
+>>>>>>> 3b51e9d47aa32a58963bb7494e5d3bc328bdae99
 @media (max-height: 700px) {
     .footer-sns-icon{
         display: none;
@@ -820,4 +848,7 @@ footer{
     }
 }
 /* ここまでfooter */
+<<<<<<< HEAD
 >>>>>>> 62b0c03865b574bbb47bf41d523621a190c43fda
+=======
+>>>>>>> 3b51e9d47aa32a58963bb7494e5d3bc328bdae99
