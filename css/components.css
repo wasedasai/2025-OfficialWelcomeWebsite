@@ -563,7 +563,7 @@ footer{
 }
 .footer-pages p {
   font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
-  width: 250px;
+  width: 260px;
 }
 .footer-pages p:hover {
   animation: zoom 0.3s;
