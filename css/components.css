@@ -565,6 +565,7 @@ footer{
 }
 .footer-pages p {
   font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+
   width: 260px;
 }
 .footer-contaier{
@@ -736,9 +737,12 @@ footer{
     }
     .footer-pages{
         top: 53%;
+
     }}
+
 @media (min-width: 1507px) {
   footer{
     display: none;
   }
 }
+
