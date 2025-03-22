@@ -1148,7 +1148,11 @@ header {
         top: 50%;
     }
 }
-
+@media (min-width: 1507px) {
+    footer{
+      display: none;
+    }
+  }
 /* 次のセクションのデザイン */
 .next-section {
     width: 100vw;
