@@ -46,7 +46,7 @@ body{
     border: 3px solid #e72241;
     width: 90%;
     margin: 2% auto;
-    padding: 3%;
+    padding: 2% 3% 3% 3%;
     text-align: center;
 }
 
@@ -55,6 +55,10 @@ body{
     font-weight: 700;
     font-style: normal;
     font-size: 3.35vw;
+}
+
+.section-title-kyoku{
+    margin-bottom: 2%;
 }
 
 .kyokuName h1{
@@ -153,6 +157,10 @@ body{
         font-size: 18px;
     }
 
+    .section-title-kyoku{
+        margin-top: 2%;
+    }
+
     .kyokuBoxUnder{
         display: flex;
         flex-direction: column;
@@ -202,5 +210,12 @@ body{
         margin: 5% 0 10% 0;
     }
     
+    .organizationChart{
+        margin-top: 10%;
+    }
+
+    .kyokuUnderBoxContainer{
+        margin-top: 8%;
+    }
 }
 

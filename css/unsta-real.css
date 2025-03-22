@@ -1,92 +1,131 @@
+.saisyo p{
+text-align:center;
+font-size:20px;
+font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+}
 
+.saisyo{
+    margin-top:75px;
+}
+.section-title{
+    position:relative;
+    left:50%;
+    transform: translateX(-50%);
+    margin:50px 0;
+}
 .wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 50px;
 }
 .chart-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    max-width: 800px;
-    width: 100%;
+    gap: 35px;
+    margin-left: 50px;
 }
 .chart-item {
-    text-align:left;
     flex-direction: column;
-    align-items: center;
+    width:auto;
+    
 }
+.fight{
+    width:300px;
+    font-size:16px;
+    position:relative;
+    left:20%;
+    font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+
+}
+.fight1{
+    width:300px;
+    font-size:16px;
+    position:relative;
+    left:24%;
+    font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+
+}
+
 .chart-item img {
-    width: 100%;
-    max-width: 300px;
+    width: 480px;
     height: auto;
 }
 
 .grid-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    max-width: 600px;
-    margin: auto;
+    gap: 25px;
+    width: 80%;
+    margin:auto;
     position: relative;
     z-index: 10;
+    max-height: 350px;
+    padding-top: 25px;
+    padding-bottom: 25px;
 }
-.container {
+
+.setumei {
     text-align: center;
 }
 
 .description-overlay {
     display: none;
-            position: relative;
-            margin: 50px auto 0 auto;
-            width: 80%; 
-    max-width: 800px; 
-    margin: 50px auto 0 auto; 
-    padding: 40px; 
-            min-height: 200px;
-            background-color: #fffcfc;
-            outline: 3px solid #e72241;
-            border-radius: 20px;
-            color: black;
-            font-size: 1.5em;
-            text-align: center;
-            padding: 40px;
-            box-sizing: border-box;
-            z-index: 5;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-}
-
-    
-
-.description-overlay::before {
-    content: "Q";
-            position: absolute;
-            top: -30px;
-            left: 10px;
-            transform: translateX(-50%);
-            width: 60px;
-            height: 60px;
-            background: white;
-            border: 3px solid red;
-            border-radius: 50%;
-            font-size: 24px;
-            font-weight: bold;
-            color: red;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-.midashi{
-    font-weight: bold;
+    position: relative;
+    margin: 100px auto 200px auto;
+    width: 80%;
+    max-width: 850px;
+    height: auto;
+    background-color: #fffcfc;
+    outline: 8px solid #e72241;
+    border-radius: 20px;
+    color: #1c1b1b;
+    font-size: 1.5em;
     text-align: center;
+    padding: 40px;
+    box-sizing: border-box;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+    font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+}
+.description-overlay::before {
+    display:none;
+    content: "Q";
+    position: absolute;
+    top: -40px;
+    left: 0;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 150px;
+    background: #fffcfc;
+    border: 3px solid #e72241;
+    border-radius: 50%;
+    font-size: 64px;
+    font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
     color: #e72241;
-    margin-bottom: 15px;
-    border-bottom: 2px solid #e72241;
-    padding-bottom: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 15;
+}
+.description-overlay img{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.midashi{
+    font-size: 40px;
+    font-weight: bold;
+    color: #e72241;
+    margin: auto;
+    border-bottom: 5px solid #e72241;
+    border-radius: 2px;
+    padding-bottom: 10px;
+    width:500px;
+    font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
 }
 .showButton {
     background-color: #fffcfc;
@@ -97,8 +136,173 @@
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
     width:100%;
+    font-size:20px;
+    font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
 }
 .showButton:hover {
     background-color: #e72241;
     color: #fffcfc;
+}
+.description-content p{
+    font-size: 20px;
+    text-align:left;
+    font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+    line-height: 2;
+}
+.blockTitle{
+    font-size:20px;
+}
+.section-title{
+    font-size:48px;
+}
+.br-sp{
+    display:none;
+}
+@media screen and (max-width:960px) {
+    .saisyo p{
+        text-align:center;
+        font-size:12px;
+        font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+        }
+        
+    .saisyo{
+            margin-top:0px;
+            padding:20px;
+    }
+    .section-title{
+        margin-top:20px;
+        margin-bottom:20px;
+    }
+    .blockTitle{
+        font-size:15px;
+    }
+    .wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 50px;
+        padding:20px;
+    }
+    .chart-container {
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+        margin:auto;
+    }
+    .chart-item p{
+        width:300px;
+        font-size:14px;
+    }
+    
+    .chart-item img {
+        width: 350px;
+        height: auto;
+    }
+    .fight{
+        width:300px;
+        font-size:14px;
+        text-align: center;
+        position:relative;
+        left:7%;
+    }
+    .fight1{
+        width:300px;
+        font-size:14px;
+        position:relative;
+        left:22%;
+        font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+    
+    }
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        width: 80%;
+        margin:auto;
+        position: relative;
+        z-index: 10;
+        max-height: 350px;
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+    .description-overlay {
+        display: none;
+        position: relative;
+        margin: 20px auto 50px auto;
+        width: 80%;
+        max-width: 850px;
+        height: auto;
+        background-color: #fffcfc;
+        outline: 4px solid #e72241;
+        border-radius: 20px;
+        color: #1c1b1b;
+        font-size: 14px;
+        font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+        text-align: center;
+        padding: 20px;
+        box-sizing: border-box;
+        z-index: 5;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        overflow: visible;
+    }
+    .description-overlay::before {
+        content: "Q";
+        position: absolute;
+        top: -20px;
+        left: 0;
+        transform: translateX(-50%);
+        width: 60px;
+        height: 60px;
+        background: #fffcfc;
+        border: 2px solid #e72241;
+        border-radius: 50%;
+        font-size: 1.5em;
+        font-weight: bold;
+        color: #e72241;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 15;
+        font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+    }
+    .description-overlay img{
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .midashi{
+        font-size: 16px;
+        font-weight: bold;
+        color: #e72241;
+        margin: auto;
+        border-bottom: 2px solid #e72241;
+        border-radius: 1px;
+        padding-bottom: 10px;
+        width:200px;
+        font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+    }
+    .description-content p{
+        font-size: 12px;
+        font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+        text-align:left;
+        line-height: 2;
+    }
+    .showButton {
+        background-color: #fffcfc;
+        color: #e72241;
+        border: 1px solid #e72241;
+        border-radius: 5px;
+        padding: 8px 8px;
+        cursor: pointer;
+        transition: background-color 0.3s, color 0.3s;
+        width:100%;
+        font-size:12px;
+        font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+    }
+    .br-sp{
+        display:flex;
+    }
+
 }

@@ -1,10 +1,36 @@
+$(document).ready(function () {
+    $(".top-menu a").on("click", function (event) {
+        event.stopPropagation(); // 他のイベントをブロック
+    });
+});
+$(document).ready(function () {
+    $(".top-icons").on("click", function (event) {
+        event.stopPropagation(); // 他のイベントをブロック
+    });
+});$(document).ready(function () {
+    $(".fullscreen-menu").on("click", function (event) {
+        event.stopPropagation(); // 他のイベントをブロック
+    });
+});
+$(document).ready(function () {
+    $(".footer_container").on("click", function (event) {
+        event.stopPropagation(); // 他のイベントをブロック
+    });
+});
+$(document).ready(function () {
 
+    $(".top-square-button2, .detail, .faq_examples, .kyousan_image, .fukidashi-container, .swiper-wrapper").on("click", function (event) {
+
+        event.stopPropagation(); // 他のイベントをブロック
+    });
+});
 $(document).ready(function () {
     // 初回ロード時に `html, body` に width: 100%; height: 100%; を適用
     $("html, body").css({"width": "100%", "height": "100%"});
 
     // スマホ版では最初に `mojimoji h1` の `font-size` を 200px に設定
     if (window.innerWidth <= 1000) {
+        $("html, body").css({"width": "100%", "height": "100dvh"});
         $(".mojimoji h1").css("font-size", "200px");
         $("html, body").css({"overflow": "hidden"});
         $("#change-text-button").on("click", function () {
@@ -23,6 +49,7 @@ $(document).ready(function () {
         });
         
     }
+
     // カスタムカーソルをスマホ版では非表示
     if (window.innerWidth > 1000) {
         $('body').append('<div class="custom-cursor">Tap</div>');
@@ -38,7 +65,7 @@ $(document).ready(function () {
         });
 
         // メニューやアイコン上でカスタムカーソルを非表示
-        $('.top-menu, .top-icons, .next-section, .next-section, .additional-content2, .additionalcontent3, footer, .additional-content').on('mouseenter', function () {
+        $('.top-loading, .top-menu, .top-icons, .next-section, .next-section, .additional-content2, .additionalcontent3, footer, .additional-content').on('mouseenter', function () {
             $cursor.css('display', 'none');
             $('body').css('cursor', 'auto');
         }).on('mouseleave', function () {
@@ -91,7 +118,7 @@ $(document).ready(function () {
                     setTimeout(() => {
                         $(".top_first h1, .scroll-container2, .scroll-container3, .top-menu, .top_matsuri_btn, .top_btn, .top-icons").css({
                             "opacity": "0",
-                            "transition": `opacity ${fadeDuration}ms ease-in-out`
+                            "transition": `opacity ${fadeDuration}ms ease-in-out`,
                         });
                         if (window.innerWidth <= 1000) {$(".scroll-container2, .scroll-container3").css({
                             "display": "none" // 完全に削除
@@ -104,6 +131,9 @@ $(document).ready(function () {
                             "display": "none" // 完全に削除,
                         });
                         $(".top-menu").css({
+                            "display": "none" // 完全に削除,
+                        });
+                        $(".top-icons").css({
                             "display": "none" // 完全に削除,
                         });
                         $(".top_first").css({
@@ -124,6 +154,13 @@ $(document).ready(function () {
                             $("top_first").css({"overflow-x": "hidden"});
 
                         }
+                        setTimeout(() => {
+                            $(".header").css({
+                                "display": "block",  // `display: none;` を解除
+                                "opacity": "1",
+                                "transition": `opacity ${fadeDuration}ms ease-in-out`
+                            });
+                        }, fadeDuration);
                     }, 200);
 
                     setTimeout(() => {
@@ -269,8 +306,10 @@ $(document).ready(function () {
                         "transition": `opacity 2s ease-in-out`,
                         "overflow": "auto"
                     });
+                
 
                 }, fadeDuration + 500);
+                
 
             }, 500);
 

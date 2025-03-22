@@ -10,9 +10,15 @@
   align-items: center;
   margin-top: 3vh;
 }
-/* heroコンポーネント */
-.hero {
-  position: relative;
+.oneday-title {
+  margin-top: 2vh;
+  padding-left: 7vw;
+}
+.wasesai-title {
+  padding-left: 40%;
+}
+.blockTitle {
+  margin-bottom: 0px;
 }
 /* boxコンポーネント */
 .blue-box-event {
@@ -20,9 +26,18 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 500px;
-  height: 840px;
+  width: 38vw;
+  height: 100vh;
   border: 3px solid #58b1e4;
+  border-radius: 40px;
+}
+.box-event-sai {
+  padding-top: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 38vw;
+  height: 100vh;
   border-radius: 40px;
 }
 .red-box-event {
@@ -30,8 +45,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 500px;
-  height: 840px;
+  width: 38vw;
+  height: 100vh;
   border: 3px solid #e72241;
   border-radius: 40px;
 }
@@ -40,15 +55,25 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 500px;
-  height: 840px;
+  width: 38vw;
+  height: 100vh;
   border: 3px dashed #e72241;
   border-radius: 40px;
 }
 .wasesai-box {
   position: relative;
-  width: 1035px;
-  height: 640px;
+  display: flex;
+  flex-direction: column;
+  width: 77vw;
+  height: 650px;
+  border: 3px solid #e72241;
+  border-radius: 40px;
+}
+.oneday-box {
+  display: flex;
+  flex-direction: column; /* 子要素を縦に並べる */
+  width: 47vw;
+  height: 780px;
   border: 3px solid #e72241;
   border-radius: 40px;
 }
@@ -60,26 +85,26 @@
   font-family: "Noto Sans JP", sans-serif;
 }
 
-.box-line {
-  margin-top: 90px;
-  display: grid;
-  grid-auto-flow: column; /* 横並び */
+.two-boxes {
+  display: flex; /* 横並び */
   gap: 4.16vw; /* ボックスの間隔を60px */
 }
-
+.box-line {
+  margin-top: 10vh;
+  display: flex; /* 横並び */
+  gap: 4.16vw; /* ボックスの間隔を60px */
+}
 .oneday-boxline {
   margin: 3% 8%;
   display: flex;
   gap: 5vw;
 }
-.oneday-box {
+.time-schedule {
   display: flex;
-  flex-direction: column; /* 子要素を縦に並べる */
-  align-items: center; /* 子要素を中央揃え */
-  width: 630px;
-  height: 1035px;
-  border: 3px solid #e72241;
-  border-radius: 40px;
+}
+.time-schedule-2 {
+  padding-top: 7vh;
+  display: flex;
 }
 /* 矢印コンポーネント*/
 .month-img {
@@ -94,28 +119,46 @@
   position: absolute;
   margin-top: 60%;
 }
+.month-sentence-wasesai {
+  color: #fffcfc;
+  font-size: 2vw;
+  position: absolute;
+  margin-top: 50%;
+}
 /* 写真サイズ指定 */
 .img-inbox {
-  width: 70%;
-  margin-top: 8%;
+  width: 25vw;
+  height: 30vh;
+  margin-top: 5vh;
 }
-.wasesai-img {
+.wasesai-img1,
+.wasesai-img2,
+.wasesai-img3 {
+  width: 24vw;
+  margin-top: 3%;
+}
+.wasesai-imgbox {
   display: flex;
-  gap: 2vw;
+  gap: 0.3vw;
   margin-left: 2vw;
   margin-right: 2vw;
   margin-top: 1.7vw;
 }
+.saikun-unsta1 {
+  padding-top: 2vh;
+  transform: scaleX(-1);
+  width: 20vw;
+}
 /* テキストボックス指定 */
 .event-discription {
-  margin: 10% 8%; /* 上下に余白を追加 */
+  margin: 4vh 4vw; /* 上下に余白を追加 */
   text-align: center; /* テキストを中央揃え */
   width: 80%;
   font-size: 1.4vw;
   line-height: 2.9vw;
 }
 .event-discription-wasesai {
-  margin: 5% 8%; /* 上下に余白を追加 */
+  margin: 8vh 8%; /* 上下に余白を追加 */
   text-align: center; /* テキストを中央揃え */
   width: 80%;
   font-size: 1.4vw;
@@ -125,10 +168,29 @@
   color: #fffcfc;
   font-size: 1.2vw;
 }
+.period-of-event-red {
+  color: #e72241;
+  font-size: 1.2vw;
+}
 .day-discription {
   margin-top: 4vh;
   font-size: 1.4vw;
   text-align: center;
+}
+.day-caution {
+  font-size: 1vw;
+  text-align: center;
+  line-height: 2.9vw;
+}
+.day-caution-2 {
+  font-size: 1vw;
+  text-align: center;
+  line-height: 2.9vw;
+  margin-top: 10vh;
+}
+.saikun-word {
+  font-size: 1vw;
+  padding-left: 5vw;
 }
 /* boxの中の小さい四角枠 */
 .smlal-box-blue {
@@ -140,7 +202,7 @@
   background-color: #58b1e4;
   border-radius: 20px;
   position: absolute; /* 絶対位置に設定 */
-  bottom: 10%;
+  bottom: 10vh;
 }
 .smlal-box-red {
   display: flex;
@@ -149,6 +211,17 @@
   width: 60%;
   height: 7%;
   background-color: #e72241;
+  border-radius: 20px;
+  position: absolute; /* 絶対位置に設定 */
+  bottom: 10vh;
+}
+.smlal-box-pj {
+  display: flex;
+  justify-content: center; /* 水平方向の中央揃え */
+  align-items: center;
+  width: 60%;
+  height: 7%;
+  border: 2.5px solid #e72241;
   border-radius: 20px;
   position: absolute; /* 絶対位置に設定 */
   bottom: 10%;
@@ -165,4 +238,391 @@
   position: absolute; /* 絶対位置に設定 */
   bottom: 7%;
   left: 20%;
+}
+/* サイくん吹き出し */
+.sai-circle {
+  display: flex;
+  align-items: center;
+  width: 20vw; /* 幅を設定 */
+  height: 16vh; /* 高さを設定 */
+  border: 3px solid #e72241;
+  border-radius: 55%; /* 楕円形にする */
+}
+/* レスポンシブ 
+@media (max-width: 768px) {
+  .box-event-sai.red-box-event.blue-box-event.box-pj {
+    width: 80%;
+    height: 60%;
+  }
+  .two-boxes {
+    display: flex;
+    flex-direction: column;
+  }
+}
+*/
+
+/* アコーディオン関連 */
+details summary {
+  list-style: none; /* デフォルトの三角を消す */
+  display: block;
+}
+details summary::-webkit-details-marker {
+  /* Safariで表示されるデフォルトの三角形アイコンを消します */
+  display: none;
+}
+/* 開く前の枠 */
+.summary_inner {
+  margin-left: 10%;
+  cursor: pointer;
+  display: flex;
+  width: 34vw;
+  height: 100px;
+  border: 3px solid #e72241;
+  border-radius: 30px;
+  padding-left: 3%;
+  padding-top: 1.5%;
+}
+.summary_inner-blue {
+  margin-left: 10%;
+  cursor: pointer;
+  display: flex;
+  width: 34vw;
+  height: 100px;
+  border: 3px solid #58b1e4;
+  border-radius: 30px;
+  padding-left: 3%;
+  padding-top: 1.5%;
+}
+/* 開いた後の枠*/
+details[open] .summary_inner {
+  height: 750px;
+  padding-left: 3.5%;
+  padding-right: 3.5%;
+}
+details[open] .summary_inner-blue {
+  height: 750px;
+  padding-left: 3.5%;
+  padding-right: 3.5%;
+}
+/* アコーディオン内のコンテンツ */
+.accordion-content-unsta1 {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* details が開いたときにコンテンツを表示 */
+details[open] .accordion-content-unsta1 {
+  display: block;
+  opacity: 1;
+}
+
+.smlal-box-red-accordion {
+  display: flex;
+  justify-content: center; /* 水平方向の中央揃え */
+  align-items: center;
+  width: 70%;
+  height: 10%;
+  background-color: #e72241;
+  border-radius: 20px;
+  margin-left: 15%;
+}
+.smlal-box-blue-accordion {
+  display: flex;
+  justify-content: center; /* 水平方向の中央揃え */
+  align-items: center;
+  width: 70%;
+  height: 10%;
+  background-color: #58b1e4;
+  border-radius: 20px;
+  margin-left: 15%;
+  padding-bottom: 10%;
+}
+.accordion-column {
+  display: flex;
+  flex-direction: column;
+}
+.event-discription-accordion {
+  font-size: 1.4vw;
+  line-height: 2.9vw;
+  margin-top: 8%;
+  margin-bottom: 8%;
+}
+.img-accordion {
+  padding-left: 12%;
+  width: 88%;
+  margin-top: 10%;
+  margin-bottom: 4%;
+}
+.event-title-accordion {
+  display: flex;
+  align-items: center; /* 縦方向の中央揃え */
+  margin-left: 1vw;
+  margin-top: 1vh;
+}
+
+/* 三角形を横に配置 */
+.event-title-accordion::after {
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 20px solid #e72241; /* 三角形（初期状態: 下向き） */
+  transition: transform 0.3s ease-in-out;
+  border-radius: 3px;
+}
+.event-title-accordion-blue::after {
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 20px solid #58b1e4; /* 三角形（初期状態: 下向き） */
+  transition: transform 0.3s ease-in-out;
+  border-radius: 3px;
+}
+
+/* アコーディオンが開いた時に三角形の向きを変える */
+details[open] .event-title-accordion::after {
+  transform: rotate(180deg); /* 上向きにする */
+}
+details[open] .event-title-accordion-blue::after {
+  transform: rotate(180deg); /* 上向きにする */
+}
+.box-accordion {
+  display: flex;
+  margin-top: 8vh;
+  gap: 5vw;
+}
+/*レスポンシブ -ipadPro*/
+@media (max-width: 1024px) {
+  details[open] .summary_inner.summary_inner-blue {
+    height: 40vh;
+  }
+  .event-title-accordion {
+    margin-left: 3vw;
+  }
+  .red-box-event,
+  .blue-box-event,
+  .box-pj {
+    height: 48vh;
+  }
+  .smlal-box-red,
+  .smlal-box-blue,
+  .smlal-box-pj {
+    bottom: 1vh;
+  }
+  .box-event-sai {
+    display: none;
+  }
+  .blockTitle {
+    font-size: 2.5vw;
+  }
+  .oneday-box {
+    height: 550px;
+  }
+  .day-caution-2 {
+    margin-top: 3.5vh;
+  }
+  .time-schedule-2 {
+    padding-top: 2vh;
+  }
+  .oneday-title {
+    margin-top: 0;
+    padding-left: 4vw;
+  }
+  .img-inbox {
+    width: 25vw;
+    height: 12vh;
+    margin-top: 5vh;
+    object-fit: cover;
+  }
+}
+/*レスポンシブ -ipad*/
+@media (max-width: 768px) {
+  .blockTitle {
+    font-size: 15vw;
+  }
+  .red-box-event,
+  .blue-box-event,
+  .box-pj {
+    height: 110vh;
+  }
+  .wasesai-box {
+    height: 450px;
+  }
+  .red-box-event,
+  .blue-box-event,
+  .box-pj {
+    height: 500px;
+  }
+  .small-box-wasesai {
+    margin-top: 1vh;
+  }
+  .event-discription-wasesai {
+    margin-top: 4vh;
+  }
+  .smlal-box-red,
+  .smlal-box-blue,
+  .smlal-box-pj {
+    bottom: 1vh;
+  }
+  .box-accordion {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+  }
+  .summary_inner.summary_inner-blue {
+    width: 54vw;
+  }
+  details[open] .summary_inner .summary_inner-blue {
+    height: 65vh;
+  }
+  .month-sentence,
+  .month-sentence-wasesai {
+    font-size: 4vw;
+  }
+  .month-sentence-wasesai {
+    margin-top: 60%;
+  }
+  .event-discription-accordion {
+    font-size: 2vw;
+    line-height: 4vw;
+  }
+  .period-of-event,
+  .period-of-event-red {
+    font-size: 2vw;
+  }
+}
+/*レスポンシブ -iphone*/
+@media (max-width: 430px) {
+  .two-boxes {
+    display: flex;
+    flex-direction: column;
+  }
+  .red-box-event,
+  .blue-box-event,
+  .box-pj,
+  .wasesai-box {
+    width: 250px;
+    height: 470px;
+  }
+  .box-line {
+    gap: 6vw;
+  }
+  .yajirushi {
+    width: 20vw;
+  }
+  .img-inbox {
+    width: 40vw;
+    margin-top: 2vh;
+  }
+  .event-discription,
+  .event-discription-wasesai {
+    margin: 11% 0;
+    text-align: center; /* テキストを中央揃え */
+    width: 80%;
+    font-size: 2.5vw;
+    line-height: 5vw;
+  }
+  .event-discription-wasesai {
+    margin-left: 10%;
+  }
+  .smlal-box-red,
+  .smlal-box-blue,
+  .smlal-box-pj {
+    bottom: 2vh;
+  }
+  .wasesai-img1,
+  .wasesai-img2 {
+    display: none;
+  }
+  .wasesai-img3 {
+    width: 40vw;
+    margin-top: 2vh;
+    margin-left: 15%;
+  }
+  .wasesai-title {
+    padding-left: 33%;
+  }
+  .day-discription {
+    margin-top: 2vh;
+    font-size: 2vw;
+  }
+  .oneday-boxline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .oneday-box {
+    width: 280px;
+    height: 510px;
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+  .day-caution {
+    font-size: 1.9vw;
+    text-align: center;
+    line-height: 2.9vw;
+  }
+  .day-caution-2 {
+    font-size: 2vw;
+    text-align: center;
+    line-height: 2.9vw;
+    margin-top: 3vh;
+  }
+  .time-schedule-2 {
+    padding-top: 3vh;
+    display: flex;
+  }
+  .oneday-title {
+    margin-top: 0vh;
+    padding-top: 0;
+  }
+  details[open] .summary_inner {
+    height: 42vh;
+  }
+  .event-title-accordion {
+    margin-left: 5vw;
+    margin-top: 2.8vh;
+  }
+  .month-sentence,
+  .month-sentence-wasesai {
+    font-size: 16px;
+  }
+  .period-of-event,
+  .period-of-event-red,
+  .day-discription {
+    font-size: 12px;
+  }
+  .day-discription {
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+  .event-discription .event-discription-wasesai {
+    font-size: 13px;
+  }
+  .blockTitle {
+    font-size: 18px;
+  }
+  .day-caution {
+    font-size: 11px;
+    text-align: center;
+    line-height: 5vw;
+  }
+  .day-caution-2 {
+    font-size: 11px;
+    text-align: center;
+    line-height: 5vw;
+    margin-top: 10vh;
+  }
+}
+/*レスポンシブ -iphoneSE*/
+@media (max-width: 375px) {
+  details[open] .summary_inner {
+    height: 53vh;
+  }
 }

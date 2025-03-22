@@ -6,6 +6,7 @@
      <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Zen+Kaku+Gothic+New:wght@700&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/sanitize.css" rel="stylesheet"/>
     <link rel="stylesheet" href="../css/components.css">
     <link rel="canocical" href="https://wasedasai.github.io/2025-OfficialWelcomeWebsite/">
@@ -182,56 +183,40 @@
 
     <!-- ここからフッター -->
      <footer>
-        <div class="yajirushi_footer">
-            <img class="yajirushi_photo" src="../images/footer_yajirushi.png">
+        <div class="arrow-img">
+            <a href="#"><img src="../images/footer_yajirushi.png" alt=""></a>
         </div>
-        <div class="shinkan_elements">
-            <div class="shinkan_wasedasai">
-                <img class="footer_logo" src="../images/logo_footer.png">
+        <div class="footer-contaier">
+            <div class="footer-logo">
+                <a href="../index.html"><img src="../images/logo_footer.png" alt=""></a>
             </div>
-            <div class="footer_grid">
-                <a href="../pages/wasedasaitoha.html" class="footer_hover">早稲田祭・運営スタッフとは</a>
-                <a href="../pages/shinkan-event.html" class="footer_hover">新歓イベント</a>
-                <a href="../pages/how-to-enter.html" class="footer_hover">入会方法</a>
-                <a href="../pages/faq-contact.html" class="footer_hover">よくある質問・お問い合わせ</a>
-                <a href="../pages/unsuta-one-yaer.html" class="footer_hover">運スタの一年</a>
-                <a href="../pages/unusta-real.html" class="footer_hover">運スタのリアル</a>
-                <a href="../pages/kyoku-introduce.html" class="footer_hover">局紹介</a>
-                <a href="../pages/comingsoon.html" class="footer_hover">わせだサイくん</a>
-
-            <div class="footer_icons">
-                <a href="https://www.instagram.com/wasedasai_new?igsh=MXZhZzJvOW50Y2preQ%3D%3D&utm_source=qr"><img src="../images/footer_instagram.png" alt="" class="footer_icons_photo"></a>
-                <a href="https://x.com/wasedasai_new?s=21"><img src="../images/footer_x.png" alt="" class="footer_icons_photo footer_icon1"></a>
-                <a href=""><img src="../images/footer_youtube.png" alt="" class="footer_icons_photo"></a>
+            <div class="footer-pages">
+                <div class="footer-pages-left">
+                    <a href="../pages/wasedasaitoha.html"><p class="mergin-exist">早稲田祭・運営スタッフとは</p></a>
+                    <a href="../pages/shinkan-event.html"><p class="mergin-exist">新歓イベント</p></a>
+                    <a href="../pages/how-to-enter.html"><p class="mergin-exist">入会方法</p></a>
+                    <a href="../pages/unsuta-one-yaer.html"><p class="margin-exist">運スタの1年</p></a>
+                </div>
+                <div class="footer-pages-right">
+                    <a href="../pages/unusta-real.html"><p class="mergin-none">運スタのリアル</p></a>
+                    <a href="../pages/kyoku-introduce.html"><p class="mergin-exist">局紹介</p></a>
+                    <a href="../pages/comingsoon.html"><p class="mergin-exist">わせだサイくん</p></a>
+                    <a href="../pages/faq-contact.html"><p class="mergin-exist">よくある質問・お問い合わせ</p></a>
+                </div>
             </div>
-            <div  class="footer_square-button square-button" href="">
-                <span class="spacer"></span>
-                <span class="footer_text">入会フォームはこちら</span>
-                <span class="spacer"></span>
+            <div class="footer-sns-icon">
+                <a href="https://www.instagram.com/wasedasai_new?igsh=MXZhZzJvOW50Y2preQ%3D%3D&utm_source=qr"><img src="../images/snsicon_I.png" alt=""></a>
+                <a href="https://x.com/wasedasai_new?s=21"><img src="../images/snsicon_X.png" alt=""></a>
+                <a href=""><img src="../images/snsicon_Y.png" alt=""></a>
+            </div>
+            <div class="footer-button">
+                <a href="" class="footer-square-button footer-square-button-white">
+                    <span class="foooter-spacer"></span>
+                    <span class="footer-text">入会方法はこちら</span>
+                    <span class="foooter-spacer"></span>
+                </a>
             </div>
         </div>
-        
-
-        <div class="footer_contents">
-            
-            
-
-        </div>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-    const backToTopBtn = document.querySelector(".yajirushi_photo");
-
-    if (backToTopBtn) {
-        backToTopBtn.addEventListener("click", function () {
-            window.scrollTo({ top: 0, behavior: "smooth" });
-        });
-    } else {
-        console.error("トップへ戻るボタン (#yajirushi_footer) が見つかりません。");
-    }
-});
-
-    </script>
      </footer>
     <!-- ここまでフッター -->
 </body>

@@ -3,11 +3,15 @@
     padding: 0;
     box-sizing: border-box;
 }
+p{
+    font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+
+}
 .section-title {
    position: relative;
    left: 50%;
     transform: translateX(-50%);
-    margin: 1vw;
+    margin-top: 8vw;
 }
 /* ここまでブロックタイトル */
 .text-wasedasai{
@@ -15,9 +19,9 @@
     text-align: center;
     margin: 2vw;
     color: #1C1B1B;
-    width: 75vw;
+    width: 90vw;
     position: relative;
-    left: 10%;
+    left: 3%;
 }
 .text-wasedasai-event{
     font-size: 30px;
@@ -53,20 +57,18 @@
     position: relative;
 }
 .blockTitleContainer{
-    justify-content: start;
-    position: relative;
-    left: 0%;
+    justify-content: center;
     width: 30vw;
 }
 .text-wasedasai-number{
     font-size: 24px;
-    text-align: start;
+    text-align: center;
     padding: 0.3vw;
     color: #1C1B1B;
 }
 .text-wasedasai-action{
     font-size: 24px;
-    text-align: start;
+    text-align: center;
     color: #1C1B1B;
     width: 30vw;
 }
@@ -88,11 +90,11 @@
 }
 .img-waseda-happi{
     width: 30vw;
-    margin-left: 7vw;
+    margin: 3vw;
 }
 .text-wasedasai-happpi{
     font-size: 24px;
-    text-align: center;
+    text-align: start;
     margin: 2vw;
     color: #1C1B1B;
     width: 40vw;
@@ -110,11 +112,11 @@
     width: 50vw;
     margin: 2vw;
     position: relative;
-    left: 25%;
+    left: 23%;
     text-align: center;
 }
 .text-color-enji{
-    color: #B3424A;
+    color: #E72241;
     font-size: 28px;
     font-weight: bold;
 }
@@ -129,18 +131,18 @@
         position: relative;
         left: 50%;
          transform: translateX(-50%);
-         margin: 1vw;
+         margin-top: 10vw;
      }
     .text-wasedasai{
-        font-size: 18px;
+        font-size: 14px;
         color: #1C1B1B;
-        width: 90%;
+        width: 93%;
         position: relative;
         left: 50%;
          transform: translateX(-50%);
     }
     .text-wasedasai-event{
-        font-size: 24px;
+        font-size: 14px;
         color: #1C1B1B;
     }
     .img-waseda:not(:first-child) {
@@ -156,7 +158,7 @@
         width: 80vw;
     }
     .text-wasedasai-number{
-        font-size: 18px;
+        font-size: 14px;
         color: #1C1B1B;
         width: 90%;
         position: relative;
@@ -164,15 +166,18 @@
          transform: translateX(-50%);
     }
     .text-wasedasai-action{
-        font-size: 18px;
+        font-size: 14px;
         color: #1C1B1B;
         width: 90%;
         position: relative;
         left: 50%;
          transform: translateX(-50%);
     }
+    .text-wasedasai-action br {
+        display: none;
+    }
     .text-wasedasai-attention{
-        font-size: 16px;
+        font-size: 14px;
         color: #1C1B1B;width: 80%;
     }
     .text-wasedasai-about-number{
@@ -190,15 +195,16 @@
         display: block;
     }
     .text-wasedasai-happpi{
-        font-size: 18px;
+        font-size: 14px;
         color: #1C1B1B;
         width: 90%;
+        text-align: center;
         position: relative;
         left: 50%;
          transform: translateX(-50%);
     }
     .text-wasedasai-lecureation{
-        font-size: 18px;
+        font-size: 14px;
         color: #1C1B1B;
         width: 90%;
         position: relative;
@@ -212,12 +218,12 @@
         left: 8%;
     }
     .text-color-enji{
-        font-size: 24px;
-        color: #B3424A;
+        font-size: 20px;
+        color: #E72241;
     }
     .text-link{
-        font-size: 18px;
-        color: #B3424A;
+        font-size: 14px;
+        color: #E72241;
     }
     .container-text-wasedasai{
         display: inline;
@@ -225,11 +231,22 @@
         margin: 2vw;
     }
     .blockTitleContainer{
-        width: 80%;
-        position: relative;
-        left: 5%;
+        width: 30%;
+        text-align: left;
+        margin-top: 3vw;
+        margin-bottom: 3vw;
     }
     .text-wasedasai-lecureation{
-        margin-bottom: 8vw;
+        font-size: 14px;
+        width: 100%;
+    }
+    .text-wasedasai-number{
+        text-align: left;
+    }
+    .text-wasedasai-action{
+        text-align: left;
+    }
+    .text-wasedasai-number br {
+        display: none;
     }
 }
