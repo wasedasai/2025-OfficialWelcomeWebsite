@@ -14,7 +14,9 @@ $(document).ready(function () {
     });
 });
 $(document).ready(function () {
+
     $(".top-square-button2, .detail, .faq_examples, .kyousan_image, .fukidashi-container, .swiper-wrapper").on("click", function (event) {
+
         event.stopPropagation(); // 他のイベントをブロック
     });
 });
