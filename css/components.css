@@ -24,6 +24,7 @@ body {
   top: 8px;
   text-align: center;
   z-index: 200;
+  cursor: pointer;
 }
 .menu-img {
   width: 75px;
