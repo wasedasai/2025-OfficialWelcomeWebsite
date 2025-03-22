@@ -14,7 +14,9 @@ $(document).ready(function () {
     });
 });
 $(document).ready(function () {
-    $(".top-square-button2, .detail, .faq_examples, .kyousan_image, .fukidashi-container").on("click", function (event) {
+
+    $(".top-square-button2, .detail, .faq_examples, .kyousan_image, .fukidashi-container, .swiper-wrapper").on("click", function (event) {
+
         event.stopPropagation(); // 他のイベントをブロック
     });
 });
@@ -24,6 +26,7 @@ $(document).ready(function () {
 
     // スマホ版では最初に `mojimoji h1` の `font-size` を 200px に設定
     if (window.innerWidth <= 1000) {
+        $("html, body").css({"width": "100%", "height": "100dvh"});
         $(".mojimoji h1").css("font-size", "200px");
         $("html, body").css({"overflow": "hidden"});
         $("#change-text-button").on("click", function () {
@@ -58,7 +61,7 @@ $(document).ready(function () {
         });
 
         // メニューやアイコン上でカスタムカーソルを非表示
-        $('#loading, .top-menu, .top-icons, .next-section, .next-section, .additional-content2, .additionalcontent3, footer, .additional-content').on('mouseenter', function () {
+        $('.top-loading, .top-menu, .top-icons, .next-section, .next-section, .additional-content2, .additionalcontent3, footer, .additional-content').on('mouseenter', function () {
             $cursor.css('display', 'none');
             $('body').css('cursor', 'auto');
         }).on('mouseleave', function () {
@@ -124,6 +127,9 @@ $(document).ready(function () {
                             "display": "none" // 完全に削除,
                         });
                         $(".top-menu").css({
+                            "display": "none" // 完全に削除,
+                        });
+                        $(".top-icons").css({
                             "display": "none" // 完全に削除,
                         });
                         $(".top_first").css({
