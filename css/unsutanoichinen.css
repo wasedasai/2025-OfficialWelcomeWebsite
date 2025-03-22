@@ -1,3 +1,9 @@
+body {
+  color: #1c1b1b;
+}
+.sp-only-unsta {
+  display: none;
+}
 /* タイトル系コンポーネント */
 .unsuta1-title {
   display: flex;
@@ -65,7 +71,7 @@
   display: flex;
   flex-direction: column;
   width: 77vw;
-  height: 650px;
+  height: 690px;
   border: 3px solid #e72241;
   border-radius: 40px;
 }
@@ -127,15 +133,17 @@
 }
 /* 写真サイズ指定 */
 .img-inbox {
-  width: 25vw;
+  width: 24vw;
   height: 30vh;
   margin-top: 5vh;
+  object-fit: cover;
 }
 .wasesai-img1,
 .wasesai-img2,
 .wasesai-img3 {
   width: 24vw;
   margin-top: 3%;
+  object-fit: cover;
 }
 .wasesai-imgbox {
   display: flex;
@@ -156,6 +164,16 @@
   width: 80%;
   font-size: 1.4vw;
   line-height: 2.9vw;
+  font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+}
+.time-discription {
+  text-align: left;
+  margin: 4vh 4vw; /* 上下に余白を追加 */
+  width: 80%;
+  font-size: 1.4vw;
+  line-height: 2.9vw;
+  font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  padding-left: 7%;
 }
 .event-discription-wasesai {
   margin: 8vh 8%; /* 上下に余白を追加 */
@@ -163,34 +181,41 @@
   width: 80%;
   font-size: 1.4vw;
   line-height: 2.9vw;
+  font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
 }
 .period-of-event {
   color: #fffcfc;
   font-size: 1.2vw;
+  font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
 }
 .period-of-event-red {
   color: #e72241;
   font-size: 1.2vw;
+  font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
 }
 .day-discription {
   margin-top: 4vh;
   font-size: 1.4vw;
   text-align: center;
+  font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
 }
 .day-caution {
   font-size: 1vw;
   text-align: center;
   line-height: 2.9vw;
+  font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
 }
 .day-caution-2 {
   font-size: 1vw;
   text-align: center;
   line-height: 2.9vw;
   margin-top: 10vh;
+  font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
 }
 .saikun-word {
   font-size: 1vw;
   padding-left: 5vw;
+  font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
 }
 /* boxの中の小さい四角枠 */
 .smlal-box-blue {
@@ -532,6 +557,10 @@ details[open] .event-title-accordion-blue::after {
     font-size: 3vw;
     line-height: 5vw;
   }
+  .time-discription {
+    font-size: 3vw;
+    line-height: 5vw;
+  }
   .event-discription-wasesai {
     margin-left: 10%;
   }
@@ -620,10 +649,22 @@ details[open] .event-title-accordion-blue::after {
     line-height: 5vw;
     margin-top: 10vh;
   }
+  .sp-only-unsta {
+    display: inline;
+  }
 }
 /*レスポンシブ -iphoneSE*/
 @media (max-width: 375px) {
   details[open] .summary_inner {
     height: 53vh;
+  }
+  .red-box-event,
+  .blue-box-event,
+  .box-pj {
+    width: 240px;
+    height: 410px;
+  }
+  .event-discription {
+    margin-top: 17%;
   }
 }
