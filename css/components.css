@@ -556,6 +556,7 @@ footer{
   transform: translate(-50%, -50%);
   font-size: 1.3vw;
   display: flex;
+  overflow: hidden;
 }
 .footer-pages a {
   text-decoration: none;
