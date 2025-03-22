@@ -567,6 +567,25 @@ footer{
   font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
   width: 260px;
 }
+.footer-contaier{
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.footer-contaier::-webkit-scrollbar{
+  display: none;
+}
+.footer-pages{
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.footer-pages::-webkit-scrollbar{
+  display: none;
+}
+@media (min-width: 1024px){
+  .footer-pages p{
+    width: 300px;
+  }
+}
 .footer-pages p:hover {
   animation: zoom 0.3s;
 }
