@@ -3,7 +3,21 @@ $(document).ready(function () {
         event.stopPropagation(); // 他のイベントをブロック
     });
 });
-
+$(document).ready(function () {
+    $(".top-icons").on("click", function (event) {
+        event.stopPropagation(); // 他のイベントをブロック
+    });
+});
+$(document).ready(function () {
+    $(".footer_container").on("click", function (event) {
+        event.stopPropagation(); // 他のイベントをブロック
+    });
+});
+$(document).ready(function () {
+    $(".top-square-button2, .detail, .faq_examples, .kyousan_image, .fukidashi-container").on("click", function (event) {
+        event.stopPropagation(); // 他のイベントをブロック
+    });
+});
 $(document).ready(function () {
     // 初回ロード時に `html, body` に width: 100%; height: 100%; を適用
     $("html, body").css({"width": "100%", "height": "100%"});
@@ -130,6 +144,13 @@ $(document).ready(function () {
                             $("top_first").css({"overflow-x": "hidden"});
 
                         }
+                        setTimeout(() => {
+                            $(".header").css({
+                                "display": "block",  // `display: none;` を解除
+                                "opacity": "1",
+                                "transition": `opacity ${fadeDuration}ms ease-in-out`
+                            });
+                        }, fadeDuration);
                     }, 200);
 
                     setTimeout(() => {
@@ -275,8 +296,10 @@ $(document).ready(function () {
                         "transition": `opacity 2s ease-in-out`,
                         "overflow": "auto"
                     });
+                
 
                 }, fadeDuration + 500);
+                
 
             }, 500);
 

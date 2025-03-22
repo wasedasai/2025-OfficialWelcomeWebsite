@@ -186,20 +186,100 @@ function preventClick(event) {
             </div>
         </div>
         <div class="top-menu">
-            <a href="wasedasai.html" class="top-menu-link"><span class="top-menu-chousei">早稲田祭・<br>運営スタッフとは</span></a><br>
-            <a href="event.html" class="top-menu-link">新歓イベント</a><br>
-            <a href="bureau.html" class="top-menu-link">局紹介</a><br>
-            <a href="year.html" class="top-menu-link">運スタの1年</a><br>
-            <a href="real.html" class="top-menu-link">運スタのリアル</a><br>
-            <a href="join.html" class="top-menu-link">入会方法</a><br>
-            <a href="saikun.html" class="top-menu-link">サイくんかわいい</a><br>
-            <a href="faq.html" class="top-menu-link">よくある質問</a>
+            <a href="pages/wasedasaitoha.html" class="top-menu-link"><span class="top-menu-chousei">早稲田祭・<br>運営スタッフとは</span></a><br>
+            <a href="pages/shinkan-event.html" class="top-menu-link">新歓イベント</a><br>
+            <a href="pages/kyoku-introduce.html" class="top-menu-link">局紹介</a><br>
+            <a href="pages/unsuta-one-yaer.html" class="top-menu-link">運スタの1年</a><br>
+            <a href="pages/unusta-real.html" class="top-menu-link">運スタのリアル</a><br>
+            <a href="pages/how-to-enter.html" class="top-menu-link">入会方法</a><br>
+            <a href="pages/comingsoon.html" class="top-menu-link">わせだサイくん</a><br>
+            <a href="pages/faq-contact.html" class="top-menu-link">よくある質問</a>
         </div>
-        
+        <header>
+            <div class="header">
+
+                <div class="saikun-menu">
+                    <img src="../images/header-saikun.png" alt="" class="menu-img">
+                    <div class="menu-text">menu</div>
+                </div>
+            </div>
+            <div class="fullscreen-menu">
+                <div class="menu-open-container">
+                    <div class="menu-open-logo"><img src="../images/menu-open-logo.png" alt=""></div>
+                    <div class="menu-open-texts">
+                        <a href="../index.html"><p>TOP</p></a>
+                        <a href="../pages/wasedasaitoha.html"><p>早稲田祭・運営スタッフとは</p></a>
+                        <a href="../pages/shinkan-event.html"><p>新歓イベント</p></a>
+                        <a href="../pages/how-to-enter.html"><p>入会方法</p></a>
+                        <a href="../pages/unsuta-one-yaer.html"><p>運スタの1年</p></a>
+                        <a href="../pages/unusta-real.html"><p>運スタのリアル</p></a>
+                        <a href="../pages/kyoku-introduce.html"><p>局紹介</p></a>
+                        <a href="../pages/comingsoon.html"><p>わせだサイくん</p></a>
+                        <a href="../pages/faq-contact.html"><p>よくある質問・お問い合わせ</p></a>
+                    </div>
+                    <a href="../pages/how-to-enter.html" class="menu-open-button">入会方法はこちら</a>
+                    <div class="menu-sns-icon">
+                        <div class="menu-Instagram">
+                            <a href="https://www.instagram.com/wasedasai_new?igsh=MXZhZzJvOW50Y2preQ%3D%3D&utm_source=qr"><img src="../images/menu-Instagram.png" alt=""></a>
+                        </div>
+                        <div class="menu-x">
+                            <a href="https://x.com/wasedasai_new?s=21"><img src="../images/menu-X.png" alt=""></a>
+                        </div>
+                        <div class="menu-YouTube">
+                            <a href=""><img src="../images/menu-YouTube.png" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+        const menu = document.querySelector(".saikun-menu");
+        const menuImg = document.querySelector(".menu-img");
+        const menuText = document.querySelector(".menu-text");
+        const fullscreenMenu = document.querySelector(".fullscreen-menu");
+        const menuItems = document.querySelectorAll(".menu-open-texts p");
+    
+        let isOpen = false;
+    
+        menu.addEventListener("click", function () {
+            isOpen = !isOpen;
+    
+            if (isOpen) {
+                menuImg.src = "../images/close.png";
+                menuText.textContent = "close";
+                fullscreenMenu.classList.add("active");
+    
+                
+                menuItems.forEach(item => {
+                    item.style.opacity = "0";
+                    item.style.transform = "translateY(30px)";
+                });
+    
+                menuItems.forEach((item, index) => {
+                    setTimeout(() => {
+                        item.style.opacity = "1";
+                        item.style.transform = "translateY(0)";
+                        item.style.transition = "opacity 0.6s ease-in-out, transform 0.6s ease-in-out";
+                    }, index * 100); 
+                });
+    
+            } else {
+                menuImg.src = "../images/header-saikun.png"; 
+                menuText.textContent = "menu";
+                fullscreenMenu.classList.remove("active"); 
+                menuItems.forEach(item => {
+                    item.style.opacity = "0";
+                    item.style.transform = "translateY(30px)";
+                });
+            }
+        });
+    });
+            </script>
+        </header>
         
         <div class="top-icons">
-            <img class="top-icon" src="images/snsicon_I.png" alt="line">
-            <img class="top-icon" src="images/snsicon_X.png" alt="twitter">
+            <a href="https://www.instagram.com/wasedasai_new?igsh=MXZhZzJvOW50Y2preQ%3D%3D&utm_source=qr"><img class="top-icon" src="images/snsicon_I.png" alt="line"></a>
+            <a href="https://x.com/wasedasai_new?s=21"><img class="top-icon" src="images/snsicon_X.png" alt="twitter"></a>
             <img class="top-icon" src="images/snsicon_Y.png" alt="instagram">
         </div>
         <div class="top_btn">
@@ -210,7 +290,8 @@ function preventClick(event) {
 
     </div>
     <div class="sentence">
-       <span class="white_red"></span> <h1>君に誇り</span>を、<br class="sentence_sp">祭に熱</span>を。</h1>
+
+    <h1>君に誇りを、<br class="sentence_sp">祭に熱を。</h1>
         <p>「早稲田祭2025」</p>
         <p>365日あるうちのたったの2日間。</p>
         <p>だがこの2日間は、<br class="sentence_sp">
@@ -242,18 +323,18 @@ function preventClick(event) {
         <p>さあ、運営スタッフとしての一歩を踏み出そう。<br class="sentence_sp">
             共に早稲田祭2025を創りあげよう。</p>
         <p>代表 吉田詩</p>
-        
-        
-<br>
-<br>
-<br>
-
+        <a href="pages/wasedasaitoha.html" class="top-square-button2 square-button-white">
+            <span class="spacer"></span>
+            <span class="text">早稲田祭を知る</span>
+            <span class="spacer"></span>
+        </a>    
 <!-- 追加: 画面を元に戻すボタン -->
 <!-- <button id="restore-screen-button" class="restore-screen-btn">画面を元に戻す</button> -->
+    <!-- ここからヘッダー -->
 
         <div class="next-section">
     
-            <h1>新歓イベント</h1>
+            <h1><span class="border">新歓イベント</span></h1>
             <!-- ナビゲーションボタン -->
 
             <p></p>
@@ -323,7 +404,7 @@ function preventClick(event) {
             
             <div class="mottokuwasiku">
                 <h1>
-                    もっと詳しく
+                    <span class="border">もっと詳しく</span>
                 </h1>
                 <div class="detail_examples">
                     <div class="detail">
@@ -338,7 +419,7 @@ function preventClick(event) {
                         <div class="detail_image">
                             <img src="images/object.png" alt="sample" class="detail_photo">
                         </div>
-                        <a href="" class="square-bar">詳しく見る</a>
+                        <a href="pages/kyoku-introduce.html" class="square-bar">詳しく見る</a>
                     </div>
                     <div class="detail">
                         <div class="blockTitleContainer">
@@ -352,12 +433,12 @@ function preventClick(event) {
                         <div class="detail_image">
                             <img src="images/image 75.png" alt="samople" class="detail_photo">
                         </div>
-                        <a href="" class="square-bar">詳しく見る</a>
+                        <a href="pages/unusta-real.html" class="square-bar">詳しく見る</a>
                     </div>
                     <div class="detail">
                         <div class="blockTitleContainer">
                             <div class="blockTitleBar blockwhite"></div>
-                            <div class="blockTitle">運スタの一年</div>
+                            <div class="blockTitle">運スタの1年</div>
                         </div>
                         <div class="minidetail">
                             運スタに入るとなにがあるの？<br>
@@ -366,7 +447,7 @@ function preventClick(event) {
                         <div class="detail_image">
                             <img src="images/image 76.png" alt="sample" class="detail_photo">
                         </div>
-                        <a href="" class="square-bar">詳しく見る</a>
+                        <a href="pages/unsuta-one-yaer.html" class="square-bar">詳しく見る</a>
                     </div>
                 </div>
             </div>
@@ -379,25 +460,28 @@ function preventClick(event) {
 
 <div class="faq_examples">
     <div class="faq-top">
-        <div class="faq_q">Q 活動日はいつですか</div>
-        <div class="faq_a">A 基本的には月曜日と木曜日の6限以降に活動しています。
-            局によっては、水曜日や金曜日に活動があります。</div>
+        <div class="faq_q">Q 入会方法について
+        </div>
+        <div class="faq_a">
+            A 募集期間内に、入会申し込みフォームに必要事項を記入しご応募ください！
+            詳細は<a href="https://example.com" target="_blank" class="faq-link">こちら</a>をご覧ください。
+        </div>
+        
     </div>
     <div class="faq-top">
-        <div class="faq_q">Q 活動日はいつですか</div>
-        <div class="faq_a">A 基本的には月曜日と木曜日の6限以降に活動しています。
-            局によっては、水曜日や金曜日に活動があります。</div>
+        <div class="faq_q">Q 活動日はいつですか？</div>
+        <div class="faq_a">A 基本的には月曜日と木曜日の6限以降に活動しています。局によっては、水曜日や金曜日に活動があります。</div>
     </div>
     <div class="faq-top">
-        <div class="faq_q">Q 活動日はいつですか</div>
-        <div class="faq_a">A 基本的には月曜日と木曜日の6限以降に活動しています。
-            局によっては、水曜日や金曜日に活動があります。</div>
+        <div class="faq_q">Q 2年生は入会できますか？</div>
+        <div class="faq_a">A できます！運営スタッフは、早稲田大学所属の１年生と２年生のみが入会できます。
+        </div>
     </div>
     <div class="faq-top">
-        <div class="faq_q">Q 活動日はいつですか</div>
-        <div class="faq_a">A 基本的には月曜日と木曜日の6限以降に活動しています。
-            局によっては、水曜日や金曜日に活動があります。</div>
-        <a href="" class="top-square-button square-button-black">
+        <div class="faq_q">Q どのくらい大変ですか？</div>
+        <div class="faq_a">A 所属する局やチームによって時期やその程度は異なりますが、自分のペースに合わせながら活動することができます！
+        </div>
+        <a href="pages/faq-contact.html" class="top-square-button square-button-black">
             <span class="spacer"></span>
             <span class="text">詳しく見る</span>
             <span class="spacer"></span>
@@ -421,7 +505,7 @@ function preventClick(event) {
             </div>
         <div class="additional-content3">
             <div class="kyousan_image">
-                <img src="images/kyousan.png" alt="" class="kyousan_photo">
+                <a href="https://www.shikaku.co.jp/"><img src="images/kyousan.png" alt="" class="kyousan_photo"></a>
             </div>
         </div>
         <div class="fukidashi-container">
@@ -432,7 +516,7 @@ function preventClick(event) {
                 <div class="large-small"></div>
             </div>
             <h2>入会情報はこちらから</h2>
-            <a href="#" class="square-button square-button-red">
+            <a href="pages/how-to-enter.html" class="square-button square-button-red">
                 <span class="spacer"></span>
                 <span class="text">詳しく見る</span>
                 <span class="spacer"></span>
@@ -442,7 +526,7 @@ function preventClick(event) {
                 <!-- ここからフッター -->
      <footer>
         <div class="arrow-img">
-            <a href="#"><img src="../images/footer_yajirushi.png" alt=""></a>
+            <a href="top.html"><img src="images/footer_yajirushi.png" alt=""></a>
         </div>
         <div class="footer-contaier">
             <div class="footer-logo">

@@ -1,7 +1,7 @@
 .saisyo p{
 text-align:center;
 font-size:20px;
-font-family: 'Notosans JP', sans-serif;
+font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
 }
 
 .saisyo{
@@ -35,7 +35,15 @@ font-family: 'Notosans JP', sans-serif;
     font-size:16px;
     position:relative;
     left:20%;
-    font-family: 'Notosans JP', sans-serif;
+    font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+
+}
+.fight1{
+    width:300px;
+    font-size:16px;
+    position:relative;
+    left:24%;
+    font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
 
 }
 
@@ -82,7 +90,7 @@ font-family: 'Notosans JP', sans-serif;
     align-items: center;
     justify-content: center;
     overflow: visible;
-    font-family: 'Notosans JP', sans-serif;
+    font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
 }
 .description-overlay::before {
     display:none;
@@ -93,12 +101,11 @@ font-family: 'Notosans JP', sans-serif;
     transform: translateX(-50%);
     width: 150px;
     height: 150px;
-    background: white;
+    background: #fffcfc;
     border: 3px solid #e72241;
     border-radius: 50%;
     font-size: 64px;
-    font-family: 'Notosans JP', sans-serif;
-    font-weight: bold;
+    font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
     color: #e72241;
     display: flex;
     align-items: center;
@@ -118,7 +125,7 @@ font-family: 'Notosans JP', sans-serif;
     border-radius: 2px;
     padding-bottom: 10px;
     width:500px;
-    font-family: 'Notosans JP', sans-serif;
+    font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
 }
 .showButton {
     background-color: #fffcfc;
@@ -130,7 +137,7 @@ font-family: 'Notosans JP', sans-serif;
     transition: background-color 0.3s, color 0.3s;
     width:100%;
     font-size:20px;
-    font-family: 'Notosans JP', sans-serif;
+    font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
 }
 .showButton:hover {
     background-color: #e72241;
@@ -138,7 +145,9 @@ font-family: 'Notosans JP', sans-serif;
 }
 .description-content p{
     font-size: 20px;
-    font-family: 'Notosans JP', sans-serif;
+    text-align:left;
+    font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+    line-height: 2;
 }
 .blockTitle{
     font-size:20px;
@@ -146,11 +155,14 @@ font-family: 'Notosans JP', sans-serif;
 .section-title{
     font-size:48px;
 }
+.br-sp{
+    display:none;
+}
 @media screen and (max-width:960px) {
     .saisyo p{
         text-align:center;
         font-size:12px;
-        font-family: 'Notosans JP', sans-serif;
+        font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
         }
         
     .saisyo{
@@ -192,7 +204,14 @@ font-family: 'Notosans JP', sans-serif;
         text-align: center;
         position:relative;
         left:7%;
-
+    }
+    .fight1{
+        width:300px;
+        font-size:14px;
+        position:relative;
+        left:22%;
+        font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+    
     }
     .grid-container {
         display: grid;
@@ -218,7 +237,7 @@ font-family: 'Notosans JP', sans-serif;
         border-radius: 20px;
         color: #1c1b1b;
         font-size: 14px;
-        font-family: 'Notosans JP', sans-serif;
+        font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
         text-align: center;
         padding: 20px;
         box-sizing: border-box;
@@ -247,7 +266,7 @@ font-family: 'Notosans JP', sans-serif;
         align-items: center;
         justify-content: center;
         z-index: 15;
-        font-family: 'Notosans JP', sans-serif;
+        font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
     }
     .description-overlay img{
         margin-top: 30px;
@@ -262,11 +281,13 @@ font-family: 'Notosans JP', sans-serif;
         border-radius: 1px;
         padding-bottom: 10px;
         width:200px;
-        font-family: 'Notosans JP', sans-serif;
+        font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
     }
     .description-content p{
         font-size: 12px;
-        font-family: 'Notosans JP', sans-serif;
+        font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+        text-align:left;
+        line-height: 2;
     }
     .showButton {
         background-color: #fffcfc;
@@ -278,7 +299,10 @@ font-family: 'Notosans JP', sans-serif;
         transition: background-color 0.3s, color 0.3s;
         width:100%;
         font-size:12px;
-        font-family: 'Notosans JP', sans-serif;
+        font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+    }
+    .br-sp{
+        display:flex;
     }
 
 }

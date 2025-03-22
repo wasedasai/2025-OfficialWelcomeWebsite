@@ -12,7 +12,7 @@ body {
     background-color: #e72241;
     color: #1c1b1b;
     overflow: hidden;
-    font-family: 'Yugothic', sans-serif;
+    font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
     font-weight: 510;
 }
 .marquee-wrapper {
@@ -59,7 +59,6 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
 }
 /* すべての要素を選択不可にする */
 * {
@@ -92,8 +91,42 @@ body{
 body {
     cursor: none;
 }
+.top_matsuri_btn {
+    display: none;
+}
+/* ここからセクションタイトル */
+.section-title {
+    display: inline-block;
+  }
+ 
+  .section-title h1 {
+    font-size: 48px;
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #1c1b1b;
+  }
+ 
+  .section-underline {
+    width: 100%;
+    height: 10px;
+    background-color: #E72241;
+    border-radius: 5px;
+  }
 
 
+@media (max-width:500px){
+    .section-title h1{
+        font-size: 18px;
+    }
+    .section-underline{
+        height: 3.5px;
+        border-radius: 1.5px;
+    }
+}
+
+
+/* ここまでセクションタイトル */
 @media screen and (max-width: 1025px) {
     .mojimoji h1 {
         transition: font-size 0.5s ease-out ;
@@ -112,33 +145,35 @@ body {
         width: 38px !important;
         height: 38px !important;
     }
-    .top-icons {
-    }
+
     .top_matsuri_btn {
         display: block !important;
         position: absolute;
-        left: 40%;
-        
+        z-index: 5;
+        left: 50%;
+        transform: translateX(-50%);
         width: 120px; /* 楕円形の幅 */
         height: 60px; /* 楕円形の高さ */
         line-height: 60px;
         font-size: 20px;
         font-weight: bold;
         text-align: center;
-        background-color: rgba(0,0,0,0);
-        color: white;
+        background-color: #fffcfc;
+        color: #E72241;
         border-radius: 50%  !important;
         border: 2px solid #fffcfc;
         cursor: pointer;
-        z-index: 9999;
         text-transform: uppercase;
+            top: 70% !important; /* 祭の文字の下に配置 */
     }
-    .top_btn {
-        position: relative;
-        top: 15%;
-        left: -39%;
+    /* .top_btn {
+
+        position: absolute;
+        top: 65%;
         z-index: 5;
-    }
+        left: 50%;
+        transform: translateX(-50%);
+    } */
 
     .top_first h1 {
         font-size: 200px;
@@ -149,6 +184,8 @@ body {
         display: flex;
         justify-content: center;
         width: 250px;
+        font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, "Yu Gothic", YuGothic, "Hiragino Sans", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;font-feature-settings: "pkna";
+        font-weight: bold;
     }
     .sentence > p {
         font-size: 16px !important;
@@ -157,7 +194,6 @@ body {
         padding-right: 3% !important;
         
     }
-
     .sentence_sp {
         display: block !important;
     }
@@ -179,7 +215,7 @@ body {
         display: none !important;
     }
     .next-section {
-        height: 2500px !important;
+        height: 2560px !important;
         align-items: unset !important;
     }
     .daen1
@@ -192,6 +228,9 @@ body {
         position: absolute !important;
         z-index: 0;
         font-size: 36px !important;
+            font-family: "Zen Kaku Gothic New", sans-serif;
+            font-weight: 700;
+            font-style: normal;
     }
     /* .swiper {
         z-index: 10 !important;
@@ -272,7 +311,6 @@ body {
     .detail {
         display: flex;
         flex-direction: column;
-        align-items: center; /* 🎯 各要素も中央揃え */
         text-align: center;
         width: 80%; /* 🎯 スマホ版では幅を調整 */
         max-width: 350px;
@@ -291,7 +329,7 @@ body {
         height: 200vh !important;
     }
     .mottokuwasiku h1 {
-        margin-top: -30px !important;
+        margin-top: -10px !important;
         width: 250px;
         /* margin-left: -50px;
         margin-right: -50px; */
@@ -330,6 +368,25 @@ body {
     .swiper-btns {
         margin-top: 810px !important;
     }
+    .border:before {
+        content: "";
+            display: inline-block;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -10px !important;
+            width: 120%;
+            height: 5px;
+            border-radius: 5px;
+          background: #fffcfc;
+        }
+        .top-days{
+        }
+        .top-topics {
+        }
+        .news_sentences {
+           margin-bottom: 0 !important;
+        }
 }
 
 
@@ -409,7 +466,7 @@ html, body {
     width: 100vw;
     height: 100vh; 
     font-weight: bold;
-    font-family: sans-serif;
+    font-family: "Zen Kaku Gothic New", sans-serif;
     overflow: visible;
     color: rgba(0,0,0,0);
     -webkit-background-clip: text;
@@ -529,7 +586,7 @@ html, body {
 .item5 {
     flex: 0 0 auto;
     width: auto;
-    font-size: 128px;
+    font-size: 110  px;
     font-weight: bold;
     color: #fffcfc;
     text-align: center;
@@ -541,15 +598,20 @@ html, body {
 }
 .saisyomoji1 {
     font-size: 128px;
-    font-weight: bold;
     color: #fffcfc;
     text-align: center;
+        font-family: "Zen Kaku Gothic New", sans-serif;
+        font-weight: 700;
+        font-style: normal;    
 }
 .saisyomoji2 {
-    font-size: 128px;
+    font-size: 110px;
     font-weight: bold;
     color: #fffcfc;
     text-align: center;
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 700;
+    font-style: normal; 
 }
 .top-menu {
     position: absolute;
@@ -571,21 +633,11 @@ html, body {
     color: #fffcfc; /* テキストカラー */
     display: inline-block; /* ブロック化せず、改行をそのまま活かす */
     transition: color 0.3s ease-in-out;
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 550;
+    font-style: normal; 
 }
-.top_matsuri_btn {
-    position: absolute;
-    top: 5vh;
-    right: 5vw;
-    border-radius: 1px;
-    font-size: 18px;
-    color: #fffcfc;
-    z-index: 1001;
-    border-left: 3px solid #fffcfc;
-    padding-left: 1.5vw;
-    line-height: 3;
-    cursor: pointer;
-    display: none;
-}
+
 @keyframes scroll {
     0% {
         transform: translateX(0);
@@ -600,17 +652,18 @@ html, body {
     background-color: purple;
 }
 .top-icon {
-    width: 6vh;
-    height: 6vh;
+    width: 45px;
+    height: 45px;
 }
 .top-icons {
-    width: 5vw;
+    width: 0vw;
     height: 20vh;
     left: 5vw;
-    top: 50vh;
+    top: 53vh;
     z-index: 1111;
     position: absolute;
     line-height: 3;
+    pointer-events: auto !important;
 }
 .top-menu-chousei {
     display: block;
@@ -619,9 +672,24 @@ html, body {
 .mojimoji h1 {
     transform: scale();
     transition: font-size 0.5s ease-in-out; /* 0.5秒でサイズ変更 */
+        font-family: "Zen Kaku Gothic New", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        
 }
 .mojimoji {
     cursor: pointer;
+}
+.header {
+    display: none; /* 初期状態で非表示 */
+}
+.show-header {
+    display: block !important; /* JavaScript で適用するクラス */
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+header {
+    cursor: auto;
 }
 .new-screen {
     position: fixed;
@@ -652,14 +720,17 @@ html, body {
     /* 背景の影響を受けないようにz-indexを設定 */
     position: relative;
     z-index: 1;
+    font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
 }
 
 .sentence h1 {
     width: 100%;
     font-size: 6rem;
     margin-bottom: 3rem;
-    margin-top: 50vh;
-    font-family: sans-serif;
+    margin-top: 40vh;
+    font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 700;
+  font-style: normal;
     text-align: center;
     color: #fffcfc;
 }
@@ -671,7 +742,9 @@ html, body {
     width: 100%;
     font-size: 20px;
     line-height: 15vh;
-    font-family: sans-serif;   
+    font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 550;
+  font-style: normal;   
     color: #fffcfc; 
     font-weight: bold;
 }
@@ -687,7 +760,7 @@ html, body {
     /* overflow-y: auto; スクロール可能にする */
     opacity: 0; /* 最初は非表示 */
     transition: opacity 2s ease-in-out;
-    font-family: sans-serif;
+    font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
     bottom: 50vh;
 }
 .sentence::-webkit-scrollbar {
@@ -699,30 +772,143 @@ html, body {
     -ms-overflow-style: none; /* IE, Edge用 */
     cursor: auto;
 }
+.top-square-button2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    border: 1.5px solid #2660ad;
+    border-radius: 30px;
+    font-size: 15px;
+    color: #2660ad;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    height: 53px;
+    white-space: nowrap;
+    width: 15%; /* 文字の長さに応じて可変 */
+    min-width: 150px; /* 最小幅を設定して極端に小さくならないように */
+    padding-right: 50px;
+    font-family: "Noto Sans JP", sans-serif;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 50px;
+}
+.top-square-button2 .spacer {
+    flex-grow: 1; 
+}
 
+.top-square-button2  .text {
+    flex-shrink: 0; /* 文字の長さに影響されないように固定 */
+}
+
+.top-square-button2::after {
+    content: "→";
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #2660ad;
+    color: #fffcfc;
+    transition: all 0.3s ease;
+    position: absolute;
+    right: 10px; /* 矢印は固定 */
+    flex-shrink: 0;
+    
+}
+
+/* ホバー時の変更 */
+.top-square-button2:hover {
+    background-color: #2660ad;
+    color: #fffcfc;
+}
+
+.top-square-button2:hover::after {
+    background-color: #fffcfc;
+    color: #2660ad;
+    transform: scale(1);
+}
+
+.square-button-white {
+    border: 1.5px solid #fffcfc;
+    color: #fffcfc;
+}
+.square-button-white::after {
+    background-color: #fffcfc;
+    color: #1c1b1b;
+}
+.square-button-white:hover {
+    background-color: #fffcfc;
+    color: #1c1b1b;
+}
+.square-button-white:hover::after {
+    background-color: #1c1b1b;
+    color: #fffcfc;
+}
+/* ここからセクションタイトル */
+.section-title {
+    display: inline-block;
+  }
+ 
+  .section-title h1 {
+    font-size: 48px;
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #1c1b1b;
+    z-index: 9999;
+    position: absolute;
+  }
+ 
+  .section-underline {
+    width: 100%;
+    height: 10px;
+    background-color: #E72241;
+    border-radius: 5px;
+  }
+
+
+@media (max-width:500px){
+    .section-title h1{
+        font-size: 18px;
+    }
+    .section-underline{
+        height: 3.5px;
+        border-radius: 1.5px;
+    }
+}
+
+
+/* ここまでセクションタイトル */
 /* .sentence.scrollable {
     overflow-y: auto;
 } */
 
 .white_red {
-    color: white;
-    text-shadow: 4px 4px 10px red;
+    color: #57b1e5;
+  }
+.white_blue {
+    color: #E72241;
   }
 /* 次のページのスタイル */
 /* ここからheader */
 .header{
     width: 100vw;
     height: 100px;
-    background-color: #fffcfc;
     color: #1c1b1b;
     font-family: 'Notosans JP', sans-serif;
+    font-weight: normal;
 }
 .header-logo img{
     width: 220px;
     margin: 15px 2% 0 2%;
 }
 .saikun-menu{
-    position: fixed;
+    position: absolute;
     right: 13px;
     top: 8px;
     text-align: center;
@@ -747,6 +933,7 @@ html, body {
     transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
     z-index: 100;
     overflow: hidden;
+    font-weight: normal;
 }
 .fullscreen-menu.active {
     opacity: 1;
@@ -907,8 +1094,8 @@ html, body {
 .menu-sns-icon{
     bottom: 25px;
 }
-.top-square-button {
-    top: 30px !important;
+.square-bar {
+    margin-right: 30px;
 }
 /* ここまでheader */
   }
@@ -934,14 +1121,32 @@ html, body {
     position: absolute;
     font-size: 64px;
     margin-bottom: 3rem;
-    font-family: sans-serif;
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 700;
+    font-style: normal;
     text-align: center;
     color: #fffcfc;
-    margin-top: -1150px;
+    margin-top: -1190px;
     z-index: 10;
-    border-bottom: 4px #fffcfc solid;
-    width: 384px;
+    border-bottom: 4px #fffcfc ;
+    width: 500px;
 }
+.border {
+    position: relative;
+  }
+  
+  .border:before {
+  content: "";
+      display: inline-block;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -20px;
+      width: 120%;
+      height: 5px;
+      border-radius: 5px;
+    background: #fffcfc;
+  }
 .daen1 {
     position: absolute;
     background-color:#e72241;
@@ -987,7 +1192,6 @@ html, body {
     transform: translateX(-50%) ;
     position: relative;
 }
-
 .swiper-slide {
     display: flex;
     align-items: center;
@@ -999,7 +1203,10 @@ html, body {
     border: #fffcfc 2px solid;
     color: #fffcfc;
     font-size: 30px;
-    line-height: 30px
+    line-height: 30px;
+        font-family: "Zen Kaku Gothic New", sans-serif;
+        font-weight: 700;
+        font-style: normal;
 }
 
 .swiper-slide-active {
@@ -1121,8 +1328,8 @@ html, body {
 /* ページネーションのデザイン */
 /* ページネーションのデザイン */
 .swiper-pagination-bullet {
-    width: 20px !important; /* 丸の大きさ */
-    height: 20px !important;
+    width: 15px !important; /* 丸の大きさ */
+    height: 15px !important;
     background-color: #fffcfc !important; /* デフォルト（押していない時の色） */
     border-radius: 50%;
     opacity: 1 !important;
@@ -1146,7 +1353,7 @@ html, body {
     width: 370px;
     height: auto;
     gap: 30px;
-    margin-top: 1px;
+    margin-top: -100px;
     z-index: 1;
 }
 .footer-left-btn {
@@ -1176,14 +1383,16 @@ html, body {
     position: absolute;
     font-size: 64px;
     margin-bottom: 3rem;
-    font-family: sans-serif;
     color: #fffcfc;
     z-index: 10;
-    border-bottom: 4px #fffcfc solid;
     width: 384px;
     left: 50%;
     transform: translateX(-50%);
     margin-top: 100px;
+        font-family: "Zen Kaku Gothic New", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+
 }
 .detail_examples {
     width: 80%;
@@ -1224,8 +1433,10 @@ html, body {
 }
 
 .blockTitle{
-    margin-top: 4px;
     color: #fffcfc;
+        font-family: "Zen Kaku Gothic New", sans-serif;
+        font-weight: 700;
+        font-style: normal;
 }
 
 .blockwhite {
@@ -1255,7 +1466,6 @@ html, body {
 
     .blockTitleBar{
         width: 6px;
-        height: 20px;
         border-radius: 3px;
     }
 
@@ -1275,8 +1485,10 @@ html, body {
     font-size: 20px;
     color: #fffcfc;
     font-weight: normal;
-    margin-bottom: 1vh;
+    margin-bottom: 13px;
     width: 290px;
+    margin-top: 9px;
+
 }
 .detail_tail {
     font-size: 20px;
@@ -1294,9 +1506,10 @@ html, body {
     color: #fffcfc; /* 文字色 */
     text-decoration: none;
     font-size: 16px;
-    font-family: "Noto Sans JP", sans-serif;
+    font-weight: normal;
     padding-bottom: 5px; /* 文字と線の間隔 */
     overflow: visible;
+    margin-top: 3px;
 }
 
 .square-bar::after {
@@ -1333,7 +1546,7 @@ html, body {
 .detail {
 width: 290px;
 height: 480px;
-padding-top: 6vh;
+padding-top: 12.5vh;
 padding-left: 1vw;
 padding-right: 1vw;
 }
@@ -1342,7 +1555,7 @@ padding-right: 1vw;
 /* さらに続くコンテンツ */
 .additional-content {
     width: 100vw;
-    height: 500px;
+    height: 650px;
 background-color: #fffcfc;
     display: flex;
     color: white;
@@ -1354,7 +1567,9 @@ background-color: #fffcfc;
 
 .additional-content h2 {
     color: #1c1b1b;
-    font-family: "Noto Sans", sans-serif;
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 700;
+    font-style: normal;
     left: 50%;
     transform: translateX(-50%);
     position: relative;
@@ -1368,19 +1583,19 @@ background-color: #fffcfc;
     padding: 10px 20px;
     border: 1.5px solid #2660ad;
     border-radius: 30px;
-    font-size: 15px;
+    font-size: 16px;
     color: #2660ad;
     text-decoration: none;
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
-    height: 50px;
+    height: 60px;
     white-space: nowrap;
     width: 100%; /* 文字の長さに応じて可変 */
     min-width: 150px; /* 最小幅を設定して極端に小さくならないように */
     padding-right: 50px;
     font-family: "Noto Sans JP", sans-serif;
-    top: 58px;
+    top: 47px;
 }
 .top-square-button .spacer {
     flex-grow: 1; 
@@ -1396,8 +1611,8 @@ background-color: #fffcfc;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 30px;
-    height: 30px;
+    width: 37px;
+    height: 37px;
     border-radius: 50%;
     background-color: #2660ad;
     color: #fffcfc;
@@ -1458,12 +1673,21 @@ background-color: #fffcfc;
 }
 .faq_q {
     font-size: 20px;
-    font-weight: bold;
     padding-bottom: 10px;
+        font-family: "Zen Kaku Gothic New", sans-serif;
+        font-weight: 700;
+        font-style: normal;
 }
 .faq_a {
     font-size: 18px;
 }
+.faq-link {
+    color: #e72241; /* リンクの色（赤） */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
 .additional-content2{
     width: 100vw;
     height: 40%;
@@ -1483,10 +1707,13 @@ background-color: #fffcfc;
 }
 .additional-content2 h1 {
     color: #1c1b1b;
-    font-family: "Noto Sans", sans-serif;
+    font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 700;
+  font-style: normal;
     margin: 0; /* 余計なマージンを削除 */
     position: relative; /* `absolute` を削除 */
     font-size: 64px;
+    margin-bottom: 40px;
 }
 .news_sentences {
     width: 90%;
@@ -1495,6 +1722,7 @@ background-color: #fffcfc;
     display: flex;
     align-items: center;
     line-height: 100px;
+    margin-bottom: 100px;
 }
 .top-days{
     /* margin-top: -115px; */
@@ -1531,6 +1759,7 @@ background-color: #fffcfc;
 .kyousan_photo {
     width: 40vw;
     height: auto;
+    margin-bottom: 30px;
 }
 .fukidashi-container{
     position: relative;
@@ -1589,7 +1818,10 @@ background-color: #fffcfc;
     bottom: 25vw;
     left: 47vw;
     font-size: 2.5vw;
-    color: #fffcfc;
+    color: #fffcfc; 
+        font-family: "Zen Kaku Gothic New", sans-serif;
+        font-weight: 700;
+        font-style: normal;
 }
 .square-button {
     display: flex;
@@ -1723,7 +1955,7 @@ background-color: #fffcfc;
         width: 300% !important;
     }
     .scroll-container2 {
-        top: 69vh !important;
+        top: 78vh !important;
     }
     .scroll-container3 {
       /* 上の幅調整 */
@@ -1761,10 +1993,25 @@ background-color: #fffcfc;
         height: auto;
     }
     .mottokuwasiku {
-        height: 240vh !important;
+        height: 280vh !important;
     }
     .top_matsuri_btn {
-        top: 80% !important; /* 祭の文字の下に配置 */
+        top: 70% !important; /* 祭の文字の下に配置 */
+    }
+    .top-square-button2 {
+        width: 50%;
+    }
+    .top-menu {
+        padding-left: 3vw;
+    }
+    .top-icons {
+        top: 60vh;
+    }
+    .blockTitle {
+        font-size: 24px;
+    }
+    .minidetail {
+        font-size: 16px;
     }
 }/* フッターを画面の最下部に固定 */
 
@@ -1781,10 +2028,11 @@ footer {
 }
 .footer_container {
     width: 100vw;
-    height: 600px;
+    height: 700px;
     position: relative; 
     cursor: auto;
     margin-bottom: -300px !important;
+    background-color: #e72241;
 }
 .next_sp {
     display: none;
