@@ -24,6 +24,7 @@ body {
   top: 8px;
   text-align: center;
   z-index: 200;
+  cursor: pointer;
 }
 .menu-img {
   width: 75px;
@@ -556,6 +557,7 @@ footer{
   transform: translate(-50%, -50%);
   font-size: 1.3vw;
   display: flex;
+  overflow: hidden;
 }
 .footer-pages a {
   text-decoration: none;
@@ -563,11 +565,27 @@ footer{
 }
 .footer-pages p {
   font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
-<<<<<<< HEAD
-  width: 250px;
-=======
+
   width: 260px;
->>>>>>> b50e9bef307bf5fd4a99af6addeb3c5eb3eb705e
+}
+.footer-contaier{
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.footer-contaier::-webkit-scrollbar{
+  display: none;
+}
+.footer-pages{
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.footer-pages::-webkit-scrollbar{
+  display: none;
+}
+@media (min-width: 1024px){
+  .footer-pages p{
+    width: 300px;
+  }
 }
 .footer-pages p:hover {
   animation: zoom 0.3s;
@@ -719,8 +737,12 @@ footer{
     }
     .footer-pages{
         top: 53%;
-<<<<<<< HEAD
+
     }}
-=======
-    }}
->>>>>>> b50e9bef307bf5fd4a99af6addeb3c5eb3eb705e
+
+@media (min-width: 1507px) {
+  footer{
+    display: none;
+  }
+}
+

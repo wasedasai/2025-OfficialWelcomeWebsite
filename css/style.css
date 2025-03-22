@@ -952,6 +952,7 @@ header {
     top: 8px;
     text-align: center;
     z-index: 200;
+    cursor: pointer;
 }
 .menu-img{
     width: 75px;
@@ -1147,7 +1148,25 @@ header {
         top: 50%;
     }
 }
-
+@media (min-width: 1507px) {
+    footer{
+      display: none;
+    }
+  }
+  .footer-contaier{
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .footer-contaier::-webkit-scrollbar{
+    display: none;
+  }
+  .footer-pages{
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .footer-pages::-webkit-scrollbar{
+    display: none;
+  }
 /* 次のセクションのデザイン */
 .next-section {
     width: 100vw;
