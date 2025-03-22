@@ -357,7 +357,7 @@ body {
         height: 200vh !important;
     }
     .mottokuwasiku h1 {
-        margin-top: -10px !important;
+        margin-top: -40px !important;
         width: 250px;
         /* margin-left: -50px;
         margin-right: -50px; */
@@ -2355,6 +2355,7 @@ footer{
     .top-icons {
         margin-top: 50px;
     }
+
 }
 /* ここまでセクションタイトル */
 @media (max-width: 400px) {
