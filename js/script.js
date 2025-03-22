@@ -7,6 +7,10 @@ $(document).ready(function () {
     $(".top-icons").on("click", function (event) {
         event.stopPropagation(); // 他のイベントをブロック
     });
+});$(document).ready(function () {
+    $(".fullscreen-menu").on("click", function (event) {
+        event.stopPropagation(); // 他のイベントをブロック
+    });
 });
 $(document).ready(function () {
     $(".footer_container").on("click", function (event) {
