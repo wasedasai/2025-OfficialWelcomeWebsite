@@ -24,6 +24,7 @@ body {
   top: 8px;
   text-align: center;
   z-index: 200;
+  cursor: pointer;
 }
 .menu-img {
   width: 75px;
@@ -717,3 +718,8 @@ footer{
     .footer-pages{
         top: 53%;
     }}
+@media (min-width: 1507px) {
+  footer{
+    display: none;
+  }
+}
