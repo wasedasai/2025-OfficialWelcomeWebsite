@@ -200,14 +200,16 @@ body {
   font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
 }
 .day-caution {
+  padding-left: 12%;
   font-size: 1vw;
-  text-align: center;
+  text-align: left;
   line-height: 2.9vw;
   font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
 }
 .day-caution-2 {
+  padding-left: 22%;
   font-size: 1vw;
-  text-align: center;
+  text-align: left;
   line-height: 2.9vw;
   margin-top: 10vh;
   font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
@@ -448,7 +450,7 @@ details[open] .event-title-accordion-blue::after {
     margin: 0;
   }
   .oneday-box {
-    height: 550px;
+    height: 50vh;
   }
   .day-caution-2 {
     margin-top: 3.5vh;
@@ -651,6 +653,12 @@ details[open] .event-title-accordion-blue::after {
   }
   .sp-only-unsta {
     display: inline;
+  }
+  .day-caution {
+    padding-left: 4%;
+  }
+  .day-caution-2 {
+    padding-left: 1%;
   }
 }
 /*レスポンシブ -iphoneSE*/
