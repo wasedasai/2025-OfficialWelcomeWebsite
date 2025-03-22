@@ -4,6 +4,7 @@ const $kyokuImgContainer = document.querySelectorAll("#kyokuImgContainer");
 const $teamName = document.querySelectorAll("#teamName");
 const $Text = document.querySelectorAll(".kyokuText");
 const $kyokucho = document.querySelectorAll(".kyokuchoName");
+const $kyokuTeam = document.querySelectorAll(".kyokuTeam");
 
 
 const kyokuName = [
@@ -51,6 +52,17 @@ const kyokucho = [
 
 ];
 
+const teamTitle =[
+    '会場整備局にあるチーム',
+    '参加対応局にあるチーム',
+    '開発局にあるチーム',
+    '企画局にあるチーム',
+    '広報制作局にあるチーム',
+    '渉外局にあるチーム',
+    '総務局にあるチーム',
+    '財務局にあるチーム'
+]
+
 const kyokuImg = [
     '<img  src="../images/kaijyoseibi.JPG" alt="会場整備局">',
     '<img  src="../images/santai.jpg" alt="参加対応局">',
@@ -77,7 +89,8 @@ $button.forEach((btn, index) => {
       $kyokucho[0].insertAdjacentHTML('afterbegin', kyokucho[index]);
       $kyokuImgContainer[0].innerHTML = '';
       $kyokuImgContainer[0].insertAdjacentHTML('afterbegin', kyokuImg[index]);
-
+      $kyokuTeam[0].innerHTML = '';
+      $kyokuTeam[0].insertAdjacentHTML('afterbegin', teamTitle[index]);
   });
 });
 
