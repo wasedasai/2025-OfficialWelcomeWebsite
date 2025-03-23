@@ -37,7 +37,7 @@ $(document).ready(function () {
     // スマホ版では最初に `mojimoji h1` の `font-size` を 200px に設定
     if (window.innerWidth <= 1000) {
         $("html, body").css({"width": "100%", "height": "100dvh"});
-        $(".mojimoji h1").css("font-size", "200px");
+        $(".mojimoji h1").css("font-size", "400px");
         $("html, body").css({"overflow": "hidden"});
         $("#change-text-button").on("click", function () {
                 if (window.innerWidth <= 1000) {  
@@ -55,7 +55,9 @@ $(document).ready(function () {
         });
         
     }
-
+    if (window.innerWidth <= 700) {
+        $(".mojimoji h1").css("font-size", "200px");
+    }
     // カスタムカーソルをスマホ版では非表示
     if (window.innerWidth > 1000) {
         $('body').append('<div class="custom-cursor">Tap</div>');

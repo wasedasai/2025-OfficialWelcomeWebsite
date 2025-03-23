@@ -139,7 +139,7 @@ body {
 
 
 /* ここまでセクションタイトル */
-@media screen and (max-width: 1025px) {
+@media screen and (max-width: 1400px) {
     .mojimoji h1 {
         transition: font-size 0.5s ease-out ;
     }
@@ -180,8 +180,8 @@ body {
     }
 
     .taptop {
-        width: 100px !important;
-        height: 100px !important;
+        width: 150px !important;
+        height: 150px !important;
         display: block !important;
         position: absolute;
         z-index: 5;
@@ -196,7 +196,7 @@ body {
 
         cursor: pointer;
         text-transform: uppercase;
-            top: 65% !important; /* 祭の文字の下に配置 */
+            top: 68% !important; /* 祭の文字の下に配置 */
     }
     /* .top_btn {
 
@@ -420,7 +420,6 @@ body {
         .top-topics {
         }
         .news_sentences {
-           margin-bottom: 0 !important;
         }
 }
 
@@ -2390,6 +2389,32 @@ footer{
         margin-top: 50px;
     }
 
+    .taptop {
+        width: 100px !important;
+        height: 100px !important;
+        display: block !important;
+        position: absolute;
+        z-index: 5;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 120px; /* 楕円形の幅 */
+        height: 60px; /* 楕円形の高さ */
+        line-height: 60px;
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+
+        cursor: pointer;
+        text-transform: uppercase;
+            top: 65% !important; /* 祭の文字の下に配置 */
+    }
+    .news_sentences {
+        margin-top: -5%;
+        margin-bottom: -5%;
+    }
+    .additional-content2 {
+        height: 50%;
+    }
 }
 /* ここまでセクションタイトル */
 @media (max-width: 400px) {
