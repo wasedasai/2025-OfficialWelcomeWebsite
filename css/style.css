@@ -196,7 +196,7 @@ body {
 
         cursor: pointer;
         text-transform: uppercase;
-            top: 68% !important; /* 祭の文字の下に配置 */
+            top: 64% !important; /* 祭の文字の下に配置 */
     }
     /* .top_btn {
 
