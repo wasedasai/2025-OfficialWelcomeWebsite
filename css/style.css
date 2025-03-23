@@ -139,7 +139,7 @@ body {
 
 
 /* ここまでセクションタイトル */
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1366px) {
     .mojimoji h1 {
         transition: font-size 0.5s ease-out ;
     }
@@ -423,6 +423,10 @@ body {
         .scroll-container3 {
             top: 0;
         }
+         .news_sentences {
+        margin-top: -1.5% !important;
+        margin-bottom: -1.5% !important;
+    }
 }
 
 
@@ -562,13 +566,13 @@ html, body {
 
 .scroll-container3 {
     display: flex;
-    overflow: hidden;
+    /* overflow: hidden; */
     width: 200vw;
     white-space: nowrap;
     z-index: 1000;
     position: absolute;
     transform: rotate(90deg);
-    top: 75vh;
+    /* top: 75vh; */
     left: -10vw;
     padding-left: 30vh;
 }
@@ -2424,7 +2428,6 @@ footer{
         align-items: center !important; /* 🎯 縦方向も中央揃え */
         text-align: center !important; /* 🎯 テキストも中央揃え */
         width: 100%;
-        padding-top: 30px;
         gap: 20px; /* アイテム間の余白 */
         top: 260px;
     }
@@ -2432,8 +2435,11 @@ footer{
         height: 2560px !important;
         align-items: unset !important;
     }
+    .faq_examples {
+        gap: 0;
+    }
 }
-@media (min-width: 750px) and (max-width: 1100px) {
+@media (min-width: 750px) and (max-width: 1000px) {
     .detail_examples {
         display: flex !important;
         flex-direction: column !important; /* 🎯 スマホでは縦並び */
@@ -2450,9 +2456,12 @@ footer{
         align-items: unset !important;
     }
     .news_sentences {
-        margin-top: -5%;
-        margin-bottom: -5%;
+        margin-top: -4% !important;
     }
+    .faq_examples {
+        margin-left: 0;
+    }
+
 }
 /* ここまでセクションタイトル */
 @media (max-width: 400px) {
