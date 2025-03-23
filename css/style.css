@@ -427,6 +427,9 @@ body {
         margin-top: -1.5% !important;
         margin-bottom: -1.5% !important;
     }
+    .faq_examples {
+        gap: 30px;
+    }
 }
 
 
@@ -1738,7 +1741,7 @@ background-color: #fffcfc;
     margin-top: 170px;
     display: flex;
     padding-top: 30px;
-    gap: 30px;
+    justify-content: space-around !important;
 }
 .faq-top {
     width: 272px;
