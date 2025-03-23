@@ -139,7 +139,7 @@ body {
 
 
 /* ここまでセクションタイトル */
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1200px) {
     .mojimoji h1 {
         transition: font-size 0.5s ease-out ;
     }
