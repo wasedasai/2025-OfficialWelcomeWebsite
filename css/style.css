@@ -248,7 +248,7 @@ body {
         display: none !important;
     }
     .next-section {
-        height: 2560px !important;
+        height: 1600px !important;
         align-items: unset !important;
     }
     .daen1
@@ -331,14 +331,13 @@ body {
     } */
     .detail_examples {
         display: flex !important;
-        flex-direction: column !important; /* 🎯 スマホでは縦並び */
         justify-content: center !important; /* 🎯 中央揃え */
         align-items: center !important; /* 🎯 縦方向も中央揃え */
         text-align: center !important; /* 🎯 テキストも中央揃え */
         width: 100%;
         padding-top: 30px;
-        gap: 20px; /* アイテム間の余白 */
-        top: 260px;
+        gap: 40px; /* アイテム間の余白 */
+        top: -260px;
     }
 
     .detail {
@@ -420,6 +419,9 @@ body {
         .top-topics {
         }
         .news_sentences {
+        }
+        .scroll-container3 {
+            top: 0;
         }
 }
 
@@ -1732,7 +1734,7 @@ background-color: #fffcfc;
     margin-top: 170px;
     display: flex;
     padding-top: 30px;
-    justify-content: space-around;
+    gap: 30px;
 }
 .faq-top {
     width: 272px;
@@ -2414,6 +2416,42 @@ footer{
     }
     .additional-content2 {
         height: 50%;
+    }
+    .detail_examples {
+        display: flex !important;
+        flex-direction: column !important; /* 🎯 スマホでは縦並び */
+        justify-content: center !important; /* 🎯 中央揃え */
+        align-items: center !important; /* 🎯 縦方向も中央揃え */
+        text-align: center !important; /* 🎯 テキストも中央揃え */
+        width: 100%;
+        padding-top: 30px;
+        gap: 20px; /* アイテム間の余白 */
+        top: 260px;
+    }
+    .next-section {
+        height: 2560px !important;
+        align-items: unset !important;
+    }
+}
+@media (min-width: 750px) and (max-width: 1100px) {
+    .detail_examples {
+        display: flex !important;
+        flex-direction: column !important; /* 🎯 スマホでは縦並び */
+        justify-content: center !important; /* 🎯 中央揃え */
+        align-items: center !important; /* 🎯 縦方向も中央揃え */
+        text-align: center !important; /* 🎯 テキストも中央揃え */
+        width: 100%;
+        padding-top: 30px;
+        gap: 20px; /* アイテム間の余白 */
+        top: 260px;
+    }
+    .next-section {
+        height: 2560px !important;
+        align-items: unset !important;
+    }
+    .news_sentences {
+        margin-top: -5%;
+        margin-bottom: -5%;
     }
 }
 /* ここまでセクションタイトル */
