@@ -127,17 +127,11 @@ p{
     font-weight: bold;
 }
 .container-video{
-    margin: 0 auto;
-    width: 100%;
+    width: auto;
+    text-align: center;
+    margin: 2vw;
 }
-.container-video iframe{
-    display: grid;
-    /* margin-left: 40%; */
-    align-items: center;
-    width: 80vw;
 
-    
-}
 @media (max-width: 1024px) {
     .hero h1{
         font-size: 25px;
@@ -146,6 +140,12 @@ p{
 @media (max-width: 830px) {
     .hero h1{
         font-size: 20px;
+    }
+}
+@media(max-width: 766px) {
+    .container-video iframe{
+        width: 80vw;
+        height: 50vw;
     }
 }
 @media (max-width: 500px) {
