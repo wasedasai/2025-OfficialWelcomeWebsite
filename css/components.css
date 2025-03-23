@@ -239,7 +239,7 @@ body {
 }
 @media (max-width: 500px){
   .hero{
-    height: 100px;
+    height: 90px;
     background-image: url(../images/hero-sp-new.png);
 }
 .hero h1{
