@@ -216,7 +216,7 @@ body {
   width: 100%;
   height: 170px;
   overflow: hidden;
-  background-image: url(../images/hero-new.png);
+  background-image: url(../images/hero-final.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -245,7 +245,11 @@ body {
 .hero h1{
     font-size: 15px;
 }}
-
+@media (max-width: 376px){
+  .hero h1{
+    font-size: 13px;
+  }
+}
 /* ここまでhero */
 
 /* ここまで、square-link */
