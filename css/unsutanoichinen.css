@@ -11,20 +11,23 @@ body {
   align-items: center;
   margin-top: 5vh;
 }
-.event-title {
-  justify-content: center; /* 水平方向の中央揃え */
-  align-items: center;
-  margin-top: 3vh;
+.blockTitleContainer {
+  margin: 0; /* 中央寄せになっている場合は解除 */
+}
+.blockTitle {
+  text-align: left;
 }
 .oneday-title {
   margin-top: 2vh;
   padding-left: 7vw;
 }
 .wasesai-title {
-  padding-left: 40%;
+  padding-top: 3%;
+  padding-left: 3%;
 }
 .blockTitle {
-  margin-bottom: 0px;
+  display: flex;
+  justify-content: flex-start;
 }
 /* boxコンポーネント */
 .blue-box-event {
@@ -112,6 +115,12 @@ body {
   padding-top: 7vh;
   display: flex;
 }
+.event-title {
+  align-self: flex-start !important;
+  padding-left: 18%; /* 水平方向の中央揃え */
+  margin-top: 3vh;
+  text-align: center;
+}
 /* 矢印コンポーネント*/
 .month-img {
   position: relative;
@@ -196,8 +205,9 @@ body {
 .day-discription {
   margin-top: 4vh;
   font-size: 1.4vw;
-  text-align: center;
+  text-align: left;
   font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  padding-left: 20%;
 }
 .day-caution {
   padding-left: 12%;
@@ -275,162 +285,19 @@ body {
   border: 3px solid #e72241;
   border-radius: 55%; /* 楕円形にする */
 }
-/* レスポンシブ 
-@media (max-width: 768px) {
-  .box-event-sai.red-box-event.blue-box-event.box-pj {
-    width: 80%;
-    height: 60%;
-  }
-  .two-boxes {
-    display: flex;
-    flex-direction: column;
-  }
-}
-*/
-
-/* アコーディオン関連 */
-details summary {
-  list-style: none; /* デフォルトの三角を消す */
-  display: block;
-}
-details summary::-webkit-details-marker {
-  /* Safariで表示されるデフォルトの三角形アイコンを消します */
-  display: none;
-}
-/* 開く前の枠 */
-.summary_inner {
-  margin-left: 10%;
-  cursor: pointer;
-  display: flex;
-  width: 34vw;
-  height: 100px;
-  border: 3px solid #e72241;
-  border-radius: 30px;
-  padding-left: 3%;
-  padding-top: 1.5%;
-}
-.summary_inner-blue {
-  margin-left: 10%;
-  cursor: pointer;
-  display: flex;
-  width: 34vw;
-  height: 100px;
-  border: 3px solid #58b1e4;
-  border-radius: 30px;
-  padding-left: 3%;
-  padding-top: 1.5%;
-}
-/* 開いた後の枠*/
-details[open] .summary_inner {
-  height: 750px;
-  padding-left: 3.5%;
-  padding-right: 3.5%;
-}
-details[open] .summary_inner-blue {
-  height: 750px;
-  padding-left: 3.5%;
-  padding-right: 3.5%;
-}
-/* アコーディオン内のコンテンツ */
-.accordion-content-unsta1 {
-  display: none;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
-}
-
-/* details が開いたときにコンテンツを表示 */
-details[open] .accordion-content-unsta1 {
-  display: block;
-  opacity: 1;
-}
-
-.smlal-box-red-accordion {
-  display: flex;
-  justify-content: center; /* 水平方向の中央揃え */
-  align-items: center;
-  width: 70%;
-  height: 10%;
-  background-color: #e72241;
-  border-radius: 20px;
-  margin-left: 15%;
-}
-.smlal-box-blue-accordion {
-  display: flex;
-  justify-content: center; /* 水平方向の中央揃え */
-  align-items: center;
-  width: 70%;
-  height: 10%;
-  background-color: #58b1e4;
-  border-radius: 20px;
-  margin-left: 15%;
-  padding-bottom: 10%;
-}
-.accordion-column {
-  display: flex;
-  flex-direction: column;
-}
-.event-discription-accordion {
-  font-size: 1.4vw;
-  line-height: 2.9vw;
-  margin-top: 8%;
-  margin-bottom: 8%;
-}
-.img-accordion {
-  padding-left: 12%;
-  width: 88%;
-  margin-top: 10%;
-  margin-bottom: 4%;
-}
-.event-title-accordion {
-  display: flex;
-  align-items: center; /* 縦方向の中央揃え */
-  margin-left: 1vw;
-  margin-top: 1vh;
-}
-
-/* 三角形を横に配置 */
-.event-title-accordion::after {
-  content: "";
-  display: inline-block;
-  width: 0;
-  height: 0;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  border-top: 20px solid #e72241; /* 三角形（初期状態: 下向き） */
-  transition: transform 0.3s ease-in-out;
-  border-radius: 3px;
-}
-.event-title-accordion-blue::after {
-  content: "";
-  display: inline-block;
-  width: 0;
-  height: 0;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  border-top: 20px solid #58b1e4; /* 三角形（初期状態: 下向き） */
-  transition: transform 0.3s ease-in-out;
-  border-radius: 3px;
-}
-
-/* アコーディオンが開いた時に三角形の向きを変える */
-details[open] .event-title-accordion::after {
-  transform: rotate(180deg); /* 上向きにする */
-}
-details[open] .event-title-accordion-blue::after {
-  transform: rotate(180deg); /* 上向きにする */
-}
-.box-accordion {
-  display: flex;
-  margin-top: 8vh;
-  gap: 5vw;
-}
 /*レスポンシブ -ipadPro*/
 @media (max-width: 1024px) {
-  details[open] .summary_inner.summary_inner-blue {
-    height: 40vh;
+  .event-discription-wasesai {
+    margin-top: 4vh;
   }
-  .event-title-accordion {
-    margin-left: 3vw;
+  .wasesai-img1,
+  .wasesai-img2,
+  .wasesai-img3 {
+    margin-top: 0;
+    object-fit: cover;
+  }
+  .wasesai-box {
+    height: 500px;
   }
   .red-box-event,
   .blue-box-event,
@@ -470,7 +337,7 @@ details[open] .event-title-accordion-blue::after {
   }
 }
 /*レスポンシブ -ipad*/
-@media (max-width: 768px) {
+@media (max-width: 820px) {
   .blockTitle {
     font-size: 15vw;
   }
@@ -482,6 +349,18 @@ details[open] .event-title-accordion-blue::after {
   .wasesai-box {
     height: 450px;
   }
+  .wasesai-img1,
+  .wasesai-img2,
+  .wasesai-img3 {
+    width: 24vw;
+    height: auto;
+    margin-top: 3%;
+    object-fit: cover;
+  }
+  .smlal-box-red-wasesai {
+    bottom: 9%;
+    left: 20%;
+  }
   .red-box-event,
   .blue-box-event,
   .box-pj {
@@ -490,24 +369,11 @@ details[open] .event-title-accordion-blue::after {
   .small-box-wasesai {
     margin-top: 1vh;
   }
-  .event-discription-wasesai {
-    margin-top: 4vh;
-  }
+
   .smlal-box-red,
   .smlal-box-blue,
   .smlal-box-pj {
     bottom: 1vh;
-  }
-  .box-accordion {
-    display: flex;
-    flex-direction: column;
-    margin-top: 0;
-  }
-  .summary_inner.summary_inner-blue {
-    width: 54vw;
-  }
-  details[open] .summary_inner .summary_inner-blue {
-    height: 65vh;
   }
   .month-sentence,
   .month-sentence-wasesai {
@@ -515,10 +381,6 @@ details[open] .event-title-accordion-blue::after {
   }
   .month-sentence-wasesai {
     margin-top: 60%;
-  }
-  .event-discription-accordion {
-    font-size: 2vw;
-    line-height: 4vw;
   }
   .period-of-event,
   .period-of-event-red {
@@ -539,7 +401,7 @@ details[open] .event-title-accordion-blue::after {
   .box-pj,
   .wasesai-box {
     width: 250px;
-    height: 470px;
+    height: 440px;
   }
   .box-line {
     gap: 6vw;
@@ -558,6 +420,9 @@ details[open] .event-title-accordion-blue::after {
     width: 80%;
     font-size: 3vw;
     line-height: 5vw;
+  }
+  .event-discription {
+    margin-top: 18%;
   }
   .time-discription {
     font-size: 3vw;
@@ -580,12 +445,10 @@ details[open] .event-title-accordion-blue::after {
     margin-top: 2vh;
     margin-left: 15%;
   }
-  .wasesai-title {
-    padding-left: 33%;
-  }
   .day-discription {
     margin-top: 2vh;
     font-size: 2vw;
+    padding-left: 12%;
   }
   .oneday-boxline {
     display: flex;
@@ -600,12 +463,10 @@ details[open] .event-title-accordion-blue::after {
   }
   .day-caution {
     font-size: 1.9vw;
-    text-align: center;
     line-height: 2.9vw;
   }
   .day-caution-2 {
     font-size: 2vw;
-    text-align: center;
     line-height: 2.9vw;
     margin-top: 3vh;
   }
@@ -617,13 +478,6 @@ details[open] .event-title-accordion-blue::after {
     margin-top: 0vh;
     padding-top: 0;
   }
-  details[open] .summary_inner {
-    height: 42vh;
-  }
-  .event-title-accordion {
-    margin-left: 5vw;
-    margin-top: 2.8vh;
-  }
   .month-sentence,
   .month-sentence-wasesai {
     font-size: 16px;
@@ -633,21 +487,16 @@ details[open] .event-title-accordion-blue::after {
   .day-discription {
     font-size: 14px;
   }
-  .day-discription {
-    padding-left: 3%;
-    padding-right: 3%;
-  }
+
   .event-discription .event-discription-wasesai {
     font-size: 13px;
   }
   .day-caution {
     font-size: 11px;
-    text-align: center;
     line-height: 5vw;
   }
   .day-caution-2 {
     font-size: 11px;
-    text-align: center;
     line-height: 5vw;
     margin-top: 10vh;
   }
@@ -655,17 +504,18 @@ details[open] .event-title-accordion-blue::after {
     display: inline;
   }
   .day-caution {
-    padding-left: 4%;
+    padding-left: 7%;
   }
   .day-caution-2 {
-    padding-left: 1%;
+    padding-left: 3%;
+  }
+  .wasesai-title {
+    padding-top: 5%;
+    padding-left: 15%;
   }
 }
 /*レスポンシブ -iphoneSE*/
 @media (max-width: 375px) {
-  details[open] .summary_inner {
-    height: 53vh;
-  }
   .red-box-event,
   .blue-box-event,
   .box-pj {
@@ -675,4 +525,7 @@ details[open] .event-title-accordion-blue::after {
   .event-discription {
     margin-top: 17%;
   }
+  .day-discription {
+
+  padding-left: 7%;
 }
