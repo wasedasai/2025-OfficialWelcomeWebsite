@@ -1,0 +1,766 @@
+body{
+    color: #1c1b1b;
+    font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+}
+
+.eventSectionTitle{
+    text-align: center;
+    margin: 3% 0 5% 0;
+}
+
+.eventsContainer {
+    width: 90vw;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+/* 左側サイドバー */
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.sidebar {
+
+    width: 40%;
+    max-height: 1500px;
+    font-size: 1.66vw; /*24px */
+    list-style: none;
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+.sidebar li{
+    margin-bottom: 2.77vw; /*40px */
+    opacity: 50%;
+    
+}
+
+
+
+
+.sidebar li a {
+    display: inline-block;   /* 文字幅に合わせる */
+    position: relative;
+  }
+  
+  .sidebar li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    width: 100%;
+    height: 2px;
+    background-color: #e72241;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease-out;
+  }
+  
+  .sidebar li.active a::after {
+    transform: scaleX(1);
+  }
+  
+  .sidebar li.active{
+    opacity: 1;
+  }
+  
+
+
+
+
+
+.eventMainContentsContainer{
+    width:60%;
+    /*IE(Internet Explorer)・Microsoft Edgeへの対応*/
+    -ms-overflow-style: none;
+    /*Firefoxへの対応*/
+    scrollbar-width: none;
+    margin-left: 5%;
+}
+
+.eventMainContentsContainer section{
+    width: 100%;
+    /* max-height: 85vh; */
+    border: 3px solid #e72241;
+    text-align: center;
+    margin-top: 10%;
+    border-radius: 6.94vw; /*100px */
+    padding: 5%;
+}
+
+.eventTitle{
+    font-size: 2.083333333vw; /*30px */
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    border-bottom: 2px solid #e72241;
+    display: inline-block;
+    margin-bottom: 3%;
+}
+
+.eventText{
+    font-size: 1.38vw; /*20px */
+    text-align: left;
+}
+
+.blockTitle{
+    font-size: 2.083333333vw; /*30px */;
+}
+
+.blockTitleContainer{
+    gap: 0.69vw; /*10px */
+}
+
+.eventUnderBox{
+    display: flex;
+    flex-direction: row;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    justify-content: space-between;
+}
+
+
+.eventUnderBoxLeft{
+    width: 45%;
+}
+
+.eventUnderBoxRight{
+    width: 45%;
+}
+
+.textBig{
+    font-size: 1.666vw; /*24px */
+}
+
+.textSmall{
+    font-size: 0.972vw; /*14px */
+    text-align: left;
+}
+
+.placeBox{
+    margin-bottom: 2.083333333vw; /*30px */
+}
+
+#sunday{
+    color: #e72241;
+}
+
+.Subtitle{
+    font-size: 1.11111vw; /*16px*/
+}
+
+.terakoyaTitle{
+    display: flex;
+    flex-direction: column;
+}
+
+.square-button{
+    margin: 0 auto;
+}
+
+.square-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.38vw 1.38vw; /*20px 20px */
+    border: 3px solid #e72241;
+    border-radius: 100px;
+    font-size: 2.083333333vw; /*30px */
+    color: #e72241;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    height: 5.9vw; /*85px */
+    white-space: nowrap;
+    width: 34.7222vw; /* 500px */
+    min-width: 150px; /* 最小幅を設定して極端に小さくならないように */
+    padding-right: 50px;
+    font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+}
+.square-button::after {
+    content: "→";
+    font-size: 2.083333333vw; /*30px */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4.166666667vw; /*60px */
+    height: 4.166666667vw; /*60px */
+    border-radius: 50%;
+    background-color: #e72241;
+    color: #fffcfc;
+    transition: all 0.3s ease;
+    position: absolute;
+    right: 1.38vw; /* 矢印は固定 */
+    flex-shrink: 0;
+}
+
+.imawa{
+    margin-bottom: 0%;
+}
+
+.kochira{
+    color: #e72241;
+    font-weight: 700;
+}
+
+/* .terakoyaBox{
+    display: flex;
+    flex-direction: column;
+} */
+
+.terakoya{
+    text-decoration: underline;
+    text-decoration-color: #e72241;
+    font-size: 2.083333333vw; /*30px */
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.shitokanaito{
+    margin-bottom: 3%;
+
+}
+
+.campusmap{
+    border: 3px solid #e72241;
+    border-radius: 100px;
+    margin: 0 auto;
+    position: relative;
+    width: 90%;
+}
+
+.campusmap Img{
+    width: 100%;
+    height: auto;
+    border-radius: 100px;
+}
+
+.zoomIcon{
+    width: 7.638888889vw; /*110px */
+    height: 7.638888889vw; /*110px */
+    background-color: #e72241;
+    color: #fffcfc;
+    position: absolute;
+    bottom: 30px; /*30px */
+    right: 30px; /*30px */
+    border-radius: 50%;
+}
+
+.zoom{
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.666vw; /*24px */;
+    color: #fffcfc;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
+#saturday{
+    color: #58B1E4;
+}
+
+.calenderContainer{
+    text-align: center;
+    width: 90%;
+    border: 3px solid #e72241;
+    border-radius: 100px;
+    margin:0 auto;
+    padding: 3%;
+}
+
+.calenderTable{
+    text-align: center;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+.calenderTable tr td{
+    width: 10.4166vw;   /*150px*/
+    height: auto;
+    text-align: center;
+    border-right:1px solid #1c1b1b ;
+    vertical-align: top;
+}
+
+.calenderTable tr th{
+    width: 10.4166vw;   /*150px*/
+    text-align: center;
+    border-bottom: 3px double #1c1b1b;
+    border-right: 1px solid #1c1b1b;
+}
+
+.calenderTable tr th:last-child{
+    border-right: 0;
+}
+
+.calenderTable tr td:last-child{
+    border-right: 0;
+}
+
+.haveEvent{
+    border-top: 1px solid #1c1b1b;
+    height: 1.52777vw;  /*22px*/
+}
+
+.noEvent{
+    border-top: 1px solid #1c1b1b;
+    height: 10.6944444444vw; /*154px*/
+}
+
+.week3{
+    height: 1.52777vw;  /*22px*/
+}
+
+.calenderBar{
+    font-size: 0.97222vw; /*14px*/
+    border-radius: 100px;
+    overflow: hidden;
+    height: 1.52777vw;  /*22px*/
+    vertical-align: middle;
+    text-decoration: none;
+}
+
+.rightSolid{
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.leftSolid{
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.calendarBarTaimen{
+    background-color: #e72241;
+    color: #fffcfc;
+}
+
+.calendarBarBurari{
+    background-color: #58B1E4;
+    color: #fffcfc;
+}
+
+.calendarBarImawa{
+    background-color: #FCC00E;
+    color: #fffcfc;
+}
+
+.calendarBarUnsta{
+    background-color: #9D213D;
+    color: #fffcfc;
+}
+
+.calendarBarTerakoya{
+    background-color: #2461AD;
+    color: #fffcfc;
+}
+
+.calendarBarGyoretsu{
+    background-color: #24AD3D;
+    color: #fffcfc;
+}
+
+.underNoteItem{
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    gap: 0.69444vw; /*10px*/
+}
+
+.underNoteItem .calenderBar{
+    width: 6.94444vw; /*100px*/
+}
+
+.underNoteItem p{
+    display: inline-block;
+    width: 17.361111vw; /*250px*/
+    text-align: left;
+    font-size: 0.69444vw; /*10px*/
+}
+
+.underNote{
+    width: 50%;
+    margin: 0 auto;
+}
+
+.carousel-arrow{
+    display: none;
+}
+
+.spOnly{
+    display: none;
+}
+
+.spOnlySpace{
+    display: none;
+}
+
+.pcTagRemove{
+    display: contents;
+}
+
+@media (max-width: 1024px){
+    .sidebar{
+        display: none;
+    }
+
+    .eventsContainer {
+        width: 90vw;
+        overflow: hidden;
+        /* overflow-x: visible; */
+        overflow-y: normal;
+        height: auto;
+        margin: 0 auto;
+        display: block;
+        flex-direction: row;
+        justify-content: space-around;
+        position: relative;
+        margin-bottom: 50px;
+    }
+
+    .eventMainContentsContainer{
+        display: flex;
+        flex-direction: row;
+        width:fit-content;
+        /*IE(Internet Explorer)・Microsoft Edgeへの対応*/
+        -ms-overflow-style: none;
+        /*Firefoxへの対応*/
+        scrollbar-width: none;
+        margin-left: 0%;
+        transition: transform 1s ease;
+        transform: translateX(0);
+        
+    }
+    
+    .eventMainContentsContainer section{
+        width: 90vw;
+        height: auto;
+        max-height: 1000px;
+        /* max-height: 85vh; */
+        border: 3px solid #e72241;
+        text-align: center;
+        margin-top: 0%;
+        border-radius: 6.94vw; /*100px */
+        padding: 30px;
+    }
+
+    
+
+    .eventTitle{
+        font-size:20px;
+        display: inline-block;
+        margin-bottom: 3%;
+    }
+    
+    .eventText{
+        font-size: 16px;
+        white-space:normal;
+        overflow: normal;
+    }
+    
+    .blockTitle{
+        font-size: 18px;
+    }
+    
+    .blockTitleContainer{
+        gap: 0.69vw; /*10px */
+    }
+    
+    .eventUnderBox{
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    
+    
+    .eventUnderBoxLeft{
+        width: 45%;
+    }
+
+    .eventUnderBoxLeftSpColumn{
+        width: 100%;
+    }
+    
+    .eventUnderBoxRight{
+        width: 45%;
+    }
+    
+    .textBig{
+        font-size: 20px;
+    }
+    
+    .textSmall{
+        font-size: 12px;
+        text-align: left;
+    }
+    
+    .placeBox{
+        margin-bottom: 2.083333333vw; /*30px */
+    }
+
+    p{
+        font-size: 16px;
+    }
+
+    .square-button {
+        padding: 10px 10px;
+        font-size: 20px;
+        height: 70px;
+        white-space: nowrap;
+        width: 220px;
+        min-width: 150px; /* 最小幅を設定して極端に小さくならないように */
+        padding-right: 50px;
+    }
+    .square-button::after {
+        content: "→";
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 42px; 
+        height: 42px;
+        border-radius: 50%;
+        background-color: #e72241;
+        color: #fffcfc;
+        transition: all 0.3s ease;
+        position: absolute;
+        right: 20px;
+        flex-shrink: 0;
+    }
+
+    .spOnly{
+        display: block;
+    }
+
+    .spSmall{
+        font-size: 12px;
+    }
+
+    .spMiddle{
+        font-size: 14px;
+    }
+
+    .spRemove{
+        display: none;
+    }
+
+    .spTitle{
+        font-size: 12px;
+    }
+
+    .spTagRemove{
+        display: contents;
+    }
+
+
+    .spColumn{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .spUnderBoxMargin{
+        margin-bottom: 20px;
+    }
+
+    .Subtitle{
+        font-size: 9.5px;
+    }
+
+    .spTotsuzenTitle{
+        font-size: 16px;
+    }
+
+    .spOnlySpace{
+        display: inline;
+    }
+
+    .eventArrow{
+        font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+        font-weight: bold;
+        font-size: 20px;
+        background-color: #e72241;
+        color: #fffcfc;
+        width: 40px;
+        height: 40px;
+        z-index: 10;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 10;
+    }
+
+    .leftArrow{
+        left: 0;
+    }
+
+    .rightArrow{
+        right: 0;
+    }
+
+    .campusmap{
+        border: 3px solid #e72241;
+        border-radius: 50px;
+        margin: 0 auto;
+        position: relative;
+        width: 90%;
+        margin-bottom: 50px;
+    }
+
+    .zoomIcon{
+        width: 48px; 
+        height: 48px; 
+        background-color: #e72241;
+        color: #fffcfc;
+        position: absolute;
+        bottom: 13px; /*30px */
+        right: 13px; /*30px */
+        border-radius: 50%;
+    }
+    
+    .zoom{
+        margin: 0 auto;
+        text-align: center;
+        font-size: 13px; 
+        color: #fffcfc;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%)
+    }
+
+    .calenderContainer{
+        text-align: center;
+        width: 90%;
+        border: 3px solid #e72241;
+        border-radius: 80px;
+        margin:0 auto;
+        padding: 3%;
+    }
+
+    
+    .calenderTable tr td{
+        width: 200px; 
+        height: auto;
+        text-align: center;
+        border-right:1px solid #1c1b1b ;
+        vertical-align: top;
+    }
+    
+    .calenderTable tr th{
+        width: 10.4166vw;   /*150px*/
+        text-align: center;
+        border-bottom: 3px double #1c1b1b;
+        border-right: 1px solid #1c1b1b;
+    }
+    
+    .calenderTable tr th:last-child{
+        border-right: 0;
+    }
+    
+    .calenderTable tr td:last-child{
+        border-right: 0;
+    }
+    
+    .haveEvent{
+        border-top: 1px solid #1c1b1b;
+        height: 1.52777vw;  /*22px*/
+    }
+    
+    .noEvent{
+        border-top: 1px solid #1c1b1b;
+        height: 10.6944444444vw; /*154px*/
+    }
+    
+    .week3{
+        height: 1.52777vw;  /*22px*/
+    }
+    
+    .calenderBar{
+        font-size: 14px; /*14px*/
+        border-radius: 100px;
+        overflow: hidden;
+        height: 22px;  /*22px*/
+        vertical-align: middle;
+        text-decoration: none;
+    }
+
+    .rightSolid{
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    
+    .leftSolid{
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+
+    .underNoteItem{
+        display: flex;
+        flex-direction: row;
+        justify-content:center;
+        gap: 10px;
+        margin-top: 5px;
+    }
+    
+    .underNoteItem .calenderBar{
+        width: 200px; /*100px*/
+        height: 20px;
+    }
+    
+    .underNoteItem p{
+        display: inline-block;
+        width: 600px; /*250px*/
+        text-align: left;
+        font-size: 10px; /*10px*/
+    }
+    
+    .underNote{
+        width: 70%;
+        margin: 50px auto;
+    }
+
+    .noEvent{
+        border-top: 1px solid #1c1b1b;
+        height: 120px;
+    }
+
+    .monthTitle{
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+}
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+            
