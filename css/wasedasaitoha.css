@@ -126,6 +126,11 @@ p{
     text-decoration: none;
     font-weight: bold;
 }
+@media (max-width: 1024px) {
+    .hero h1{
+        font-size: 25px;
+    }
+}
 @media (max-width: 830px) {
     .hero h1{
         font-size: 20px;
