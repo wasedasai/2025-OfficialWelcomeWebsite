@@ -95,6 +95,7 @@ body {
 .top_matsuri_btn {
     display: none;
 }
+
 .taptop {
     display: none;
 }
@@ -117,6 +118,7 @@ body {
     background-color: #E72241;
     border-radius: 5px;
   }
+
   .swiper-tap {
     text-decoration: none !important;
     color: #fffcfc;
@@ -133,6 +135,7 @@ body {
         border-radius: 1.5px;
     }
 }
+
 
 
 /* ここまでセクションタイトル */
@@ -175,6 +178,7 @@ body {
         text-transform: uppercase;
             top: 70% !important; /* 祭の文字の下に配置 */
     }
+
     .taptop {
         width: 100px !important;
         height: 100px !important;
@@ -201,6 +205,7 @@ body {
         z-index: 5;
         left: 50%;
         transform: translateX(-50%);
+
     } */
 
     .top_first h1 {
@@ -357,7 +362,9 @@ body {
         height: 200vh !important;
     }
     .mottokuwasiku h1 {
+
         margin-top: -40px !important;
+
         width: 250px;
         /* margin-left: -50px;
         margin-right: -50px; */
@@ -681,7 +688,9 @@ html, body {
 .top-icon {
     width: 45px;
     height: 45px;
+
     margin-bottom: 15px;
+
 }
 .top-icons {
     width: 0vw;
@@ -849,6 +858,7 @@ header {
     
 }
 
+
 /* ホバー時の変更 */
 .top-square-button2:hover {
     background-color: #2660ad;
@@ -911,6 +921,7 @@ header {
 }
 
 
+
 /* ここまでセクションタイトル */
 /* .sentence.scrollable {
     overflow-y: auto;
@@ -941,6 +952,7 @@ header {
     top: 8px;
     text-align: center;
     z-index: 200;
+    cursor: pointer;
 }
 .menu-img{
     width: 75px;
@@ -1136,7 +1148,25 @@ header {
         top: 50%;
     }
 }
-
+@media (min-width: 1507px) {
+    footer{
+      display: none;
+    }
+  }
+  .footer-contaier{
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .footer-contaier::-webkit-scrollbar{
+    display: none;
+  }
+  .footer-pages{
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .footer-pages::-webkit-scrollbar{
+    display: none;
+  }
 /* 次のセクションのデザイン */
 .next-section {
     width: 100vw;
@@ -1997,7 +2027,9 @@ background-color: #fffcfc;
         width: 300% !important;
     }
     .scroll-container2 {
+
         top: 77vh !important;
+
     }
     .scroll-container3 {
       /* 上の幅調整 */
@@ -2042,6 +2074,8 @@ background-color: #fffcfc;
     }
     .top-square-button2 {
         width: 50%;
+
+
     }
     .top-menu {
         padding-left: 3vw;
@@ -2153,7 +2187,7 @@ footer{
 }
 .footer-pages p{
     font-family: "Noto Sans JP", sans-serif;
-    width: 250px;
+    width: 260px;
 }
 .footer-pages p:hover{
     animation: zoom .3s;
@@ -2361,6 +2395,12 @@ footer{
 @media (max-width: 400px) {
     .top_first{
         margin-top: 0px;
+    }
+    .top_first h1{
+        margin-top: 15px;
+    }
+    .taptop{
+        margin-top: 30px;
     }
     .top-menu {
         line-height: 27px;
