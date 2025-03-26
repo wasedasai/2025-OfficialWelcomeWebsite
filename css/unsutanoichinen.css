@@ -401,7 +401,7 @@ body {
   .box-pj,
   .wasesai-box {
     width: 250px;
-    height: 440px;
+    height: 490px;
   }
   .box-line {
     gap: 6vw;
@@ -510,7 +510,7 @@ body {
     padding-left: 3%;
   }
   .wasesai-title {
-    padding-top: 5%;
+    padding-top: 13%;
     padding-left: 15%;
   }
 }
@@ -526,6 +526,6 @@ body {
     margin-top: 17%;
   }
   .day-discription {
-
-  padding-left: 7%;
+    padding-left: 7%;
+  }
 }
