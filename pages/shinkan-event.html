@@ -4,14 +4,15 @@
         <meta charset="utf-8">
         <title>早稲田祭2025運営スタッフ 新歓公式サイト 新歓イベント</title><!---変えてね--->
         <link rel="preconnect" href="https://fonts.googleapis.com">
-       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-       <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
-       <link href="https://unpkg.com/sanitize.css" rel="stylesheet"/>
-       <link rel="stylesheet" href="../css/components.css">
-       <!-- <link rel="stylesheet" href="../css/comingsoon.css"> 変えてね-->
-       <link rel="canocical" href="https://wasedasai.github.io/2025-OfficialWelcomeWebsite/">
-       <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-        <meta name="description" content="早稲田祭運営スタッフ2025年度新歓用公式サイトです。運スタの新歓イベントや、運スタに関する情報を掲載しています。"> <!---変えてね--->
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Zen+Kaku+Gothic+New:wght@700&display=swap" rel="stylesheet">
+        <link href="https://unpkg.com/sanitize.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="../css/components.css">
+        <link rel="stylesheet" href="../css/shinkan-event.css">
+        <link rel="canocical" href="https://wasedasai.github.io/2025-OfficialWelcomeWebsite/">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+        <meta name="description" content="早稲田祭運営スタッフ2025年度新歓用公式サイトです。運スタの新歓イベントや、運スタに関する情報を掲載しています。"><!---変えてね--->
         <meta name="keywords" content="早稲田祭,早稲田祭運営スタッフ,運スタ,早稲田,運スタ新歓,運スタ2025,早稲田祭2025運営スタッフ,運スタ2025新歓">
         <meta property="og:url" content="https://wasedasai.github.io/2025-OfficialWelcomeWebsite/" />
         <meta property="og:type" content="website" />
@@ -22,8 +23,935 @@
         <link rel="icon" href="../images/favicon.ico" type="image/png">
         <link rel="apple-touch-icon" href="../images/faviconlogo.png">
         <meta name="google-site-verification" content="PREUoAvDPGm4IBv_BUsNCwKUSFRjLSaLSSNL8bfFCAE" />
+        <script src="../js/shinkan-event.js" defer></script>
    </head>
    <body>
-    
-   </body>
+    <!-- ここからヘッダー -->
+    <header>
+        <div class="header">
+            <div class="header-logo">
+                <a href="../index.html"><img src="../images/headerlogo.png" alt=""></a>
+            </div>
+            <div class="saikun-menu">
+                <img src="../images/header-saikun.png" alt="" class="menu-img">
+                <div class="menu-text">menu</div>
+            </div>
+        </div>
+        <div class="fullscreen-menu">
+            <div class="menu-open-container">
+                <div class="menu-open-logo"><img src="../images/menu-open-logo.png" alt=""></div>
+                <div class="menu-open-texts">
+                    <a href="../index.html"><p>TOP</p></a>
+                    <a href="../pages/wasedasaitoha.html"><p>早稲田祭・運営スタッフとは</p></a>
+                    <a href="../pages/shinkan-event.html"><p>新歓イベント</p></a>
+                    <a href="../pages/how-to-enter.html"><p>入会方法</p></a>
+                    <a href="../pages/unsuta-one-yaer.html"><p>運スタの1年</p></a>
+                    <a href="../pages/unusta-real.html"><p>運スタのリアル</p></a>
+                    <a href="../pages/kyoku-introduce.html"><p>局紹介</p></a>
+                    <a href="../pages/comingsoon.html"><p>わせだサイくん</p></a>
+                    <a href="../pages/faq-contact.html"><p>よくある質問・お問い合わせ</p></a>
+                </div>
+                <a href="../pages/how-to-enter.html" class="menu-open-button">入会方法はこちら</a>
+                <div class="menu-sns-icon">
+                    <div class="menu-Instagram">
+                        <a href="https://www.instagram.com/wasedasai_new?igsh=MXZhZzJvOW50Y2preQ%3D%3D&utm_source=qr"><img src="../images/menu-Instagram.png" alt=""></a>
+                    </div>
+                    <div class="menu-x">
+                        <a href="https://x.com/wasedasai_new?s=21"><img src="../images/menu-X.png" alt=""></a>
+                    </div>
+                    <div class="menu-YouTube">
+                        <a href=""><img src="../images/menu-YouTube.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+    const menu = document.querySelector(".saikun-menu");
+    const menuImg = document.querySelector(".menu-img");
+    const menuText = document.querySelector(".menu-text");
+    const fullscreenMenu = document.querySelector(".fullscreen-menu");
+    const menuItems = document.querySelectorAll(".menu-open-texts p");
+
+    let isOpen = false;
+
+    menu.addEventListener("click", function () {
+        isOpen = !isOpen;
+
+        if (isOpen) {
+            menuImg.src = "../images/close.png";
+            menuText.textContent = "close";
+            fullscreenMenu.classList.add("active");
+
+            
+            menuItems.forEach(item => {
+                item.style.opacity = "0";
+                item.style.transform = "translateY(30px)";
+            });
+
+            menuItems.forEach((item, index) => {
+                setTimeout(() => {
+                    item.style.opacity = "1";
+                    item.style.transform = "translateY(0)";
+                    item.style.transition = "opacity 0.6s ease-in-out, transform 0.6s ease-in-out";
+                }, index * 100); 
+            });
+
+        } else {
+            menuImg.src = "../images/header-saikun.png"; 
+            menuText.textContent = "menu";
+            fullscreenMenu.classList.remove("active"); 
+            menuItems.forEach(item => {
+                item.style.opacity = "0";
+                item.style.transform = "translateY(30px)";
+            });
+        }
+    });
+});
+        </script>
+    </header>
+    <!-- ここまでヘッダー -->
+
+
+    <div class="hero">
+        <h1>新歓イベント</h1>
+    </div>
+
+    <div class="eventSectionTitle">
+        <div class="section-title ">
+            <h1>&emsp;新歓イベント&emsp;</h1>
+            <div class="section-underline"></div>
+        </div>
+    </div>
+
+    <div class="eventsContainer">
+        <nav class="sidebar">
+          <ul>
+            <li class="active"><a href="#section1">対面説明会</a></li>
+            <li><a href="#section2">ぶらり早稲田の旅</a></li>
+            <li><a href="#section3">今際の国の運営スタッフ</a></li>
+            <li><a href="#section4">運スタ入っちゃダメですか？</a></li>
+            <li><a href="#section5">新歓てらこや</a></li>
+            <li><a href="#section6">行列のできる運スタ相談所</a></li>
+            <li class="totsuzen"><a href="#section7" >突然ですが、相談してもいいですか。</a></li>
+          </ul>
+        </nav>
+
+            <div class="eventMainContentsContainer ">
+                <section id="section1">
+        
+                    <h1 class="eventTitle">対面説明会</h1>
+        
+                    <p class="eventText">運スタに関する基本的な情報から活動の様子、大学生活の実態まで、運スタのことをなんでも知ることができます！ 運スタに入るか迷っているなら、まず説明会に来てみてください！
+                    </p>
+        
+                    <div class="eventUnderBox spColumn">
+                        <div class="eventUnderBoxLeft spUnderBoxMargin">
+                            <div class="blockTitleContainer">
+                                <div class="blockTitleBar blockBlue"></div>
+                                <h1 class="blockTitle">日程</h1>
+                            </div>
+                
+                            <p class="eventText"><span class="textBig">一次募集のみ</span><br>
+                                <span class="textBig">4/5</span><span class="spSmall textYoubi">(土),</span>
+                                <span class="textBig">10</span><span class="spSmall textYoubi">(木)</span><br>
+                                &emsp;13:10〜14:50<br>
+                                <span class="textBig">4/12</span><span class="spSmall textYoubi">(土)</span><br>
+                                &emsp;15:05〜16:45<br>
+                                <span class="textBig">4/13</span><span class="spSmall textYoubi">(<span id="sunday">日</span>)</span><br>
+                                &emsp;10:40〜12:20
+                            </p>
+                        </div>
+                        
+            
+                        <div class="eventUnderBoxRight spTagRemove">
+                            <div class="placeBox spUnderBoxMargin">
+                                <div class="blockTitleContainer">
+                                    <div class="blockTitleBar blockBlue"></div>
+                                    <h1 class="blockTitle">場所</h1>
+                                </div>
+                    
+                                <p class="eventText">戸山キャンパス 学生会館 W棟<br>403-405教室</p>
+                            </div>
+                            
+                            <div class="applicationBox">
+                                <div class="blockTitleContainer">
+                                    <div class="blockTitleBar blockBlue"></div>
+                                    <h1 class="blockTitle">申込期間</h1>
+                                </div>
+                    
+                                <p class="eventText"><span class="textBig">一次募集</span><br>
+                                    開始 <span class="spOnly"></span>&nbsp;3/29<span class="spSmall textYoubi">(土)</span>12:00<br>
+                                    終了 <span class="spOnly"></span>&nbsp;4/2<span class="spSmall textYoubi">(水)</span>23:59<br>
+                                    <span class="textSmall">当企画は一次募集のみ受け付けいたします</span>
+                                </p>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+        
+                    <a href="../pages/comingsoon.html" class="square-button square-button-red">
+                        <span class="spacer"></span>
+                        <span class="text">お申し込みは<br class="spOnly">コチラから！</span>
+                        <span class="spacer"></span>
+                    </a>
+                    
+                </section>
+        
+                <section id="section2">
+                    <h1 class="eventTitle">ぶらり早稲田の旅</h1>
+        
+                    <p class="eventText">運スタのことも大学生活のこともまだよくわからない……というそこの君！ 早稲田祭の様子や早大生ライフを肌で感じてみない？ 運スタと一緒に早稲田のまちをぶらぶらしよう！ ゆっくりお話をしたり、祭当日の写真を使ったゲームをしたりすることもできるよ！
+                    </p>
+        
+                    <div class="eventUnderBox spColumn">
+                        <div class="eventUnderBoxLeft spUnderBoxMargin eventUnderBoxLeftSpColumn">
+                            <div class="blockTitleContainer">
+                                <div class="blockTitleBar blockBlue"></div>
+                                <h1 class="blockTitle">日程</h1>
+                            </div>
+                
+                            <p class="eventText"><span class="textBig">一次募集のみ</span><br>
+                                <span class="textBig">4/5</span><span class="spSmall textYoubi">(土),</span>
+                                <span class="textBig">7</span><span class="spSmall textYoubi">(月),</span>
+                                <span class="textBig">8</span><span class="spSmall textYoubi">(火),</span><br class="spRemove">
+                                <span class="textBig">9</span><span class="spSmall textYoubi">(水),</span><br class="spOnly">
+                                <span class="textBig">11</span><span class="spSmall textYoubi">(金),</span>
+                                <span class="textBig">12</span><span class="spSmall textYoubi">(土),</span><br class="spRemove">
+                                <span class="textBig">13</span><span class="spSmall textYoubi">(<span id="sunday">日</span>)</span><br>
+                                全日程<span class="spOnly"></span>13:10～14:50
+                                
+                            </p>
+                        </div>
+                        
+            
+                        <div class="eventUnderBoxRight spTagRemove">
+                            <div class="placeBox spUnderBoxMargin">
+                                <div class="blockTitleContainer">
+                                    <div class="blockTitleBar blockBlue"></div>
+                                    <h1 class="blockTitle">場所</h1>
+                                </div>
+                    
+                                <p class="eventText">早稲田<span class="spMiddle">キャンパス</span><br>戸山キャンパス<br>周辺地域</p>
+                            </div>
+                            
+                            <div class="applicationBox">
+                                <div class="blockTitleContainer">
+                                <div class="blockTitleBar blockBlue"></div>
+                                <h1 class="blockTitle">申込期間</h1>
+                                </div>
+                
+                                <p class="eventText"><span class="textBig">一次募集</span><br>
+                                    開始<span class="spOnly"></span>&nbsp;3/29<span class="spSmall textYoubi">(土)</span> 12:00<br>
+                                    終了<span class="spOnly"></span>&nbsp;4/2<span class="spSmall textYoubi">(水)</span> 23:59<br>
+                                <span class="textSmall">当企画は一次募集のみ受け付けいたします</span>
+                                </p>
+                            </div>
+                            
+                        </div>
+        
+                    </div>
+        
+                    <a href="../pages/comingsoon.html" class="square-button square-button-red">
+                        <span class="spacer"></span>
+                        <span class="text">お申し込みは<br class="spOnly">コチラから！</span>
+                        <span class="spacer"></span>
+                    </a>
+                </section>
+        
+                <section id="section3">
+                    <h1 class="eventTitle imawa">今際の国の運営スタッフ</h1>
+                    <h1 class="eventTitle spTitle">〜トランプ集めて落単の世界から脱出！？〜</h1>
+        
+                    <p class="eventText">選択必修？ 空きコマ？ 落単？ 楽単？ 大学入学がゴールでこの先何もわからない！！ でも大丈夫！ 運営スタッフの先輩とお話しすれば、そんな悩みもすぐに解消！！ また、運スタお手製の神経衰弱をすれば早稲田祭運営スタッフがどんなサークルなのかも丸わかり！！ 授業に、サークルに、不安なそこのあなた！ ご応募お待ちしてます！！
+                    </p>
+        
+                    <div class="eventUnderBox">
+                        <div class="eventUnderBoxLeft spUnderBoxMargin">
+                            <div class="blockTitleContainer">
+                                <div class="blockTitleBar blockBlue"></div>
+                                <h1 class="blockTitle">日程</h1>
+                            </div>
+                
+                            <p class="eventText"><span class="textBig">一次募集のみ</span><br>
+                                <span class="textBig">4/6</span><span class="spSmall textYoubi">(<span id="sunday">日</span>)</span><br>
+                                &emsp;10:40〜12:20<br>
+                                <span class="textBig">4/10</span><span class="spSmall textYoubi">(木),</span>
+                                <span class="textBig">13</span><span class="spSmall textYoubi">(<span id="sunday">日</span>)</span><br>
+                                &emsp;15:05〜16:45<br>
+                                <span class="textBig">4/12</span><span class="spSmall textYoubi">(<span id="sunday">日</span>)</span><br>
+                                &emsp;17:00〜18:40
+                            </p>
+                        </div>
+                        
+            
+                        <div class="eventUnderBoxRight">
+                            <div class="placeBox spUnderBoxMargin">
+                                <div class="blockTitleContainer">
+                                    <div class="blockTitleBar blockBlue"></div>
+                                    <h1 class="blockTitle">場所</h1>
+                                </div>
+                    
+                                <p class="eventText">戸山キャンパス <span class="spSmall">学生会館 <br class="spRemove">
+                                    W棟会議室／</span><br>
+                                    新宿コズミックセンター <br class="spRemove">
+                                    <span class="spSmall">3階小会議室</span><br>
+                                    <span class="textSmall">新宿コズミックセンターへのアクセスは<br class="spOnly">
+                                        <a class="kochira" href="https://www.regasu-shinjuku.or.jp/?p=93534">コチラ</a>から！</span>
+                                </p>
+                            </div>
+                        
+                            <div class="applicationBox">
+                                <div class="blockTitleContainer">
+                                    <div class="blockTitleBar blockBlue"></div>
+                                    <h1 class="blockTitle">申込期間</h1>
+                                </div>
+                    
+                                <p class="eventText"><span class="textBig">一次募集</span><br>
+                                    開始&nbsp;3/29<span class="spSmall textYoubi">(土)</span> 12:00<br>
+                                    終了&nbsp;4/2<span class="spSmall textYoubi">(水)</span> 23:59<br>
+                                    <span class="textSmall">当企画は一次募集のみ受け付けいたします</span>
+                                </p>
+                            </div>
+                            
+                        </div>
+        
+                    </div>
+        
+                    <a href="../pages/comingsoon.html" class="square-button square-button-red">
+                        <span class="spacer"></span>
+                        <span class="text">お申し込みは<br class="spOnly">コチラから！</span>
+                        <span class="spacer"></span>
+                    </a>
+                </section>
+        
+                <section id="section4">
+                    <h1 class="eventTitle imawa">運スタ入っちゃダメですか？</h1>
+                    <h1 class="eventTitle">～診断×人生ゲーム～</h1>
+        
+                    <p class="eventText">運スタに興味はあるけど、「自分のやりたいことが運スタでできるのかな？」と疑問に思っているみなさん！ 運スタの1年をみなさんの性格にあった人生ゲームで体験してみませんか？ 相性の合う先輩と交流して、楽しく運スタのリアルを知っちゃおう！
+                    </p>
+        
+                    <div class="eventUnderBox">
+                        <div class="eventUnderBoxLeft">
+                            <div class="blockTitleContainer">
+                                <div class="blockTitleBar blockBlue"></div>
+                                <h1 class="blockTitle">日程</h1>
+                            </div>
+                
+                            <p class="eventText"><span class="textBig">一次募集</span><br>
+                                <span class="textBig">4/6</span><span class="spSmall textYoubi">(<span id="sunday">日</span>)</span><br>
+                                &emsp;13:10〜14:50<br>
+                                <span class="textBig">4/7</span><span class="spSmall textYoubi">(月)</span><br>
+                                &emsp;16:40～18:20<br>
+                                <span class="textBig">4/11</span><span class="spSmall textYoubi">(金)</span><br>
+                                &emsp;10:00～11:40<br>
+                                <span class="textBig">4/13</span><span class="spSmall textYoubi">(日)</span><br>
+                                &emsp;17:00〜18:40<br><br>
+                                <span class="textBig">二次募集</span><br>
+                                <span class="textBig">4/15</span><span class="spSmall textYoubi">(火)</span><br>
+                                &emsp;17:00～18:40<br>
+                            </p>
+                        </div>
+                        
+            
+                        <div class="eventUnderBoxRight">
+                            <div class="placeBox">
+                                <div class="blockTitleContainer">
+                                    <div class="blockTitleBar blockBlue"></div>
+                                    <h1 class="blockTitle">場所</h1>
+                                </div>
+                    
+                                <p class="eventText">戸山キャンパス <span class="spSmall">学生会館 <br class="spRemove">
+                                    W棟会議室／</span><br>
+                                    新宿コズミックセンター <br>
+                                    <span class="spSmall">3階小会議室</span><br>
+                                    <span class="textSmall">新宿コズミックセンターへのアクセスは<br class="spOnly">
+                                        <a class="kochira" href="https://www.regasu-shinjuku.or.jp/?p=93534">コチラ</a>から！</span>
+                                </p>
+                            </div>
+                            
+                            <div class="applicationBox">
+                                <div class="blockTitleContainer">
+                                    <div class="blockTitleBar blockBlue"></div>
+                                    <h1 class="blockTitle">申込期間</h1>
+                                </div>
+                    
+                                <p class="eventText"><span class="textBig">一次募集</span><br>
+                                    開始<br class="spOnly">&nbsp;3/29<span class="spSmall textYoubi">(土)</span> 12:00<br>
+                                    終了<br class="spOnly">&nbsp;4/2<span class="spSmall textYoubi">(水)</span> 23:59<br><br>
+                                    <span class="textBig">二次募集</span><br>
+                                    開始<br class="spOnly">&nbsp;4/3<span class="spSmall textYoubi">(土)</span> 12:00<br>
+                                    終了<br class="spOnly">&nbsp;4/10<span class="spSmall textYoubi">(水)</span> 23:59<br>
+                                </p>
+                            </div>
+                            
+                        </div>
+        
+                    </div>
+        
+                    <a href="../pages/comingsoon.html" class="square-button square-button-red">
+                        <span class="spacer"></span>
+                        <span class="text">お申し込みは<br class="spOnly">コチラから!</span>
+                        <span class="spacer"></span>
+                    </a>
+                </section>
+        
+                <section id="section5">
+                        <h1 class="eventTitle imawa">新歓てらこや</h1>
+                        <br>
+                        <h1 class="eventTitle Subtitle ">～悩み溜めてるようじゃ無理か、相談はね、しとかないと。～</h1>
+                    
+                        <!-- <h1 class="terakoya">新歓てらこや</h1>
+                        <h1 class="terakoya">～悩み溜めてるようじゃ無理か、</h1>
+                        <h1 class="terakoya shitokanaito">相談はね、しとかないと。～</h1> -->
+        
+                    <p class="eventText">どの企画に参加すればいいのだろう……と迷ったらこれ！！ 運スタ2人、参加者4人の6人グループに分けるため、1人でも参加しやすい！ 「1人で応募して孤立しちゃったらどうしよう……」「なんとなく運スタに興味があり、いろいろなことを聞きたいけど、どの企画に応募すればいいのかわからない……」そんな子におすすめ！ 質問がない！？ それでも大丈夫！ とりあえず来てみてね！
+                    </p>
+        
+                    <div class="eventUnderBox">
+                        <div class="eventUnderBoxLeft">
+                            <div class="blockTitleContainer">
+                                <div class="blockTitleBar blockBlue"></div>
+                                <h1 class="blockTitle">日程</h1>
+                            </div>
+                
+                            <p class="eventText"><span class="textBig">一次募集</span><br>
+                                <span class="textBig">4/11</span><span class="spSmall textYoubi">(金)</span><br>
+                                &emsp;11:00～15:00<br>
+                                <span class="spSmall">(1時間制/計4回実施)</span><br><br>
+                                <span class="textBig">二次募集</span><br>
+                                <span class="textBig">4/14</span><span class="spSmall textYoubi">(月),</span>
+                                <span class="textBig">18</span><span class="spSmall textYoubi">(金),</span><br>
+                                <span class="textBig">19</span><span class="spSmall textYoubi">(土),</span><br>
+                                &emsp;11:00～15:00<br>
+                                <span class="spSmall">(1時間制/計4回実施)</span><br>
+                                <span class="textBig">4/16</span><span class="spSmall textYoubi">(水)</span><br>
+                                &emsp;13:00～15:00<br>
+                                <span class="spSmall">(1時間制/計2回実施)</span>
+                            </p>
+                        </div>
+                        
+            
+                        <div class="eventUnderBoxRight">
+                            <div class="placeBox">
+                                <div class="blockTitleContainer">
+                                    <div class="blockTitleBar blockBlue"></div>
+                                    <h1 class="blockTitle">場所</h1>
+                                </div>
+                    
+                                <p class="eventText">
+                                    早稲田<span class="spSmall">キャンパス</span><br class="spOnly">
+                                    <span class="spSmall"> 7号館 <br class="spRemove">W Space</span>
+                                </p>
+                            </div>
+                            
+                            <div class="applicationBox">
+                                <div class="blockTitleContainer">
+                                    <div class="blockTitleBar blockBlue"></div>
+                                    <h1 class="blockTitle">申込期間</h1>
+                                </div>
+                    
+                                <p class="eventText"><span class="textBig">一次募集</span><br>
+                                    開始<br class="spOnly">&nbsp;3/29<span class="spSmall textYoubi">(土)</span> 12:00<br>
+                                    終了<br class="spOnly">&nbsp;4/2<span class="spSmall textYoubi">(水)</span> 23:59<br><br>
+                                    <span class="textBig">二次募集</span><br>
+                                    開始<br class="spOnly">&nbsp;4/3<span class="spSmall textYoubi">(土)</span> 12:00<br>
+                                    終了<br class="spOnly">&nbsp;4/10<span class="spSmall textYoubi">(水)</span> 23:59<br>
+                                </p>
+                            </div>
+                            
+                        </div>
+        
+                    </div>
+        
+                    <a href="../pages/comingsoon.html" class="square-button square-button-red">
+                        <span class="spacer"></span>
+                        <span class="text">お申し込みは<br class="spOnly">コチラから!</span>
+                        <span class="spacer"></span>
+                    </a>
+                </section>
+        
+                <section id="section6">
+                    <h1 class="eventTitle">行列のできる運スタ相談所</h1>
+        
+                    <p class="eventText">あなたのお悩みサクッと解決！ 運スタから大学生活のことまで、幅広く質問できる相談所！運スタの先輩と1対1でじっくり相談してみませんか？  オンライン・対面どちらでも開催！ 入会の決め手がここで見つかるかも！？
+                    </p>
+        
+                    <div class="eventUnderBox">
+                        <div class="eventUnderBoxLeft">
+                            <div class="blockTitleContainer">
+                                <div class="blockTitleBar blockBlue"></div>
+                                <h1 class="blockTitle">日程</h1>
+                            </div>
+                
+                            <p class="eventText"><span class="textBig">一次募集</span><br>
+                                <span class="textBig">4/11</span><span class="spSmall textYoubi">(金),</span>
+                                <span class="textBig">13</span><span class="spSmall textYoubi">(日)</span><br>
+                                &emsp;20:00～22:00<br>
+                                <span class="spSmall">(1時間制/計2回実施)</span><br><br>
+                                <span class="textBig">二次募集</span><br>
+                                <span class="textBig">4/15</span><span class="spSmall textYoubi">(火)</span><br>
+                                &emsp;12:00〜15:00<br class="spOnly">/20:00～22:00<br>
+                                <span class="spSmall">(1時間制/計5回実施)</span><br>
+                                <span class="textBig">4/19</span><span class="spSmall textYoubi">(土)</span><br>
+                                &emsp;13:00～18:00<br class="spOnly">/20:00〜22:00<br>
+                                <span class="spSmall">(1時間制/計6回実施)</span><br>
+                                <span class="textBig">4/20</span><span class="spSmall textYoubi">(水)</span><br>
+                                &emsp;20:00〜22:00<br>
+                                <span class="spSmall">(1時間制/計2回実施)</span>
+                            </p>
+                        </div>
+                        
+            
+                        <div class="eventUnderBoxRight">
+                            <div class="placeBox">
+                                <div class="blockTitleContainer">
+                                    <div class="blockTitleBar blockBlue"></div>
+                                    <h1 class="blockTitle">場所</h1>
+                                </div>
+                    
+                                <p class="eventText">Google Meet<br><span class="spSmall">&nbsp;(オンライン開催)</span><br>
+                                    早稲田<span class="spSmall">キャンパス</span><br><span class="spSmall">&nbsp;7号館 W Space<br class="spOnly">&nbsp;(対面開催)</span><br>
+                                    戸山キャンパス<br class="spOnly"><span class="spSmall">&nbsp;37号館<br class="spRemove">W Space/<br class="spOnly">リフレッシュラウンジ<br>&nbsp;(対面開催)</span><br>
+                                    <div class="textSmall">※オンライン開催と併用して対面でも<br class="spRemove">実施いたします。</div>                            
+                                    </p>
+                            </div>
+                            
+                            <div class="applicationBox">
+                                <div class="blockTitleContainer">
+                                    <div class="blockTitleBar blockBlue"></div>
+                                    <h1 class="blockTitle">申込期間</h1>
+                                </div>
+                    
+                                <p class="eventText"><span class="textBig">一次募集</span><br>
+                                    開始<br class="spOnly">&nbsp;3/29<span class="spSmall textYoubi">(土)</span> 12:00<br>
+                                    終了<br class="spOnly">&nbsp;4/2<span class="spSmall textYoubi">(水)</span> 23:59<br><br>
+                                    <span class="textBig">一次募集</span><br>
+                                    開始<br class="spOnly">&nbsp;4/3<span class="spSmall textYoubi">(土)</span> 12:00<br>
+                                    終了<br class="spOnly">&nbsp;4/10<span class="spSmall textYoubi">(水)</span> 23:59<br>
+                                </p>
+                            </div>
+                            
+                        </div>
+        
+                    </div>
+        
+                    <a href="../pages/comingsoon.html" class="square-button square-button-red">
+                        <span class="spacer"></span>
+                        <span class="text">お申し込みは<br class="spOnly">コチラから!</span>
+                        <span class="spacer"></span>
+                    </a>
+                </section>
+        
+                <section id="section7">
+                    <h1 class="eventTitle spTotsuzenTitle">突然ですが、相談してもいいですか。</h1>
+        
+                    <p class="eventText">新歓イベントに参加したい！ 思い立ったが吉日だ！ でも何も予約してないしどうしよう…… どこかに暇そうな運スタはいないかな…… 突然ですが、相談してもいいですか。予約なし！ おひとり様でも！ 時間の制限なくゆっくり相談しましょう！
+                    </p>
+        
+                    <div class="eventUnderBox spColumn">
+                        <div class="eventUnderBoxLeft eventUnderBoxLeftSpColumn spUnderBoxMargin">
+                            <div class="blockTitleContainer">
+                                <div class="blockTitleBar blockBlue"></div>
+                                <h1 class="blockTitle">日程</h1>
+                            </div>
+                
+                            <p class="eventText">
+                                <span class="textBig">4/14</span><span class="spSmall textYoubi">(月),</span>
+                                <span class="textBig">15</span><span class="spSmall textYoubi">(火),</span>
+                                <span class="textBig">16</span><span class="spSmall textYoubi">(水),</span><br class="spRemove">
+                                <span class="textBig">17</span><span class="spSmall textYoubi">(木),</span>
+                                <span class="textBig">18</span><span class="spSmall textYoubi">(金)</span><br>
+                                &emsp;13:00～14:45/15:00〜16:45<br>
+                            </p>
+                        </div>
+                        
+            
+                        <div class="eventUnderBoxRight spTagRemove">
+                            <div class="placeBox spUnderBoxMargin">
+                                <div class="blockTitleContainer">
+                                    <div class="blockTitleBar blockBlue"></div>
+                                    <h1 class="blockTitle">場所</h1>
+                                </div>
+                    
+                                <p class="eventText">
+                                    全日程：Google Meet<br class="spRemove">
+                                    <span class="spSmall">&emsp;(オンライン開催)</span><br>
+                                    16<span class="spSmall">(水)</span>:戸山<span class="spSmall">キャンパス</span><br class="spRemove">
+                                    <span class="spRemove">&emsp;</span><span class="spSmall">37号館 W Space</span><br>
+                                    16<span class="spSmall">(水)以外</span>:早稲田<span class="spSmall">キャンパス</span><br class="spRemove">
+                                    <span class="spSmall"><span class="spRemove">&emsp;</span>7号館 W Space</span><br>
+                                    <span class="textSmall">※オンライン開催と併用して対面でも実施いたします。</span> 
+                                </p>
+                            </div>
+                            
+                            <div class="applicationBox spUnderBoxMargin">
+                                <div class="blockTitleContainer">
+                                    <div class="blockTitleBar blockBlue"></div>
+                                    <h1 class="blockTitle">申込期間</h1>
+                                </div>
+                    
+                                <p class="eventText">
+                                    当企画は、事前の申し込みは必要ございません。<br>
+                                    詳細は新歓公式SNSにてお知らせいたします。
+                                </p>
+                            </div>
+                            
+                        </div>
+        
+                    </div>
+                </section>
+        
+        
+                
+            </div>
+        
+            <div class="leftArrowContainer spRemove">
+                <div class="spOnly eventArrow leftArrow">←</div>
+            </div>
+            <div class="rightArrowContainer">
+                <div class="spOnly eventArrow rightArrow">→</div>
+            </div>
+            
+            
+        
+    </div>
+        
+  
+
+    <div class="eventSectionTitle">
+        <div class="section-title ">
+            <h1>&emsp;キャンパスマップ&emsp;</h1>
+            <div class="section-underline"></div>
+        </div>
+    </div>
+
+    <div class="campusmap">
+        <img src="../images/campus-map.png" alt="キャンパスマップ">
+        <!-- <div class="zoomIcon">
+            <div class="zoomTextContainer">
+                <p class="zoom">拡大</p>
+            </div>
+        </div> -->
+    </div>
+
+    <div class="eventSectionTitle">
+        <div class="section-title ">
+            <h1>&emsp;申し込みの日程&emsp;</h1>
+            <div class="section-underline"></div>
+        </div>
+    </div>
+
+    <div class="calenderContainer">
+        <h1 class="monthTitle">3・4月</h1>
+
+        <table class="calenderTable">
+            <tbody>
+                <tr class="dayOfWeek">
+                    <th id="sunday">日曜</th>
+                    <th>月曜</th>
+                    <th>火曜</th>
+                    <th>水曜</th>
+                    <th>木曜</th>
+                    <th>金曜</th>
+                    <th id="saturday">土曜</th>
+                </tr>
+
+                <tr class="date haveEvent">
+                    <td id="sunday">3/23</td>
+                    <td>3/24</td>
+                    <td>3/25</td>
+                    <td>3/26</td>
+                    <td>3/27</td>
+                    <td>3/28</td>
+                    <td id="saturday">3/29</td>
+                </tr>
+                <tr class="whiteSpace">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td colspan="1"><div class="calenderBar calendarBarTaimen rightSolid">対面説明会</div></td>
+                </tr>
+                <tr class="whiteSpace">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td colspan="1"><div class="calenderBar calendarBarBurari rightSolid">ぶらり早稲田の旅</div></td>
+                </tr>
+                <tr class="whiteSpace">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td colspan="1"><div class="calenderBar calendarBarImawa rightSolid">今際の国の運営スタッフ</div></td>
+                </tr>
+                <tr class="whiteSpace">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td colspan="1"><div class="calenderBar calendarBarUnsta rightSolid">運スタ入っちゃダメですか？</div></td>
+                </tr>
+                <tr class="whiteSpace">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td colspan="1"><div class="calenderBar calendarBarTerakoya rightSolid">新歓てらこや</div></td>
+                </tr>
+                <tr class="whiteSpace">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td colspan="1"><div class="calenderBar calendarBarGyoretsu rightSolid">行列のできる運スタ相談所</div></td>
+                </tr>
+
+                <tr class="date haveEvent">
+                    <td id="sunday">3/30</td>
+                    <td>3/31</td>
+                    <td>4/1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td id="saturday">5</td>
+                </tr>
+                <tr class="whiteSpace">
+                    <td colspan="4"><div class="calenderBar calendarBarTaimen leftSolid">対面説明会</div></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="whiteSpace">
+                    <td colspan="4"><div class="calenderBar calendarBarBurari leftSolid">ぶらり早稲田の旅</div></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="whiteSpace">
+                    <td colspan="4"><div class="calenderBar calendarBarImawa leftSolid">今際の国の運営スタッフ</div></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="whiteSpace">
+                    <td colspan="4"><div class="calenderBar calendarBarUnsta leftSolid">運スタ入っちゃダメですか？</div></td>
+                    <td colspan="3"><div class="calenderBar calendarBarUnsta rightSolid">運スタ入っちゃダメですか？</div></td>
+                </tr>
+                <tr class="whiteSpace">
+                    <td colspan="4"><div class="calenderBar calendarBarTerakoya leftSolid">新歓てらこや</div></td>
+                    <td colspan="3"><div class="calenderBar calendarBarTerakoya rightSolid">新歓てらこや</div></td>
+                </tr>
+                <tr class="whiteSpace">
+                    <td colspan="4"><div class="calenderBar calendarBarGyoretsu leftSolid">行列のできる運スタ相談所</div></td>
+                    <td colspan="3"><div class="calenderBar calendarBarGyoretsu rightSolid">行列のできる運スタ相談所</div></td>
+                </tr>
+
+                <tr class="date haveEvent">
+                    <td id="sunday">6</td>
+                    <td>7</td>
+                    <td>8</td>
+                    <td>9</td>
+                    <td>10</td>
+                    <td>11</td>
+                    <td id="saturday">12</td>
+                </tr>
+                <tr class="whiteSpace week3">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="whiteSpace week3">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="whiteSpace week3">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="whiteSpace">
+                    <td colspan="5"><div class="calenderBar calendarBarUnsta leftSolid">運スタ入っちゃダメですか？</div></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="whiteSpace">
+                    <td colspan="5"><div class="calenderBar calendarBarTerakoya leftSolid">新歓てらこや</div></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="whiteSpace">
+                    <td colspan="5"><div class="calenderBar calendarBarGyoretsu leftSolid">行列のできる運スタ相談所</div></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+                <tr class="date noEvent">
+                    <td id="sunday">13</td>
+                    <td>14</td>
+                    <td>15</td>
+                    <td>16</td>
+                    <td>17</td>
+                    <td>18</td>
+                    <td id="saturday">19</td>
+                </tr>
+                <tr class="whiteSpace">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="whiteSpace">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="whiteSpace">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="whiteSpace">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="whiteSpace">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="whiteSpace">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="underNote">
+            <div class="underNoteItem">
+                <div class="calenderBar calendarBarTaimen"></div>
+                <p>対面説明会</p>
+            </div>
+            
+            <div class="underNoteItem">
+                <div class="calenderBar calendarBarBurari"></div>
+                <p>ぶらり早稲田の旅</p>
+            </div>
+
+            <div class="underNoteItem">
+                <div class="calenderBar calendarBarImawa"></div>
+                <p>今際の国の運営スタッフ</p>
+            </div>
+
+            <div class="underNoteItem">
+                <div class="calenderBar calendarBarUnsta"></div>
+                <p>運スタ入っちゃダメですか？</p>
+            </div>
+            
+            <div class="underNoteItem">
+                <div class="calenderBar calendarBarTerakoya"></div>
+                <p>新歓てらこや</p>
+            </div>
+            
+            <div class="underNoteItem">
+                <div class="calenderBar calendarBarGyoretsu"></div>
+                <p>行列のできる運スタ相談所</p>
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- ここからフッター -->
+    <footer>
+        <div class="arrow-img">
+            <a href="#"><img src="../images/footer_yajirushi.png" alt=""></a>
+        </div>
+        <div class="footer-contaier">
+            <div class="footer-logo">
+                <a href="../index.html"><img src="../images/logo_footer.png" alt=""></a>
+            </div>
+            <div class="footer-pages">
+                <div class="footer-pages-left">
+                    <a href="../pages/wasedasaitoha.html"><p class="mergin-exist">早稲田祭・運営スタッフとは</p></a>
+                    <a href="../pages/shinkan-event.html"><p class="mergin-exist">新歓イベント</p></a>
+                    <a href="../pages/how-to-enter.html"><p class="mergin-exist">入会方法</p></a>
+                    <a href="../pages/unsuta-one-yaer.html"><p class="margin-exist">運スタの1年</p></a>
+                </div>
+                <div class="footer-pages-right">
+                    <a href="../pages/unusta-real.html"><p class="mergin-none">運スタのリアル</p></a>
+                    <a href="../pages/kyoku-introduce.html"><p class="mergin-exist">局紹介</p></a>
+                    <a href="../pages/comingsoon.html"><p class="mergin-exist">わせだサイくん</p></a>
+                    <a href="../pages/faq-contact.html"><p class="mergin-exist">よくある質問・お問い合わせ</p></a>
+                </div>
+            </div>
+            <div class="footer-sns-icon">
+                <a href="https://www.instagram.com/wasedasai_new?igsh=MXZhZzJvOW50Y2preQ%3D%3D&utm_source=qr"><img src="../images/snsicon_I.png" alt=""></a>
+                <a href="https://x.com/wasedasai_new?s=21"><img src="../images/snsicon_X.png" alt=""></a>
+                <a href=""><img src="../images/snsicon_Y.png" alt=""></a>
+            </div>
+            <div class="footer-button">
+                <a href="" class="footer-square-button footer-square-button-white">
+                    <span class="foooter-spacer"></span>
+                    <span class="footer-text">入会方法はこちら</span>
+                    <span class="foooter-spacer"></span>
+                </a>
+            </div>
+        </div>
+     </footer>
+    <!-- ここまでフッター -->
+    </body>
 </html>
