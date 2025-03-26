@@ -1,26 +1,4 @@
-// const sections = document.querySelectorAll('section');
-// const navItems = document.querySelectorAll('.sidebar li');
 
-// const observerOptions = {
-//   threshold: 0.1,
-// };
-
-// const observerAction = (entries) => {
-//   entries.forEach(entry => {
-//     if (entry.isIntersecting) {
-
-//       const id = entry.target.getAttribute('id');
-//       navItems.forEach(item => item.classList.remove('active'));
-
-//       const activeItem = document.querySelector(`.sidebar li a[href="#${id}"]`);
-//       if (activeItem && activeItem.parentElement) {
-//         activeItem.parentElement.classList.add('active');
-//       }
-//     }
-//   });
-// };
-
-// const observer = new IntersectionObserver(observerAction, observerOptions);
 
 // 1. セクションとナビゲーションアイテムの取得
 const sections = document.querySelectorAll('section');
@@ -62,34 +40,50 @@ const leftArrow = document.querySelector('.leftArrow');
 const rightArrow = document.querySelector('.rightArrow');
 const container = document.querySelector('.eventsContainer');
 const boxContainer = document.querySelector('.eventMainContentsContainer');
-const contents = document.querySelector('.eventMainContentsContainer section')
+const contents = document.querySelector('.eventMainContentsContainer section');
+const leftArrowContainer = document.querySelector('.leftArrowContainer');
+const rightArrowContainer = document.querySelector('.rightArrowContainer');
+const body = document.querySelector('body')
 
 const scrollAmount = contents.offsetWidth; 
 
-console.log(leftArrow);
-console.log(rightArrow);
-console.log(container);
-console.log(boxContainer);
+
 
 
 if (window.innerWidth <= 1024) {
 leftArrow.addEventListener('click', () => {
       const containerWidth = container.offsetWidth;
-      const maxScrollAmount = boxContainer.offsetWidth - containerWidth;
+      const maxScrollAmount = scrollAmount * 6;
       const currentScrollAmount = Math.abs(parseInt(boxContainer.style.transform.split('(')[1])) || 0;
       const newScrollAmount = Math.max(currentScrollAmount - scrollAmount, 0);
       boxContainer.style.transform = `translateX(-${newScrollAmount}px)`;
-      // updateArrowVisibility(newScrollAmount, maxScrollAmount);
+      updateArrowVisibility(newScrollAmount, maxScrollAmount);
     });
 
     rightArrow.addEventListener('click', () => {
       const containerWidth = container.offsetWidth;
-      const maxScrollAmount = boxContainer.offsetWidth - containerWidth;
+      const maxScrollAmount = scrollAmount * 6;
       const currentScrollAmount = Math.abs(parseInt(boxContainer.style.transform.split('(')[1])) || 0;
       const newScrollAmount = Math.min(currentScrollAmount + scrollAmount, maxScrollAmount);
       boxContainer.style.transform = `translateX(-${newScrollAmount}px)`;
-      // updateArrowVisibility(newScrollAmount, maxScrollAmount);
+      updateArrowVisibility(newScrollAmount, maxScrollAmount);
     });
+
+    
 
 }
 
+
+function updateArrowVisibility(scrollAmount, maxScrollAmount) {
+  if (scrollAmount === 0) {
+    leftArrowContainer.classList.add('spRemove');
+  } else {
+    leftArrowContainer.classList.remove('spRemove');
+  }
+
+  if (scrollAmount === maxScrollAmount) {
+    rightArrowContainer.classList.add('spRemove');
+  } else {
+    rightArrowContainer.classList.remove('spRemove');
+  }
+}
