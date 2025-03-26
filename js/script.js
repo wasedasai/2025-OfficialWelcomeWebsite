@@ -19,6 +19,12 @@ $(document).ready(function () {
 });
 $(document).ready(function () {
 
+    $("menu-open-container").on("click", function (event) {
+        event.stopPropagation(); // 他のイベントをブロック
+    });
+});
+$(document).ready(function () {
+
     $(".top-square-button2, .detail, .faq_examples, .kyousan_image, .fukidashi-container, .swiper-wrapper").on("click", function (event) {
 
         event.stopPropagation(); // 他のイベントをブロック
@@ -29,9 +35,9 @@ $(document).ready(function () {
     $("html, body").css({"width": "100%", "height": "100%"});
 
     // スマホ版では最初に `mojimoji h1` の `font-size` を 200px に設定
-    if (window.innerWidth <= 1000) {
+    if (window.innerWidth <= 1200) {
         $("html, body").css({"width": "100%", "height": "100dvh"});
-        $(".mojimoji h1").css("font-size", "200px");
+        $(".mojimoji h1").css("font-size", "350px");
         $("html, body").css({"overflow": "hidden"});
         $("#change-text-button").on("click", function () {
                 if (window.innerWidth <= 1000) {  
@@ -49,7 +55,9 @@ $(document).ready(function () {
         });
         
     }
-
+    if (window.innerWidth <= 700) {
+        $(".mojimoji h1").css("font-size", "200px");
+    }
     // カスタムカーソルをスマホ版では非表示
     if (window.innerWidth > 1000) {
         $('body').append('<div class="custom-cursor">Tap</div>');

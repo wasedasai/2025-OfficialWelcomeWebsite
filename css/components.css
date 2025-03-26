@@ -214,9 +214,9 @@ body {
 .hero {
   position: relative;
   width: 100%;
-  height: 180px;
+  height: 170px;
   overflow: hidden;
-  background-image: url(../images/hero.png);
+  background-image: url(../images/hero-final.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -232,15 +232,24 @@ body {
   font-weight: 700;
   font-style: normal;
 }
-@media (max-width: 500px){
-    .hero{
-      height: 100px;
-      background-image: url(../images/hero-wide.png);
-  }
+@media (max-width: 800px){
   .hero h1{
-      font-size: 15px;
-  }}
-
+    font-size: 28px;
+  }
+}
+@media (max-width: 500px){
+  .hero{
+    height: 90px;
+    background-image: url(../images/hero-sp-new.png);
+}
+.hero h1{
+    font-size: 15px;
+}}
+@media (max-width: 376px){
+  .hero h1{
+    font-size: 13px;
+  }
+}
 /* ここまでhero */
 
 /* ここまで、square-link */
@@ -565,7 +574,27 @@ footer{
 }
 .footer-pages p {
   font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+
   width: 260px;
+}
+.footer-contaier{
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.footer-contaier::-webkit-scrollbar{
+  display: none;
+}
+.footer-pages{
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.footer-pages::-webkit-scrollbar{
+  display: none;
+}
+@media (min-width: 1024px){
+  .footer-pages p{
+    width: 300px;
+  }
 }
 .footer-pages p:hover {
   animation: zoom 0.3s;
@@ -645,6 +674,39 @@ footer{
   color: #fffcfc;
   transform: scale(1);
 }
+@media (max-width: 1025px){
+  .footer-pages{
+    font-size: 1.7vw;
+  }
+  .footer-logo img {
+    width: 20vw;
+    margin: 26px 2% 0 2%;
+  }
+  .footer-sns-icon img{
+    width: 4vw;
+    margin: 0 10px;
+}
+.footer-square-button {
+  padding: 2vw 4vw;
+  border-radius: 6vw;
+  font-size: 12px;
+  height: 48px;
+  width: 190px;
+  padding-right: 7vw;
+}
+.footer-square-button .spacer {
+  flex-grow: 1; 
+}
+.footer-square-button .text {
+  flex-shrink: 0; 
+}
+.footer-square-button::after {
+  font-size: 14px;
+  width: 34px;
+  height: 34px;
+  right: 1.3vw;
+}
+}
 @media (max-width: 500px){
     footer{
         height: 100vh;
@@ -717,9 +779,12 @@ footer{
     }
     .footer-pages{
         top: 53%;
+
     }}
+
 @media (min-width: 1507px) {
   footer{
     display: none;
   }
 }
+

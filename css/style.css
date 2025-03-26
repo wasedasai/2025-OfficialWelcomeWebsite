@@ -139,7 +139,7 @@ body {
 
 
 /* ここまでセクションタイトル */
-@media screen and (max-width: 1025px) {
+@media screen and (max-width: 1367px) {
     .mojimoji h1 {
         transition: font-size 0.5s ease-out ;
     }
@@ -150,7 +150,9 @@ body {
     .custom-cursor {
         display: none;
     }
-    
+    .scroll-container1 {
+        width: 160% !important;
+    }
 
 
     .top-icon {
@@ -180,8 +182,8 @@ body {
     }
 
     .taptop {
-        width: 100px !important;
-        height: 100px !important;
+        width: 150px !important;
+        height: 150px !important;
         display: block !important;
         position: absolute;
         z-index: 5;
@@ -196,7 +198,7 @@ body {
 
         cursor: pointer;
         text-transform: uppercase;
-            top: 65% !important; /* 祭の文字の下に配置 */
+            top: 64% !important; /* 祭の文字の下に配置 */
     }
     /* .top_btn {
 
@@ -248,7 +250,7 @@ body {
         display: none !important;
     }
     .next-section {
-        height: 2560px !important;
+        height: 1600px !important;
         align-items: unset !important;
     }
     .daen1
@@ -331,14 +333,13 @@ body {
     } */
     .detail_examples {
         display: flex !important;
-        flex-direction: column !important; /* 🎯 スマホでは縦並び */
         justify-content: center !important; /* 🎯 中央揃え */
         align-items: center !important; /* 🎯 縦方向も中央揃え */
         text-align: center !important; /* 🎯 テキストも中央揃え */
         width: 100%;
         padding-top: 30px;
-        gap: 20px; /* アイテム間の余白 */
-        top: 260px;
+        gap: 40px; /* アイテム間の余白 */
+        top: -260px;
     }
 
     .detail {
@@ -420,8 +421,17 @@ body {
         .top-topics {
         }
         .news_sentences {
-           margin-bottom: 0 !important;
         }
+        .scroll-container3 {
+            top: 0;
+        }
+         .news_sentences {
+        margin-top: -1.5% !important;
+        margin-bottom: -1.5% !important;
+    }
+    .faq_examples {
+        gap: 30px;
+    }
 }
 
 
@@ -561,13 +571,13 @@ html, body {
 
 .scroll-container3 {
     display: flex;
-    overflow: hidden;
+    /* overflow: hidden; */
     width: 200vw;
     white-space: nowrap;
     z-index: 1000;
     position: absolute;
     transform: rotate(90deg);
-    top: 75vh;
+    /* top: 75vh; */
     left: -10vw;
     padding-left: 30vh;
 }
@@ -1153,6 +1163,20 @@ header {
       display: none;
     }
   }
+  .footer-contaier{
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .footer-contaier::-webkit-scrollbar{
+    display: none;
+  }
+  .footer-pages{
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .footer-pages::-webkit-scrollbar{
+    display: none;
+  }
 /* 次のセクションのデザイン */
 .next-section {
     width: 100vw;
@@ -1305,7 +1329,7 @@ header {
     position: relative;
 }
 .shinkan-event-3 {
-    padding-top: 150px;
+    padding-top: 135px;
     position: relative;
 }
 .shinkan-event-4 {
@@ -1719,7 +1743,7 @@ background-color: #fffcfc;
     margin-top: 170px;
     display: flex;
     padding-top: 30px;
-    justify-content: space-around;
+    justify-content: space-around !important;
 }
 .faq-top {
     width: 272px;
@@ -2254,6 +2278,39 @@ footer{
     color: #fffcfc;
     transform: scale(1);
 }
+@media (max-width: 1025px){
+    .footer-pages{
+      font-size: 1.7vw;
+    }
+    .footer-logo img {
+      width: 20vw;
+      margin: 26px 2% 0 2%;
+    }
+    .footer-sns-icon img{
+      width: 4vw;
+      margin: 0 10px;
+  }
+  .footer-square-button {
+    padding: 2vw 4vw;
+    border-radius: 6vw;
+    font-size: 12px;
+    height: 48px;
+    width: 190px;
+    padding-right: 7vw;
+  }
+  .footer-square-button .spacer {
+    flex-grow: 1; 
+  }
+  .footer-square-button .text {
+    flex-shrink: 0; 
+  }
+  .footer-square-button::after {
+    font-size: 14px;
+    width: 34px;
+    height: 34px;
+    right: 1.3vw;
+  }
+  }
 @media (max-width: 500px) {
     footer{
         height: 100vh;
@@ -2359,7 +2416,7 @@ footer{
     }
 }
 
-@media (max-height: 700px) {
+@media (max-width: 700px) {
     .top_first {
         margin-top: -75px;
         height: 100svh !important;
@@ -2376,7 +2433,75 @@ footer{
         margin-top: 50px;
     }
 
+    .taptop {
+        width: 100px !important;
+        height: 100px !important;
+        display: block !important;
+        position: absolute;
+        z-index: 5;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 120px; /* 楕円形の幅 */
+        height: 60px; /* 楕円形の高さ */
+        line-height: 60px;
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+
+        cursor: pointer;
+        text-transform: uppercase;
+            top: 65% !important; /* 祭の文字の下に配置 */
+    }
+    .news_sentences {
+        margin-top: -5%;
+        margin-bottom: -5%;
+    }
+    .additional-content2 {
+        height: 50%;
+    }
+    .detail_examples {
+        display: flex !important;
+        flex-direction: column !important; /* 🎯 スマホでは縦並び */
+        justify-content: center !important; /* 🎯 中央揃え */
+        align-items: center !important; /* 🎯 縦方向も中央揃え */
+        text-align: center !important; /* 🎯 テキストも中央揃え */
+        width: 100%;
+        gap: 20px; /* アイテム間の余白 */
+        top: 260px;
+    }
+    .next-section {
+        height: 2560px !important;
+        align-items: unset !important;
+    }
+    .faq_examples {
+        gap: 0;
+    }
 }
+@media (min-width: 750px) and (max-width: 1000px) {
+    .detail_examples {
+        display: flex !important;
+        flex-direction: column !important; /* 🎯 スマホでは縦並び */
+        justify-content: center !important; /* 🎯 中央揃え */
+        align-items: center !important; /* 🎯 縦方向も中央揃え */
+        text-align: center !important; /* 🎯 テキストも中央揃え */
+        width: 100%;
+        padding-top: 30px;
+        gap: 20px; /* アイテム間の余白 */
+        top: 260px;
+    }
+    .next-section {
+        height: 2560px !important;
+        align-items: unset !important;
+    }
+    .news_sentences {
+        margin-top: -4% !important;
+    }
+    .faq_examples {
+        margin-left: 0;
+    }
+
+}
+
 /* ここまでセクションタイトル */
 @media (max-width: 400px) {
     .top_first{
