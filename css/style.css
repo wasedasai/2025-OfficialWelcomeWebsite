@@ -1799,7 +1799,7 @@ background-color: #fffcfc;
 }
 .news_sentences {
     width: 90%;
-    height: 180px;
+    height: 280px;
     border-top: #1c1b1b 2px solid;
     border-bottom: #1c1b1b 2px solid;
     display: flex;
@@ -1830,7 +1830,7 @@ background-color: #fffcfc;
     color: #1c1b1b;
     font-weight: normal;
     font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
-    text-align: center; 
+    text-align: left; 
 }
 
 .additional-content3{
