@@ -19,7 +19,7 @@ $(document).ready(function () {
 });
 $(document).ready(function () {
 
-    $("menu-open-container").on("click", function (event) {
+    $("menu-open-container, .news_sentences").on("click", function (event) {
         event.stopPropagation(); // 他のイベントをブロック
     });
 });
