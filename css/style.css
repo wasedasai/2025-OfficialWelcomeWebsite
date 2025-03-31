@@ -393,8 +393,7 @@ body {
         padding-right: 10vw !important;
     }
     .top-topics {
-
-        font-size: 16px;
+        font-size: 16px !important;
         text-align: left !important;
     }
     .additional-content2 h1 {
@@ -1831,6 +1830,7 @@ background-color: #fffcfc;
     font-weight: normal;
     font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
     text-align: left; 
+    font-size: 20px;
 }
 
 .additional-content3{
@@ -2489,6 +2489,12 @@ footer{
     }
     .faq_examples {
         gap: 0;
+    }
+    .top-topics {
+        font-size: 12px !important;
+        text-align: left !important;
+        line-height: 20px !important;
+        margin-bottom: 10px;
     }
 }
 @media (min-width: 750px) and (max-width: 1000px) {
