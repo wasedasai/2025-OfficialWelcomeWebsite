@@ -467,7 +467,7 @@ a{
     .eventMainContentsContainer section{
         width: 90vw;
         height: auto;
-        max-height: 1000px;
+        max-height: 1500px;
         /* max-height: 85vh; */
         border: 3px solid #e72241;
         text-align: center;
